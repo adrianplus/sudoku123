@@ -3,76 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f4ee">
-  <meta name="description" content="樂在齡中：從零開始，慢慢學會數獨。">
-  <title>樂在齡中｜數獨 100 步</title>
+  <meta name="theme-color" content="#f6f8fb">
+  <title>樂在齡中｜數獨小教室</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要內容</a>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="樂在齡中數獨教學首頁">
-      <span class="brand-mark" aria-hidden="true">樂</span>
-      <span><strong>樂在齡中</strong><small>玩得開心・玩得健康・玩到老</small></span>
-    </a>
-    <button class="text-button" id="text-size-toggle" type="button" aria-pressed="false">放大文字</button>
+    <div class="brand-mark" aria-hidden="true">樂</div>
+    <div>
+      <p class="eyebrow">樂在齡中・玩得開心，玩得健康，玩到老</p>
+      <h1>數獨小教室</h1>
+    </div>
+    <button id="text-size-toggle" class="secondary small-button" type="button" aria-pressed="false">放大文字</button>
   </header>
 
-  <main id="main">
-    <section class="hero" id="home-view">
-      <div class="hero-copy">
-        <p class="eyebrow">從零開始，也完全沒關係</p>
-        <h1>一步一步，<br>學會玩數獨。</h1>
-        <p class="hero-description">不用比速度，也不用怕答錯。每天學一點點，慢慢找到數字的樂趣。</p>
-        <button class="primary-button" id="start-button" type="button">開始我的第一步 <span aria-hidden="true">→</span></button>
-        <p class="gentle-note"><span aria-hidden="true">●</span> 不用註冊・免費練習・隨時可以休息</p>
+  <main class="main-content">
+    <section id="home-screen" class="panel">
+      <p class="welcome-label">從最簡單的規則開始</p>
+      <h2>一次學會一件事</h2>
+      <p class="intro">先不用急著解完整數獨。我們從橫排、直排、四宮格開始，每次只填一個數字。</p>
+      <div class="lesson-list">
+        <article class="lesson-card">
+          <div class="lesson-number">01</div>
+          <div class="lesson-copy"><h3>第一步：橫排</h3><p>看看一排數字，找出缺少的數字。</p></div>
+          <button class="primary start-lesson" data-lesson="row" type="button">開始練習</button>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-number">02</div>
+          <div class="lesson-copy"><h3>第二步：直排</h3><p>看看一直排數字，找出缺少的數字。</p></div>
+          <button class="primary start-lesson" data-lesson="column" type="button">開始練習</button>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-number">03</div>
+          <div class="lesson-copy"><h3>第三步：四宮格</h3><p>看看小方格裡，缺少哪一個數字。</p></div>
+          <button class="primary start-lesson" data-lesson="box" type="button">開始練習</button>
+        </article>
       </div>
-      <div class="hero-art" aria-label="數獨格子示意圖">
-        <div class="mini-board" aria-hidden="true">
-          <span>1</span><span>2</span><span>3</span><span>4</span>
-          <span>3</span><span class="blank">？</span><span>1</span><span>2</span>
-          <span>2</span><span>1</span><span>4</span><span>3</span>
-          <span>4</span><span>3</span><span>2</span><span>1</span>
-        </div>
-        <div class="art-caption">慢慢觀察，就會找到線索。</div>
-      </div>
+      <p class="privacy-note">不用登入，也不計時。慢慢想就可以。</p>
     </section>
 
-    <section class="journey-section" id="journey">
-      <div class="section-heading">
+    <section id="game-screen" class="panel hidden" aria-live="polite">
+      <button id="back-home" class="text-button" type="button">← 回到課程選單</button>
+      <div class="game-heading">
         <div>
-          <p class="eyebrow">我的學習旅程</p>
-          <h2>100 步，慢慢來</h2>
-          <p>先從簡單的小任務開始，每完成一步，就更熟悉數字一點。</p>
+          <p id="step-label" class="welcome-label">第一步</p>
+          <h2 id="lesson-title">橫排練習</h2>
         </div>
-        <div class="progress-pill"><span id="completed-count">0</span> / 100 步</div>
+        <div class="progress-pill"><span id="streak-count">0</span> / 3 題答對</div>
       </div>
-      <div class="chapter-list" id="chapter-list" aria-label="數獨學習章節"></div>
-      <p class="prototype-note">目前是網頁外殼原型：關卡入口與版面已建立，教學互動將在下一步逐項加入。</p>
-    </section>
-
-    <section class="lesson-view hidden" id="lesson-view" aria-live="polite">
-      <button class="back-button" id="back-button" type="button">← 回到學習地圖</button>
-      <div class="lesson-card">
-        <p class="eyebrow" id="lesson-step-label">第 1 步 / 100 步</p>
-        <h2 id="lesson-title">認識數字</h2>
-        <p class="lesson-description" id="lesson-description">歡迎開始學習數獨。這一步先熟悉數字與格子。</p>
-        <div class="lesson-placeholder" aria-hidden="true">
-          <div class="placeholder-number">1</div>
-          <div class="placeholder-number">2</div>
-          <div class="placeholder-number">3</div>
-          <div class="placeholder-number">4</div>
-        </div>
-        <div class="coming-soon"><strong>互動練習即將加入</strong><span>下一個開發階段會讓你直接點選數字、收到提示並練習答題。</span></div>
-        <button class="primary-button" id="return-map-button" type="button">回到學習地圖</button>
+      <p id="instruction" class="instruction">請找出這一排缺少的數字。</p>
+      <div id="puzzle-area" class="puzzle-area">
+        <div id="puzzle-grid" class="puzzle-grid" role="group" aria-label="數獨練習題"></div>
       </div>
+      <p id="feedback" class="feedback" role="status">選擇下方的數字作答。</p>
+      <div class="number-pad" aria-label="選擇答案">
+        <button class="number-button" data-number="1" type="button">1</button>
+        <button class="number-button" data-number="2" type="button">2</button>
+        <button class="number-button" data-number="3" type="button">3</button>
+        <button class="number-button" data-number="4" type="button">4</button>
+      </div>
+      <div class="game-footer">
+        <span id="question-count">第 1 題</span>
+        <button id="hint-button" class="secondary" type="button">給我提示</button>
+      </div>
+      <section id="complete-box" class="complete-box hidden">
+        <div class="complete-icon" aria-hidden="true">✓</div>
+        <h3 id="complete-title">這一步完成了！</h3>
+        <p id="complete-message">你已經連續答對三題。</p>
+        <button id="next-step" class="primary" type="button">進入下一步</button>
+        <button id="return-menu" class="secondary" type="button">回到課程選單</button>
+      </section>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p><strong>樂在齡中</strong>　玩得開心・玩得健康・玩到老</p>
-    <p>這是一個循序漸進的學習原型，答錯也沒關係。</p>
-  </footer>
+  <footer class="site-footer">樂在齡中｜不比速度，只要一步一步學會。</footer>
+  <script src="js/app.js"></script>
 </body>
 </html>
