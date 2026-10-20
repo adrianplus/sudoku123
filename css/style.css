@@ -1,78 +1,8 @@
-*{box-sizing:border-box} :root{--scale:1;--ink:#243247;--muted:#58677a;--blue:#245ea8;--line:#d5deea}body{margin:0;background:#f6f8fb;color:var(--ink);font:calc(18px * var(--scale))/1.4 system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}body.font-small{--scale:.86}body.font-normal{--scale:1}body.font-large{--scale:1.16}body.font-xlarge{--scale:1.32}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus{outline:none}header{max-width:980px;margin:auto;padding:10px 14px;display:flex;align-items:center;gap:9px}.logo{background:var(--blue);color:white;border-radius:11px;width:40px;height:40px;display:grid;place-items:center;font-size:1.3em;font-weight:bold;flex-shrink:0}.brand{min-width:0}.brand small{color:var(--blue);font-size:.68em;font-weight:bold}h1{font-size:1.25em;margin:0}h2{font-size:1.4em;margin:0 0 8px}h3{font-size:1.1em;margin:0 0 4px}p{margin:0 0 12px}nav{display:flex;gap:4px;margin-left:auto;flex-shrink:0}nav button{height:40px;min-width:36px;border:2px solid #b9cbe2;border-radius:9px;background:white;color:#17467f;font-weight:bold}nav button:disabled{opacity:.35}main{max-width:980px;margin:auto;padding:8px 14px 14px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(14px,3vw,30px);box-shadow:0 5px 18px #2037540b}.label{color:var(--blue);font-weight:bold}.lessons{display:grid;gap:12px}.lessons article{border:1px solid var(--line);border-radius:14px;padding:13px;display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px}.lessons article>b{background:#eaf3ff;color:var(--blue);border-radius:10px;padding:8px;text-align:center}.lessons p,.note{color:var(--muted);margin:0}.start,.actions button{background:var(--blue);color:white;border:0;border-radius:11px;padding:11px 15px;font-weight:bold;min-height:46px}.note{text-align:center;margin-top:18px}.hidden{display:none!important}.gamehead{display:flex;align-items:center;gap:8px;justify-content:space-between;margin-bottom:8px}.gamehead h2{font-size:1.2em;margin:0;flex:1}.gamehead strong{white-space:nowrap;background:#eaf3ff;color:#17467f;border-radius:30px;padding:6px 10px;font-size:.88em}.instruction{font-size:1.08em;font-weight:bold;color:var(--muted);line-height:1.35;margin-bottom:8px}.puzzle-area{display:flex;justify-content:center;padding:3px 0 7px}#grid{display:grid;border:3px solid #29384b;background:white}#grid.row{grid-template-columns:repeat(4,1fr);width:100%;max-width:520px;height:clamp(58px,9vh,90px)}#grid.column{grid-template-rows:repeat(4,1fr);width:84px;height:clamp(165px,27vh,280px)}#grid.box{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);width:min(42vw,210px);aspect-ratio:1;max-height:25vh}.cell{display:grid;place-items:center;border:1px solid #718096;font-size:clamp(1.8rem,8vw,2.5rem);font-weight:bold}.cell.missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}.cell.missing:after{content:"?"}.cell.filled{background:#e8f7ee;color:#176b47}#feedback{font-size:1.05em;font-weight:bold;text-align:center;padding:5px;margin:3px 0 7px;line-height:1.3}#feedback.good{background:#e8f7ee;color:#176b47;border-radius:8px}#feedback.bad{background:#fff0ee;color:#a63a32;border-radius:8px}.pad{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.pad button{min-height:clamp(46px,7vh,62px);border:2px solid #b9cbe2;border-radius:11px;background:white;color:#17467f;font-size:2em;font-weight:bold;box-shadow:0 3px 0 #d8e1ed}.pad button:active{background:white}.gamefoot{display:flex;justify-content:space-between;align-items:center;margin-top:7px;color:var(--muted)}#hint{width:45px;height:40px;border:2px solid #e5c56b;border-radius:10px;background:#fff8d9;font-size:1.5em;box-shadow:0 0 10px #f4d46b66}.backdrop{position:fixed;inset:0;z-index:10;background:#14203099;display:grid;place-items:center;padding:18px}.dialog{width:min(100%,450px);padding:28px 22px;background:white;border-radius:22px;text-align:center;box-shadow:0 18px 70px #0003}.check{width:58px;height:58px;border-radius:50%;background:#e8f7ee;color:#176b47;display:grid;place-items:center;font-size:2em;margin:0 auto 12px}.dialog p{color:var(--muted);margin:14px 0 20px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.actions button:last-child{background:white;color:var(--blue);border:2px solid #b9cbe2}footer{text-align:center;color:var(--muted);padding:0 12px 10px;font-size:.82em}@media(max-width:640px){header{padding:6px 9px;gap:6px}.logo{width:34px;height:34px;font-size:1.1em}h1{font-size:1.04em}.brand small{font-size:.55em}nav button{min-width:31px;height:35px;font-size:.88em}main{padding:4px 9px 8px}.panel{padding:12px;border-radius:15px}.lessons article{grid-template-columns:36px 1fr;gap:9px}.lessons .start{grid-column:1/-1;width:100%}.gamehead h2{font-size:1.1em}.gamehead strong{font-size:.78em;padding:6px 8px}.instruction{font-size:1.03em;margin-bottom:6px}#grid.row{height:clamp(54px,8vh,75px)}#grid.column{height:clamp(150px,24vh,220px);width:76px}#grid.box{width:min(40vw,180px);max-height:22vh}.cell{font-size:clamp(1.7rem,8vw,2.3rem)}#feedback{font-size:1em;padding:4px;margin:2px 0 5px}.pad{gap:5px}.pad button{min-height:clamp(43px,6.5vh,56px)}.gamefoot{margin-top:5px}#hint{width:41px;height:36px}.actions{grid-template-columns:1fr}footer{padding-bottom:5px}}
-
-/* v5: 第二步直排採左右配置，左側題目、右側直向答案按鈕 */
-#game.column-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(110px, 180px);
-  grid-template-areas:
-    "head head"
-    "instruction answers"
-    "puzzle answers"
-    "feedback answers"
-    "footer footer";
-  align-items: center;
-  column-gap: clamp(14px, 3vw, 28px);
-  row-gap: 6px;
-}
-#game.column-layout .gamehead { grid-area: head; width: 100%; }
-#game.column-layout .instruction { grid-area: instruction; align-self: end; }
-#game.column-layout .puzzle-area { grid-area: puzzle; width: 100%; padding: 4px 0; }
-#game.column-layout #feedback { grid-area: feedback; width: 100%; }
-#game.column-layout .pad {
-  grid-area: answers;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 180px;
-  gap: 10px;
-  align-self: center;
-}
-#game.column-layout .pad button {
-  width: 100%;
-  min-height: clamp(54px, 8vh, 76px);
-  flex: 0 0 auto;
-}
-#game.column-layout .gamefoot { grid-area: footer; width: 100%; }
-#game.column-layout #grid.column {
-  height: clamp(220px, 42vh, 390px);
-  width: min(100%, 150px);
-}
-@media (max-width: 640px) {
-  #game.column-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(70px, 100px);
-    grid-template-areas:
-      "head head"
-      "instruction answers"
-      "puzzle answers"
-      "feedback feedback"
-      "footer footer";
-    column-gap: 10px;
-    row-gap: 5px;
-    padding: 12px 10px;
-  }
-  #game.column-layout .instruction {
-    font-size: 1em;
-    align-self: end;
-    margin-bottom: 2px;
-  }
-  #game.column-layout .pad {
-    max-width: 100px;
-    gap: 8px;
-    align-self: center;
-  }
-  #game.column-layout .pad button {
-    min-height: clamp(48px, 7.5vh, 62px);
-    font-size: 1.7em;
-  }
-  #game.column-layout #grid.column {
-    width: 72px;
-    height: clamp(190px, 32vh, 270px);
-  }
-  #game.column-layout .cell {
-    font-size: clamp(1.6rem, 7vw, 2rem);
-  }
-  #game.column-layout #feedback {
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
-}
+*{box-sizing:border-box}:root{--scale:1;--ink:#243247;--muted:#58677a;--blue:#245ea8;--line:#d5deea}body{margin:0;background:#f6f8fb;color:var(--ink);font:calc(18px * var(--scale))/1.4 system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}body.font-small{--scale:.86}body.font-normal{--scale:1}body.font-large{--scale:1.16}body.font-xlarge{--scale:1.32}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus{outline:none}header{max-width:980px;margin:auto;padding:10px 14px;display:flex;align-items:center;gap:9px}.logo{background:var(--blue);color:white;border-radius:11px;width:40px;height:40px;display:grid;place-items:center;font-size:1.3em;font-weight:bold;flex-shrink:0}.brand{min-width:0}.brand small{color:var(--blue);font-size:.68em;font-weight:bold}h1{font-size:1.25em;margin:0}h2{font-size:1.4em;margin:0 0 8px}h3{font-size:1.1em;margin:0 0 4px}p{margin:0 0 12px}nav{display:flex;gap:4px;margin-left:auto;flex-shrink:0}nav button{height:40px;min-width:36px;border:2px solid #b9cbe2;border-radius:9px;background:white;color:#17467f;font-weight:bold}nav button:disabled{opacity:.35}main{max-width:980px;margin:auto;padding:8px 14px 14px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(14px,3vw,30px);box-shadow:0 5px 18px #2037540b}.lessons{display:grid;gap:12px}.lessons article{border:1px solid var(--line);border-radius:14px;padding:13px;display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px}.lessons article>b{background:#eaf3ff;color:var(--blue);border-radius:10px;padding:8px;text-align:center}.lessons p,.note{color:var(--muted);margin:0}.start,.actions button{background:var(--blue);color:white;border:0;border-radius:11px;padding:11px 15px;font-weight:bold;min-height:46px}.note{text-align:center;margin-top:18px}.hidden{display:none!important}.gamehead{display:flex;align-items:center;gap:8px;justify-content:space-between;margin-bottom:8px}.gamehead h2{font-size:1.2em;margin:0;flex:1}.gamehead strong{white-space:nowrap;background:#eaf3ff;color:#17467f;border-radius:30px;padding:6px 10px;font-size:.88em}.instruction{font-size:1.08em;font-weight:bold;color:var(--muted);line-height:1.35;margin-bottom:8px}.puzzle-area{display:flex;justify-content:center;padding:3px 0 7px;min-width:0}#grid{display:grid;border:3px solid #29384b;background:white;max-width:100%}#grid.row{grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,520px);height:clamp(58px,9vh,90px)}#grid.column{grid-template-rows:repeat(4,minmax(0,1fr));width:84px;height:clamp(165px,27vh,280px)}#grid.box{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));width:min(42vw,210px);aspect-ratio:1;max-height:25vh}.cell{display:grid;place-items:center;border:1px solid #718096;font-size:clamp(1.8rem,8vw,2.5rem);font-weight:bold;min-width:0;min-height:0;overflow:hidden}.cell.missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}.cell.missing:after{content:"?"}.cell.filled{background:#e8f7ee;color:#176b47}#feedback{font-size:1.05em;font-weight:bold;text-align:center;padding:5px;margin:3px 0 7px;line-height:1.3}#feedback.good{background:#e8f7ee;color:#176b47;border-radius:8px}#feedback.bad{background:#fff0ee;color:#a63a32;border-radius:8px}.pad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;min-width:0}.pad button{min-width:0;min-height:clamp(46px,7vh,62px);border:2px solid #b9cbe2;border-radius:11px;background:white;color:#17467f;font-size:2em;font-weight:bold;box-shadow:0 3px 0 #d8e1ed}.pad button:active{background:white}.gamefoot{display:flex;justify-content:space-between;align-items:center;margin-top:7px;color:var(--muted)}#hint{width:45px;height:40px;border:2px solid #e5c56b;border-radius:10px;background:#fff8d9;font-size:1.5em;box-shadow:0 0 10px #f4d46b66}.backdrop{position:fixed;inset:0;z-index:10;background:#14203099;display:grid;place-items:center;padding:18px}.dialog{width:min(100%,450px);padding:28px 22px;background:white;border-radius:22px;text-align:center;box-shadow:0 18px 70px #0003}.check{width:58px;height:58px;border-radius:50%;background:#e8f7ee;color:#176b47;display:grid;place-items:center;font-size:2em;margin:0 auto 12px}.dialog p{color:var(--muted);margin:14px 0 20px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.actions button:last-child{background:white;color:var(--blue);border:2px solid #b9cbe2}footer{text-align:center;color:var(--muted);padding:0 12px 10px;font-size:.82em}
+#game.column-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,180px);grid-template-areas:"head head" "instruction answers" "puzzle answers" "feedback answers" "footer footer";align-items:center;column-gap:clamp(14px,3vw,28px);row-gap:6px}#game.column-layout .gamehead{grid-area:head;width:100%}#game.column-layout .instruction{grid-area:instruction;align-self:end}#game.column-layout .puzzle-area{grid-area:puzzle;width:100%;padding:4px 0}#game.column-layout #feedback{grid-area:feedback;width:100%}#game.column-layout .pad{grid-area:answers;display:flex;flex-direction:column;width:100%;max-width:180px;gap:10px;align-self:center}#game.column-layout .pad button{width:100%;min-height:clamp(54px,8vh,76px);flex:0 0 auto}#game.column-layout .gamefoot{grid-area:footer;width:100%}#game.column-layout #grid.column{height:clamp(220px,42vh,390px);width:min(100%,150px)}
+@media(max-width:640px){header{padding:6px 9px;gap:6px}.logo{width:34px;height:34px;font-size:1.1em}h1{font-size:1.04em}.brand small{font-size:.55em}nav button{min-width:31px;height:35px;font-size:.88em}main{padding:4px 9px 8px}.panel{padding:12px;border-radius:15px}.lessons article{grid-template-columns:36px 1fr;gap:9px}.lessons .start{grid-column:1/-1;width:100%}.gamehead h2{font-size:1.1em}.gamehead strong{font-size:.78em;padding:6px 8px}.instruction{font-size:1.03em;margin-bottom:6px}#grid.row{height:clamp(54px,8vh,75px)}#grid.column{height:clamp(150px,24vh,220px);width:76px}#grid.box{width:min(40vw,180px);max-height:22vh}.cell{font-size:clamp(1.7rem,8vw,2.3rem)}#feedback{font-size:1em;padding:4px;margin:2px 0 5px}.pad{gap:5px}.pad button{min-height:clamp(43px,6.5vh,56px)}.gamefoot{margin-top:5px}#hint{width:41px;height:36px}.actions{grid-template-columns:1fr}footer{padding-bottom:5px}#game.column-layout{grid-template-columns:minmax(0,1fr) minmax(70px,100px);grid-template-areas:"head head" "instruction answers" "puzzle answers" "feedback feedback" "footer footer";column-gap:10px;row-gap:5px;padding:12px 10px}#game.column-layout .instruction{font-size:1em;align-self:end;margin-bottom:2px}#game.column-layout .pad{max-width:100px;gap:8px;align-self:center}#game.column-layout .pad button{min-height:clamp(48px,7.5vh,62px);font-size:1.7em}#game.column-layout #grid.column{width:72px;height:clamp(190px,32vh,270px)}#game.column-layout .cell{font-size:clamp(1.6rem,7vw,2rem)}#game.column-layout #feedback{margin-top:2px;margin-bottom:2px}}
+/* v6 修正第三步四宮格：桌機版限制棋盤寬度，維持正方形且不溢出 */
+#game:not(.column-layout) .puzzle-area{width:100%;min-width:0;overflow:hidden}
+#game:not(.column-layout) #grid.box{width:min(100%,280px);height:auto;aspect-ratio:1;max-height:none}
+#game:not(.column-layout) #grid.box .cell{font-size:clamp(1.5rem,4vw,2.6rem)}
+@media(max-width:640px){#game:not(.column-layout) #grid.box{width:min(68vw,240px);max-width:100%;height:auto;max-height:none}#game:not(.column-layout) #grid.box .cell{font-size:clamp(1.5rem,7vw,2.2rem)}}
