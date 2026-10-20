@@ -1,1 +1,14 @@
-新版更新：手機說明文字放大、選題後清除按鈕焦點、右上新增主頁按鈕、移除回到課程選單與第1步小標、進度移到標題右側並顯示1/100、燈泡提示按鈕、縮小手機版版面以盡量讓題目與答案按鈕同屏。更新 GitHub 專案根目錄中的 index.html、css/style.css、js/app.js 後 Commit changes。
+# 樂在齡中｜數獨小教室 v5
+
+本版針對第二步「直排」調整版面：
+- 題目說明與直向棋盤靠左。
+- 1、2、3、4 答案按鈕改為直向排列，放在右側。
+- 電腦版與手機版皆採左右配置，避免為了同屏而把直排題目擠壞。
+- 第一、三步維持原本版面。
+- 保留右上角主頁、字體大小切換、進度顯示與燈泡提示。
+
+更新 GitHub：
+1. 解壓縮 ZIP。
+2. 到 https://github.com/adrianplus/sudoku123 → Code → Add file → Upload files。
+3. 更新 index.html、css/style.css、js/app.js。
+4. 按 Commit changes，等待 GitHub Pages 更新後測試第二步。
