@@ -6,3 +6,9 @@
 #game:not(.column-layout) #grid.box{width:min(100%,280px);height:auto;aspect-ratio:1;max-height:none}
 #game:not(.column-layout) #grid.box .cell{font-size:clamp(1.5rem,4vw,2.6rem)}
 @media(max-width:640px){#game:not(.column-layout) #grid.box{width:min(68vw,240px);max-width:100%;height:auto;max-height:none}#game:not(.column-layout) #grid.box .cell{font-size:clamp(1.5rem,7vw,2.2rem)}}
+
+/* v7 品牌調整：使用者提供的標誌，移除 slogan */
+.brand-logo{display:block;width:clamp(110px,17vw,190px);height:76px;object-fit:contain;object-position:left center;flex:0 0 auto}
+.brand{min-width:0}
+.brand h1{font-size:clamp(1.15rem,2.2vw,1.65rem);white-space:nowrap}
+@media(max-width:640px){header{gap:8px}.brand-logo{width:94px;height:56px}.brand h1{font-size:1.05em;white-space:normal;line-height:1.2}}
