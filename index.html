@@ -1,45 +1,8 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f6f8fb"><title>樂在齡中｜數獨小教室</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body class="font-normal">
-<header class="site-header">
-  <div class="brand-mark" aria-hidden="true">樂</div>
-  <div class="brand-copy"><p class="eyebrow">樂在齡中・玩得開心，玩得健康，玩到老</p><h1>數獨小教室</h1></div>
-  <div class="font-controls" role="group" aria-label="調整字體大小">
-    <button id="font-smaller" class="font-button" type="button" aria-label="縮小字體">小</button>
-    <button id="font-larger" class="font-button" type="button" aria-label="放大字體">大</button>
-  </div>
-</header>
-<main class="main-content">
-<section id="home-screen" class="panel">
-  <p class="welcome-label">從最簡單的規則開始</p><h2>一次學會一件事</h2>
-  <p class="intro">先不用急著解完整數獨。我們從橫排、直排、四宮格開始，每次只填一個數字。</p>
-  <div class="lesson-list">
-    <article class="lesson-card"><div class="lesson-number">01</div><div class="lesson-copy"><h3>第一步：橫排</h3><p>看看一排數字，找出缺少的數字。</p></div><button class="primary start-lesson" data-lesson="row" type="button">開始練習</button></article>
-    <article class="lesson-card"><div class="lesson-number">02</div><div class="lesson-copy"><h3>第二步：直排</h3><p>看看一直排數字，找出缺少的數字。</p></div><button class="primary start-lesson" data-lesson="column" type="button">開始練習</button></article>
-    <article class="lesson-card"><div class="lesson-number">03</div><div class="lesson-copy"><h3>第三步：四宮格</h3><p>看看小方格裡，缺少哪一個數字。</p></div><button class="primary start-lesson" data-lesson="box" type="button">開始練習</button></article>
-  </div><p class="privacy-note">不用登入，也不計時。慢慢想就可以。</p>
-</section>
-<section id="game-screen" class="panel hidden" aria-live="polite">
-  <button id="back-home" class="text-button" type="button">← 回到課程選單</button>
-  <div class="game-heading"><div><p id="step-label" class="welcome-label">第一步</p><h2 id="lesson-title">橫排練習</h2></div><div class="progress-pill"><span id="streak-count">0</span> / 3 題答對</div></div>
-  <p id="instruction" class="instruction">請找出這一排缺少的數字。</p>
-  <div class="puzzle-area"><div id="puzzle-grid" class="puzzle-grid" role="group" aria-label="數獨練習題"></div></div>
-  <p id="feedback" class="feedback" role="status">選擇下方的數字作答。</p>
-  <div class="number-pad" aria-label="選擇答案">
-    <button class="number-button" data-number="1" type="button">1</button><button class="number-button" data-number="2" type="button">2</button><button class="number-button" data-number="3" type="button">3</button><button class="number-button" data-number="4" type="button">4</button>
-  </div>
-  <div class="game-footer"><span id="question-count">第 1 題</span><button id="hint-button" class="secondary" type="button">給我提示</button></div>
-</section>
-</main>
-<div id="completion-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message">
-  <div class="modal-card"><div class="complete-icon" aria-hidden="true">✓</div><h2 id="modal-title">這一步完成了！</h2><p id="modal-message">你已經連續答對三題，做得很好！</p>
-  <div class="modal-actions"><button id="modal-next" class="primary" type="button">下一步</button><button id="modal-home" class="secondary" type="button">回到主頁</button></div></div>
-</div>
-<footer class="site-footer">樂在齡中｜不比速度，只要一步一步學會。</footer>
-<script src="js/app.js"></script>
-</body></html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>樂在齡中｜數獨小教室</title><link rel="stylesheet" href="css/style.css"></head><body class="font-normal">
+<header><div class="logo">樂</div><div class="brand"><small>樂在齡中・玩得開心，玩得健康，玩到老</small><h1>數獨小教室</h1></div><nav><button id="home-top" aria-label="回到主頁" title="回到主頁">主</button><button id="font-smaller" aria-label="縮小字體">小</button><button id="font-larger" aria-label="放大字體">大</button></nav></header>
+<main><section id="home" class="panel"><p class="label">從最簡單的規則開始</p><h2>一次學會一件事</h2><p>先不用急著解完整數獨。我們從橫排、直排、四宮格開始，每次只填一個數字。</p><div class="lessons">
+<article><b>01</b><div><h3>第一步：橫排</h3><p>看看一排數字，找出缺少的數字。</p></div><button class="start" data-id="row">開始練習</button></article>
+<article><b>02</b><div><h3>第二步：直排</h3><p>看看一直排數字，找出缺少的數字。</p></div><button class="start" data-id="column">開始練習</button></article>
+<article><b>03</b><div><h3>第三步：四宮格</h3><p>看看小方格裡，缺少哪一個數字。</p></div><button class="start" data-id="box">開始練習</button></article></div><p class="note">不用登入，也不計時。慢慢想就可以。</p></section>
+<section id="game" class="panel hidden"><div class="gamehead"><h2 id="title">第一步：橫排</h2><strong><span id="progress">1</span> / 100</strong></div><p id="instruction" class="instruction"></p><div class="puzzle-area"><div id="grid"></div></div><p id="feedback" role="status">請觀察格子，再選擇下方數字。</p><div class="pad"><button data-n="1">1</button><button data-n="2">2</button><button data-n="3">3</button><button data-n="4">4</button></div><div class="gamefoot"><span id="question">第 1 題</span><button id="hint" aria-label="提示" title="給我提示">💡</button></div></section></main>
+<div id="modal" class="backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="dialog"><div class="check">✓</div><h2 id="modal-title">這一步完成了！</h2><p id="modal-message"></p><div class="actions"><button id="next">下一步</button><button id="modal-home">回到主頁</button></div></div></div><footer>樂在齡中｜不比速度，只要一步一步學會。</footer><script src="js/app.js"></script></body></html>
