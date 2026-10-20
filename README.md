@@ -1,9 +1,11 @@
-# 樂在齡中｜數獨新手村 v7
+# 樂在齡中｜數獨新手村 v8
 
-1. 左上角改用使用者提供的標誌圖片：assets/lezaiblingzhong-logo.png。
-2. 移除品牌 slogan。
-3. 標誌旁標題改為「數獨新手村」。
-4. 主頁移除「從最簡單的規則開始」與介紹段落，保留「一次學會一件事」及三個練習入口。
-5. 保留前一版的直排左右配置與四宮格顯示修正。
+新增主頁已完成進度與續玩：
+- 「一次學會一件事」右側顯示「(已完成數 / 100) 已完成」。
+- 完成每一步的三題練習後，該步驟會記錄為已完成；重複完成同一步不會重複加總。
+- 進度按鈕可點擊，回到最近一次完成的步驟。
+- 使用瀏覽器 localStorage 記錄進度，關閉頁面或下次用同一台裝置、同一個瀏覽器再進入仍可讀取。
+- 不同裝置或不同瀏覽器之間目前不會同步進度。
+- 保留 v7 的自訂 LOGO、主頁簡化、直排左右配置與四宮格版面修正。
 
-更新 GitHub：上傳並覆蓋 index.html、css/style.css、js/app.js，另外將 assets/lezaiblingzhong-logo.png 一併上傳到 assets 資料夾，然後 Commit changes。
+更新 GitHub：覆蓋 index.html、css/style.css、js/app.js，並保留 assets/lezaiblingzhong-logo.png。
