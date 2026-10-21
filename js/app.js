@@ -3,7 +3,8 @@ const L={
 row:{step:1,title:"第一步：橫排",mode:"row",text:"請看這一橫排的四個位置。1、2、3、4 各出現一次，找出缺少的數字。",need:3},
 column:{step:2,title:"第二步：直排",mode:"column",text:"請看這一直排的四個位置。1、2、3、4 各出現一次，找出缺少的數字。",need:3},
 box:{step:3,title:"第三步：四宮格",mode:"box",text:"請看這個四宮格的四個位置。1、2、3、4 各出現一次，找出缺少的數字。",need:3},
-rowcol:{step:4,title:"第四步：橫排＋直排",mode:"rowcol",text:"請同時參考問號所在的橫排與直排線索，找出唯一正確的數字。",need:5}
+rowcol:{step:4,title:"第四步：橫排＋直排",mode:"rowcol",text:"請同時參考問號所在的橫排與直排線索，找出唯一正確的數字。",need:5},
+threeways:{step:5,title:"第五步：同時考慮三個方向",mode:"threeways",text:"請觀察問號周圍三個方向的線索，合併判斷缺少的數字。",need:5}
 };
 const $=id=>document.getElementById(id),home=$("home"),game=$("game"),grid=$("grid"),feedback=$("feedback"),modal=$("modal"),next=$("next"),modalHome=$("modal-home"),hint=$("hint"),buttons=Array.from(document.querySelectorAll(".pad button")),sm=$("font-smaller"),lg=$("font-larger");
 const STORAGE_KEY="lezaiblingzhong_sudoku_progress_v3";let font=1,current=null,currentId=null,missing=0,streak=0,q=1,answered=false,timer=null;
@@ -32,6 +33,43 @@ function render(){
   const r=Math.floor(Math.random()*4),c=Math.floor(Math.random()*4);missing=solution[r][c];
   grid.className="sudoku";grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";grid.style.width="min(100%,420px)";grid.style.aspectRatio="1";
   for(let rr=0;rr<4;rr++)for(let cc=0;cc<4;cc++){let v=document.createElement("div");v.className="cell sudoku-cell";v.style.border="1px solid #718096";if(cc===1)v.style.borderRightWidth="3px";if(rr===1)v.style.borderBottomWidth="3px";if(rr===r&&cc===c){v.classList.add("missing");v.dataset.gap="1"}else v.textContent=solution[rr][cc];grid.appendChild(v)}return;
+ }
+ if(current.mode==="threeways"){
+  // Step 5: keep the full 4x4 grid, but show only the question mark and
+  // three clues on three different arms (up/down/left/right).
+  const vals=[1,2,3,4];
+  const shuffled=vals.slice().sort(()=>Math.random()-0.5);
+  missing=shuffled[0];
+  const clues=shuffled.slice(1);
+  const targetRow=1+Math.floor(Math.random()*2);
+  const targetCol=1+Math.floor(Math.random()*2);
+  const directions=["up","down","left","right"].sort(()=>Math.random()-0.5).slice(0,3);
+  const clueCells=[];
+  directions.forEach((dir,i)=>{
+    if(dir==="up")clueCells.push({r:0,c:targetCol,v:clues[i]});
+    if(dir==="down")clueCells.push({r:3,c:targetCol,v:clues[i]});
+    if(dir==="left")clueCells.push({r:targetRow,c:0,v:clues[i]});
+    if(dir==="right")clueCells.push({r:targetRow,c:3,v:clues[i]});
+  });
+  grid.className="sudoku sparse-board threeways";
+  grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";
+  grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";
+  grid.style.width="min(100%,480px)";grid.style.aspectRatio="1";grid.style.height="auto";
+  for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+    const item=document.createElement("div");
+    item.className="cell sudoku-cell sparse-board-cell empty-clue";
+    item.style.border="1px solid #d8d8d8";
+    if(c===1)item.style.borderRightWidth="3px";
+    if(r===1)item.style.borderBottomWidth="3px";
+    if(r===targetRow&&c===targetCol){
+      item.className="cell sudoku-cell sparse-board-cell missing";item.dataset.gap="1";
+    }else{
+      const clue=clueCells.find(x=>x.r===r&&x.c===c);
+      if(clue){item.classList.remove("empty-clue");item.style.borderColor="#718096";item.textContent=String(clue.v);}
+    }
+    grid.appendChild(item);
+  }
+  return;
  }
  if(current.mode==="rowcol"){
   // Step 4: always show a 4x4 grid. Only the row and column clues are populated.
@@ -74,7 +112,7 @@ function render(){
  }
 }
 function answer(n){if(answered)return;if(n===missing){answered=true;streak++;const c=grid.querySelector("[data-gap]");if(c){c.className="cell filled sudoku-cell";c.textContent=String(n);c.removeAttribute("data-gap")}buttons.forEach(b=>b.disabled=true);hint.disabled=true;say(`答對了！目前連續答對 ${streak} / ${current.need} 題。`,"good");timer=setTimeout(()=>{if(streak>=current.need)complete();else{q++;render()}},streak>=current.need?450:650)}else{streak=0;say("再想一想！請重新觀察線索。","bad");setTimeout(()=>{if(!answered)say("沒關係，慢慢找。請再選一次。")},900)}}
-function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已連續答對 ${current.need} 題，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前四個練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
+function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已連續答對 ${current.need} 題，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前五個練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
 function goHome(){clearTimeout(timer);modal.classList.add("hidden");game.classList.add("hidden");home.classList.remove("hidden");current=null;currentId=null;updateHomeProgress();window.scrollTo(0,0)}
 document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));buttons.forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.n))));$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(current&&!answered)say("提示：缺少的數字是 "+missing+"。")});sm.addEventListener("click",()=>{if(font>0){font--;fontApply()}});lg.addEventListener("click",()=>{if(font<3){font++;fontApply()}});loadProgress();updateHomeProgress();fontApply()
 })();

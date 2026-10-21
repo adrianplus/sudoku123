@@ -71,3 +71,11 @@
 #grid.sudoku.sparse-board .sparse-board-cell.missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
 #grid.sudoku.sparse-board .sparse-board-cell.missing:after{content:"?"}
 @media(max-width:640px){#grid.sudoku.sparse-board{width:min(100%,92vw)}#grid.sudoku.sparse-board .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
+
+/* v16：第五步完整4×4格線，只在問號周圍三個方向放線索 */
+#grid.sudoku.sparse-board.threeways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));width:min(100%,480px);aspect-ratio:1;margin:0 auto;border:3px solid #29384b;overflow:hidden}
+#grid.sudoku.sparse-board.threeways .sparse-board-cell{aspect-ratio:1;min-width:0;min-height:0;font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800}
+#grid.sudoku.sparse-board.threeways .empty-clue{background:#fff;border-color:#d8d8d8}
+#grid.sudoku.sparse-board.threeways .missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
+#grid.sudoku.sparse-board.threeways .missing:after{content:"?"}
+@media(max-width:640px){#grid.sudoku.sparse-board.threeways{width:min(100%,92vw)}#grid.sudoku.sparse-board.threeways .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
