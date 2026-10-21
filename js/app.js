@@ -5,7 +5,8 @@ column:{step:2,title:"第二步：直排",mode:"column",text:"請看這一直排
 box:{step:3,title:"第三步：四宮格",mode:"box",text:"請看這個四宮格的四個位置。1、2、3、4 各出現一次，找出缺少的數字。",need:3},
 rowcol:{step:4,title:"第四步：橫排＋直排",mode:"rowcol",text:"請同時參考問號所在的橫排與直排線索，找出唯一正確的數字。",need:5},
 threeways:{step:5,title:"第五步：同時考慮三個方向",mode:"threeways",text:"請觀察問號周圍三個方向的線索，合併判斷缺少的數字。",need:5},
-boxways:{step:6,title:"第六步：宮＋直排＋橫排",mode:"boxways",text:"請同時觀察問號所在的四宮格、直排與橫排，合併三種線索找出答案。",need:5}
+boxways:{step:6,title:"第六步：宮＋直排＋橫排",mode:"boxways",text:"請同時觀察問號所在的四宮格、直排與橫排，合併三種線索找出答案。",need:5},
+advanced:{step:7,title:"第七步：找出真正有用的線索",mode:"advanced",text:"棋盤上有些數字和問號無直接關係。請判斷問號所在的橫排、直排與四宮格，找出唯一答案。所有數字顏色相同，請靠規則判斷。",need:5}
 };
 const $=id=>document.getElementById(id),home=$("home"),game=$("game"),grid=$("grid"),feedback=$("feedback"),modal=$("modal"),next=$("next"),modalHome=$("modal-home"),hint=$("hint"),buttons=Array.from(document.querySelectorAll(".pad button")),sm=$("font-smaller"),lg=$("font-larger");
 const STORAGE_KEY="lezaiblingzhong_sudoku_progress_v3";let font=1,current=null,currentId=null,missing=0,streak=0,q=1,answered=false,timer=null;
@@ -34,6 +35,51 @@ function render(){
   const r=Math.floor(Math.random()*4),c=Math.floor(Math.random()*4);missing=solution[r][c];
   grid.className="sudoku";grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";grid.style.width="min(100%,420px)";grid.style.aspectRatio="1";
   for(let rr=0;rr<4;rr++)for(let cc=0;cc<4;cc++){let v=document.createElement("div");v.className="cell sudoku-cell";v.style.border="1px solid #718096";if(cc===1)v.style.borderRightWidth="3px";if(rr===1)v.style.borderBottomWidth="3px";if(rr===r&&cc===c){v.classList.add("missing");v.dataset.gap="1"}else v.textContent=solution[rr][cc];grid.appendChild(v)}return;
+ }
+ if(current.mode==="advanced"){
+  // Step 7: show only one decisive clue from each target unit, plus unrelated
+  // distractors. Validate that no single unit alone rules out all alternatives.
+  const base=[[1,2,3,4],[3,4,1,2],[2,1,4,3],[4,3,2,1]];
+  const shuffle=a=>{const out=a.slice();for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;};
+  function makeBoard(){
+    const ro=[];shuffle([0,1]).forEach(b=>shuffle([0,1]).forEach(x=>ro.push(b*2+x)));
+    const co=[];shuffle([0,1]).forEach(b=>shuffle([0,1]).forEach(x=>co.push(b*2+x)));
+    const ds=shuffle([1,2,3,4]);return ro.map(r=>co.map(c=>ds[base[r][c]-1]));
+  }
+  let board,tr,tc,rowClue,colClue,boxClue;
+  for(let attempt=0;attempt<500&&!board;attempt++){
+    const b=makeBoard();
+    for(let r=0;r<4&&!board;r++)for(let c=0;c<4&&!board;c++){
+      const answer=b[r][c], other=[1,2,3,4].filter(v=>v!==answer), br=Math.floor(r/2)*2,bc=Math.floor(c/2)*2;
+      const rows=[];for(let x=0;x<4;x++)if(x!==c&&Math.floor(x/2)!==Math.floor(c/2))rows.push({r,c:x,v:b[r][x]});
+      const cols=[];for(let y=0;y<4;y++)if(y!==r&&Math.floor(y/2)!==Math.floor(r/2))cols.push({r:y,c,v:b[y][c]});
+      const boxes=[];for(let y=br;y<br+2;y++)for(let x=bc;x<bc+2;x++)if(y!==r&&x!==c)boxes.push({r:y,c:x,v:b[y][x]});
+      const options=[];for(const a of rows)for(const d of cols)for(const e of boxes){if(new Set([a.v,d.v,e.v]).size===3&&other.every(v=>[a.v,d.v,e.v].includes(v)))options.push({a,d,e});}
+      if(options.length){const chosen=options[Math.floor(Math.random()*options.length)];board=b;tr=r;tc=c;rowClue=chosen.a;colClue=chosen.d;boxClue=chosen.e;}
+    }
+  }
+  // Deterministic fallback known to satisfy all three independent clues.
+  if(!board){board=[[1,2,3,4],[3,4,1,2],[2,1,4,3],[4,3,2,1]];tr=0;tc=0;rowClue={r:0,c:2,v:3};colClue={r:2,c:0,v:2};boxClue={r:1,c:1,v:4};}
+  missing=board[tr][tc];
+  const shown=new Set([`${rowClue.r},${rowClue.c}`,`${colClue.r},${colClue.c}`,`${boxClue.r},${boxClue.c}`]);
+  // Add 2-3 clues outside the target's row, column and box. Include the answer
+  // value elsewhere when possible, so matching digits alone cannot solve it.
+  const unrelated=[];for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+    const outsideUnits=r!==tr&&c!==tc&&(Math.floor(r/2)!==Math.floor(tr/2)||Math.floor(c/2)!==Math.floor(tc/2));
+    if(outsideUnits&&!shown.has(`${r},${c}`))unrelated.push({r,c});
+  }
+  const answerCopies=unrelated.filter(p=>board[p.r][p.c]===missing);
+  if(answerCopies.length)shown.add(`${answerCopies[0].r},${answerCopies[0].c}`);
+  shuffle(unrelated.filter(p=>!shown.has(`${p.r},${p.c}`))).slice(0,3).forEach(p=>shown.add(`${p.r},${p.c}`));
+  grid.className="sudoku sparse-board advanced";grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";grid.style.width="min(100%,480px)";grid.style.aspectRatio="1";grid.style.height="auto";
+  for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+    const item=document.createElement("div");item.className="cell sudoku-cell sparse-board-cell empty-clue";item.style.border="1px solid #d8d8d8";
+    if(c===1)item.style.borderRightWidth="3px";if(r===1)item.style.borderBottomWidth="3px";
+    if(r===tr&&c===tc){item.className="cell sudoku-cell sparse-board-cell missing";item.dataset.gap="1";}
+    else if(shown.has(`${r},${c}`)){item.classList.remove("empty-clue");item.textContent=String(board[r][c]);}
+    grid.appendChild(item);
+  }
+  return;
  }
  if(current.mode==="boxways"){
   // Step 6: three clues must belong to the target's row, column, and 2x2 box.
@@ -185,7 +231,7 @@ function render(){
  }
 }
 function answer(n){if(answered)return;if(n===missing){answered=true;streak++;const c=grid.querySelector("[data-gap]");if(c){c.className="cell filled sudoku-cell";c.textContent=String(n);c.removeAttribute("data-gap")}buttons.forEach(b=>b.disabled=true);hint.disabled=true;say(`答對了！目前連續答對 ${streak} / ${current.need} 題。`,"good");timer=setTimeout(()=>{if(streak>=current.need)complete();else{q++;render()}},streak>=current.need?450:650)}else{streak=0;say("再想一想！請重新觀察線索。","bad");setTimeout(()=>{if(!answered)say("沒關係，慢慢找。請再選一次。")},900)}}
-function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已連續答對 ${current.need} 題，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前六個練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
+function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已連續答對 ${current.need} 題，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前七個練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
 function goHome(){clearTimeout(timer);modal.classList.add("hidden");game.classList.add("hidden");home.classList.remove("hidden");current=null;currentId=null;updateHomeProgress();window.scrollTo(0,0)}
 document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));buttons.forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.n))));$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(current&&!answered)say("提示：缺少的數字是 "+missing+"。")});sm.addEventListener("click",()=>{if(font>0){font--;fontApply()}});lg.addEventListener("click",()=>{if(font<3){font++;fontApply()}});loadProgress();updateHomeProgress();fontApply()
 })();

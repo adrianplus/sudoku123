@@ -93,3 +93,11 @@
 
 /* v19: sixth-step clue cells are validated against row, column and 2x2 box */
 #grid.sudoku.sparse-board.boxways .sparse-board-cell{font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800}
+
+/* Step 7: all clue digits intentionally share the same style. */
+#grid.sudoku.sparse-board.advanced{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));width:min(100%,480px);aspect-ratio:1;margin:0 auto;border:3px solid #29384b;overflow:hidden}
+#grid.sudoku.sparse-board.advanced .sparse-board-cell{aspect-ratio:1;min-width:0;min-height:0;font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800;color:#29384b}
+#grid.sudoku.sparse-board.advanced .empty-clue{background:#fff;border-color:#d8d8d8}
+#grid.sudoku.sparse-board.advanced .missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
+#grid.sudoku.sparse-board.advanced .missing:after{content:"?"}
+@media(max-width:640px){#grid.sudoku.sparse-board.advanced{width:min(100%,92vw)}#grid.sudoku.sparse-board.advanced .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
