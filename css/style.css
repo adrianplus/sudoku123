@@ -40,3 +40,34 @@
 #grid.sudoku .cell.filled{background:#e8f7ee;color:#176b47}
 #grid.sudoku .cell{aspect-ratio:1;min-width:0;min-height:0}
 @media(max-width:640px){#grid.sudoku .cell{font-size:clamp(2rem,10vw,3.4rem)}}
+
+/* v12：第5、6步改為稀疏線索，不再顯示填滿的16格棋盤 */
+#grid.sparse{display:grid;justify-content:center;align-content:center;gap:0;margin:0 auto;border:0;width:auto;max-width:100%;height:auto;aspect-ratio:auto;overflow:visible}
+#grid.sparse .sparse-cell{display:grid;place-items:center;min-width:0;min-height:0;aspect-ratio:1;border:2px solid #718096;background:#fff;font-size:clamp(2rem,6vw,3.1rem);font-weight:800}
+#grid.sparse.rowcol .sparse-cell{width:clamp(64px,12vw,92px);height:clamp(64px,12vw,92px)}
+#grid.sparse.linebox .sparse-cell{width:clamp(70px,13vw,100px);height:clamp(70px,13vw,100px)}
+#grid.sparse .sparse-cell.missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
+#grid.sparse .sparse-cell.missing:after{content:"?"}
+@media(max-width:640px){
+ #grid.sparse.rowcol .sparse-cell{width:clamp(58px,17vw,78px);height:clamp(58px,17vw,78px);font-size:2.2rem}
+ #grid.sparse.linebox .sparse-cell{width:clamp(62px,18vw,82px);height:clamp(62px,18vw,82px);font-size:2.2rem}
+}
+
+/* v13: fifth step uses only the target, horizontal clues and one vertical clue */
+#grid.sparse.rowcol{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(54px,90px));width:min(100%,360px);margin:0 auto}
+#grid.sparse.rowcol .sparse-cell{width:clamp(58px,8vw,84px);height:clamp(58px,8vw,84px)}
+#grid.sparse.rowcol .sparse-cell[style*="grid-area: vblank"]{background:#fff;border-color:#d7d7d7}
+@media(max-width:640px){#grid.sparse.rowcol{grid-template-rows:repeat(3,minmax(54px,17vw));width:min(100%,340px)}#grid.sparse.rowcol .sparse-cell{width:clamp(50px,17vw,74px);height:clamp(50px,17vw,74px);font-size:2.1rem}}
+
+/* v14: fourth step is sparse row+column deduction; sixth step removed */
+#grid.sparse.rowcol{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(54px,90px));width:min(100%,360px);margin:0 auto}
+#grid.sparse.rowcol .sparse-cell{width:clamp(58px,8vw,84px);height:clamp(58px,8vw,84px)}
+@media(max-width:640px){#grid.sparse.rowcol{grid-template-rows:repeat(3,minmax(54px,17vw));width:min(100%,340px)}#grid.sparse.rowcol .sparse-cell{width:clamp(50px,17vw,74px);height:clamp(50px,17vw,74px);font-size:2.1rem}}
+
+/* v15：第四步固定呈現完整4×4格線，只填入少量橫排與直排線索 */
+#grid.sudoku.sparse-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));width:min(100%,480px);aspect-ratio:1;margin:0 auto;border:3px solid #29384b;overflow:hidden}
+#grid.sudoku.sparse-board .sparse-board-cell{aspect-ratio:1;min-width:0;min-height:0;font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800}
+#grid.sudoku.sparse-board .sparse-board-cell.empty-clue{background:#fff;border-color:#d8d8d8}
+#grid.sudoku.sparse-board .sparse-board-cell.missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
+#grid.sudoku.sparse-board .sparse-board-cell.missing:after{content:"?"}
+@media(max-width:640px){#grid.sudoku.sparse-board{width:min(100%,92vw)}#grid.sudoku.sparse-board .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
