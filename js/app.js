@@ -36,54 +36,73 @@ function render(){
   for(let rr=0;rr<4;rr++)for(let cc=0;cc<4;cc++){let v=document.createElement("div");v.className="cell sudoku-cell";v.style.border="1px solid #718096";if(cc===1)v.style.borderRightWidth="3px";if(rr===1)v.style.borderBottomWidth="3px";if(rr===r&&cc===c){v.classList.add("missing");v.dataset.gap="1"}else v.textContent=solution[rr][cc];grid.appendChild(v)}return;
  }
  if(current.mode==="boxways"){
-  // Step 6: create a valid 4x4 Sudoku solution, then reveal only a sparse
-  // subset of clues from the target's row, column, and 2x2 box. Each unit
-  // alone leaves candidates; together the three units uniquely determine the answer.
+  // Step 6: three clues must belong to the target's row, column, and 2x2 box.
+  // The clue values are exactly the three non-answer digits, one supplied by
+  // each unit. Thus row+column still leave two candidates; the box clue resolves it.
   const baseBoard=[[1,2,3,4],[3,4,1,2],[2,1,4,3],[4,3,2,1]];
-  const perm=[1,2,3,4].sort(()=>Math.random()-0.5);
-  const board=baseBoard.map(row=>row.map(v=>perm[v-1]));
-  const tr=Math.floor(Math.random()*4),tc=Math.floor(Math.random()*4);
-  missing=board[tr][tc];
-  const peers={
-    row:[0,1,2,3].filter(c=>c!==tc).map(c=>({r:tr,c,v:board[tr][c]})),
-    col:[0,1,2,3].filter(r=>r!==tr).map(r=>({r,c:tc,v:board[r][tc]})),
-    box:[Math.floor(tr/2)*2,Math.floor(tr/2)*2+1].flatMap(r=>[Math.floor(tc/2)*2,Math.floor(tc/2)*2+1].map(c=>({r,c,v:board[r][c]}))).filter(x=>!(x.r===tr&&x.c===tc))
-  };
-  const masks=[1,2,3,4,5,6,7];
-  let chosen=null;
-  for(let tries=0;tries<300&&!chosen;tries++){
-    const picks={};
-    for(const unit of ["row","col","box"]){
-      const arr=peers[unit],mask=masks[Math.floor(Math.random()*masks.length)];
-      picks[unit]=arr.filter((x,i)=>(mask&(1<<i))!==0);
+  const shuffle=a=>{const out=a.slice();for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;};
+  function makeBoard(){
+    const bandOrder=shuffle([0,1]), rowOrder=[];
+    bandOrder.forEach(b=>shuffle([0,1]).forEach(r=>rowOrder.push(b*2+r)));
+    const stackOrder=shuffle([0,1]), colOrder=[];
+    stackOrder.forEach(b=>shuffle([0,1]).forEach(c=>colOrder.push(b*2+c)));
+    const digits=shuffle([1,2,3,4]);
+    return rowOrder.map(r=>colOrder.map(c=>digits[baseBoard[r][c]-1]));
+  }
+  let board=null,tr=0,tc=0,rowClue=null,colClue=null,boxClue=null;
+  for(let attempt=0;attempt<200&&!board;attempt++){
+    const candidate=makeBoard(), options=[];
+    for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+      const target=candidate[r][c], otherDigits=[1,2,3,4].filter(v=>v!==target);
+      const boxR=Math.floor(r/2)*2, boxC=Math.floor(c/2)*2;
+      const rows=[0,1,2,3].filter(x=>Math.floor(x/2)!==Math.floor(c/2)).map(x=>({r,c:x,v:candidate[r][x]}));
+      const cols=[0,1,2,3].filter(y=>Math.floor(y/2)!==Math.floor(r/2)).map(y=>({r:y,c,v:candidate[y][c]}));
+      const boxes=[];
+      for(let y=boxR;y<boxR+2;y++)for(let x=boxC;x<boxC+2;x++){
+        if(y!==r&&x!==c)boxes.push({r:y,c:x,v:candidate[y][x]});
+      }
+      for(const ro of rows)for(const co of cols)for(const bo of boxes){
+        if(new Set([ro.v,co.v,bo.v]).size===3 &&
+           otherDigits.every(v=>[ro.v,co.v,bo.v].includes(v))){
+          options.push({r,c,ro,co,bo});
+        }
+      }
     }
-    const sets={};
-    for(const unit of ["row","col","box"])sets[unit]=new Set(picks[unit].map(x=>x.v));
-    const union=new Set([...sets.row,...sets.col,...sets.box]);
-    const expected=new Set([1,2,3,4].filter(v=>v!==missing));
-    const allCovered=[...expected].every(v=>union.has(v))&&union.size===3;
-    const eachAmbiguous=["row","col","box"].every(u=>sets[u].size<3);
-    const eachContributes=["row","col","box"].every(u=>{
-      const others=new Set([...sets[ u==="row"?"col":"row"],...sets[u==="box"?"col":"box"]]);
-      const other2=new Set(["row","col","box"].filter(v=>v!==u).flatMap(v=>[...sets[v]]));
-      return [...sets[u]].some(v=>!other2.has(v));
-    });
-    if(allCovered&&eachAmbiguous&&eachContributes)chosen=picks;
+    if(options.length){
+      const chosen=options[Math.floor(Math.random()*options.length)];
+      board=candidate;tr=chosen.r;tc=chosen.c;
+      rowClue=chosen.ro;colClue=chosen.co;boxClue=chosen.bo;
+    }
   }
-  if(!chosen){
-    // Safe fallback: reveal all three peers from each unit; answer still follows Sudoku rules.
-    chosen={row:peers.row,col:peers.col,box:peers.box};
+  // A known-valid fallback, used only if the randomized search unexpectedly fails.
+  if(!board){
+    board=baseBoard;tr=0;tc=0;missing=1;
+    rowClue={r:0,c:2,v:3};colClue={r:2,c:0,v:2};boxClue={r:1,c:1,v:4};
   }
-  const clueMap=new Map();
-  for(const unit of ["row","col","box"])for(const x of chosen[unit])clueMap.set(`${x.r},${x.c}`,x.v);
+  missing=board[tr][tc];
+  const clueMap=new Map([
+    [`${rowClue.r},${rowClue.c}`,rowClue.v],
+    [`${colClue.r},${colClue.c}`,colClue.v],
+    [`${boxClue.r},${boxClue.c}`,boxClue.v]
+  ]);
   grid.className="sudoku sparse-board boxways";
-  grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";
+  grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";
+  grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";
   grid.style.width="min(100%,480px)";grid.style.aspectRatio="1";grid.style.height="auto";
   for(let r=0;r<4;r++)for(let c=0;c<4;c++){
-    const item=document.createElement("div");item.className="cell sudoku-cell sparse-board-cell empty-clue";
-    item.style.border="1px solid #d8d8d8";if(c===1)item.style.borderRightWidth="3px";if(r===1)item.style.borderBottomWidth="3px";
-    if(r===tr&&c===tc){item.className="cell sudoku-cell sparse-board-cell missing";item.dataset.gap="1"}
-    else if(clueMap.has(`${r},${c}`)){item.classList.remove("empty-clue");item.style.borderColor="#718096";item.textContent=String(clueMap.get(`${r},${c}`))}
+    const item=document.createElement("div");
+    item.className="cell sudoku-cell sparse-board-cell empty-clue";
+    item.style.border="1px solid #d8d8d8";
+    if(c===1)item.style.borderRightWidth="3px";
+    if(r===1)item.style.borderBottomWidth="3px";
+    if(r===tr&&c===tc){
+      item.className="cell sudoku-cell sparse-board-cell missing";
+      item.dataset.gap="1";
+    }else if(clueMap.has(`${r},${c}`)){
+      item.classList.remove("empty-clue");
+      item.style.borderColor="#718096";
+      item.textContent=String(clueMap.get(`${r},${c}`));
+    }
     grid.appendChild(item);
   }
   return;

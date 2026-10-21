@@ -87,3 +87,9 @@
 #grid.sudoku.sparse-board.boxways .missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
 #grid.sudoku.sparse-board.boxways .missing:after{content:"?"}
 @media(max-width:640px){#grid.sudoku.sparse-board.boxways{width:min(100%,92vw)}#grid.sudoku.sparse-board.boxways .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
+
+/* v18：第六步只保留三個策略線索，確保橫直不足以單獨解題 */
+#grid.sudoku.sparse-board.boxways .sparse-board-cell{font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800}
+
+/* v19: sixth-step clue cells are validated against row, column and 2x2 box */
+#grid.sudoku.sparse-board.boxways .sparse-board-cell{font-size:clamp(1.8rem,6vw,3.2rem);font-weight:800}
