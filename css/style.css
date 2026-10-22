@@ -113,3 +113,8 @@
 #grid.sudoku.breakthrough .breakthrough-cell.selected{background:#e8f4ff;outline:4px solid #3b82b5;outline-offset:-4px;}
 #grid.sudoku.breakthrough .breakthrough-cell.wrong{color:#c62828!important;background:#fff0f0;}
 #grid.sudoku.breakthrough .breakthrough-cell.locked{font-weight:800;cursor:default;background:#fff;}
+
+
+/* v35：第4至第13步將4x4棋盤中央十字線加粗；第1至第3步維持原樣。依格子位置套用，避免依賴不存在的 .sudoku-cell 類別。 */
+#game.strong-box-lines #grid > :nth-child(4n + 2){border-right:4px solid #222!important}
+#game.strong-box-lines #grid > :nth-child(n + 5):nth-child(-n + 8){border-bottom:4px solid #222!important}
