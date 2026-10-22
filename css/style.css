@@ -101,3 +101,10 @@
 #grid.sudoku.sparse-board.advanced .missing{background:#fff4d6;border:3px solid #d99a1c;color:#9a6a11}
 #grid.sudoku.sparse-board.advanced .missing:after{content:"?"}
 @media(max-width:640px){#grid.sudoku.sparse-board.advanced{width:min(100%,92vw)}#grid.sudoku.sparse-board.advanced .sparse-board-cell{font-size:clamp(2rem,10vw,3.5rem)}}
+/* 第九步：4x4數獨實戰 */
+#grid.sudoku.practical .practical-cell{cursor:pointer;background:#fff;color:#243247;}
+#grid.sudoku.practical .practical-cell.selected{background:#e8f4ff;outline:4px solid #3b82b5;outline-offset:-4px;}
+#grid.sudoku.practical .practical-cell.wrong{color:#c62828!important;background:#fff0f0;}
+#grid.sudoku.practical .practical-cell.locked{font-weight:800;cursor:default;background:#f7f9fc;}
+.check-wrap{display:flex;justify-content:center;margin-top:8px;}
+#check-answers{min-width:150px;min-height:48px;padding:10px 24px;border:0;border-radius:11px;background:#176b47;color:#fff;font-weight:bold;font-size:1.1em;}
