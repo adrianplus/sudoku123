@@ -283,14 +283,22 @@ function answer(n){if(answered)return;if(current&&current.mode==="breakthrough")
   {targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
  ];
  const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],[r,c]=selectedCell.split(",").map(Number),target=puzzle.targets.find(t=>t.r===r&&t.c===c),values=window.breakthroughValues||(window.breakthroughValues={});
- if(target&&target.v===n){delete values[selectedCell];say("答對了！你找到破局點！","good");answered=true;buttons.forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>{window.breakthroughIndex=pi+1;selectedCell=null;if(window.breakthroughIndex>=3)complete();else{q++;render();say("新題目來了！再找出一個破局點。")}},550);return;}
+ if(target&&target.v===n){Object.keys(values).forEach(key=>{if(values[key]&&values[key].wrong)delete values[key];});delete values[selectedCell];say("答對了！你找到破局點！","good");answered=true;buttons.forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>{window.breakthroughIndex=pi+1;selectedCell=null;if(window.breakthroughIndex>=3)complete();else{q++;render();say("新題目來了！再找出一個破局點。")}},550);return;}
  values[selectedCell]={value:n,wrong:true};selectedCell=null;render();say("這次不對，數字已標紅。再觀察一下，重新找破局點！","bad");return;
  }if(current&&current.mode==="practical"){
  if(!selectedCell){say("請先點選棋盤上的空格，再選擇數字。","bad");return;}
  const values=window.practicalValues||(window.practicalValues={});values[selectedCell]=n;render();say("已填入數字。填好後按「檢查」，也可以繼續修改。","good");return;
  }if(n===missing){answered=true;if(current.mode==="classic"){buttons.forEach(b=>b.disabled=true);hint.disabled=true;const c=grid.querySelector("[data-gap]");if(c){c.removeAttribute("data-gap");c.className="cell sudoku-cell sparse-board-cell";c.textContent=String(n)}classicIndex++;say(`答對了！已完成 ${classicIndex} / 6 題。`,"good");timer=setTimeout(()=>{if(classicIndex>=6)complete();else{q++;render()}},650);return}streak++;const c=grid.querySelector("[data-gap]");if(c){c.className="cell filled sudoku-cell";c.textContent=String(n);c.removeAttribute("data-gap")}buttons.forEach(b=>b.disabled=true);hint.disabled=true;say(`答對了！目前連續答對 ${streak} / ${current.need} 題。`,"good");timer=setTimeout(()=>{if(streak>=current.need)complete();else{q++;render()}},streak>=current.need?450:650)}else{streak=0;say("再想一想！請重新觀察線索。","bad");setTimeout(()=>{if(!answered)say("沒關係，慢慢找。請再選一次。")},900)}}
 function selectPracticalCell(item){if(item.classList.contains("locked"))return;selectedCell=item.dataset.cell;grid.querySelectorAll(".practical-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));say("已選取空格，請按下方數字填入。")}
-function selectBreakthroughCell(item){if(item.classList.contains("locked"))return;selectedCell=item.dataset.cell;grid.querySelectorAll(".breakthrough-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));say("已選取這一格，請選擇你認為正確的數字。")}
+function selectBreakthroughCell(item){
+ if(item.classList.contains("locked"))return;
+ const values=window.breakthroughValues||(window.breakthroughValues={});
+ // 開始新一次嘗試時，清除上一個錯誤答案，避免紅字干擾。
+ Object.keys(values).forEach(key=>{if(values[key]&&values[key].wrong)delete values[key];});
+ selectedCell=item.dataset.cell;
+ render();
+ say("已選取這一格，請選擇你認為正確的數字。");
+}
 function checkPractical(){if(currentId!=="practical")return;const values=window.practicalValues||(window.practicalValues={});const fixed=new Set(["0,3","1,2","2,0","3,3"]);let filled=0,wrong=0,empty=0;const solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]];
  grid.querySelectorAll(".practical-cell").forEach(cell=>{const key=cell.dataset.cell;if(fixed.has(key))return;const v=values[key];cell.classList.remove("wrong");if(v===undefined){empty++;return;}filled++;const [r,c]=key.split(",").map(Number);if(v!==solution[r][c]){wrong++;cell.classList.add("wrong");}});
  if(wrong){say(`已檢查 ${filled} 格，有 ${wrong} 格不正確，紅色數字請再試試看。正確答案不會直接公布。`,"bad");return;}
