@@ -8,7 +8,8 @@ threeways:{step:5,title:"第五步：同時考慮三個方向",mode:"threeways",
 boxways:{step:6,title:"第六步：宮＋直排＋橫排",mode:"boxways",text:"請同時觀察問號所在的四宮格、直排與橫排，合併三種線索找出答案。",need:5},
 advanced:{step:7,title:"第七步：找出真正有用的線索",mode:"advanced",text:"棋盤上有些數字和問號無直接關係。請判斷問號所在的橫排、直排與四宮格，找出唯一答案。所有數字顏色相同，請靠規則判斷。",need:5},
 classic:{step:8,title:"第八步：4X4數獨練習",mode:"classic",text:"依照一到六的順序解題。每答對一格，答案就會保留在棋盤上，再繼續下一個位置。",need:6},
-practical:{step:9,title:"第九步：4X4數獨實戰",mode:"practical",text:"先選擇棋盤上的空格，再按下方數字填入。填好後按「檢查」；答錯的數字會標紅，不會直接公布答案。",need:1}
+practical:{step:9,title:"第九步：4X4數獨實戰",mode:"practical",text:"先選擇棋盤上的空格，再按下方數字填入。填好後按「檢查」；答錯的數字會標紅，不會直接公布答案。",need:1},
+breakthrough:{step:10,title:"第十步：找到4X4數獨的破局點",mode:"breakthrough",text:"觀察棋盤，找出第一個可以確定答案的格子。選擇空格並填入數字；答對立即進入下一題，答錯會標紅，請重新尋找。",need:1}
 };
 const $=id=>document.getElementById(id),home=$("home"),game=$("game"),grid=$("grid"),feedback=$("feedback"),modal=$("modal"),next=$("next"),modalHome=$("modal-home"),hint=$("hint"),buttons=Array.from(document.querySelectorAll(".pad button")),sm=$("font-smaller"),lg=$("font-larger");
 const STORAGE_KEY="lezaiblingzhong_sudoku_progress_v3";let font=1,current=null,currentId=null,missing=0,streak=0,q=1,answered=false,timer=null,classicIndex=0,selectedCell=null,hintUsed=0;
@@ -18,11 +19,28 @@ function saveProgress(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(prog
 function updateHomeProgress(){const n=progressData.completed.length;$("completed-count").textContent=String(n);const b=$("resume-progress");b.disabled=n===0;b.setAttribute("aria-label",`已完成 ${n}/100，點擊回到上次完成的任務`);b.title=n?`回到上次完成的任務：${L[progressData.lastCompleted]?.title||""}`:"完成第一個任務後，就能從這裡回到上次完成的任務"}
 function fontApply(){document.body.classList.remove(...levels);document.body.classList.add(levels[font]);sm.disabled=font===0;lg.disabled=font===3}
 function say(t,k=""){feedback.textContent=t;feedback.className=k}
-function start(id){if(!L[id])return;clearTimeout(timer);modal.classList.add("hidden");currentId=id;current=L[id];streak=0;q=1;classicIndex=0;selectedCell=null;hintUsed=0;if(id==="practical")window.practicalValues={};home.classList.add("hidden");game.classList.remove("hidden");game.classList.toggle("column-layout",id==="column");$("title").textContent=current.title;$("progress").textContent=current.step;$("instruction").textContent=current.text;render();window.scrollTo(0,0)}
+function start(id){if(!L[id])return;clearTimeout(timer);modal.classList.add("hidden");currentId=id;current=L[id];streak=0;q=1;classicIndex=0;selectedCell=null;hintUsed=0;if(id==="practical")window.practicalValues={};if(id==="breakthrough"){window.breakthroughIndex=0;window.breakthroughValues={};}home.classList.add("hidden");game.classList.remove("hidden");game.classList.toggle("column-layout",id==="column");$("title").textContent=current.title;$("progress").textContent=current.step;$("instruction").textContent=current.text;render();window.scrollTo(0,0)}
 function render(){
  answered=false;buttons.forEach(b=>{b.disabled=false;b.blur()});hint.disabled=false;$ ("check-wrap").classList.toggle("hidden",current.mode!=="practical");
  say("請觀察格子，再選擇下方數字。");$("question").textContent=`第 ${q} 題`;grid.innerHTML="";
  grid.style.width="";grid.style.height="";grid.style.aspectRatio="";
+ if(current.mode==="breakthrough"){
+  const puzzles=[
+   {fixed:[[1,0,3],[2,3,4],[3,1,1],[3,3,3]],targets:[{r:2,c:0,v:2},{r:3,c:2,v:2}]},
+   {fixed:[[0,1,4],[0,3,2],[2,0,3],[2,3,1]],targets:[{r:0,c:0,v:1}]},
+   {fixed:[[0,3,1],[1,0,2],[2,2,3],[2,3,2]],targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
+  ];
+  const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],values=window.breakthroughValues||(window.breakthroughValues={});
+  const fixedMap=new Map(puzzle.fixed.map(([r,c,v])=>[`${r},${c}`,v]));
+  grid.className="sudoku sparse-board breakthrough";grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";grid.style.width="min(100%,480px)";grid.style.aspectRatio="1";grid.style.height="auto";
+  for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+   const key=`${r},${c}`,item=document.createElement("div");item.dataset.cell=key;item.className="cell sudoku-cell sparse-board-cell breakthrough-cell";item.style.border="1px solid #d8d8d8";if(c===1)item.style.borderRightWidth="3px";if(r===1)item.style.borderBottomWidth="3px";
+   if(fixedMap.has(key)){item.textContent=String(fixedMap.get(key));item.classList.add("locked");}
+   else {if(values[key]!==undefined){item.textContent=String(values[key].value);if(values[key].wrong)item.classList.add("wrong");}item.tabIndex=0;item.setAttribute("role","button");item.setAttribute("aria-label",`第${r+1}列第${c+1}欄，${values[key]===undefined?'空格':values[key].value}`);item.addEventListener("click",()=>selectBreakthroughCell(item));if(selectedCell===key)item.classList.add("selected");}
+   grid.appendChild(item);
+  }
+  $("question").textContent=`破局題 ${pi+1} / 3`;return;
+ }
  if(current.mode==="practical"){
   const fixed=[[0,3,3],[1,2,4],[2,0,1],[3,3,2]];
   const solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]];
@@ -257,19 +275,30 @@ function render(){
   return;
  }
 }
-function answer(n){if(answered)return;if(current&&current.mode==="practical"){
+function answer(n){if(answered)return;if(current&&current.mode==="breakthrough"){
+ if(!selectedCell){say("請先點選你認為可以突破的空格，再選擇數字。","bad");return;}
+ const puzzles=[
+  {targets:[{r:2,c:0,v:2},{r:3,c:2,v:2}]},
+  {targets:[{r:0,c:0,v:1}]},
+  {targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
+ ];
+ const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],[r,c]=selectedCell.split(",").map(Number),target=puzzle.targets.find(t=>t.r===r&&t.c===c),values=window.breakthroughValues||(window.breakthroughValues={});
+ if(target&&target.v===n){delete values[selectedCell];say("答對了！你找到破局點！","good");answered=true;buttons.forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>{window.breakthroughIndex=pi+1;selectedCell=null;if(window.breakthroughIndex>=3)complete();else{q++;render();say("新題目來了！再找出一個破局點。")}},550);return;}
+ values[selectedCell]={value:n,wrong:true};selectedCell=null;render();say("這次不對，數字已標紅。再觀察一下，重新找破局點！","bad");return;
+ }if(current&&current.mode==="practical"){
  if(!selectedCell){say("請先點選棋盤上的空格，再選擇數字。","bad");return;}
  const values=window.practicalValues||(window.practicalValues={});values[selectedCell]=n;render();say("已填入數字。填好後按「檢查」，也可以繼續修改。","good");return;
  }if(n===missing){answered=true;if(current.mode==="classic"){buttons.forEach(b=>b.disabled=true);hint.disabled=true;const c=grid.querySelector("[data-gap]");if(c){c.removeAttribute("data-gap");c.className="cell sudoku-cell sparse-board-cell";c.textContent=String(n)}classicIndex++;say(`答對了！已完成 ${classicIndex} / 6 題。`,"good");timer=setTimeout(()=>{if(classicIndex>=6)complete();else{q++;render()}},650);return}streak++;const c=grid.querySelector("[data-gap]");if(c){c.className="cell filled sudoku-cell";c.textContent=String(n);c.removeAttribute("data-gap")}buttons.forEach(b=>b.disabled=true);hint.disabled=true;say(`答對了！目前連續答對 ${streak} / ${current.need} 題。`,"good");timer=setTimeout(()=>{if(streak>=current.need)complete();else{q++;render()}},streak>=current.need?450:650)}else{streak=0;say("再想一想！請重新觀察線索。","bad");setTimeout(()=>{if(!answered)say("沒關係，慢慢找。請再選一次。")},900)}}
 function selectPracticalCell(item){if(item.classList.contains("locked"))return;selectedCell=item.dataset.cell;grid.querySelectorAll(".practical-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));say("已選取空格，請按下方數字填入。")}
+function selectBreakthroughCell(item){if(item.classList.contains("locked"))return;selectedCell=item.dataset.cell;grid.querySelectorAll(".breakthrough-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));say("已選取這一格，請選擇你認為正確的數字。")}
 function checkPractical(){if(currentId!=="practical")return;const values=window.practicalValues||(window.practicalValues={});const fixed=new Set(["0,3","1,2","2,0","3,3"]);let filled=0,wrong=0,empty=0;const solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]];
  grid.querySelectorAll(".practical-cell").forEach(cell=>{const key=cell.dataset.cell;if(fixed.has(key))return;const v=values[key];cell.classList.remove("wrong");if(v===undefined){empty++;return;}filled++;const [r,c]=key.split(",").map(Number);if(v!==solution[r][c]){wrong++;cell.classList.add("wrong");}});
  if(wrong){say(`已檢查 ${filled} 格，有 ${wrong} 格不正確，紅色數字請再試試看。正確答案不會直接公布。`,"bad");return;}
  if(empty){say(`目前填入的 ${filled} 格都正確！還有 ${empty} 格未完成，繼續加油。`,"good");return;}
  say("全部正確！你完成了 4X4 數獨實戰！","good");answered=true;buttons.forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>complete(),650);
 }
-function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced",advanced:"classic",classic:"practical"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已完成這一步，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
+function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced",advanced:"classic",classic:"practical",practical:"breakthrough"})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已完成這一步，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
 function goHome(){clearTimeout(timer);modal.classList.add("hidden");game.classList.add("hidden");home.classList.remove("hidden");current=null;currentId=null;updateHomeProgress();window.scrollTo(0,0)}
-document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));buttons.forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.n))));$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(!current||answered)return;if(current.mode==="practical"){const targets=[[2,3],[1,3],[0,2],[2,2],[2,1],[3,2]],solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]],values=window.practicalValues||(window.practicalValues={});let target=null;for(const [r,c] of targets){const key=`${r},${c}`;if(values[key]!==solution[r][c]){target={r,c,key,value:solution[r][c]};break;}}if(hintUsed>=6||!target){say("加油！提示已經使用完畢，你可以自己做到！","good");hint.disabled=true;return;}values[target.key]=target.value;hintUsed++;selectedCell=null;render();if(hintUsed>=6)say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。加油！提示已經使用完畢，你可以自己做到！`);else say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。`);if(hintUsed>=6)hint.disabled=true;return;}say("提示：缺少的數字是 "+missing+"。")});
+document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));buttons.forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.n))));$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(!current||answered)return;if(current.mode==="breakthrough"){say("這一關請靠自己的觀察找出破局點！");return;}if(current.mode==="practical"){const targets=[[2,3],[1,3],[0,2],[2,2],[2,1],[3,2]],solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]],values=window.practicalValues||(window.practicalValues={});let target=null;for(const [r,c] of targets){const key=`${r},${c}`;if(values[key]!==solution[r][c]){target={r,c,key,value:solution[r][c]};break;}}if(hintUsed>=6||!target){say("加油！提示已經使用完畢，你可以自己做到！","good");hint.disabled=true;return;}values[target.key]=target.value;hintUsed++;selectedCell=null;render();if(hintUsed>=6)say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。加油！提示已經使用完畢，你可以自己做到！`);else say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。`);if(hintUsed>=6)hint.disabled=true;return;}say("提示：缺少的數字是 "+missing+"。")});
 $("check-answers").addEventListener("click",checkPractical);sm.addEventListener("click",()=>{if(font>0){font--;fontApply()}});lg.addEventListener("click",()=>{if(font<3){font++;fontApply()}});loadProgress();updateHomeProgress();fontApply()
 })();

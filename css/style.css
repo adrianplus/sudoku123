@@ -108,3 +108,8 @@
 #grid.sudoku.practical .practical-cell.locked{font-weight:800;cursor:default;background:#f7f9fc;}
 .check-wrap{display:flex;justify-content:center;margin-top:8px;}
 #check-answers{min-width:150px;min-height:48px;padding:10px 24px;border:0;border-radius:11px;background:#176b47;color:#fff;font-weight:bold;font-size:1.1em;}
+
+#grid.sudoku.breakthrough .breakthrough-cell{cursor:pointer;background:#fff;color:#243247;}
+#grid.sudoku.breakthrough .breakthrough-cell.selected{background:#e8f4ff;outline:4px solid #3b82b5;outline-offset:-4px;}
+#grid.sudoku.breakthrough .breakthrough-cell.wrong{color:#c62828!important;background:#fff0f0;}
+#grid.sudoku.breakthrough .breakthrough-cell.locked{font-weight:800;cursor:default;background:#fff;}
