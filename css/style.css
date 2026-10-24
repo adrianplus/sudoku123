@@ -166,3 +166,7 @@
 #grid.six-note-board .six-note-cell.note-gap{position:relative}
 #note-mode[data-state="ON"]::after{content:"ON"}
 #note-mode[data-state="OFF"]::after{content:"OFF"}
+
+/* v48：第十五步與第十九步直排改回六個正方形格子 */
+#grid.six-practice-board.vertical-square-board{aspect-ratio:1 / 6!important;width:min(100%,108px)!important}
+#grid.six-practice-board.vertical-square-board .six-practice-cell{aspect-ratio:1 / 1}
