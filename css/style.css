@@ -139,3 +139,30 @@
 
 /* v42：4x4數獨標題改成與6×6數獨標籤一致的外觀 */
 .home-heading h2{display:inline-block;padding:4px 14px;background:#eaf3ff;border:1px solid #b9cbe2;border-radius:10px;color:#243247;font-size:1.35em;line-height:1.4;margin:0}
+
+/* v43：第十八步筆記模式工具列與小字呈現 */
+.game-tools{display:flex;align-items:center;gap:6px}
+.game-tools button:not(#hint){min-width:46px;height:40px;padding:4px 10px;border:2px solid #b9cbe2;border-radius:10px;background:#fff;color:#17467f;font-weight:800}
+.game-tools button.active{background:#eaf3ff;border-color:#245ea8;box-shadow:inset 0 0 0 1px #245ea8}
+.game-tools button:disabled{opacity:.45}
+#grid.six-note-board .six-note-cell{position:relative;cursor:pointer}
+#grid.six-note-board .six-note-cell.note-gap{background:#fffdf5}
+#grid.six-note-board .six-note-cell.selected{outline:3px solid #245ea8;outline-offset:-4px;background:#eaf3ff}
+#grid.six-note-board .pencil-mini-grid{position:absolute;inset:5%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));align-items:center;justify-items:center;width:90%;height:90%;pointer-events:none}
+#grid.six-note-board .pencil-note{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:clamp(1.05rem,3.1vw,1.65rem);font-weight:700;line-height:1;color:#c21828}
+#grid.six-note-board .pencil-note.filled{visibility:visible}
+#grid.six-note-board .pencil-note:not(.filled){visibility:hidden}
+#game.six-note-mode .pad{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media(max-width:640px){.game-tools{gap:4px}.game-tools button:not(#hint){min-width:40px;height:36px;padding:3px 7px;font-size:.9em}}
+
+
+/* v44：筆記模式明確顯示 ON／OFF；修正切換格子時題目重抽的問題 */
+#note-mode{position:relative;padding-right:34px!important}
+#note-mode::after{content:attr(data-state);position:absolute;right:4px;top:2px;font-size:.58rem;line-height:1.2;padding:2px 4px;border-radius:4px;background:#1b8a55;color:#fff;letter-spacing:.02em}
+#note-mode[data-state="OFF"]::after{background:#a6a6a6;color:#fff}
+#note-mode[data-state="ON"]{background:#eaf3ff;border-color:#245ea8;box-shadow:inset 0 0 0 1px #245ea8}
+
+/* v45：筆記採格內 3×2 候選數字區，放大字體；每格可記多個候選數字。 */
+#grid.six-note-board .six-note-cell.note-gap{position:relative}
+#note-mode[data-state="ON"]::after{content:"ON"}
+#note-mode[data-state="OFF"]::after{content:"OFF"}
