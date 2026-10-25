@@ -192,3 +192,7 @@
 #grid.number-focus-board .number-focus-cell.number-focus-filled{color:#111}
 #grid.number-focus-board .number-focus-cell.number-focus-empty{cursor:pointer}
 #grid.number-focus-board .number-focus-cell.six-intro-target{background:#fff4d6;color:#e11d2e}
+
+
+/* v58：第二十四步只保留六宮格必要的橫向分隔線，並明確顯示玩家選取的空格 */
+#grid.number-focus-board .number-focus-cell.selected{background:#e7f1ff!important;outline:3px solid #3478d4;outline-offset:-4px;position:relative;z-index:2}
