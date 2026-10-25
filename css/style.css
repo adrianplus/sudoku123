@@ -170,3 +170,25 @@
 /* v48：第十五步與第十九步直排改回六個正方形格子 */
 #grid.six-practice-board.vertical-square-board{aspect-ratio:1 / 6!important;width:min(100%,108px)!important}
 #grid.six-practice-board.vertical-square-board .six-practice-cell{aspect-ratio:1 / 1}
+
+
+/* v53：第二十二步完整棋盤筆記實戰，逐格完成八個候選數字目標 */
+#grid.six-note-combat-board{border:4px solid #222;background:#fff;box-sizing:border-box;max-width:100%}
+#grid.six-note-combat-board .six-note-combat-cell{position:relative;cursor:pointer}
+#grid.six-note-combat-board .six-note-combat-cell.note-gap{background:#fffdf5}
+#grid.six-note-combat-board .six-note-combat-cell.selected{outline:3px solid #245ea8;outline-offset:-4px;background:#eaf3ff}
+#grid.six-note-combat-board .six-note-combat-cell .pencil-mini-grid{position:absolute;inset:4%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));align-items:center;justify-items:center;width:92%;height:92%;pointer-events:none}
+#grid.six-note-combat-board .pencil-note{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:clamp(.95rem,2.7vw,1.45rem);font-weight:700;line-height:1;color:#c21828}
+#grid.six-note-combat-board .pencil-note.filled{visibility:visible}
+#grid.six-note-combat-board .pencil-note:not(.filled){visibility:hidden}
+#game.six-note-mode .pad{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+
+#grid.six-note-combat-board .six-note-combat-cell.six-intro-target{background:#fff1c9;box-shadow:inset 0 0 0 3px #d99a1c}
+#grid.six-note-combat-board .six-note-combat-cell.six-intro-correct{background:#e8f7ed}
+
+/* v55：第二十三步逐一檢查數字，金色反白顯示受影響的橫排、直排與六宮格 */
+#grid.number-focus-board .number-focus-cell.scan-highlight{background:#fff0bf!important}
+#grid.number-focus-board .number-focus-cell.scan-number{background:#f5cf68!important;box-shadow:inset 0 0 0 2px #d99a1c}
+#grid.number-focus-board .number-focus-cell.number-focus-filled{color:#111}
+#grid.number-focus-board .number-focus-cell.number-focus-empty{cursor:pointer}
+#grid.number-focus-board .number-focus-cell.six-intro-target{background:#fff4d6;color:#e11d2e}
