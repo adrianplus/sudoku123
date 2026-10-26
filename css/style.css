@@ -196,3 +196,16 @@
 
 /* v58：第二十四步只保留六宮格必要的橫向分隔線，並明確顯示玩家選取的空格 */
 #grid.number-focus-board .number-focus-cell.selected{background:#e7f1ff!important;outline:3px solid #3478d4;outline-offset:-4px;position:relative;z-index:2}
+
+
+/* v59：第二十五步完整 6×6 數獨實戰 */
+#grid.number-focus-full-board .number-focus-full-cell{position:relative;display:grid;place-items:center;min-width:0;min-height:0;font-size:clamp(1.5rem,5.5vw,2.7rem);cursor:pointer;box-sizing:border-box;}
+#grid.number-focus-full-board .number-focus-full-cell.locked{color:#7b3fa5;cursor:default;}
+#grid.number-focus-full-board .number-focus-full-cell.number-focus-filled{color:#111;}
+#grid.number-focus-full-board .number-focus-full-cell.scan-highlight{background:#fff0bf!important;}
+#grid.number-focus-full-board .number-focus-full-cell.scan-number{background:#f5cf68!important;box-shadow:inset 0 0 0 2px #d99a1c;}
+#grid.number-focus-full-board .number-focus-full-cell.selected{background:#e7f1ff!important;outline:3px solid #3478d4;outline-offset:-4px;z-index:2;}
+#grid.number-focus-full-board .pencil-mini-grid{position:absolute;inset:4%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));align-items:center;justify-items:center;width:92%;height:92%;pointer-events:none;}
+#grid.number-focus-full-board .pencil-note{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:clamp(.75rem,2vw,1.2rem);font-weight:700;line-height:1;color:#c21828;}
+#grid.number-focus-full-board .pencil-note.filled{visibility:visible;}
+#grid.number-focus-full-board .pencil-note:not(.filled){visibility:hidden;}
