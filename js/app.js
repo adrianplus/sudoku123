@@ -178,7 +178,7 @@ function render(){
  if(current.mode==="breakthrough"){
   const puzzles=[
    {fixed:[[1,0,3],[2,3,4],[3,1,1],[3,3,3]],targets:[{r:2,c:0,v:2},{r:3,c:2,v:2}]},
-   {fixed:[[0,1,4],[0,3,2],[2,0,3],[2,3,1]],targets:[{r:0,c:0,v:1}]},
+   {fixed:[[0,1,4],[0,3,2],[2,0,3],[2,3,1]],targets:[{r:0,c:0,v:1},{r:2,c:1,v:2}]},
    {fixed:[[0,3,1],[1,0,2],[2,2,3],[2,3,2]],targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
   ];
   const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],values=window.breakthroughValues||(window.breakthroughValues={});
@@ -493,7 +493,7 @@ function answer(n){if(answered)return;if(current&&(current.mode==="numberfocus3"
  if(!selectedCell){say("請先點選你認為可以突破的空格，再選擇數字。","bad");return;}
  const puzzles=[
   {targets:[{r:2,c:0,v:2},{r:3,c:2,v:2}]},
-  {targets:[{r:0,c:0,v:1}]},
+  {targets:[{r:0,c:0,v:1},{r:2,c:1,v:2}]},
   {targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
  ];
  const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],[r,c]=selectedCell.split(",").map(Number),target=puzzle.targets.find(t=>t.r===r&&t.c===c),values=window.breakthroughValues||(window.breakthroughValues={});
