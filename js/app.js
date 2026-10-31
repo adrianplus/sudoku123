@@ -553,7 +553,7 @@ $("check-answers").addEventListener("click",checkPractical);sm.addEventListener(
 // v69：以第11～13步畢業考題為題庫的4×4簡單隨機遊戲
 const playHub=document.getElementById("play-hub"),randomMenu=document.getElementById("random-menu"),randomGame=document.getElementById("random-game");
 const randomState={solution:null,puzzle:null,givens:null,selected:null,sourceStep:null,completed:false,notes:{},noteMode:false};
-const random6State={solution:null,puzzle:null,givens:null,selected:null,completed:false,notes:{},noteMode:false,scanDigit:null};
+const random6State={solution:null,puzzle:null,givens:null,selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set()};
 function showPlayView(view){document.body.classList.remove("in-lesson");[home,game,playHub,randomMenu,randomGame].forEach(el=>el.classList.add("hidden"));view.classList.remove("hidden");modal.classList.add("hidden");window.scrollTo(0,0);}
 $("play-top").addEventListener("click",()=>showPlayView(playHub));$("play-home").addEventListener("click",goHome);
 $("random-sudoku-entry").addEventListener("click",()=>{showPlayView(randomMenu);document.getElementById("difficulty-area").classList.add("hidden");document.getElementById("random-menu-message").textContent="";});
@@ -698,33 +698,46 @@ function renderRandom6(){
  const board=$("random-grid"),pad=$("random-pad");board.innerHTML="";pad.innerHTML="";pad.classList.add("random-pad-6");board.className="random-grid-6";board.style.gridTemplateColumns="repeat(6,minmax(0,1fr))";
  const affected=new Set();if(random6State.scanDigit!==null){for(let r=0;r<6;r++)for(let c=0;c<6;c++)if(random6State.puzzle[r][c]===random6State.scanDigit){for(let i=0;i<6;i++){affected.add(`${r},${i}`);affected.add(`${i},${c}`);}const br=Math.floor(r/2)*2,bc=Math.floor(c/3)*3;for(let rr=br;rr<br+2;rr++)for(let cc=bc;cc<bc+3;cc++)affected.add(`${rr},${cc}`);}}
  for(let r=0;r<6;r++)for(let c=0;c<6;c++){
-  const key=`${r},${c}`,v=random6State.puzzle[r][c],given=!!random6State.givens[r][c],cell=document.createElement("button");cell.type="button";cell.className="random-cell"+(given?" fixed":"")+(random6State.selected===key?" selected":"")+(affected.has(key)?" scan-highlight":"")+(random6State.scanDigit!==null&&v===random6State.scanDigit?" scan-number":"")+(v&&v!==random6State.solution[r][c]?" wrong":"");cell.dataset.r=r;cell.dataset.c=c;
+  const key=`${r},${c}`,v=random6State.puzzle[r][c],given=!!random6State.givens[r][c],cell=document.createElement("button");cell.type="button";cell.className="random-cell"+(given?" fixed":"")+(random6State.selected===key?" selected":"")+(affected.has(key)?" scan-highlight":"")+(random6State.scanDigit!==null&&v===random6State.scanDigit?" scan-number":"")+(random6State.checkedWrong.has(key)?" wrong":"");cell.dataset.r=r;cell.dataset.c=c;
   if(c===2)cell.classList.add("box-right");if(r===1||r===3)cell.classList.add("box-bottom");
   if(v)cell.textContent=String(v);else{const notes=random6State.notes[key]||[];if(notes.length){const mini=document.createElement("span");mini.className="random-pencil-mini six-pencil-mini";for(let n=1;n<=6;n++){const small=document.createElement("span");small.textContent=notes.includes(n)?String(n):"";mini.appendChild(small);}cell.appendChild(mini);}}
-  if(given){cell.setAttribute("aria-label",`第${r+1}列第${c+1}欄，題目數字${v}`);cell.addEventListener("click",()=>{if(random6State.completed)return;random6State.scanDigit=v;random6State.selected=null;renderRandom6();randomSay(`已反金數字 ${v} 所在的橫排、直排與六宮格。` ,"good");});}
-  else{cell.setAttribute("aria-label",`第${r+1}列第${c+1}欄，${v||"空格"}`);cell.addEventListener("click",()=>{if(random6State.completed)return;random6State.selected=key;renderRandom6();});}
+  if(v){cell.setAttribute("aria-label",`第${r+1}列第${c+1}欄，${given?"題目原有":"自行填入"}數字${v}${given?"；點選可反金":"；點選可反金，也可選取修改"}`);cell.addEventListener("click",()=>{if(random6State.completed)return;if(given){random6State.scanDigit=v;random6State.selected=null;renderRandom6();randomSay(`已反金數字 ${v} 所在的橫排、直排與六宮格。` ,"good");}else{random6State.selected=key;random6State.scanDigit=v;renderRandom6();randomSay(`已選取自行填入的數字 ${v}；可觀察反金區域，也可直接輸入新數字或按「空」清除。`);}});}
+  else{cell.setAttribute("aria-label",`第${r+1}列第${c+1}欄，空格`);cell.addEventListener("click",()=>{if(random6State.completed)return;random6State.selected=key;random6State.scanDigit=null;renderRandom6();});}
   board.appendChild(cell);
  }
  for(let n=1;n<=6;n++){const b=document.createElement("button");b.type="button";b.textContent=String(n);b.addEventListener("click",()=>{
   if(random6State.completed)return;if(random6State.selected===null){randomSay("請先選擇棋盤上的空格；點選題目中已有的數字則可反金觀察相關區域。","bad");return;}
+  if(b.disabled)return;
   const [r,c]=random6State.selected.split(",").map(Number),key=random6State.selected;
-  if(random6State.noteMode){const notes=random6State.notes[key]||(random6State.notes[key]=[]);if(notes.includes(n)){random6State.notes[key]=notes.filter(x=>x!==n);if(!random6State.notes[key].length)delete random6State.notes[key];}else{notes.push(n);notes.sort((a,b)=>a-b);}randomSay(`已更新候選數字 ${n}。`);}
-  else{random6State.puzzle[r][c]=n;delete random6State.notes[key];random6State.selected=null;randomSay("數字已填入。");}
-  renderRandom6();if(!random6State.noteMode&&random6State.puzzle.every(row=>row.every(v=>v!==0)))checkRandom6();
- });pad.appendChild(b);}
+  if(random6State.noteMode){if(random6State.puzzle[r][c]!==0){randomSay("請先清除這格的答案，再使用筆記。","bad");return;}const notes=random6State.notes[key]||(random6State.notes[key]=[]);if(notes.includes(n)){random6State.notes[key]=notes.filter(x=>x!==n);if(!random6State.notes[key].length)delete random6State.notes[key];}else{notes.push(n);notes.sort((a,b)=>a-b);}randomSay(`已更新候選數字 ${n}。`);}
+  else{random6State.puzzle[r][c]=n;delete random6State.notes[key];random6State.checkedWrong.delete(key);random6State.selected=null;random6State.scanDigit=n;randomSay("數字已填入；按下「檢查答案」後才會判斷對錯。");}
+  renderRandom6();
+  // 最後一格以答案模式填入時，自動執行檢查；筆記模式不會觸發。
+  if(!random6State.noteMode && random6State.puzzle.every(row=>row.every(value=>value!==0)))checkRandom6();
+ });
+  // 比照第25、26步：某個數字在整盤所有應填位置都正確完成後，該數字按鍵轉灰。
+  const digitComplete=Array.from({length:6},(_,i)=>i+1).every(d=>{
+   if(d!==n)return true;
+   for(let rr=0;rr<6;rr++)for(let cc=0;cc<6;cc++)if(random6State.solution[rr][cc]===d&&random6State.puzzle[rr][cc]!==d)return false;
+   return true;
+  });
+  b.disabled=digitComplete;
+  b.classList.toggle("digit-complete",digitComplete);
+  b.setAttribute("aria-label",digitComplete?`數字 ${n} 已全部完成`:`輸入數字 ${n}`);
+  pad.appendChild(b);}
  const nb=$("random-note-mode");nb.classList.toggle("active",random6State.noteMode);nb.dataset.state=random6State.noteMode?"ON":"OFF";nb.setAttribute("aria-pressed",String(random6State.noteMode));
  // 「空」在未選取空格時仍可使用：若目前正在反金，按下即可取消反金。
  $("random-clear-cell").disabled=random6State.selected===null&&random6State.scanDigit===null;
 }
-function startRandom6(blankCount=7,label="簡單"){const generated=createRandom6Puzzle(blankCount);Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,blankCount,label});$("random-title").textContent=`6×6 隨機數獨｜${label}`;$("random-instruction").textContent=`六宮格為2列×3欄。本題隨機挖空${blankCount}格，且已確認只有唯一解。點選題目中已有的數字，可反金該數字所在的橫排、直排與六宮格；選取空格後按下方數字填入，也可以使用筆記。最後一格填完後會自動檢查。`;$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay(`開始解題吧！本題共有${blankCount}格空白。點選棋盤上已有的數字，可以反金觀察相關區域。`);renderRandom6();showPlayView(randomGame);}
-function checkRandom6(){if(random6State.completed)return;let blanks=0,wrong=0;for(let r=0;r<6;r++)for(let c=0;c<6;c++){if(random6State.puzzle[r][c]===0)blanks++;else if(random6State.puzzle[r][c]!==random6State.solution[r][c])wrong++;}if(blanks||wrong){renderRandom6();const cells=$("random-grid").children;for(let r=0;r<6;r++)for(let c=0;c<6;c++)if(random6State.puzzle[r][c]&&random6State.puzzle[r][c]!==random6State.solution[r][c])cells[r*6+c].classList.add("wrong");randomSay(blanks?`還有 ${blanks} 格尚未填寫。`:`有 ${wrong} 格答案不正確，請再修改。`,"bad");return;}random6State.completed=true;random6State.selected=null;renderRandom6();$("random-actions").classList.add("hidden");$("random-complete").classList.remove("hidden");randomSay("全部正確！這題完成了！","good");}
+function startRandom6(blankCount=7,label="簡單"){const generated=createRandom6Puzzle(blankCount);Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount,label});$("random-title").textContent=`6×6 隨機數獨｜${label}`;$("random-instruction").textContent=`六宮格為2列×3欄。本題隨機挖空${blankCount}格，且已確認只有唯一解。點選題目中已有的數字，可反金該數字所在的橫排、直排與六宮格；選取空格或自己填入的數字後按下方數字填入；只有按下「檢查答案」才會標示錯誤。也可以使用筆記。`;$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay(`開始解題吧！本題共有${blankCount}格空白。點選棋盤上已有的數字，可以反金觀察相關區域。`);renderRandom6();showPlayView(randomGame);}
+function checkRandom6(){if(random6State.completed)return;let blanks=0,wrong=0;random6State.checkedWrong=new Set();for(let r=0;r<6;r++)for(let c=0;c<6;c++){const key=`${r},${c}`,value=random6State.puzzle[r][c];if(value===0)blanks++;else if(!random6State.givens[r][c]&&value!==random6State.solution[r][c]){wrong++;random6State.checkedWrong.add(key);}}if(blanks||wrong){renderRandom6();randomSay(blanks?`還有 ${blanks} 格尚未填寫。`:`有 ${wrong} 格答案不正確，紅色數字請再修改。`,"bad");return;}random6State.completed=true;random6State.selected=null;renderRandom6();$("random-actions").classList.add("hidden");$("random-complete").classList.remove("hidden");randomSay("全部正確！這題完成了！","good");}
 $("random-clear-cell").addEventListener("click",()=>{if(randomSize===6){
  if(!random6State.selected){
   if(random6State.scanDigit!==null){random6State.scanDigit=null;renderRandom6();randomSay("已取消數字反金，棋盤恢復原來顯示。");}
   else randomSay("目前沒有選取的空格，也沒有反金中的數字。");
   return;
  }
- const key=random6State.selected,[r,c]=key.split(",").map(Number);if(random6State.givens[r][c]){randomSay("題目原有數字不能清除。","bad");return;}random6State.puzzle[r][c]=0;delete random6State.notes[key];random6State.selected=null;renderRandom6();randomSay("已清除選取格的答案與筆記。");return;
+ const key=random6State.selected,[r,c]=key.split(",").map(Number);if(random6State.givens[r][c]){randomSay("題目原有數字不能清除。","bad");return;}random6State.puzzle[r][c]=0;delete random6State.notes[key];random6State.checkedWrong.delete(key);random6State.selected=null;renderRandom6();randomSay("已清除選取格的答案與筆記。");return;
 } });
 $("random-note-mode").addEventListener("click",()=>{if(randomSize===6){if(random6State.completed)return;random6State.noteMode=!random6State.noteMode;renderRandom6();randomSay(random6State.noteMode?"筆記模式已開啟。選取空格，再按數字加入或移除候選小字。":"筆記模式已關閉。按數字會直接填入答案。");}});
 $("random-hint").addEventListener("click",()=>{if(randomSize===6&&!random6State.completed)randomSay("提示：先觀察某一橫排、直排或六宮格中，哪些數字已經出現；也可以點選已知數字反金相關區域，再用筆記記錄候選數字。","good");});

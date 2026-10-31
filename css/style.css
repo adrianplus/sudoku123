@@ -282,3 +282,6 @@ body.in-lesson #play-top{display:none}
 @media(max-width:640px){#random-grid.random-grid-6{width:min(100%,94vw)}#random-grid.random-grid-6 .random-cell{font-size:clamp(1.15rem,7vw,2rem)}#random-grid.random-grid-6 .six-pencil-mini span{font-size:clamp(.5rem,2.5vw,.85rem)}}
 #difficulty-area-6 .choice-grid button{background:#fff8e8;border-color:#e6c77f;color:#795313}
 #difficulty-area-6 .choice-grid button:disabled{opacity:.58;cursor:not-allowed}
+
+/* v81：6×6 隨機數獨中，某數字全盤完成後按鍵反灰，沿用第25、26步視覺 */
+#random-pad.random-pad-6 button:disabled, #random-pad.random-pad-6 button.digit-complete{background:#e5e7eb!important;color:#8a929d!important;border-color:#c4c9d1!important;box-shadow:none!important;opacity:1!important;cursor:not-allowed}
