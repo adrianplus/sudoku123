@@ -214,3 +214,19 @@
 /* v64：第二十六步完成數字反灰、放大筆記鍵，並保留空鍵取消反白 */
 #game.numberfocus4-mode #note-mode{width:clamp(80px,12vw,140px);min-height:clamp(46px,7vh,62px);padding-left:10px;padding-right:34px!important;font-size:1.05em}
 #game.numberfocus4-mode .pad button:disabled, #game.numberfocus4-mode .pad button.digit-complete{background:#e5e7eb!important;color:#8a929d!important;border-color:#c4c9d1!important;box-shadow:none!important;opacity:1;cursor:not-allowed}
+/* v67：益智遊戲專區介面版型；本版先完成導覽與選單，不啟用隨機出題 */
+#play-top{color:#c62828;border-color:#e7a0a0;background:#fff0f0;font-size:1.18em;font-weight:900;min-width:44px;box-shadow:0 2px 0 #f1caca}
+.play-cards{display:grid;gap:12px}.play-card{display:flex;flex-direction:column;gap:6px;text-align:left;padding:18px;border:2px solid #d5deea;border-radius:14px;background:#fff;color:var(--ink);min-height:86px}.play-card strong{font-size:1.2em;color:var(--blue)}.play-card span{color:var(--muted)}.play-card.coming{background:#f7f8fa;opacity:.75}.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}.choice-grid button,.random-actions button{border:2px solid #b9cbe2;border-radius:12px;background:#eaf3ff;color:#17467f;padding:14px 8px;font-weight:800;min-height:58px}.choice-grid button:active,.random-actions button:active{background:#d4e6fb}#random-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,460px);aspect-ratio:1;border:3px solid #29384b;margin:auto;background:white}#random-grid .random-cell{display:grid;place-items:center;border:1px solid #aab4c2;font-size:clamp(1.8rem,6vw,3rem);font-weight:800;min-width:0;min-height:0;aspect-ratio:1;background:white;color:#243247}#random-grid .random-cell.fixed{background:#f0f2f5;color:#4a5568}#random-grid .random-cell.selected{background:#dceeff;outline:3px solid #2878c8;outline-offset:-3px}#random-grid .random-cell.wrong{color:#c62828;background:#fff0f0}#random-pad{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:12px}#random-pad button:disabled{opacity:.3}#random-feedback{text-align:center;font-weight:700;min-height:1.5em;margin:10px 0}#random-feedback.good{color:#176b47}#random-feedback.bad{color:#b42318}.random-actions{display:flex;justify-content:center;gap:10px;margin-top:12px}.random-actions button{min-width:130px}
+@media(max-width:640px){nav{gap:3px}#play-top{font-size:1.08em;min-width:38px}.choice-grid{grid-template-columns:1fr}#random-grid{width:min(100%,92vw)}#random-grid .random-cell{font-size:clamp(1.7rem,10vw,3rem)}.random-actions button{flex:1;min-width:0}}
+#random-grid .random-cell:nth-child(4n+2){border-right:3px solid #29384b}#random-grid .random-cell:nth-child(n+5):nth-child(-n+8){border-bottom:3px solid #29384b}
+
+/* v67：遊戲入口與選單視覺整理 */
+#play-hub .gamehead,#random-menu .gamehead{margin-bottom:16px}
+#play-hub .play-card{transition:transform .12s ease,border-color .12s ease;cursor:pointer}
+#play-hub .play-card:not(.coming):hover{border-color:#7da7d8;transform:translateY(-1px)}
+#play-hub .play-card.coming{border-style:dashed;cursor:default}
+#random-menu .choice-grid button{font-size:1.05em;line-height:1.35}
+#random-menu #difficulty-area{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+#random-menu #difficulty-area .choice-grid button{background:#fff8e8;border-color:#e6c77f;color:#795313}
+#random-menu #random-menu-message{padding:12px 14px;border-radius:12px;background:#f1f6fc;line-height:1.5}
+@media(max-width:640px){#play-hub .play-card{min-height:82px;padding:15px}#random-menu .choice-grid{gap:8px}#random-menu .choice-grid button{min-height:54px}}
