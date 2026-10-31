@@ -232,3 +232,40 @@ body.in-lesson #play-top{display:none}
 #random-menu #difficulty-area .choice-grid button{background:#fff8e8;border-color:#e6c77f;color:#795313}
 #random-menu #random-menu-message{padding:12px 14px;border-radius:12px;background:#f1f6fc;line-height:1.5}
 @media(max-width:640px){#play-hub .play-card{min-height:82px;padding:15px}#random-menu .choice-grid{gap:8px}#random-menu .choice-grid button{min-height:54px}}
+
+/* v69：4×4簡單隨機題完成流程 */
+#random-game .random-cell:not(.fixed){cursor:pointer}
+#random-game .random-cell.fixed{cursor:default}
+#random-game .random-cell.wrong{color:#c62828!important;background:#fff0f0!important;box-shadow:inset 0 0 0 2px #c62828}
+.random-complete{display:grid;grid-template-columns:1fr;gap:10px;margin:18px auto 0;max-width:460px;padding:16px;border:2px solid #b8d8c6;border-radius:14px;background:#f2fbf5}
+.random-complete p{margin:0 0 4px;text-align:center;font-size:1.2em;font-weight:900;color:#176b47}
+.random-complete button{min-height:54px;padding:12px;border:2px solid #b9cbe2;border-radius:12px;background:#fff;color:#17467f;font-weight:800;font-size:1.05em}
+.random-complete #random-up-difficulty{color:#c62828;border-color:#e6a0a0;background:#fff3f3}
+@media(max-width:640px){.random-complete{width:100%;padding:12px}.random-complete button{min-height:52px}}
+
+/* v70：4×4隨機遊戲移植第24～26步共用操作工具列 */
+#random-game .random-gamefoot{margin-top:8px;justify-content:flex-end;gap:10px}
+#random-game .random-gamefoot>span{margin-right:auto;font-size:.9em}
+#random-game .game-tools{display:flex;align-items:center;gap:6px}
+#random-game .game-tools button:not(#random-hint){min-width:46px;height:40px;padding:4px 10px;border:2px solid #b9cbe2;border-radius:10px;background:#fff;color:#17467f;font-weight:800}
+#random-game #random-note-mode{position:relative;padding-right:34px!important}
+#random-game #random-note-mode::after{content:attr(data-state);position:absolute;right:4px;top:2px;font-size:.58rem;line-height:1.2;padding:2px 4px;border-radius:4px;background:#a6a6a6;color:#fff;letter-spacing:.02em}
+#random-game #random-note-mode[data-state="ON"]::after{background:#1b8a55;content:"ON"}
+#random-game #random-note-mode[data-state="OFF"]::after{content:"OFF"}
+#random-game #random-note-mode.active{background:#eaf3ff;border-color:#245ea8;box-shadow:inset 0 0 0 1px #245ea8}
+#random-game #random-clear-cell:disabled{opacity:.45;cursor:not-allowed}
+#random-game #random-hint{width:50px;height:44px;border:2px solid #e5c56b;border-radius:10px;background:#fff8d9;font-size:1.5em;box-shadow:0 0 10px #f4d46b66}
+#random-grid .random-pencil-mini{position:absolute;inset:5%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));align-items:center;justify-items:center;width:90%;height:90%;pointer-events:none}
+#random-grid .random-pencil-mini span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:clamp(.8rem,2.5vw,1.25rem);font-weight:700;line-height:1;color:#c21828}
+#random-grid .random-cell{position:relative}
+@media(max-width:640px){#random-game .random-gamefoot{gap:5px}#random-game .game-tools{gap:4px}#random-game .game-tools button:not(#random-hint){min-width:40px;height:36px;padding:3px 7px;font-size:.9em}#random-game #random-hint{width:42px;height:38px}}
+
+
+/* v72：4×4隨機數獨筆記格固定依數字位置顯示 */
+#random-grid .random-pencil-mini{position:absolute;inset:5%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));width:90%;height:90%;align-items:center;justify-items:center;pointer-events:none;z-index:1}
+#random-grid .random-pencil-mini>span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:clamp(.9rem,2.8vw,1.35rem);font-weight:700;line-height:1;color:#c21828}
+#random-grid .random-pencil-mini>span:nth-child(1){grid-area:1/1}
+#random-grid .random-pencil-mini>span:nth-child(2){grid-area:1/2}
+#random-grid .random-pencil-mini>span:nth-child(3){grid-area:2/1}
+#random-grid .random-pencil-mini>span:nth-child(4){grid-area:2/2}
+#random-grid .random-cell{position:relative;overflow:hidden}
