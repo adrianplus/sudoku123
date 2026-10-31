@@ -285,3 +285,6 @@ body.in-lesson #play-top{display:none}
 
 /* v81：6×6 隨機數獨中，某數字全盤完成後按鍵反灰，沿用第25、26步視覺 */
 #random-pad.random-pad-6 button:disabled, #random-pad.random-pad-6 button.digit-complete{background:#e5e7eb!important;color:#8a929d!important;border-color:#c4c9d1!important;box-shadow:none!important;opacity:1!important;cursor:not-allowed}
+
+/* v91：6×6 隨機數獨操作歷史控制 */
+.random-history-controls{display:flex;align-items:center;justify-content:flex-end;gap:9px;margin:5px auto 8px;width:min(100%,560px);min-height:44px}.random-history-status{margin-right:0;color:#245ea8;font-size:.92em;font-weight:700;min-width:5.5em}.random-history-controls button{min-width:58px;min-height:42px;padding:5px 14px;border:2px solid #b9cbe2;border-radius:9px;background:#eaf3ff;color:#17467f;font-weight:800}.random-history-controls button:disabled{opacity:.35;cursor:not-allowed}@media(max-width:640px){.random-history-controls{width:min(100%,94vw);gap:6px}.random-history-controls button{min-width:52px;min-height:40px}.random-history-status{font-size:.88em}}
