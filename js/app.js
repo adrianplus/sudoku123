@@ -565,7 +565,62 @@ const graduateSolutions=[
  [[4,3,2,1],[2,1,4,3],[1,4,3,2],[3,2,1,4]]
 ];
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function createGraduateRandom4(){const sourceIndex=Math.floor(Math.random()*graduateSolutions.length);const solution=graduateSolutions[sourceIndex].map(row=>row.slice());const puzzle=solution.map(row=>row.slice());const removed=shuffle(Array.from({length:16},(_,i)=>i)).slice(0,4);removed.forEach(pos=>{puzzle[Math.floor(pos/4)][pos%4]=0;});return {solution,puzzle,sourceStep:sourceIndex+11};}
+function countRandom4Solutions(board,limit=2){
+ const grid=board.map(row=>row.slice());
+ const candidates=(r,c)=>{const used=new Set(grid[r]);for(let i=0;i<4;i++)used.add(grid[i][c]);const br=Math.floor(r/2)*2,bc=Math.floor(c/2)*2;for(let i=br;i<br+2;i++)for(let j=bc;j<bc+2;j++)used.add(grid[i][j]);return [1,2,3,4].filter(n=>!used.has(n));};
+ function solve(){let best=null,opts=null;for(let r=0;r<4;r++)for(let c=0;c<4;c++)if(grid[r][c]===0){const choices=candidates(r,c);if(!choices.length)return 0;if(opts===null||choices.length<opts.length){best=[r,c];opts=choices;}}if(!best)return 1;let total=0;const [r,c]=best;for(const n of opts){grid[r][c]=n;total+=solve();grid[r][c]=0;if(total>=limit)return total;}return total;}
+ return solve();
+}
+function transformGraduateSolution(source){
+ // 僅使用合法數獨等價變形：數字重命名、同一橫帶內交換列、橫帶互換、
+ // 同一直棧內交換欄、直棧互換，以及轉置。變形後仍是合法 4×4 數獨。
+ let g=source.map(row=>row.slice());
+ const permuteDigits=shuffle([1,2,3,4]);
+ g=g.map(row=>row.map(v=>permuteDigits[v-1]));
+ if(Math.random()<0.5) g=[g[2],g[3],g[0],g[1]];
+ if(Math.random()<0.5) [g[0],g[1]]=[g[1],g[0]];
+ if(Math.random()<0.5) [g[2],g[3]]=[g[3],g[2]];
+ if(Math.random()<0.5) g=g.map(row=>[row[2],row[3],row[0],row[1]]);
+ if(Math.random()<0.5) g=g.map(row=>{[row[0],row[1]]=[row[1],row[0]];return row;});
+ if(Math.random()<0.5) g=g.map(row=>{[row[2],row[3]]=[row[3],row[2]];return row;});
+ if(Math.random()<0.5) g=g[0].map((_,c)=>g.map(row=>row[c]));
+ return g;
+}
+function createGraduateRandom4(blankCount=4){
+ const sourceIndex=Math.floor(Math.random()*graduateSolutions.length);
+ let solution=null,puzzle=null;
+ // 困難模式：以第 11～13 步任一原題解盤為基礎，先做合法等價變形，
+ // 再抽出四個提示；必須至少有三種不同數字，且整題恰有唯一解。
+ const maxAttempts=blankCount===12?12000:5000;
+ for(let attempt=0;attempt<maxAttempts;attempt++){
+  const candidateSolution=transformGraduateSolution(graduateSolutions[sourceIndex]);
+  const positions=shuffle(Array.from({length:16},(_,i)=>i)).slice(0,16-blankCount);
+  const candidatePuzzle=Array.from({length:4},()=>[0,0,0,0]);
+  const clueValues=[];
+  positions.forEach(pos=>{const r=Math.floor(pos/4),c=pos%4,v=candidateSolution[r][c];candidatePuzzle[r][c]=v;clueValues.push(v);});
+  if(blankCount===12 && new Set(clueValues).size<3) continue;
+  if(countRandom4Solutions(candidatePuzzle)===1){solution=candidateSolution;puzzle=candidatePuzzle;break;}
+ }
+ // 若困難模式大量隨機嘗試仍未命中，改為窮舉提示位置；每一組仍以解數驗證，
+ // 不會退回可能有多重解的題目。
+ if(!puzzle && blankCount===12){
+  const base=transformGraduateSolution(graduateSolutions[sourceIndex]);
+  const combos=[];
+  for(let a=0;a<16;a++)for(let b=a+1;b<16;b++)for(let c=b+1;c<16;c++)for(let d=c+1;d<16;d++)combos.push([a,b,c,d]);
+  shuffle(combos);
+  for(const positions of combos){
+   const candidatePuzzle=Array.from({length:4},()=>[0,0,0,0]),values=[];
+   positions.forEach(pos=>{const r=Math.floor(pos/4),col=pos%4,v=base[r][col];candidatePuzzle[r][col]=v;values.push(v);});
+   if(new Set(values).size<3)continue;
+   if(countRandom4Solutions(candidatePuzzle)===1){solution=base;puzzle=candidatePuzzle;break;}
+  }
+ }
+ if(!puzzle){
+  // 不輸出無解或多解題目；使用者會看到明確提示，而非錯誤題目。
+  throw new Error("目前無法從來源題目產生符合條件的唯一解題目，請重新開始。");
+ }
+ return {solution,puzzle,sourceStep:sourceIndex+11};
+}
 function renderRandom4(){
  const board=$("random-grid"),pad=$("random-pad");
  board.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";
@@ -596,9 +651,11 @@ function renderRandom4(){
     else{notes.push(n);notes.sort((a,b)=>a-b);randomSay(`已記下候選數字 ${n}。`,"good");}
    }else{
     randomState.puzzle[r][c]=n;delete randomState.notes[key];randomState.selected=null;
-    randomSay("數字已填入。四格都填好後，請按「檢查答案」。");
+    randomSay("數字已填入。");
    }
    renderRandom4();
+   // 所有空格都已填入大字答案時，自動執行檢查；筆記輸入不會觸發。
+   if(!randomState.noteMode && randomState.puzzle.every(row=>row.every(value=>value!==0))){checkRandom4();}
   });pad.appendChild(b);
  }
  const noteBtn=$("random-note-mode");noteBtn.classList.toggle("active",randomState.noteMode);noteBtn.setAttribute("aria-pressed",String(randomState.noteMode));noteBtn.dataset.state=randomState.noteMode?"ON":"OFF";
@@ -606,15 +663,15 @@ function renderRandom4(){
 }
 
 function randomSay(msg,kind=""){const el=$("random-feedback");el.textContent=msg;el.className=kind;}
-function startRandom4(){randomBlanks=4;randomLabel="簡單";const generated=createGraduateRandom4();randomState.solution=generated.solution;randomState.puzzle=generated.puzzle;randomState.givens=generated.puzzle.map(row=>row.slice());randomState.selected=null;randomState.sourceStep=generated.sourceStep;randomState.completed=false;randomState.notes={};randomState.noteMode=false;$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;$("random-title").textContent="4×4 隨機數獨｜簡單";$("random-instruction").textContent="本題從第十一步至第十三步的畢業考題中隨機抽選，並隨機挖空四格。選取空格，再按下方數字填入；全部填好後按「檢查答案」。";$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-clear-cell").disabled=true;randomSay("開始解題吧！本題共有 4 格空白。");renderRandom4();showPlayView(randomGame);}
+function startRandom4(blankCount=4,label="簡單"){randomBlanks=blankCount;randomLabel=label;const generated=createGraduateRandom4(blankCount);randomState.solution=generated.solution;randomState.puzzle=generated.puzzle;randomState.givens=generated.puzzle.map(row=>row.slice());randomState.selected=null;randomState.sourceStep=generated.sourceStep;randomState.completed=false;randomState.notes={};randomState.noteMode=false;$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;$("random-title").textContent=`4×4 隨機數獨｜${randomLabel}`;$("random-instruction").textContent=`本題從第十一步至第十三步的畢業考題中隨機抽選，並隨機挖空 ${randomBlanks} 格。選取空格，再按下方數字填入；最後一格填完後會自動檢查。`;$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-clear-cell").disabled=true;randomSay(`開始解題吧！本題共有 ${randomBlanks} 格空白。`);renderRandom4();showPlayView(randomGame);}
 function checkRandom4(){if(randomState.completed)return;const blanks=[];let wrong=0;for(let r=0;r<4;r++)for(let c=0;c<4;c++)if(randomState.solution[r][c]!==randomState.puzzle[r][c]){if(randomState.puzzle[r][c]===0)blanks.push([r,c]);else wrong++;}if(blanks.length||wrong){renderRandom4();const cells=$("random-grid").children;for(let r=0;r<4;r++)for(let c=0;c<4;c++)if(randomState.puzzle[r][c]&&randomState.puzzle[r][c]!==randomState.solution[r][c])cells[r*4+c].classList.add("wrong");randomSay(blanks.length?`還有 ${blanks.length} 格尚未填寫。請完成後再檢查。`:`有 ${wrong} 格答案不正確，紅色數字請再修改。`,"bad");return;}randomState.completed=true;randomState.selected=null;renderRandom4();$("random-actions").classList.add("hidden");$("random-complete").classList.remove("hidden");randomSay("全部正確！這題完成了！","good");$("random-return-hub").focus();}
-document.querySelectorAll("[data-difficulty]").forEach(btn=>btn.addEventListener("click",()=>{const difficulty=btn.dataset.difficulty;if(difficulty==="easy"){startRandom4();}else{document.getElementById("random-menu-message").textContent="目前先開放簡單難度。普通與困難將在後續版本加入。";}}));
+document.querySelectorAll("[data-difficulty]").forEach(btn=>btn.addEventListener("click",()=>{const difficulty=btn.dataset.difficulty;if(difficulty==="easy"){startRandom4(4,"簡單");}else if(difficulty==="normal"){startRandom4(8,"普通");}else{startRandom4(12,"困難");}}));
 $("random-clear-cell").addEventListener("click",()=>{if(!randomState.selected){randomSay("目前沒有選取的空格。");return;}const key=randomState.selected,[r,c]=key.split(",").map(Number);if(randomState.givens[r][c]){randomSay("題目原有數字不能清除。","bad");return;}if(randomState.puzzle[r][c]!==0)randomState.puzzle[r][c]=0;delete randomState.notes[key];randomState.selected=null;$("random-clear-cell").disabled=true;renderRandom4();randomSay("已清除選取格的答案與筆記。");});
 $("random-note-mode").addEventListener("click",()=>{if(randomState.completed)return;randomState.noteMode=!randomState.noteMode;const b=$("random-note-mode");b.classList.toggle("active",randomState.noteMode);b.setAttribute("aria-pressed",String(randomState.noteMode));b.dataset.state=randomState.noteMode?"ON":"OFF";randomSay(randomState.noteMode?"筆記模式已開啟。選取空格，再按數字加入或移除候選小字。":"筆記模式已關閉。按數字會直接填入答案。");});
 $("random-hint").addEventListener("click",()=>{if(randomState.completed)return;randomSay("提示：先找出某一橫排、直排或 2×2 宮格中，只剩一個位置能放入某個數字的情況；也可以先用筆記記下候選數字。","good");});
 $("random-check").addEventListener("click",checkRandom4);
 $("random-return-hub").addEventListener("click",()=>showPlayView(playHub));
-$("random-play-again").addEventListener("click",startRandom4);
-$("random-up-difficulty").addEventListener("click",()=>{showPlayView(randomMenu);document.getElementById("difficulty-area").classList.remove("hidden");document.getElementById("random-menu-message").textContent="目前先開放簡單難度；普通與困難將在後續版本加入。";});
+$("random-play-again").addEventListener("click",()=>startRandom4(randomBlanks,randomLabel));
+$("random-up-difficulty").addEventListener("click",()=>{if(randomLabel==="簡單"){startRandom4(8,"普通");return;}if(randomLabel==="普通"){startRandom4(12,"困難");return;}showPlayView(randomMenu);document.getElementById("difficulty-area").classList.remove("hidden");document.getElementById("random-menu-message").textContent="困難已是目前最高難度。";});
 
 })();
