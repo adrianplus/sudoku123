@@ -716,27 +716,65 @@ function solveSixSinglesOnly(board){
  }
  return g.every(row=>row.every(Boolean));
 }
-function createRandom6Hard(){
- // 固定試作題：沿用第25步的完整答案盤面，重新挑選11個提示位置。
- // 本題共25格空白；經程式驗證只有唯一解，且裸單數／隱性單數無法解完。
- const solution=[[4,3,2,6,1,5],[1,6,5,3,4,2],[2,4,6,5,3,1],[3,5,1,2,6,4],[6,2,4,1,5,3],[5,1,3,4,2,6]];
- const puzzle=[[0,3,0,0,1,5],[1,0,0,3,4,0],[0,0,6,0,0,1],[0,0,0,0,0,0],[0,2,0,0,0,0],[5,0,0,4,0,0]];
- if(countSixSolutions(puzzle)!==1||solveSixSinglesOnly(puzzle))throw new Error("困難試作題驗證未通過，請勿開始解題。");
- return {solution,puzzle,blankCount:25};
+async function createRandom6Hard(onProgress=()=>{}){
+ // 困難隨機題：最多搜尋18,000次；只接受唯一解且基本單數推理無法解完整盤的題目。
+ // 每100次讓出主執行緒，避免搜尋期間整個網站無法操作。
+ const maxAttempts=18000,batchSize=100;
+ for(let attempt=1;attempt<=maxAttempts;attempt++){
+  const solution=transformSixSolution(sixBaseSolution);
+  const clueCount=15+Math.floor(Math.random()*7);
+  const positions=shuffle(Array.from({length:36},(_,i)=>i)).slice(0,clueCount);
+  const puzzle=Array.from({length:6},()=>Array(6).fill(0));
+  positions.forEach(pos=>{puzzle[Math.floor(pos/6)][pos%6]=solution[Math.floor(pos/6)][pos%6];});
+  if(countSixSolutions(puzzle)===1&&!solveSixSinglesOnly(puzzle)){
+   return {solution,puzzle,blankCount:36-clueCount,attempts:attempt};
+  }
+  if(attempt%batchSize===0){
+   onProgress(attempt,maxAttempts);
+   await new Promise(resolve=>setTimeout(resolve,0));
+  }
+ }
+ throw new Error(`已搜尋${maxAttempts.toLocaleString()}次，仍未找到符合條件的困難題。請再試一次。`);
 }
-// 燒腦級固定試作題：沿用第25步答案盤面，保留9個提示數字、挖空27格。
-// 已驗證提示數字恰為9個、唯一解，且裸單數／隱性單數無法單獨解完。
+// 燒腦之一：原「燒腦之二」固定題。15個提示數字、21格空白；唯一解。
+// 先以裸單／隱性單數推進後，左上2列×3欄宮只剩兩格，候選數字同為2、6。
+// 假設左上宮第一格為2會導致矛盾；取6則可完成整盤。
 function createRandom6Brain(){
+ const solution=[[5,6,3,2,1,4],[4,1,2,3,6,5],[2,3,1,5,4,6],[6,5,4,1,2,3],[3,2,6,4,5,1],[1,4,5,6,3,2]];
+ const puzzle=[[5,0,0,0,1,0],[4,0,0,3,0,0],[0,3,1,5,4,0],[0,0,0,1,2,3],[3,0,0,0,0,1],[1,4,0,0,0,0]];
+ const clueCount=puzzle.flat().filter(Boolean).length;
+ if(clueCount!==15||countSixSolutions(puzzle)!==1||solveSixSinglesOnly(puzzle))throw new Error("燒腦之一驗證未通過，請勿開始解題。");
+ return {solution,puzzle,blankCount:21};
+}
+// 燒腦之二：原「燒腦之一」固定題。9個提示數字、27格空白；唯一解。
+function createRandom6Brain2(){
  const solution=[[4,3,2,6,1,5],[1,6,5,3,4,2],[2,4,6,5,3,1],[3,5,1,2,6,4],[6,2,4,1,5,3],[5,1,3,4,2,6]];
  const puzzle=[[0,0,2,0,0,0],[1,0,5,3,0,0],[0,4,0,0,0,0],[0,0,0,0,6,4],[0,0,0,0,5,0],[0,0,3,0,0,0]];
  const clueCount=puzzle.flat().filter(Boolean).length;
- if(clueCount!==9||countSixSolutions(puzzle)!==1||solveSixSinglesOnly(puzzle))throw new Error("燒腦固定試作題驗證未通過，請勿開始解題。");
+ if(clueCount!==9||countSixSolutions(puzzle)!==1||solveSixSinglesOnly(puzzle))throw new Error("燒腦之二驗證未通過，請勿開始解題。");
  return {solution,puzzle,blankCount:27};
 }
+function startRandom6Brain(){const generated=createRandom6Brain();Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"燒腦之一"});resetRandom6History();$("random-title").textContent="6×6 隨機數獨｜燒腦之一";$("random-instruction").textContent="六宮格為2列×3欄。本題15個提示數字、21格空白，已驗證唯一解。建議先用基本排除法推進；當左上宮只剩兩格、候選數字同為2與6時，可嘗試假設其中一格的數字，再觀察後續是否產生矛盾。";$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay("燒腦之一開始！先找出能確定的數字，再嘗試控制變數的二分推理。");renderRandom6();showPlayView(randomGame);}
+function startRandom6Brain2(){const generated=createRandom6Brain2();Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"燒腦之二"});resetRandom6History();$("random-title").textContent="6×6 隨機數獨｜燒腦之二";$("random-instruction").textContent="六宮格為2列×3欄。本題只有9個提示數字、27格空白，已驗證唯一解；請使用筆記，嘗試進階候選數字排除。";$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay("燒腦之二開始！本題只有9個提示數字，請善用筆記逐步推理。");renderRandom6();showPlayView(randomGame);}
 function createRandom6Easy(){return createRandom6Puzzle(7);}
 function createRandom6Normal(){return createRandom6Puzzle(14);}
-function startRandom6Hard(){const generated=createRandom6Hard();Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"困難試作"});resetRandom6History();$("random-title").textContent=`6×6 隨機數獨｜困難試作（固定題｜${generated.blankCount}格空白）`;$("random-instruction").textContent=`六宮格為2列×3欄。本題由第二十五步的答案盤面改編，共11個提示數字、25格空白；已確認唯一解，且單靠裸單數與隱性單數無法解完，請善用筆記尋找數對等進階推理。`;$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay(`困難試作開始！這是由第二十五步改編的固定測試題，共${generated.blankCount}格空白。`);renderRandom6();showPlayView(randomGame);}
-function startRandom6Brain(){const generated=createRandom6Brain();Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"燒腦試作"});resetRandom6History();$("random-title").textContent="6×6 隨機數獨｜燒腦試作（固定題｜27格空白）";$("random-instruction").textContent="六宮格為2列×3欄。本題由第二十五步的答案盤面改編，只有9個提示數字、27格空白；已確認唯一解，但裸單數與隱性單數無法解完。請使用筆記，嘗試進階候選數字排除。";$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay("燒腦試作開始！本題只有9個提示數字，請善用筆記逐步推理。");renderRandom6();showPlayView(randomGame);}
+async function startRandom6Hard(){
+ const button=document.querySelector('[data-difficulty6="hard"]');
+ if(button)button.disabled=true;
+ $("random-menu-message").textContent="正在搜尋符合條件的困難題，搜尋期間仍可操作網站…";
+ try{
+  const generated=await createRandom6Hard((done,total)=>{$("random-menu-message").textContent=`困難題搜尋中：${done.toLocaleString()} / ${total.toLocaleString()} 次`;});
+  Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"困難"});
+  resetRandom6History();
+  $("random-title").textContent=`6×6 隨機數獨｜困難（${generated.blankCount}格空白）`;
+  $("random-instruction").textContent=`六宮格為2列×3欄。本題隨機產生${36-generated.blankCount}個提示數字、${generated.blankCount}格空白，已確認唯一解；裸單數與隱性單數不足以解完，請善用筆記尋找進階推理。`;
+  $("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");
+  $("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");
+  $("random-clear-cell").disabled=true;randomSay(`困難開始！本題隨機產生${generated.blankCount}格空白，請嘗試進階推理。`);
+  $("random-menu-message").textContent="";renderRandom6();showPlayView(randomGame);
+ }finally{if(button)button.disabled=false;}
+}
+function startRandom6Brain(){const generated=createRandom6Brain();Object.assign(random6State,{solution:generated.solution,puzzle:generated.puzzle,givens:generated.puzzle.map(row=>row.slice()),selected:null,completed:false,notes:{},noteMode:false,scanDigit:null,checkedWrong:new Set(),blankCount:generated.blankCount,label:"燒腦之一"});resetRandom6History();$("random-title").textContent="6×6 隨機數獨｜燒腦之一";$("random-instruction").textContent="六宮格為2列×3欄。本題15個提示數字、21格空白，已驗證唯一解。建議先用基本排除法推進；當左上宮只剩兩格、候選數字同為2與6時，可嘗試假設其中一格的數字，再觀察後續是否產生矛盾。";$("random-actions").classList.remove("hidden");$("random-complete").classList.add("hidden");$("random-note-mode").classList.remove("active");$("random-note-mode").dataset.state="OFF";$("random-note-mode").setAttribute("aria-pressed","false");$("random-clear-cell").disabled=true;randomSay("燒腦之一開始！本題只有9個提示數字，請善用筆記逐步推理。");renderRandom6();showPlayView(randomGame);}
 function cloneRandom6Snapshot(){return {puzzle:random6State.puzzle.map(row=>row.slice()),notes:JSON.parse(JSON.stringify(random6State.notes||{})),checkedWrong:[...(random6State.checkedWrong||[])],completed:!!random6State.completed};}
 function resetRandom6History(){random6State.history=[cloneRandom6Snapshot()];random6State.historyIndex=0;updateRandom6HistoryControls();}
 function updateRandom6HistoryControls(){
@@ -820,6 +858,6 @@ $("random-hint").addEventListener("click",()=>{if(randomSize===6&&!random6State.
 $("random-check").addEventListener("click",()=>{if(randomSize===6)checkRandom6();});
 $("random-play-again").addEventListener("click",()=>{if(randomSize===6)startRandom6(random6State.blankCount,random6State.label);});
 $("random-return-hub").addEventListener("click",()=>showPlayView(playHub));
-$("random-up-difficulty").addEventListener("click",()=>{if(randomSize===6){if(random6State.label==="簡單"){startRandom6(14,"普通");}else if(random6State.label==="普通"){startRandom6Hard();}else if(random6State.label==="困難試作"){startRandom6Brain();}else{showPlayView(randomMenu);$("difficulty-area-6").classList.remove("hidden");$("random-menu-message").textContent="困難試作版已開放；燒腦仍在規劃中。";}}});
-document.querySelectorAll("[data-difficulty6]").forEach(btn=>btn.addEventListener("click",()=>{if(btn.dataset.difficulty6==="easy")startRandom6(7,"簡單");else if(btn.dataset.difficulty6==="normal")startRandom6(14,"普通");else if(btn.dataset.difficulty6==="hard"){try{startRandom6Hard();}catch(e){$("random-menu-message").textContent=e.message;}}else if(btn.dataset.difficulty6==="brain"){try{startRandom6Brain();}catch(e){$("random-menu-message").textContent=e.message;}}}));
+$("random-up-difficulty").addEventListener("click",async()=>{if(randomSize===6){if(random6State.label==="簡單"){startRandom6(14,"普通");}else if(random6State.label==="普通"){try{await startRandom6Hard();}catch(e){$("random-menu-message").textContent=e.message;showPlayView(randomMenu);$("difficulty-area-6").classList.remove("hidden");}}else if(random6State.label==="困難"){startRandom6Brain();}else{showPlayView(randomMenu);$("difficulty-area-6").classList.remove("hidden");$("random-menu-message").textContent="燒腦題目已開放。";}}});
+document.querySelectorAll("[data-difficulty6]").forEach(btn=>btn.addEventListener("click",async()=>{if(btn.dataset.difficulty6==="easy")startRandom6(7,"簡單");else if(btn.dataset.difficulty6==="normal")startRandom6(14,"普通");else if(btn.dataset.difficulty6==="hard"){try{await startRandom6Hard();}catch(e){$("random-menu-message").textContent=e.message;}}else if(btn.dataset.difficulty6==="brain"){try{startRandom6Brain();}catch(e){$("random-menu-message").textContent=e.message;}}else if(btn.dataset.difficulty6==="brain2"){try{startRandom6Brain2();}catch(e){$("random-menu-message").textContent=e.message;}}}));
 })();
