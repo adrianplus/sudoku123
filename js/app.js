@@ -194,12 +194,16 @@ function render(){
  }
  if(current.mode==="practical"||current.mode==="graduate"){
   const practicalFixed=[[0,3,3],[1,2,4],[2,0,1],[3,3,2]];
+  // 第十一步：依照新版題目，與第九步使用不同盤面。
+  const graduate1Fixed=[[0,2,1],[0,3,4],[2,1,3],[3,3,1]];
   const graduate2Fixed=[[0,1,4],[0,3,2],[2,0,3],[2,3,1]];
   const graduate3Fixed=[[0,3,1],[1,0,2],[2,2,3],[2,3,2]];
-  const fixed=currentId==="graduate2"?graduate2Fixed:(currentId==="graduate3"?graduate3Fixed:practicalFixed);
-  const solution=currentId==="graduate2"
-    ?[[1,4,3,2],[2,3,1,4],[3,2,4,1],[4,1,2,3]]
-    :(currentId==="graduate3"?[[4,3,2,1],[2,1,4,3],[1,4,3,2],[3,2,1,4]]:[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]]);
+  const fixed=currentId==="graduate1"?graduate1Fixed:(currentId==="graduate2"?graduate2Fixed:(currentId==="graduate3"?graduate3Fixed:practicalFixed));
+  const solution=currentId==="graduate1"
+    ?[[3,2,1,4],[4,1,2,3],[1,3,4,2],[2,4,3,1]]
+    :(currentId==="graduate2"
+      ?[[1,4,3,2],[2,3,1,4],[3,2,4,1],[4,1,2,3]]
+      :(currentId==="graduate3"?[[4,3,2,1],[2,1,4,3],[1,4,3,2],[3,2,1,4]]:[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]]));
   const fixedMap=new Map(fixed.map(([r,c,v])=>[`${r},${c}`,v]));
   const values = currentId==="graduate2" ? (window.graduate2Values ||= {}) : currentId==="graduate3" ? (window.graduate3Values ||= {}) : current.mode==="graduate" ? (window.graduateValues ||= {}) : (window.practicalValues ||= {});
   grid.className="sudoku sparse-board practical"+(current.mode==="graduate"?" graduate":"");grid.style.gridTemplateColumns="repeat(4,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(4,minmax(0,1fr))";grid.style.width="min(100%,480px)";grid.style.aspectRatio="1";grid.style.height="auto";
@@ -521,7 +525,7 @@ function selectBreakthroughCell(item){
  render();
  say("已選取這一格，請選擇你認為正確的數字。");
 }
-function checkPractical(){if(!["practical","graduate1","graduate2","graduate3"].includes(currentId))return;const values = currentId==="graduate2" ? (window.graduate2Values ||= {}) : currentId==="graduate3" ? (window.graduate3Values ||= {}) : currentId==="graduate1" ? (window.graduateValues ||= {}) : (window.practicalValues ||= {});const fixedList=currentId==="graduate2"?[[0,1,4],[0,3,2],[2,0,3],[2,3,1]]:(currentId==="graduate3"?[[0,3,1],[1,0,2],[2,2,3],[2,3,2]]:[[0,3,3],[1,2,4],[2,0,1],[3,3,2]]);const fixed=new Set(fixedList.map(([r,c])=>`${r},${c}`));let filled=0,wrong=0,empty=0;const solution=currentId==="graduate2"?[[1,4,3,2],[2,3,1,4],[3,2,4,1],[4,1,2,3]]:(currentId==="graduate3"?[[4,3,2,1],[2,1,4,3],[1,4,3,2],[3,2,1,4]]:[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]]);
+function checkPractical(){if(!["practical","graduate1","graduate2","graduate3"].includes(currentId))return;const values = currentId==="graduate2" ? (window.graduate2Values ||= {}) : currentId==="graduate3" ? (window.graduate3Values ||= {}) : currentId==="graduate1" ? (window.graduateValues ||= {}) : (window.practicalValues ||= {});const fixedList=currentId==="graduate1"?[[0,2,1],[0,3,4],[2,1,3],[3,3,1]]:(currentId==="graduate2"?[[0,1,4],[0,3,2],[2,0,3],[2,3,1]]:(currentId==="graduate3"?[[0,3,1],[1,0,2],[2,2,3],[2,3,2]]:[[0,3,3],[1,2,4],[2,0,1],[3,3,2]]));const fixed=new Set(fixedList.map(([r,c])=>`${r},${c}`));let filled=0,wrong=0,empty=0;const solution=currentId==="graduate1"?[[3,2,1,4],[4,1,2,3],[1,3,4,2],[2,4,3,1]]:(currentId==="graduate2"?[[1,4,3,2],[2,3,1,4],[3,2,4,1],[4,1,2,3]]:(currentId==="graduate3"?[[4,3,2,1],[2,1,4,3],[1,4,3,2],[3,2,1,4]]:[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]]));
  grid.querySelectorAll(".practical-cell").forEach(cell=>{const key=cell.dataset.cell;if(fixed.has(key))return;const v=values[key];cell.classList.remove("wrong");if(v===undefined){empty++;return;}filled++;const [r,c]=key.split(",").map(Number);if(v!==solution[r][c]){wrong++;cell.classList.add("wrong");}});
  if(wrong){say(`已檢查 ${filled} 格，有 ${wrong} 格不正確，紅色數字請再試試看。正確答案不會直接公布。`,"bad");return;}
  if(empty){say(`目前填入的 ${filled} 格都正確！還有 ${empty} 格未完成，繼續加油。`,"good");return;}
