@@ -214,3 +214,8 @@
 /* v64：第二十六步完成數字反灰、放大筆記鍵，並保留空鍵取消反白 */
 #game.numberfocus4-mode #note-mode{width:clamp(80px,12vw,140px);min-height:clamp(46px,7vh,62px);padding-left:10px;padding-right:34px!important;font-size:1.05em}
 #game.numberfocus4-mode .pad button:disabled, #game.numberfocus4-mode .pad button.digit-complete{background:#e5e7eb!important;color:#8a929d!important;border-color:#c4c9d1!important;box-shadow:none!important;opacity:1;cursor:not-allowed}
+
+/* Step 27: 9×9 horizontal practice */
+.nine-practice-board{display:grid;margin:0 auto;max-width:100%;}
+.nine-practice-cell{display:flex;align-items:center;justify-content:center;min-width:0;font-size:clamp(18px,5vw,32px);font-weight:700;aspect-ratio:1;}
+@media (max-width:520px){.nine-practice-cell{font-size:clamp(14px,4.4vw,24px);}}
