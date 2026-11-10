@@ -221,3 +221,12 @@
 .nine-practice-cell{display:flex;align-items:center;justify-content:center;font-size:clamp(24px,5vw,48px);min-width:0;aspect-ratio:1/1;background:#fff;color:#24364d;}
 .nine-practice-cell.missing{background:#f7f9fc;}
 @media(max-width:600px){.nine-practice-cell{font-size:clamp(18px,7vw,32px);}}
+
+
+/* V66.1 試作：第二十七步 9×9 數字按鈕自動適應版面 */
+#game.ninerow-mode .pad{grid-template-columns:repeat(9,minmax(0,1fr));gap:7px;width:min(100%,900px);margin-left:auto;margin-right:auto}
+#game.ninerow-mode .pad button{font-size:clamp(1.35rem,3vw,2rem);min-height:clamp(48px,7vh,62px)}
+@media(max-width:640px){
+  #game.ninerow-mode .pad{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:min(100%,360px)}
+  #game.ninerow-mode .pad button{font-size:clamp(1.6rem,7vw,2rem);min-height:clamp(52px,8vh,64px)}
+}
