@@ -496,9 +496,23 @@ function answer(n){if(answered)return;if(current&&(current.mode==="numberfocus3"
  else{say("再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。","bad");}return;}if(current&&current.mode==="breakthrough"){
  if(!selectedCell){say("請先點選你認為可以突破的空格，再選擇數字。","bad");return;}
  const puzzles=[
-  {targets:[{r:2,c:0,v:2},{r:3,c:2,v:2}]},
-  {targets:[{r:0,c:0,v:1},{r:2,c:1,v:2}]},
-  {targets:[{r:1,c:2,v:4},{r:3,c:3,v:4}]}
+  // 第十步：接受題目初始狀態下可用橫排、直排與 2×2 宮格邏輯推得的所有答案。
+  {targets:[
+    {r:0,c:0,v:1},{r:0,c:2,v:3},
+    {r:2,c:0,v:2},{r:2,c:1,v:3},{r:2,c:2,v:1},
+    {r:3,c:0,v:4},{r:3,c:2,v:2}
+  ]},
+  {targets:[
+    {r:0,c:0,v:1},{r:0,c:2,v:3},
+    {r:1,c:1,v:3},
+    {r:2,c:1,v:2},{r:2,c:2,v:4},
+    {r:3,c:0,v:4}
+  ]},
+  {targets:[
+    {r:0,c:2,v:2},
+    {r:1,c:1,v:1},{r:1,c:2,v:4},{r:1,c:3,v:3},
+    {r:3,c:1,v:2},{r:3,c:2,v:1},{r:3,c:3,v:4}
+  ]}
  ];
  const pi=window.breakthroughIndex||0,puzzle=puzzles[pi],[r,c]=selectedCell.split(",").map(Number),target=puzzle.targets.find(t=>t.r===r&&t.c===c),values=window.breakthroughValues||(window.breakthroughValues={});
  if(target&&target.v===n){Object.keys(values).forEach(key=>{if(values[key]&&values[key].wrong)delete values[key];});delete values[selectedCell];say("答對了！你找到破局點！","good");answered=true;document.querySelectorAll(".pad button").forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>{window.breakthroughIndex=pi+1;selectedCell=null;if(window.breakthroughIndex>=3)complete();else{q++;render();say("新題目來了！再找出一個破局點。")}},550);return;}
