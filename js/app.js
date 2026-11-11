@@ -31,7 +31,8 @@ ninecolumn:{step:28,title:"第二十八步：9×9數獨－直排",mode:"ninecolu
 ninebox:{step:29,title:"第二十九步：9×9數獨－九宮格",mode:"ninebox",text:"請看這個九宮格的九個位置。1、2、3、4、5、6、7、8、9 各出現一次，找出缺少的數字。",need:3},
 ninerowcol:{step:30,title:"第三十步：思考橫排與直排後，填出數字",mode:"ninerowcol",text:"請同時觀察問號所在的橫排與直排。兩個方向的 1～9 都各少了一個相同的數字，找出答案。",need:8},
 ninerowcolbox:{step:31,title:"第三十一步：橫排＋直排＋九宮格",mode:"ninerowcolbox",text:"觀察問號所在的橫排、直排與九宮格。三個方向合計放入 8 個不同數字，找出唯一缺少的第 9 個數字。",need:5},
-nineadvanced:{step:32,title:"第三十二步：找出真正有用的線索",mode:"nineadvanced",text:"棋盤上有一些無關數字。請只觀察問號所在的橫排、直排與九宮格，找出真正有用的 8 個不同數字，推測答案。",need:5}
+nineadvanced:{step:32,title:"第三十二步：找出真正有用的線索",mode:"nineadvanced",text:"棋盤上有一些無關數字。請只觀察問號所在的橫排、直排與九宮格，找出真正有用的 8 個不同數字，推測答案。",need:5},
+ninenote:{step:33,title:"第三十三步：練習筆記小字（9×9橫排）",mode:"ninenote",text:"請依照目前題次的提示，開啟「筆記」，在每個空格記下這一橫排缺少的候選數字。",need:6}
 };
 const $=id=>document.getElementById(id),home=$("home"),game=$("game"),grid=$("grid"),feedback=$("feedback"),modal=$("modal"),next=$("next"),modalHome=$("modal-home"),hint=$("hint"),buttons=Array.from(document.querySelectorAll(".pad button")),sm=$("font-smaller"),lg=$("font-larger");
 const STORAGE_KEY="lezaiblingzhong_sudoku_progress_v3";let font=1,current=null,currentId=null,missing=0,streak=0,q=1,answered=false,timer=null,classicIndex=0,selectedCell=null,hintUsed=0,noteMode=false;
@@ -41,9 +42,9 @@ function saveProgress(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(prog
 function updateHomeProgress(){const n=progressData.completed.length;$("completed-count").textContent=String(n);const b=$("resume-progress");b.disabled=n===0;b.setAttribute("aria-label",`已完成 ${n}/100，點擊回到上次完成的任務`);b.title=n?`回到上次完成的任務：${L[progressData.lastCompleted]?.title||""}`:"完成第一個任務後，就能從這裡回到上次完成的任務"}
 function fontApply(){document.body.classList.remove(...levels);document.body.classList.add(levels[font]);sm.disabled=font===0;lg.disabled=font===3}
 function say(t,k=""){feedback.textContent=t;feedback.className=k}
-function start(id){if(!L[id])return;clearTimeout(timer);modal.classList.add("hidden");currentId=id;current=L[id];streak=0;q=1;classicIndex=0;selectedCell=null;hintUsed=0;noteMode=false;if(["sixnote","sixcolumnnote","sixboxnote"].includes(id))window.sixNoteState={notes:{},targets:[],puzzle:null};if(id==="sixnotecombat")window.sixNoteCombatState={index:0,notes:{}};if(id==="numberfocus")window.numberFocusState={index:0,values:{},scanDigit:null};if(id==="numberfocus2")window.numberFocus2State={index:0,values:{},scanDigit:null};if(id==="numberfocus3")window.numberFocus3State={values:{},notes:{},scanDigit:null};if(id==="numberfocus4")window.numberFocus4State={values:{},notes:{},scanDigit:null};$("note-mode").classList.remove("active");$("note-mode").setAttribute("aria-pressed","false");$("note-mode").disabled=false;$("clear-cell").disabled=true;if(id==="practical")window.practicalValues={};if(id==="graduate1")window.graduateValues={};if(id==="graduate2")window.graduate2Values={};if(id==="graduate3")window.graduate3Values={};if(id==="step14")window.sixIntroState={index:0,values:{}};if(id==="sixintro2")window.sixIntro2State={index:0,values:{}};if(id==="breakthrough"){window.breakthroughIndex=0;window.breakthroughValues={};}home.classList.add("hidden");game.classList.remove("hidden");game.classList.toggle("column-layout",id==="column");game.classList.toggle("strong-box-lines",current.step>=4&&current.step<=13);game.classList.toggle("six-intro-mode",id==="step14"||id==="sixintro2");game.classList.toggle("six-practice-mode",["sixrow","sixcolumn","sixbox","sixnote","sixcolumnnote","sixboxnote"].includes(id));game.classList.toggle("six-note-mode",["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4"].includes(id));game.classList.toggle("numberfocus4-mode",id==="numberfocus4");game.classList.toggle("ninerow-mode",id==="ninerow"||id==="ninecolumn"||id==="ninebox"||id==="ninerowcol"||id==="ninerowcolbox"||id==="nineadvanced");$("clear-cell").classList.toggle("hidden",!["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4"].includes(id));$("note-mode").classList.toggle("hidden",!["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4"].includes(id));$("title").textContent=current.title;$("progress").textContent=current.step;$("instruction").textContent=current.text;render();window.scrollTo(0,0)}
+function start(id){if(!L[id])return;clearTimeout(timer);modal.classList.add("hidden");currentId=id;current=L[id];streak=0;q=1;classicIndex=0;selectedCell=null;hintUsed=0;noteMode=false;if(["sixnote","sixcolumnnote","sixboxnote"].includes(id))window.sixNoteState={notes:{},targets:[],puzzle:null};if(id==="ninenote")window.nineNoteState={notes:{},targets:[],puzzle:null};if(id==="sixnotecombat")window.sixNoteCombatState={index:0,notes:{}};if(id==="numberfocus")window.numberFocusState={index:0,values:{},scanDigit:null};if(id==="numberfocus2")window.numberFocus2State={index:0,values:{},scanDigit:null};if(id==="numberfocus3")window.numberFocus3State={values:{},notes:{},scanDigit:null};if(id==="numberfocus4")window.numberFocus4State={values:{},notes:{},scanDigit:null};$("note-mode").classList.remove("active");$("note-mode").setAttribute("aria-pressed","false");$("note-mode").disabled=false;$("clear-cell").disabled=true;if(id==="practical")window.practicalValues={};if(id==="graduate1")window.graduateValues={};if(id==="graduate2")window.graduate2Values={};if(id==="graduate3")window.graduate3Values={};if(id==="step14")window.sixIntroState={index:0,values:{}};if(id==="sixintro2")window.sixIntro2State={index:0,values:{}};if(id==="breakthrough"){window.breakthroughIndex=0;window.breakthroughValues={};}home.classList.add("hidden");game.classList.remove("hidden");game.classList.toggle("column-layout",id==="column");game.classList.toggle("strong-box-lines",current.step>=4&&current.step<=13);game.classList.toggle("six-intro-mode",id==="step14"||id==="sixintro2");game.classList.toggle("six-practice-mode",["sixrow","sixcolumn","sixbox","sixnote","sixcolumnnote","sixboxnote"].includes(id));game.classList.toggle("six-note-mode",["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4","ninenote"].includes(id));game.classList.toggle("numberfocus4-mode",id==="numberfocus4");game.classList.toggle("ninerow-mode",id==="ninerow"||id==="ninecolumn"||id==="ninebox"||id==="ninerowcol"||id==="ninerowcolbox"||id==="nineadvanced"||id==="ninenote");$("clear-cell").classList.toggle("hidden",!["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4","ninenote"].includes(id));$("note-mode").classList.toggle("hidden",!["sixnote","sixcolumnnote","sixboxnote","sixnotecombat","numberfocus3","numberfocus4","ninenote"].includes(id));$("title").textContent=current.title;$("progress").textContent=current.step;$("instruction").textContent=current.text;render();window.scrollTo(0,0)}
 function render(){
- answered=false;document.querySelectorAll(".pad button").forEach(b=>{b.disabled=false;b.blur()});hint.disabled=false;const pad=document.querySelector(".pad");pad.innerHTML="";const padNums=["sixintro","sixintro2","sixrow","sixcolumn","sixbox","sixnote","sixnotecombat","numberfocus","numberfocus2","numberfocus3","numberfocus4"].includes(current.mode)?[1,2,3,4,5,6]:( ["ninerow","ninecolumn","ninebox","ninerowcol","ninerowcolbox","nineadvanced"].includes(current.mode)?[1,2,3,4,5,6,7,8,9]:[1,2,3,4]);padNums.forEach(n=>{const b=document.createElement("button");b.type="button";b.dataset.n=String(n);b.textContent=String(n);b.addEventListener("click",()=>answer(n));pad.appendChild(b)});$("check-wrap").classList.toggle("hidden",!(["practical","graduate"].includes(current.mode)));
+ answered=false;document.querySelectorAll(".pad button").forEach(b=>{b.disabled=false;b.blur()});hint.disabled=false;const pad=document.querySelector(".pad");pad.innerHTML="";const padNums=["sixintro","sixintro2","sixrow","sixcolumn","sixbox","sixnote","sixnotecombat","numberfocus","numberfocus2","numberfocus3","numberfocus4"].includes(current.mode)?[1,2,3,4,5,6]:( ["ninerow","ninecolumn","ninebox","ninerowcol","ninerowcolbox","nineadvanced","ninenote"].includes(current.mode)?[1,2,3,4,5,6,7,8,9]:[1,2,3,4]);padNums.forEach(n=>{const b=document.createElement("button");b.type="button";b.dataset.n=String(n);b.textContent=String(n);b.addEventListener("click",()=>answer(n));pad.appendChild(b)});$("check-wrap").classList.toggle("hidden",!(["practical","graduate"].includes(current.mode)));
  say("請觀察格子，再選擇下方數字。");$("question").textContent=`第 ${q} 題`;grid.innerHTML="";
  grid.style.width="";grid.style.height="";grid.style.aspectRatio="";
 
@@ -357,63 +358,81 @@ function render(){
   else {grid.style.gridTemplateColumns="repeat(3,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(2,minmax(0,1fr))";grid.style.width="min(100%,390px)";grid.style.aspectRatio="3 / 2";}
   nums.forEach((n,i)=>{const cell=document.createElement("div");cell.className="cell six-practice-cell";cell.style.border="1px solid #aaa";if(current.mode==="sixbox"&&(i%3)===2)cell.style.borderRightWidth="4px";if(current.mode==="sixbox"&&i>=3)cell.style.borderTopWidth="4px";if(i===gap){cell.classList.add("missing");cell.dataset.gap="1";}else cell.textContent=String(n);grid.appendChild(cell)});return;
  }
- if(current.mode==="sixnote"){
-  const state=window.sixNoteState||(window.sixNoteState={notes:{},targets:[],puzzle:null});
-  // 輸入、切換格子或清空時保留同一題；只有進入下一題才重新抽題。
+ if(current.mode==="ninenote"){
+  // 第三十三步：依目前題次顯示對應說明，避免一次顯示六題規則。
+  const step33Text=q<=2
+    ? `第 ${q} 題：同宮的橫排缺二。請開啟「筆記」，在兩個空格都記下這一排缺少的兩個候選數字。`
+    : q<=4
+      ? `第 ${q} 題：非同宮的橫排缺二。請開啟「筆記」，在兩個空格都記下這一排缺少的兩個候選數字。`
+      : `第 ${q} 題：同宮的橫排缺三。請開啟「筆記」，在三個空格都記下這一排缺少的三個候選數字。`;
+  $("instruction").textContent=step33Text;
+
+  const state=window.nineNoteState||(window.nineNoteState={notes:{},targets:[],puzzle:null});
   if(!state.puzzle){
-   const nums=[1,2,3,4,5,6];for(let i=nums.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[nums[i],nums[j]]=[nums[j],nums[i]];}
-   const gapIndices=[];while(gapIndices.length<2){const idx=Math.floor(Math.random()*6);if(!gapIndices.includes(idx))gapIndices.push(idx);}gapIndices.sort((a,b)=>a-b);
-   state.puzzle={nums,gapIndices};state.notes={};state.targets=gapIndices.map(i=>({index:i,answer:nums[i]}));
+    const type=q<=2?"same2":q<=4?"split2":"same3";
+    const shuffle=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b};
+    const nums=shuffle([1,2,3,4,5,6,7,8,9]);
+    let gapIndices=[];
+    if(type==="same2"){
+      const band=Math.floor(Math.random()*3)*3;
+      gapIndices=shuffle([band,band+1,band+2]).slice(0,2).sort((a,b)=>a-b);
+    }else if(type==="split2"){
+      const bands=shuffle([0,1,2]).slice(0,2);
+      gapIndices=bands.map(b=>b*3+Math.floor(Math.random()*3)).sort((a,b)=>a-b);
+    }else{
+      const band=Math.floor(Math.random()*3)*3;
+      gapIndices=[band,band+1,band+2];
+    }
+    state.puzzle={nums,gapIndices,type};
+    state.notes={};
+    state.targets=gapIndices.map(i=>({index:i,answer:nums[i]}));
   }
   const nums=state.puzzle.nums,gapIndices=state.puzzle.gapIndices;
-  const missingNums=gapIndices.map(i=>nums[i]).sort((a,b)=>a-b);missing=missingNums[0];
-  const noteType=current.noteType||"row";
-  grid.className="six-practice-board six-note-board"+(noteType==="column"?" vertical-square-board":"");
-  if(noteType==="column"){grid.style.gridTemplateColumns="1fr";grid.style.gridTemplateRows="repeat(6,minmax(0,1fr))";grid.style.width="min(100%,108px)";grid.style.aspectRatio="1 / 6";}
-  else if(noteType==="box"){grid.style.gridTemplateColumns="repeat(3,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(2,minmax(0,1fr))";grid.style.width="min(100%,390px)";grid.style.aspectRatio="3 / 2";}
-  else{grid.style.gridTemplateColumns="repeat(6,minmax(0,1fr))";grid.style.gridTemplateRows="1fr";grid.style.width="min(100%,650px)";grid.style.aspectRatio="6 / 1";}
-  nums.forEach((n,i)=>{const cell=document.createElement("div");cell.className="cell six-practice-cell six-note-cell";cell.dataset.index=String(i);cell.style.border="1px solid #aaa";if(noteType==="box"&&(i%3)===2)cell.style.borderRightWidth="4px";if(noteType==="box"&&i>=3)cell.style.borderTopWidth="4px";if(gapIndices.includes(i)){cell.classList.add("note-gap");cell.tabIndex=0;cell.setAttribute("role","button");cell.setAttribute("aria-label",`第${i+1}格空格`);cell.addEventListener("click",()=>selectNoteCell(cell));const notes=state.notes[i]||[];const mini=document.createElement("div");mini.className="pencil-mini-grid";for(let candidate=1;candidate<=6;candidate++){const small=document.createElement("span");small.className="pencil-note"+(notes.includes(candidate)?" filled":"");small.textContent=notes.includes(candidate)?String(candidate):"";mini.appendChild(small);}cell.appendChild(mini);if(selectedCell===String(i))cell.classList.add("selected");}else cell.textContent=String(n);grid.appendChild(cell)});
-  const noteBtn=$("note-mode"),clearBtn=$("clear-cell");noteBtn.classList.toggle("active",noteMode);noteBtn.setAttribute("aria-pressed",String(noteMode));noteBtn.dataset.state=noteMode?"ON":"OFF";clearBtn.disabled=selectedCell===null;return;
- }
- if(current.mode==="sixnotecombat"){
-  const state=window.sixNoteCombatState||(window.sixNoteCombatState={index:0,notes:{}});
-  const puzzle=[[0,3,0,6,1,5],[1,0,0,3,4,2],[0,0,6,0,0,1],[0,0,0,0,0,0],[0,2,0,0,0,0],[5,0,0,4,2,0]];
-  // 依標記編號一至八闖關；每格需要記下由橫排、直排、六宮格交集得出的兩個候選數字。
-  const targets=[
-   {r:0,c:0,candidates:[2,4]}, {r:0,c:2,candidates:[2,4]},
-   {r:1,c:1,candidates:[5,6]}, {r:1,c:2,candidates:[5,6]},
-   {r:2,c:3,candidates:[2,5]}, {r:3,c:3,candidates:[2,5]},
-   {r:5,c:5,candidates:[3,6]}, {r:4,c:5,candidates:[3,6]}
-  ];
-  const active=targets[state.index];
-  selectedCell=active?`${active.r},${active.c}`:null;
-  grid.className="sudoku six-intro-board six-note-combat-board six-note-board";
-  grid.style.display="grid";grid.style.gridTemplateColumns="repeat(6,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(6,minmax(0,1fr))";grid.style.width="min(100%,590px)";grid.style.aspectRatio="1";grid.style.height="auto";
-  puzzle.forEach((row,r)=>row.forEach((v,c)=>{
-   const key=`${r},${c}`,cell=document.createElement("div");cell.className="cell six-intro-cell six-note-combat-cell";cell.dataset.cell=key;cell.style.border="1px solid #aaa";
-   if(c===2)cell.style.borderRight="4px solid #222";if(r===1||r===3)cell.style.borderBottom="4px solid #222";
-   if(v){cell.textContent=String(v);cell.classList.add("locked");if((r===1&&c>=4))cell.classList.add("user-solved");}
-   else {
-    const targetIndex=targets.findIndex(t=>t.r===r&&t.c===c),notes=state.notes[key]||[];
-    if(targetIndex>=0){
-     cell.classList.add("note-gap");cell.tabIndex=0;cell.setAttribute("role","button");cell.setAttribute("aria-label",`第${targetIndex+1}個筆記目標格`);
-     const mini=document.createElement("div");mini.className="pencil-mini-grid";
-     for(let n=1;n<=6;n++){const small=document.createElement("span");small.className="pencil-note"+(notes.includes(n)?" filled":"");small.textContent=notes.includes(n)?String(n):"";mini.appendChild(small)}
-     cell.appendChild(mini);if(targetIndex===state.index){cell.classList.add("six-intro-target");if(notes.length===0)cell.dataset.currentTarget="true";}else if(targetIndex<state.index)cell.classList.add("six-intro-correct");
-     if(selectedCell===key)cell.classList.add("selected");
-    }
-   }
-   grid.appendChild(cell);
-  }));
-  $("question").textContent=state.index<8?`第 ${state.index+1} / 8 關：請在目標格記下兩個候選數字`:"八格完成";
-  const noteBtn=$("note-mode"),clearBtn=$("clear-cell");noteBtn.classList.toggle("active",noteMode);noteBtn.setAttribute("aria-pressed",String(noteMode));noteBtn.dataset.state=noteMode?"ON":"OFF";clearBtn.disabled=selectedCell===null;
+  const missingNums=gapIndices.map(i=>nums[i]).sort((a,b)=>a-b); missing=missingNums[0];
+
+  grid.className="nine-note-row-board";
+  grid.style.display="grid";
+  grid.style.gridTemplateColumns="repeat(9,minmax(0,1fr))";
+  grid.style.gridTemplateRows="1fr";
+  grid.style.width="min(100%,720px)";
+  grid.style.aspectRatio="9 / 1";
+  grid.style.height="auto";
+  for(let c=0;c<9;c++){
+    const cell=document.createElement("div");
+    cell.className="cell nine-note-cell";
+    cell.style.border="1px solid #718096";
+    if(c===0)cell.style.borderLeft="5px solid #334155";
+    if(c===8)cell.style.borderRight="5px solid #334155";
+    if(c===2||c===5)cell.style.borderRight="5px solid #334155";
+    cell.style.borderTop="5px solid #334155";
+    cell.style.borderBottom="5px solid #334155";
+    if(gapIndices.includes(c)){
+      cell.classList.add("note-gap"); cell.dataset.index=String(c); cell.tabIndex=0;
+      cell.setAttribute("role","button"); cell.setAttribute("aria-label",`橫排第${c+1}格空格`);
+      cell.addEventListener("click",()=>selectNoteCell(cell));
+      cell.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectNoteCell(cell);}});
+      const notes=state.notes[c]||[];
+      const mini=document.createElement("div"); mini.className="pencil-mini-grid nine-pencil-mini-grid";
+      for(let candidate=1;candidate<=9;candidate++){
+        const small=document.createElement("span");
+        small.className="pencil-note"+(notes.includes(candidate)?" filled":"");
+        small.textContent=notes.includes(candidate)?String(candidate):"";
+        mini.appendChild(small);
+      }
+      cell.appendChild(mini);
+      if(selectedCell===String(c))cell.classList.add("selected");
+    }else cell.textContent=String(nums[c]);
+    grid.appendChild(cell);
+  }
+  const noteBtn=$("note-mode"),clearBtn=$("clear-cell");
+  noteBtn.classList.toggle("active",noteMode); noteBtn.setAttribute("aria-pressed",String(noteMode)); noteBtn.dataset.state=noteMode?"ON":"OFF";
+  clearBtn.disabled=selectedCell===null;
   return;
  }
-
  if(current.mode==="numberfocus3"||current.mode==="numberfocus4"){
   const isSecondClass=current.mode==="numberfocus4";
   const state=isSecondClass?(window.numberFocus4State||(window.numberFocus4State={values:{},notes:{},scanDigit:null})):(window.numberFocus3State||(window.numberFocus3State={values:{},notes:{},scanDigit:null}));
-  const puzzle=isSecondClass?[[6,2,0,0,5,0],[0,0,0,0,2,0],[0,4,0,0,0,0],[5,0,0,0,1,0],[0,0,1,0,0,0],[4,0,3,0,0,0]]:[[0,3,0,6,1,5],[1,0,0,3,4,2],[0,0,6,0,0,1],[0,0,0,0,0,0],[0,2,0,0,0,0],[5,0,0,4,2,0]];
+ const puzzle=isSecondClass?[[6,2,0,0,5,0],[0,0,0,0,2,0],[0,4,0,0,0,0],[5,0,0,0,1,0],[0,0,1,0,0,0],[4,0,3,0,0,0]]:[[0,3,0,6,1,5],[1,0,0,3,4,2],[0,0,6,0,0,1],[0,0,0,0,0,0],[0,2,0,0,0,0],[5,0,0,4,2,0]];
   const solution=isSecondClass?[[6,2,4,3,5,1],[3,5,6,1,2,4],[1,4,5,2,3,6],[5,6,2,4,1,3],[2,3,1,6,4,5],[4,1,3,5,6,2]]:[[4,3,2,6,1,5],[1,6,5,3,4,2],[2,4,6,5,3,1],[3,5,1,2,6,4],[6,2,4,1,5,3],[5,1,3,4,2,6]];
   grid.className="sudoku number-focus-board number-focus-full-board";grid.style.display="grid";grid.style.gridTemplateColumns="repeat(6,minmax(0,1fr))";grid.style.gridTemplateRows="repeat(6,minmax(0,1fr))";grid.style.width="min(100%,650px)";grid.style.aspectRatio="1";grid.style.height="auto";
   const vals={};puzzle.forEach((row,r)=>row.forEach((v,c)=>{const key=`${r},${c}`;vals[key]=state.values[key]??v;}));
@@ -768,6 +787,50 @@ function answer(n){if(answered)return;if(current&&(current.mode==="numberfocus3"
  if(state.index>=3){render();say("三題全部完成！你已學會一次檢查一個數字。","good");timer=setTimeout(()=>complete(),700);}
  else{render();say(`答對了！數字 ${n} 已保留。請點選棋盤上已有的 ${order[state.index]}，繼續下一題。`,"good");}
  return;
+ }if(current&&current.mode==="ninenote"){
+ if(!noteMode){say("筆記模式目前關閉，請按「筆記」開啟。","bad");return;}
+ if(selectedCell===null){say("請先選取一個空格，再按數字加入小字。","bad");return;}
+ const state=window.nineNoteState,idx=Number(selectedCell);
+ state.notes[idx]=state.notes[idx]||[];
+ const list=state.notes[idx];
+ if(list.includes(n)){
+   state.notes[idx]=list.filter(v=>v!==n);
+   say(`已移除小字 ${n}。`);
+ }else{
+   list.push(n);list.sort((a,b)=>a-b);
+   say(`已在這一格記下小字 ${n}。請在所有空格記下這一橫排缺少的候選數字。`,"good");
+ }
+ render();
+ selectedCell=String(idx);
+ const cell=grid.querySelector(`[data-index="${idx}"]`);
+ if(cell)cell.classList.add("selected");
+
+ const missingNums=state.targets.map(t=>t.answer).sort((a,b)=>a-b);
+ const completeTargets=state.targets.every(t=>
+   Array.isArray(state.notes[t.index]) &&
+   missingNums.every(v=>state.notes[t.index].includes(v)) &&
+   state.notes[t.index].length===missingNums.length
+ );
+ if(completeTargets){
+   streak++;answered=true;
+   document.querySelectorAll(".pad button").forEach(b=>b.disabled=true);
+   $("clear-cell").disabled=true;
+   say(`這題完成！所有空格都已正確記下 ${missingNums.length} 個候選小字。第 ${q} / 6 題完成。`,"good");
+   timer=setTimeout(()=>{
+     if(streak>=current.need)complete();
+     else{
+       q++;selectedCell=null;
+       window.nineNoteState={notes:{},targets:[],puzzle:null};
+       noteMode=true;
+       render();
+       say(`第 ${q} / 6 題開始！筆記模式維持 ON。請繼續找出這一橫排缺少的候選數字。`,"good");
+     }
+   },850);
+ }else{
+   const anyWrong=state.targets.some(t=>(state.notes[t.index]||[]).some(v=>!missingNums.includes(v)));
+   if(anyWrong)say("有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。","bad");
+ }
+ return;
  }if(current&&current.mode==="sixnote"){
  if(!noteMode){say("筆記模式目前關閉，請按「筆記」開啟。","bad");return;}if(selectedCell===null){say("請先選取一個空格，再按數字加入小字。","bad");return;}
  const state=window.sixNoteState,idx=Number(selectedCell);state.notes[idx]=state.notes[idx]||[];const list=state.notes[idx];if(list.includes(n)){state.notes[idx]=list.filter(v=>v!==n);say(`已移除小字 ${n}。`);}else{list.push(n);list.sort((a,b)=>a-b);say(`已在這一格記下小字 ${n}。請把兩個缺少的數字都記錄在每個空格。`,"good");}
@@ -836,7 +899,7 @@ function selectCombatNoteCell(item){
  if(item.dataset.cell!==key){say("請依照順序完成目前亮起的目標格。","bad");return;}
  selectedCell=key;grid.querySelectorAll(".six-note-combat-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));$("clear-cell").disabled=false;say(noteMode?"已選取目標格，請用下方數字記錄兩個候選小字。":"請先按「筆記」開啟筆記模式，再選取目標格。");
 }
-function selectNoteCell(item){selectedCell=item.dataset.index;grid.querySelectorAll(".six-note-cell").forEach(c=>c.classList.toggle("selected",c.dataset.index===selectedCell));$("clear-cell").disabled=false;say(noteMode?"已選取空格，請按下方數字寫入小字。":"請先按「筆記」按鈕，再選取空格。");}
+function selectNoteCell(item){selectedCell=item.dataset.index;const selector=current&&current.mode==="ninenote"?".nine-note-cell.note-gap":".six-note-cell";grid.querySelectorAll(selector).forEach(c=>c.classList.toggle("selected",c.dataset.index===selectedCell));$("clear-cell").disabled=false;say(noteMode?"已選取空格，請按下方數字寫入小字。":"請先按「筆記」按鈕，再選取空格。");}
 function selectPracticalCell(item){if(item.classList.contains("locked"))return;selectedCell=item.dataset.cell;grid.querySelectorAll(".practical-cell").forEach(c=>c.classList.toggle("selected",c.dataset.cell===selectedCell));say("已選取空格，請按下方數字填入。")}
 function selectBreakthroughCell(item){
  if(item.classList.contains("locked"))return;
@@ -853,9 +916,9 @@ function checkPractical(){if(!["practical","graduate1","graduate2","graduate3"].
  if(empty){say(`目前填入的 ${filled} 格都正確！還有 ${empty} 格未完成，繼續加油。`,"good");return;}
  say(currentId==="graduate1"?"全部正確！你通過了4X4數獨畢業考（1/3）！":(currentId==="graduate2"?"全部正確！你通過了4X4數獨畢業考（2/3）！":(currentId==="graduate3"?"全部正確！你通過了4X4數獨畢業考（3/3）！":"全部正確！你完成了 4X4 數獨實戰！")),"good");answered=true;document.querySelectorAll(".pad button").forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>complete(),650);
 }
-function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced",advanced:"classic",classic:"practical",practical:"breakthrough",breakthrough:"graduate1",graduate1:"graduate2",graduate2:"graduate3",graduate3:"sixrow",sixrow:"sixcolumn",sixcolumn:"sixbox",sixbox:"step14",step14:"sixnote",sixnote:"sixcolumnnote",sixcolumnnote:"sixboxnote",sixboxnote:"sixintro2",sixintro2:"sixnotecombat",sixnotecombat:"numberfocus",numberfocus:"numberfocus2",numberfocus2:"numberfocus3",numberfocus3:"numberfocus4",numberfocus4:"ninerow",ninerow:"ninecolumn",ninecolumn:"ninebox",ninebox:"ninerowcol",ninerowcol:"ninerowcolbox",ninerowcolbox:"nineadvanced",nineadvanced:null})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已完成這一步，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
+function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced",advanced:"classic",classic:"practical",practical:"breakthrough",breakthrough:"graduate1",graduate1:"graduate2",graduate2:"graduate3",graduate3:"sixrow",sixrow:"sixcolumn",sixcolumn:"sixbox",sixbox:"step14",step14:"sixnote",sixnote:"sixcolumnnote",sixcolumnnote:"sixboxnote",sixboxnote:"sixintro2",sixintro2:"sixnotecombat",sixnotecombat:"numberfocus",numberfocus:"numberfocus2",numberfocus2:"numberfocus3",numberfocus3:"numberfocus4",numberfocus4:"ninerow",ninerow:"ninecolumn",ninecolumn:"ninebox",ninebox:"ninerowcol",ninerowcol:"ninerowcolbox",ninerowcolbox:"nineadvanced",nineadvanced:"ninenote",ninenote:null})[currentId]||null;$("modal-title").textContent=current.title+"完成了！";$("modal-message").textContent=nextId?`你已完成這一步，做得很好！接下來繼續挑戰下一步吧。`:"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。";next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
 function goHome(){clearTimeout(timer);modal.classList.add("hidden");game.classList.add("hidden");home.classList.remove("hidden");current=null;currentId=null;updateHomeProgress();window.scrollTo(0,0)}
-document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));$("note-mode").addEventListener("click",()=>{if(!current||!(current.mode==="sixnote"||current.mode==="sixnotecombat"||current.mode==="numberfocus3"||current.mode==="numberfocus4"))return;noteMode=!noteMode;$("note-mode").classList.toggle("active",noteMode);$("note-mode").setAttribute("aria-pressed",String(noteMode));$("note-mode").dataset.state=noteMode?"ON":"OFF";say(noteMode?"筆記模式已開啟。請選取空格，再按下方數字輸入小字。":"筆記模式已關閉。");});$("clear-cell").addEventListener("click",()=>{
+document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>start(b.dataset.id)));$("note-mode").addEventListener("click",()=>{if(!current||!(current.mode==="sixnote"||current.mode==="ninenote"||current.mode==="sixnotecombat"||current.mode==="numberfocus3"||current.mode==="numberfocus4"))return;noteMode=!noteMode;$("note-mode").classList.toggle("active",noteMode);$("note-mode").setAttribute("aria-pressed",String(noteMode));$("note-mode").dataset.state=noteMode?"ON":"OFF";say(noteMode?"筆記模式已開啟。請選取空格，再按下方數字輸入小字。":"筆記模式已關閉。");});$("clear-cell").addEventListener("click",()=>{
  if(!current)return;
  if(current.mode==="numberfocus4"){
   const state=window.numberFocus4State||(window.numberFocus4State={values:{},notes:{},scanDigit:null});
@@ -874,6 +937,6 @@ document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>st
  else if(current.mode==="numberfocus3"){const state=window.numberFocus3State;if(state.values)delete state.values[selectedCell];if(state.notes)delete state.notes[selectedCell];}
  else return;
  selectedCell=null;render();say("已清空選取格子的所有小字。");
-});$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(!current||answered)return;if(current.mode==="numberfocus3"||current.mode==="numberfocus4"){say(current.mode==="numberfocus4"?"這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。":"先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。","good");return;}if(current.mode==="numberfocus2"){say("請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。","good");return;}if(current.mode==="numberfocus"){say("請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。","good");return;}if(current.mode==="sixnotecombat"){say("先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。","good");return;}if(current.mode==="sixnote"){const axis=current.noteType==="column"?"這一直排":current.noteType==="box"?"這個六宮格":"這一橫排";say(`先按「筆記」，再選兩個空格，分別記下${axis}缺少的兩個數字。`,`good`);return;}if(current.mode==="sixintro"){const tips=["第一題：觀察第二橫排、第五直排與右上六宮格。","第二題：觀察第二橫排、第六直排與右上六宮格。","第三題：觀察第一橫排、第五直排與右上六宮格。"];const st=window.sixIntroState||{index:0};say(tips[Math.min(st.index,2)]);return;}if(current.mode==="sixintro2"){say("請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。");return;}if(current.mode==="breakthrough"){say("這一關請靠自己的觀察找出破局點！");return;}if(current.mode==="graduate"){say("畢業考請靠自己的觀察完成，加油！");return;}if(current.mode==="practical"){const targets=[[2,3],[1,3],[0,2],[2,2],[2,1],[3,2]],solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]],values=current.mode==="graduate"?(window.graduateValues||(window.graduateValues={} )):(window.practicalValues||(window.practicalValues={}));let target=null;for(const [r,c] of targets){const key=`${r},${c}`;if(values[key]!==solution[r][c]){target={r,c,key,value:solution[r][c]};break;}}if(hintUsed>=6||!target){say("加油！提示已經使用完畢，你可以自己做到！","good");hint.disabled=true;return;}values[target.key]=target.value;hintUsed++;selectedCell=null;render();if(hintUsed>=6)say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。加油！提示已經使用完畢，你可以自己做到！`);else say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。`);if(hintUsed>=6)hint.disabled=true;return;}say("提示：缺少的數字是 "+missing+"。")});
+});$("home-top").addEventListener("click",goHome);modalHome.addEventListener("click",goHome);next.addEventListener("click",()=>{if(next.dataset.id)start(next.dataset.id)});$("resume-progress").addEventListener("click",()=>{if(progressData.lastCompleted)start(progressData.lastCompleted)});hint.addEventListener("click",()=>{if(!current||answered)return;if(current.mode==="numberfocus3"||current.mode==="numberfocus4"){say(current.mode==="numberfocus4"?"這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。":"先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。","good");return;}if(current.mode==="numberfocus2"){say("請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。","good");return;}if(current.mode==="numberfocus"){say("請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。","good");return;}if(current.mode==="sixnotecombat"){say("先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。","good");return;}if(current.mode==="ninenote"){say("先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。","good");return;}if(current.mode==="sixnote"){const axis=current.noteType==="column"?"這一直排":current.noteType==="box"?"這個六宮格":"這一橫排";say(`先按「筆記」，再選兩個空格，分別記下${axis}缺少的兩個數字。`,`good`);return;}if(current.mode==="sixintro"){const tips=["第一題：觀察第二橫排、第五直排與右上六宮格。","第二題：觀察第二橫排、第六直排與右上六宮格。","第三題：觀察第一橫排、第五直排與右上六宮格。"];const st=window.sixIntroState||{index:0};say(tips[Math.min(st.index,2)]);return;}if(current.mode==="sixintro2"){say("請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。");return;}if(current.mode==="breakthrough"){say("這一關請靠自己的觀察找出破局點！");return;}if(current.mode==="graduate"){say("畢業考請靠自己的觀察完成，加油！");return;}if(current.mode==="practical"){const targets=[[2,3],[1,3],[0,2],[2,2],[2,1],[3,2]],solution=[[4,1,2,3],[2,3,4,1],[1,2,3,4],[3,4,1,2]],values=current.mode==="graduate"?(window.graduateValues||(window.graduateValues={} )):(window.practicalValues||(window.practicalValues={}));let target=null;for(const [r,c] of targets){const key=`${r},${c}`;if(values[key]!==solution[r][c]){target={r,c,key,value:solution[r][c]};break;}}if(hintUsed>=6||!target){say("加油！提示已經使用完畢，你可以自己做到！","good");hint.disabled=true;return;}values[target.key]=target.value;hintUsed++;selectedCell=null;render();if(hintUsed>=6)say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。加油！提示已經使用完畢，你可以自己做到！`);else say(`提示 ${hintUsed}/6：第 ${target.r+1} 列第 ${target.c+1} 欄是 ${target.value}。`);if(hintUsed>=6)hint.disabled=true;return;}say("提示：缺少的數字是 "+missing+"。")});
 $("check-answers").addEventListener("click",checkPractical);sm.addEventListener("click",()=>{if(font>0){font--;fontApply()}});lg.addEventListener("click",()=>{if(font<3){font++;fontApply()}});loadProgress();updateHomeProgress();fontApply()
 })();
