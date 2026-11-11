@@ -294,3 +294,18 @@
 - 完成第二十六步後，「下一步」會正確進入第二十七步。
 - 本正式版同步更新網站資源版本為 v66，避免 GitHub Pages 使用舊快取。
 - ZIP 採單一正式根資料夾結構；解壓後進入 `sudoku-v66-step27-9x9-row` 即可直接看到 `index.html`、`css`、`js`、`assets` 與 `README.md`，不再包含舊版巢狀資料夾。
+
+
+## V68-optimized：Logo 網頁效能優化
+
+- 僅優化 assets/lezaiblingzhong-logo.png 的圖片尺寸與壓縮。
+- 未修改 HTML、CSS 或 JavaScript 功能。
+- Logo 由原始高解析度版本縮小為適合網頁與手機使用的尺寸，以降低首次載入流量。
+
+
+## V68 WebP 圖片深度優化
+
+- Logo 改用 WebP 網頁格式，維持 768 × 512 顯示尺寸。
+- Logo 檔案由 PNG 約 679 KB 降至 WebP 約 68 KB。
+- 僅更新圖片資源與圖片引用；數獨遊戲邏輯未修改。
+- 建議未來彩色插圖與照片優先使用 WebP，原始高解析度圖片保留在網站專案外部備份。
