@@ -290,3 +290,10 @@
 
 /* V98.2：第36步目標格只由 JS 顯示一個「？」；強制關閉所有較高權重的 CSS 偽元素 */
 #grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:none !important;display:none !important;}
+
+/* 第37步：9×9 筆記→正式答案 */
+#grid.nine-practice2-board .nine-practice-cell{position:relative;}
+#grid.nine-practice2-board .nine-practice-cell.nine-practice-target{background:#eaf3ff;outline:4px solid #245ea8;outline-offset:-5px;z-index:2;}
+#grid.nine-practice2-board .pencil-mini-grid{position:absolute;inset:6%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));align-items:center;justify-items:center;width:88%;height:88%;pointer-events:none;}
+#grid.nine-practice2-board .pencil-note{font-size:0.30em;line-height:1;font-weight:700;color:#1f3b5b;}
+#grid.nine-practice2-board .pencil-note:not(.filled){visibility:hidden;}
