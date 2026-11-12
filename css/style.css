@@ -283,3 +283,10 @@
 #grid.nine-note-box-board .pencil-mini-grid{position:absolute;inset:6%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));align-items:center;justify-items:center;pointer-events:none;width:88%;height:88%;} 
 #grid.nine-note-box-board .pencil-note{font-size:clamp(14px,2.6vw,22px);line-height:1;color:#245ea8;font-weight:700;text-align:center;}
 #grid.nine-note-box-board .pencil-note:not(.filled){visibility:hidden;}
+
+
+/* V98.1：9×9 第五步問號由 JS 本體顯示，避免 CSS 偽元素重複產生第二個問號 */
+.nine-practice-cell.missing:after{content:none;}
+
+/* V98.2：第36步目標格只由 JS 顯示一個「？」；強制關閉所有較高權重的 CSS 偽元素 */
+#grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:none !important;display:none !important;}
