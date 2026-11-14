@@ -320,3 +320,6 @@
 /* V102.2：第39、40步筆記固定綁定各自格子，切換選取或反金時不消失 */
 #grid.nine-combat-board .nine-combat-cell{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;box-sizing:border-box;}
 #grid.nine-combat-board .nine-combat-cell .pencil-mini-grid{z-index:1;}
+/* 第 39、40 步：已完成 9 個的數字鍵盤反灰 */
+#game:has(.nine-combat-board) .pad button:disabled,
+#game:has(.nine-combat-board) .pad button.digit-complete{background:#e5e7eb!important;color:#8a929d!important;border-color:#c4c9d1!important;box-shadow:none!important;opacity:1;cursor:not-allowed}

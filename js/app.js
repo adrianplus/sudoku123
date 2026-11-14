@@ -458,6 +458,16 @@ function render(){
     if(selectedCell===key)item.classList.add("selected");if(!v&&state.values[key]===undefined){item.tabIndex=0;item.setAttribute("role","button");item.addEventListener("click",()=>{selectedCell=key;render();say(`已選取第 ${r+1} 列、第 ${c+1} 欄。${noteMode?"按下方數字加入或移除筆記。":"按下方數字填入答案；需要時可開啟筆記。"}`,"good");});}grid.appendChild(item);
   }));
   const filled=Object.keys(state.values).length,total=puzzle.flat().filter(v=>v===0).length;$("question").textContent=`已完成 ${filled} / ${total} 格${state.scanDigit!==null?`｜正在反金數字 ${state.scanDigit}`:"｜可自行選格、填答、筆記或點數字反金"}`;
+  // 第 39、40 步：同一數字在完整盤面已達 9 個時，將下方該數字反灰；筆記不計入。
+  document.querySelectorAll(".pad button[data-n]").forEach(button=>{
+   const digit=Number(button.dataset.n);
+   let count=0;
+   for(let rr=0;rr<9;rr++)for(let cc=0;cc<9;cc++)if(vals[`${rr},${cc}`]===digit)count++;
+   const completeDigit=count===9;
+   button.disabled=completeDigit;
+   button.classList.toggle("digit-complete",completeDigit);
+   button.setAttribute("aria-label",completeDigit?`數字 ${digit} 已全部完成`:`輸入數字 ${digit}`);
+  });
   const nb=$("note-mode"),cb=$("clear-cell");nb.classList.toggle("active",noteMode);nb.setAttribute("aria-pressed",String(noteMode));nb.dataset.state=noteMode?"ON":"OFF";cb.disabled=(selectedCell===null&&state.scanDigit===null);return;
  }
  if(current.mode==="numberfocus3"||current.mode==="numberfocus4"){
@@ -1041,7 +1051,14 @@ function answer(n){if(answered)return;if(current&&(current.mode==="ninecombat1"|
  const solution=cfg.solution;
  if(selectedCell===null){say("請先選擇一個空格，再按下方數字填入或記筆記。","bad");return;}const [r,c]=selectedCell.split(",").map(Number),key=selectedCell;if(puzzle[r][c]!==0){say("題目原有數字不能修改，請選擇空格。","bad");return;}
  if(noteMode){state.notes[key]=state.notes[key]||[];if(state.notes[key].includes(n))state.notes[key]=state.notes[key].filter(v=>v!==n);else{state.notes[key].push(n);state.notes[key].sort((a,b)=>a-b);}render();selectedCell=key;say(`已${(state.notes[key]||[]).includes(n)?"記下":"移除"}候選數字 ${n}。`,`good`);return;}
- if(n!==solution[r][c]){say("這個數字目前不正確。請再觀察橫排、直排與九宮格，或先使用筆記。","bad");return;}
+ if(n!==solution[r][c]){
+  // 第39、40步仍屬新手村：錯誤正式答案不落盤，保留目前選取格讓玩家重新思考。
+  selectedCell=key;
+  const chosen=grid.querySelector(`[data-cell="${key}"]`);
+  if(chosen)chosen.classList.add("selected");
+  say("這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。","bad");
+  return;
+ }
  state.values[key]=n;delete state.notes[key];selectedCell=null;render();const total=puzzle.flat().filter(v=>v===0).length;if(Object.keys(state.values).length===total){answered=true;say(cfg.completeText,"good");timer=setTimeout(()=>complete(),800);}else say(`答對了！${n} 已填入並保留。`,`good`);return;
  }if(current&&(current.mode==="numberfocus3"||current.mode==="numberfocus4")){
  const isSecondClass=current.mode==="numberfocus4";
