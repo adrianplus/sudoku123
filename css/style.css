@@ -285,11 +285,10 @@
 #grid.nine-note-box-board .pencil-note:not(.filled){visibility:hidden;}
 
 
-/* V98.1：9×9 第五步問號由 JS 本體顯示，避免 CSS 偽元素重複產生第二個問號 */
-.nine-practice-cell.missing:after{content:none;}
-
-/* V98.2：第36步目標格只由 JS 顯示一個「？」；強制關閉所有較高權重的 CSS 偽元素 */
-#grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:none !important;display:none !important;}
+/* V105.1：第27、28步的缺格恢復顯示單一「？」。
+   先前為修正其他步驟的雙問號而全域關閉偽元素，誤傷了橫排與直排練習。 */
+.nine-practice-cell.missing:after{content:"?";display:block;}
+#grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:"?" !important;display:block !important;}
 
 /* 第37步：9×9 筆記→正式答案 */
 #grid.nine-practice2-board .nine-practice-cell{position:relative;}
@@ -327,3 +326,22 @@
 #grid.nine-combat-board .nine-combat-cell.number-focus-filled.wrong{color:#c62828!important;background:#fff0f0!important;}
 #game:has(.nine-combat-board) .game-tools #check-wrap button{min-width:46px;height:40px;padding:4px 10px;border:2px solid #b9cbe2;border-radius:10px;background:#fff;color:#17467f;font-weight:800;}
 @media(max-width:640px){#game:has(.nine-combat-board) .game-tools #check-wrap button{min-width:40px;height:36px;padding:3px 7px;font-size:.9em}}
+
+
+/* V105.2：手機版局部修正
+   第28、34步：縮短直排棋盤，讓九格能在同一個畫面完整看見。
+   第30～32步：只縮小手機版九宮格線索數字，桌機版維持原樣。
+*/
+@media(max-width:640px){
+  #grid.vertical-nine-board,
+  #grid.nine-note-column-board{
+    height:min(47vh,432px)!important;
+    width:min(5.2vh,48px)!important;
+    aspect-ratio:auto!important;
+  }
+
+  #grid.sudoku.sparse-board.rowcol.nine-rowcol-board .nine-rowcol-cell{
+    font-size:clamp(1.1rem,6vw,1.7rem)!important;
+    line-height:1!important;
+  }
+}
