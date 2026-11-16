@@ -345,3 +345,25 @@
     line-height:1!important;
   }
 }
+
+
+/* V105.3：第15、28步直排棋盤線條修正
+   只調整兩個直排練習的格線：外框沿用棋盤深色外框，
+   一般格線改為單條細線，宮格交界（第3格後）加粗。
+   不影響第34步及其他關卡。 */
+#grid.six-practice-board.vertical-square-board .six-practice-cell,
+#grid.nine-practice-board.vertical-nine-board .nine-practice-cell{
+  border:0 !important;
+  border-bottom:1px solid #718096 !important;
+  border-radius:0 !important;
+  box-sizing:border-box;
+}
+#grid.six-practice-board.vertical-square-board .six-practice-cell:nth-child(3),
+#grid.nine-practice-board.vertical-nine-board .nine-practice-cell:nth-child(3),
+#grid.nine-practice-board.vertical-nine-board .nine-practice-cell:nth-child(6){
+  border-bottom:5px solid #334155 !important;
+}
+#grid.six-practice-board.vertical-square-board .six-practice-cell:last-child,
+#grid.nine-practice-board.vertical-nine-board .nine-practice-cell:last-child{
+  border-bottom:0 !important;
+}
