@@ -397,3 +397,13 @@ body.game-active .category-nav{display:none}
   #home-top img{width:28px;height:28px}
   #font-smaller,#font-larger{min-width:36px;font-size:1.02em}
 }
+
+
+/* V106.7：跨語言通用的地球＋Language 語言入口 */
+.language-control{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:7px;height:40px;min-width:124px;padding:0 10px;border:2px solid #b9cbe2;border-radius:10px;background:#fff;color:#17467f;font:inherit;font-size:.82em;line-height:1;white-space:nowrap;cursor:pointer;user-select:none}
+.language-control:focus-within{outline:3px solid #f0bd45;outline-offset:2px}
+.language-globe{width:20px;height:20px;flex:0 0 20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.language-control-label{font-weight:600}
+.language-chevron{width:15px;height:15px;flex:0 0 15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#language-select{position:absolute;inset:0;width:100%;height:100%;max-width:none;min-width:0;margin:0;padding:0;border:0;border-radius:inherit;opacity:0;cursor:pointer;font-size:16px}
+@media(max-width:640px){.language-control{height:36px;min-width:112px;gap:6px;padding:0 8px;font-size:.76em}.language-globe{width:18px;height:18px;flex-basis:18px}.language-chevron{width:14px;height:14px;flex-basis:14px}}
