@@ -1,0 +1,551 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Sudoku Classroom",
+    "village": "Sudoku Beginner's Village",
+    "home": "Home",
+    "smaller": "Smaller text",
+    "larger": "Larger text",
+    "language": "Language",
+    "category4": "4×4 Sudoku",
+    "category6": "6×6 Sudoku",
+    "category9": "9×9 Sudoku",
+    "homeNote": "No sign-in or timer required. Take your time.",
+    "start": "Start practice",
+    "exam": "Start test",
+    "study": "Start lesson",
+    "challenge": "Start challenge",
+    "practice": "Start practice",
+    "battle": "Start challenge",
+    "graduation": "Start test",
+    "firstInterview": "Start first interview",
+    "finalInterview": "Start final interview",
+    "hiredChallenge": "Start hired challenge",
+    "gameFeedback": "Select a cell, then choose a number below.",
+    "check": "Check",
+    "clear": "Clear",
+    "notes": "Notes",
+    "hint": "Hint",
+    "question": "Question",
+    "modalTitle": "Step completed!",
+    "next": "Next step",
+    "modalHome": "Back to home",
+    "footer": "Le Zai Ling Zhong | No rush. Learn one step at a time.",
+    "gridAria": "Sudoku grid",
+    "categoryAria": "Sudoku size categories",
+    "brandAlt": "Le Zai Ling Zhong logo",
+    "section4": "4×4 Sudoku",
+    "section6": "6×6 Sudoku",
+    "section9": "9×9 Sudoku",
+    "completeNext": "You have completed this step. Well done! Keep going with the next challenge.",
+    "completeAll": "You have completed all available steps! Well done. You can return to the home page."
+  },
+  "lessons": [
+    {
+      "title": "Step 1: Row",
+      "description": "Look across the row and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 2: Column",
+      "description": "Look down the column and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 3: 2×2 Box",
+      "description": "Find the number missing from the small box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 4: Row + Column",
+      "description": "Use both the row and column clues to solve the question mark.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 5: Use Three Directions",
+      "description": "Combine clues from three directions to find the correct number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 6: Box + Column + Row",
+      "description": "Use the box, column, and row clues together.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 7: Find the Useful Clues",
+      "description": "Ignore distractions and identify the clues that matter.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 8: 4×4 Sudoku Practice",
+      "description": "Solve the puzzles in order. Each correct answer stays on the board.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 9: 4×4 Sudoku Challenge",
+      "description": "Select an empty cell, enter a number, then check your answer. Use a hint if needed.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 10: Find the Breakthrough Cell",
+      "description": "Find the first cell whose answer can be determined. Correct answers advance to the next puzzle.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 11: 4×4 Graduation Test (1/3)",
+      "description": "Complete the 4×4 grid and check your answers. Incorrect entries are marked in red.",
+      "action": "Start test"
+    },
+    {
+      "title": "Step 12: 4×4 Graduation Test (2/3)",
+      "description": "Complete the second 4×4 grid and check your answers. Incorrect entries are marked in red.",
+      "action": "Start test"
+    },
+    {
+      "title": "Step 13: 4×4 Graduation Test (3/3)",
+      "description": "Complete the third 4×4 grid and check your answers. Incorrect entries are marked in red.",
+      "action": "Start test"
+    },
+    {
+      "title": "Step 14: 6×6 Sudoku – Row",
+      "description": "Look across six cells and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 15: 6×6 Sudoku – Column",
+      "description": "Look down six cells and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 16: 6×6 Sudoku – Box",
+      "description": "Find the missing number in the six-cell box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 17: What Is 6×6 Sudoku? (Type 1)",
+      "description": "Learn the row, column, and box rules, then solve three target cells.",
+      "action": "Start lesson"
+    },
+    {
+      "title": "Step 18: Pencil Marks (6×6 Row)",
+      "description": "Record the two missing numbers as small pencil marks in two empty cells.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 19: Pencil Marks (6×6 Column)",
+      "description": "Record the two missing numbers as small pencil marks in two empty cells in the column.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 20: Pencil Marks (6×6 Box)",
+      "description": "Record the two missing numbers as small pencil marks in two empty cells in the box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 21: What Is 6×6 Sudoku? (Type 2)",
+      "description": "Solve five target cells in order. Correct answers stay on the board.",
+      "action": "Start lesson"
+    },
+    {
+      "title": "Step 22: Pencil-Mark Challenge",
+      "description": "Complete eight target cells by recording two candidate numbers in each cell.",
+      "action": "Start challenge"
+    },
+    {
+      "title": "Step 23: Scan One Number at a Time (1, 2, 6)",
+      "description": "Scan 1, 2, and 6 in turn. Use the highlighted rows, columns, and boxes to find where each number fits.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 24: Scan One Number at a Time (1, 2, 5)",
+      "description": "Scan 1, 2, and 5 in turn. Use the highlighted rows, columns, and boxes to find where each number fits.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 25: 6×6 Sudoku Challenge 1",
+      "description": "Complete a full 6×6 Sudoku using highlighting and pencil marks.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 26: 6×6 Sudoku Challenge 2",
+      "description": "Try a harder 6×6 Sudoku and combine all the techniques you have learned.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 27: 9×9 Sudoku – Row",
+      "description": "Look across nine cells and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 28: 9×9 Sudoku – Column",
+      "description": "Look down nine cells and find the missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 29: 9×9 Sudoku – Box",
+      "description": "Find the missing number in the 3×3 box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 30: Solve with Row and Column",
+      "description": "Use the row and column together to identify the same missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 31: Row + Column + Box",
+      "description": "Use the row, column, and 3×3 box to find the one missing number.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 32: Find the Relevant Clues",
+      "description": "Ignore unrelated numbers and focus on the useful clues in the row, column, and box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 33: Pencil Marks (9×9 Row)",
+      "description": "Practice recording missing candidates as small pencil marks in each row.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 34: Pencil Marks (9×9 Column)",
+      "description": "Practice recording missing candidates as small pencil marks in each column.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 35: Pencil Marks (9×9 Box)",
+      "description": "Use pencil marks to identify the missing candidates in each 3×3 box.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 36: 9×9 Sudoku Practice 1 – Step by Step",
+      "description": "Follow the specified order and solve 21 target cells in one 9×9 Sudoku.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 37: 9×9 Sudoku Practice 2 – Use Pencil Marks",
+      "description": "Use pencil marks in the first four target cells, then solve the final cell using those notes.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 38: 9×9 Sudoku Practice 3 – Scan One Number at a Time",
+      "description": "Scan numbers 1 through 9 one at a time. Use highlighting and pencil marks to find each position.",
+      "action": "Start practice"
+    },
+    {
+      "title": "Step 39: 9×9 Sudoku Challenge 1",
+      "description": "Complete the full 9×9 Sudoku. Use pencil marks and number highlighting when helpful.",
+      "action": "Start challenge"
+    },
+    {
+      "title": "Step 40: 9×9 Sudoku Challenge 2 – Two-Position Method",
+      "description": "Use the two-position method and scan one number at a time to solve the full grid.",
+      "action": "Start challenge"
+    },
+    {
+      "title": "Step 41: 9×9 Graduation Test (Part 1)",
+      "description": "Complete the full Sudoku. You can check at any time; incorrect entries are marked in red.",
+      "action": "Start test"
+    },
+    {
+      "title": "Step 42: 9×9 Graduation Test (Part 2)",
+      "description": "Complete the second graduation puzzle. You can check at any time; incorrect entries are marked in red.",
+      "action": "Start test"
+    },
+    {
+      "title": "Step 43: Company First Interview – 9×9 Sudoku",
+      "description": "Your first company interview. Use the skills from the graduation test to complete this 9×9 Sudoku.",
+      "action": "Start first interview"
+    },
+    {
+      "title": "Step 44: Company Final Interview – 9×9 Sudoku",
+      "description": "Your final company interview. Complete this 9×9 Sudoku using notes, highlighting, and checking.",
+      "action": "Start final interview"
+    },
+    {
+      "title": "Step 45: First Challenge After Joining the Company – 9×9 Sudoku",
+      "description": "Congratulations on being hired! Take on your first challenge after joining the company.",
+      "action": "Start hired challenge"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Step 1: Row",
+      "instruction": "Look across the row and find the missing number."
+    },
+    "column": {
+      "title": "Step 2: Column",
+      "instruction": "Look down the column and find the missing number."
+    },
+    "box": {
+      "title": "Step 3: 2×2 Box",
+      "instruction": "Find the number missing from the small box."
+    },
+    "rowcol": {
+      "title": "Step 4: Row + Column",
+      "instruction": "Use both the row and column clues to solve the question mark."
+    },
+    "threeways": {
+      "title": "Step 5: Use Three Directions",
+      "instruction": "Combine clues from three directions to find the correct number."
+    },
+    "boxways": {
+      "title": "Step 6: Box + Column + Row",
+      "instruction": "Use the box, column, and row clues together."
+    },
+    "advanced": {
+      "title": "Step 7: Find the Useful Clues",
+      "instruction": "Ignore distractions and identify the clues that matter."
+    },
+    "classic": {
+      "title": "Step 8: 4×4 Sudoku Practice",
+      "instruction": "Solve the puzzles in order. Each correct answer stays on the board."
+    },
+    "practical": {
+      "title": "Step 9: 4×4 Sudoku Challenge",
+      "instruction": "Select an empty cell, enter a number, then check your answer. Use a hint if needed."
+    },
+    "breakthrough": {
+      "title": "Step 10: Find the Breakthrough Cell",
+      "instruction": "Find the first cell whose answer can be determined. Correct answers advance to the next puzzle."
+    },
+    "graduate1": {
+      "title": "Step 11: 4×4 Graduation Test (1/3)",
+      "instruction": "Complete the 4×4 grid and check your answers. Incorrect entries are marked in red."
+    },
+    "graduate2": {
+      "title": "Step 12: 4×4 Graduation Test (2/3)",
+      "instruction": "Complete the second 4×4 grid and check your answers. Incorrect entries are marked in red."
+    },
+    "graduate3": {
+      "title": "Step 13: 4×4 Graduation Test (3/3)",
+      "instruction": "Complete the third 4×4 grid and check your answers. Incorrect entries are marked in red."
+    },
+    "sixrow": {
+      "title": "Step 14: 6×6 Sudoku – Row",
+      "instruction": "Look across six cells and find the missing number."
+    },
+    "sixcolumn": {
+      "title": "Step 15: 6×6 Sudoku – Column",
+      "instruction": "Look down six cells and find the missing number."
+    },
+    "sixbox": {
+      "title": "Step 16: 6×6 Sudoku – Box",
+      "instruction": "Find the missing number in the six-cell box."
+    },
+    "sixnote": {
+      "title": "Step 18: Pencil Marks (6×6 Row)",
+      "instruction": "Record the two missing numbers as small pencil marks in two empty cells."
+    },
+    "sixcolumnnote": {
+      "title": "Step 19: Pencil Marks (6×6 Column)",
+      "instruction": "Record the two missing numbers as small pencil marks in two empty cells in the column."
+    },
+    "sixboxnote": {
+      "title": "Step 20: Pencil Marks (6×6 Box)",
+      "instruction": "Record the two missing numbers as small pencil marks in two empty cells in the box."
+    },
+    "step14": {
+      "title": "Step 17: What Is 6×6 Sudoku? (Type 1)",
+      "instruction": "Sudoku has three rules:\n1. Each column contains 1–6 without repeats.\n2. Each row contains 1–6 without repeats.\n3. Each 6-cell box contains 1–6 without repeats.\nSolve the three target cells in order. Correct answers remain on the board."
+    },
+    "sixintro2": {
+      "title": "Step 21: What Is 6×6 Sudoku? (Type 2)",
+      "instruction": "Solve five target cells in order. Correct answers stay on the board."
+    },
+    "sixnotecombat": {
+      "title": "Step 22: Pencil-Mark Challenge",
+      "instruction": "Complete eight target cells by recording two candidate numbers in each cell."
+    },
+    "numberfocus": {
+      "title": "Step 23: Scan One Number at a Time (1, 2, 6)",
+      "instruction": "Scan 1, 2, and 6 in turn. Use the highlighted rows, columns, and boxes to find where each number fits."
+    },
+    "numberfocus2": {
+      "title": "Step 24: Scan One Number at a Time (1, 2, 5)",
+      "instruction": "Scan 1, 2, and 5 in turn. Use the highlighted rows, columns, and boxes to find where each number fits."
+    },
+    "numberfocus3": {
+      "title": "Step 25: 6×6 Sudoku Challenge 1",
+      "instruction": "Complete a full 6×6 Sudoku using highlighting and pencil marks."
+    },
+    "numberfocus4": {
+      "title": "Step 26: 6×6 Sudoku Challenge 2",
+      "instruction": "Try a harder 6×6 Sudoku and combine all the techniques you have learned."
+    },
+    "ninerow": {
+      "title": "Step 27: 9×9 Sudoku – Row",
+      "instruction": "Look across nine cells and find the missing number."
+    },
+    "ninecolumn": {
+      "title": "Step 28: 9×9 Sudoku – Column",
+      "instruction": "Look down nine cells and find the missing number."
+    },
+    "ninebox": {
+      "title": "Step 29: 9×9 Sudoku – Box",
+      "instruction": "Find the missing number in the 3×3 box."
+    },
+    "ninerowcol": {
+      "title": "Step 30: Solve with Row and Column",
+      "instruction": "Use the row and column together to identify the same missing number."
+    },
+    "ninerowcolbox": {
+      "title": "Step 31: Row + Column + Box",
+      "instruction": "Use the row, column, and 3×3 box to find the one missing number."
+    },
+    "nineadvanced": {
+      "title": "Step 32: Find the Relevant Clues",
+      "instruction": "Ignore unrelated numbers and focus on the useful clues in the row, column, and box."
+    },
+    "ninenote": {
+      "title": "Step 33: Pencil Marks (9×9 Row)",
+      "instruction": "Practice recording missing candidates as small pencil marks in each row."
+    },
+    "ninecolumnnote": {
+      "title": "Step 34: Pencil Marks (9×9 Column)",
+      "instruction": "Practice recording missing candidates as small pencil marks in each column."
+    },
+    "nineboxnote": {
+      "title": "Step 35: Pencil Marks (9×9 Box)",
+      "instruction": "Use pencil marks to identify the missing candidates in each 3×3 box."
+    },
+    "ninepractice1": {
+      "title": "Step 36: 9×9 Sudoku Practice 1 – Step by Step",
+      "instruction": "Follow the specified order and solve 21 target cells in one 9×9 Sudoku."
+    },
+    "ninepractice2": {
+      "title": "Step 37: 9×9 Sudoku Practice 2 – Use Pencil Marks",
+      "instruction": "Use pencil marks in the first four target cells, then solve the final cell using those notes."
+    },
+    "ninefocus": {
+      "title": "Step 38: 9×9 Sudoku Practice 3 – Scan One Number at a Time",
+      "instruction": "Scan numbers 1 through 9 one at a time. Use highlighting and pencil marks to find each position."
+    },
+    "ninecombat1": {
+      "title": "Step 39: 9×9 Sudoku Challenge 1",
+      "instruction": "Complete the full 9×9 Sudoku. Use pencil marks and number highlighting when helpful."
+    },
+    "ninecombat2": {
+      "title": "Step 40: 9×9 Sudoku Challenge 2 – Two-Position Method",
+      "instruction": "Use the two-position method and scan one number at a time to solve the full grid."
+    },
+    "ninecombat3": {
+      "title": "Step 41: 9×9 Graduation Test (Part 1)",
+      "instruction": "Complete the full Sudoku. You can check at any time; incorrect entries are marked in red."
+    },
+    "ninecombat4": {
+      "title": "Step 42: 9×9 Graduation Test (Part 2)",
+      "instruction": "Complete the second graduation puzzle. You can check at any time; incorrect entries are marked in red."
+    },
+    "ninecombat75": {
+      "title": "Step 43: Company First Interview – 9×9 Sudoku",
+      "instruction": "Your first company interview. Use the skills from the graduation test to complete this 9×9 Sudoku."
+    },
+    "ninecombat80": {
+      "title": "Step 44: Company Final Interview – 9×9 Sudoku",
+      "instruction": "Your final company interview. Complete this 9×9 Sudoku using notes, highlighting, and checking."
+    },
+    "ninecombat5": {
+      "title": "Step 45: First Challenge After Joining the Company – 9×9 Sudoku",
+      "instruction": "Congratulations on being hired! Take on your first challenge after joining the company."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Look at the cells, then choose a number below.",
+    "答對了！你找到破局點！": "Correct! You found the breakthrough cell!",
+    "再想一想！請重新觀察線索。": "Try again. Look at the clues once more.",
+    "沒關係，慢慢找。請再選一次。": "That's okay. Take your time and try again.",
+    "請先選取一個空格。": "Please select an empty cell first.",
+    "請先選取一個空格，再按數字加入小字。": "Select an empty cell, then choose a number to add a pencil mark.",
+    "請先點選棋盤上的空格，再選擇數字。": "Select an empty cell on the board, then choose a number.",
+    "題目原有數字不能修改。": "The original puzzle numbers cannot be changed.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Notes are on. Select an empty cell, then choose a number below to add a note.",
+    "筆記模式已關閉。": "Notes are off.",
+    "已取消所有金色反白。": "All gold highlighting has been cleared.",
+    "目前沒有選取空格，也沒有反金顯示。": "No cell is selected and no number highlighting is active.",
+    "目前沒有選取空格，也沒有反白區域。": "No cell is selected and no area is highlighted.",
+    "已清空選取格子的答案與筆記。": "The selected cell's answer and notes have been cleared.",
+    "已清空選取格子的所有小字。": "All pencil marks in the selected cell have been cleared.",
+    "按下方數字加入或移除筆記。": "Choose a number below to add or remove a note.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Notes are off. Press Notes to turn them on.",
+    "請先關閉「筆記」，再填入正式答案。": "Turn off Notes before entering the final answer.",
+    "請依照順序完成目前亮起的目標格。": "Complete the currently highlighted target cell in order.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Complete the currently highlighted target cell before moving on.",
+    "已選取空格，請按下方數字填入答案。": "An empty cell is selected. Choose a number below to enter your answer.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Answer entered. The system will not check automatically; press Check when ready.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Number entered. Press Check when ready, or continue editing.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Try again. You only need to solve the cell with the question mark.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Not quite. The number is marked red. Look again and find the breakthrough!",
+    "三題全部答對！你已學會一次檢查一個數字。": "All three are correct! You've learned to scan one number at a time.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "You've checked all numbers from 1 to 9. Step 38 is complete!",
+    "本次已完成，但瀏覽器無法保存進度。": "This session is complete, but the browser could not save your progress.",
+    "目前目標格已選取，請先開啟「筆記」。": "The target cell is selected. Turn on “Notes” first.",
+    "目前目標格已選取，請按下方數字寫入小字。": "The target cell is selected. Choose a number below to add a pencil mark.",
+    "最後目標格已選取，請直接填入答案。": "The final target cell is selected. Enter the answer directly.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Select the current target cell, then choose a number to add a pencil mark.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Select the specified number already on the board to observe the highlighted areas.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Find and select an empty cell where this number can go, then choose the number below.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Select an existing 1, 2, or 6 on the board, then observe the gold highlights.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Select an existing 1, 2, or 5 on the board, then observe the gold highlights.",
+    "提示：缺少的數字是 ": "Hint: the missing number is ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Two numbers were noted, but the pair is incorrect. Use Clear and try again.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "The candidate numbers in this cell are incorrect. Use Clear and record them again.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "The two candidate notes are incorrect. Use “Clear” and record them again.",
+    "這個候選數字不正確，請再觀察九宮格。": "This candidate number is incorrect. Check the 3×3 box again.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "This final answer is incorrect. Review the highlighted area or turn on Notes to record candidates.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "This position is incorrect. Review the gold highlights and find the empty cell where this number belongs.",
+    "已選取這一格，請選擇你認為正確的數字。": "This cell is selected. Choose the number you think is correct.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Select an empty cell, then choose a number below to enter an answer or add a note.",
+    "全部正確！你完成了 4X4 數獨實戰！": "All correct! You completed the 4×4 Sudoku challenge!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "All correct! You passed the 4×4 graduation test (1/3)!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "All correct! You passed the 4×4 graduation test (2/3)!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "All correct! You passed the 4×4 graduation test (3/3)!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "All eight target cells are complete! Step 22 is finished.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "All five are correct! You completed the Type 2 6×6 Sudoku practice.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Excellent! The puzzle is correct. You passed Step 43: the company's first 9×9 Sudoku interview!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Excellent! You completed the company's final interview and passed Step 44!",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Excellent! You completed the 90-point challenge and passed Step 45: your first challenge after joining the company!",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "You have completed all available practice steps! Well done. You can return to the home page.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "You have completed this step. Well done! Continue to the next challenge.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Select a number already on the board to see the highlighted areas.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Select a number on the board to highlight its row, column, and box. Select an empty cell and enter a number. Notes can record candidates.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Turn on Notes, then record two candidate numbers using the target cell's row, column, and box. Completed cells remain on the board.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Turn on Notes, select an empty cell, and record all missing candidates in the row. There are six puzzles, with changing formats.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Turn on Notes, select an empty cell, and record all missing candidates in the column. There are six puzzles, with changing formats.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "For each of the five target cells, check its row first, then its column and box.",
+    "這一關請靠自己的觀察找出破局點！": "Use your own observation to find the breakthrough in this level!",
+    "畢業考請靠自己的觀察完成，加油！": "Use your own observation to complete the graduation test. You can do it!",
+    "按下方數字填入答案；也可開啟筆記。": "Choose a number below to enter your answer, or turn on Notes.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Turn on Notes and record candidates in the first four target cells in order. After the fourth, turn Notes off and use your notes to solve the final cell.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Step 1 of 9: Select any 1 in the puzzle. After highlighting, turn on Notes and mark possible positions for 1.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Now turn on Notes and mark the possible positions for 1.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Keep going! All hints have been used. You can finish it yourself!",
+    "提示已經使用完畢，你可以自己做到！": "All hints have been used. You can finish it yourself!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Excellent! The 9×9 Sudoku is correct. Step 42 is complete!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Excellent! The 9×9 Sudoku is correct. Step 41 is complete!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Excellent! The 9×9 Sudoku is correct. Step 40 is complete!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Excellent! The 9×9 Sudoku is correct. Step 39 is complete!",
+    "請依序完成目前亮起的目標格。": "Complete the currently highlighted target cell in order.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Notes are on. The target cell is already selected; choose a number below to add a note.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "For the final step, turn off Notes and enter the final answer directly.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Think again: use the four saved pencil notes to infer the final answer.",
+    "新題目來了！再找出一個破局點。": "A new puzzle! Find another breakthrough cell.",
+    "題目原有數字不能修改，請選擇空格。": "The given numbers cannot be changed. Select an empty cell.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "This number is not correct. Reconsider the row, column, and box clues, or use Notes to record candidates.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "This answer is incorrect and will not be entered. Review the row, column, and 3×3 box, or use Notes first.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Some notes are not missing from this row. Press Clear to erase this cell and record them again.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Some notes are not missing from this row. Press Clear to erase this cell and record them again.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Think again: check the row, then the column, and finally the 6-cell box. Correct answers stay on the board.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Think again: check the target cell's row, column, and 6-cell box. Correct answers stay on the board.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Next puzzle! Notes have been turned on automatically. Record the two missing numbers in the two empty cells.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "All three are correct! You have learned to solve puzzles using row, column, and box rules.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Turn on Notes and record pencil marks in the four target cells in the specified order.",
+    "三題全部完成！你已學會一次檢查一個數字。": "All three are complete! You have learned to scan one number at a time.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "For the first four steps, turn on Notes and enter two candidate marks.",
+    "原本題目提供的數字不能修改，請選擇空格。": "The given numbers cannot be changed. Select an empty cell.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Excellent! You completed all 21 steps and solved this Sudoku!",
+    "已選取空格，請按下方數字填入。": "An empty cell is selected. Choose a number below to fill it.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Notes are off. Press Notes to turn them on first.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Correct! You completed the exercise using pencil notes to infer the answer.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "First select a number already on the 6×6 board. The system will highlight its row, column, and box. The number buttons below are only for answers or notes.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Select the empty cell you think is the breakthrough, then choose a number."
+  }
+}

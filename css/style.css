@@ -380,3 +380,20 @@
 .home-heading{display:none!important}
 body.game-active .category-nav{display:none}
 @media(max-width:640px){.sticky-shell header{padding:6px 9px;gap:6px}.category-nav{padding:0 9px 8px;gap:7px}.category-nav button{min-height:42px;padding:6px 3px;border-radius:10px;font-size:.92em}.brand-logo{width:94px;height:56px}}
+
+/* V106 language selector */
+#language-select{height:40px;max-width:104px;min-width:78px;border:2px solid #b9cbe2;border-radius:9px;background:#fff;color:#17467f;font:inherit;font-size:.82em;padding:0 5px}
+#language-select:focus-visible{outline:3px solid #f0bd45;outline-offset:2px}
+@media(max-width:640px){#language-select{height:36px;min-width:70px;max-width:84px;font-size:.75em;padding:0 3px}nav{gap:3px}}
+
+#home-top{min-width:42px}
+@media(max-width:640px){#home-top{min-width:36px}#language-select{min-width:60px;max-width:64px}}
+
+#home-top{display:grid;place-items:center;padding:2px;min-width:40px}
+#home-top img{display:block;width:32px;height:32px;object-fit:contain}
+#font-smaller,#font-larger{min-width:40px;font-size:1.12em;line-height:1}
+@media(max-width:640px){
+  #home-top{min-width:36px}
+  #home-top img{width:28px;height:28px}
+  #font-smaller,#font-larger{min-width:36px;font-size:1.02em}
+}
