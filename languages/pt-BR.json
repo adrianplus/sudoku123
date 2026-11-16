@@ -1,0 +1,551 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Sala de Sudoku",
+    "village": "Vila dos iniciantes no Sudoku",
+    "home": "Início",
+    "smaller": "Diminuir texto",
+    "larger": "Aumentar texto",
+    "language": "Language",
+    "category4": "Sudoku 4×4",
+    "category6": "Sudoku 6×6",
+    "category9": "Sudoku 9×9",
+    "homeNote": "Não precisa entrar nem usar cronômetro. Faça tudo no seu ritmo.",
+    "start": "Começar exercício",
+    "exam": "Começar teste",
+    "study": "Começar aula",
+    "challenge": "Começar desafio",
+    "practice": "Começar exercício",
+    "battle": "Começar desafio",
+    "graduation": "Começar prova",
+    "firstInterview": "Começar primeira entrevista",
+    "finalInterview": "Começar entrevista final",
+    "hiredChallenge": "Começar desafio após a contratação",
+    "gameFeedback": "Observe as casas e escolha um número abaixo.",
+    "check": "Conferir",
+    "clear": "Limpar",
+    "notes": "Anotações",
+    "hint": "Dica",
+    "question": "Questão",
+    "modalTitle": "Etapa concluída!",
+    "next": "Próxima etapa",
+    "modalHome": "Voltar ao início",
+    "footer": "Le Zai Ling Zhong | Sem pressa. Aprenda passo a passo.",
+    "gridAria": "Grade de Sudoku",
+    "categoryAria": "Categorias de tamanho do Sudoku",
+    "brandAlt": "Logotipo Le Zai Ling Zhong",
+    "section4": "Sudoku 4×4",
+    "section6": "Sudoku 6×6",
+    "section9": "Sudoku 9×9",
+    "completeNext": "Você concluiu esta etapa. Muito bem! Continue com o próximo desafio.",
+    "completeAll": "Você concluiu todas as etapas disponíveis! Muito bem. Você pode voltar à página inicial."
+  },
+  "lessons": [
+    {
+      "title": "Etapa 1: Linha",
+      "description": "Observe a linha e encontre o número que está faltando.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 2: Coluna",
+      "description": "Observe a coluna e encontre o número que está faltando.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 3: Bloco 2×2",
+      "description": "Encontre o número que falta no pequeno bloco.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 4: Linha + coluna",
+      "description": "Use as pistas da linha e da coluna para resolver o ponto de interrogação.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 5: Usar três direções",
+      "description": "Combine as pistas das três direções para encontrar o número correto.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 6: Bloco + coluna + linha",
+      "description": "Use juntas as pistas do bloco, da coluna e da linha.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 7: Encontrar as pistas úteis",
+      "description": "Ignore as distrações e identifique as pistas importantes.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 8: Prática de Sudoku 4×4",
+      "description": "Resolva os desafios na ordem. Cada resposta correta permanece no tabuleiro.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 9: Desafio de Sudoku 4×4",
+      "description": "Selecione uma casa vazia, digite um número e confira sua resposta. Use uma dica se precisar.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 10: Encontrar a casa decisiva",
+      "description": "Encontre a primeira casa cuja resposta pode ser determinada. Cada acerto leva ao próximo desafio.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 11: Prova final 4×4 (1/3)",
+      "description": "Complete a grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho.",
+      "action": "Começar teste"
+    },
+    {
+      "title": "Etapa 12: Prova final 4×4 (2/3)",
+      "description": "Complete a segunda grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho.",
+      "action": "Começar teste"
+    },
+    {
+      "title": "Etapa 13: Prova final 4×4 (3/3)",
+      "description": "Complete a terceira grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho.",
+      "action": "Começar teste"
+    },
+    {
+      "title": "Etapa 14: Sudoku 6×6 – Linha",
+      "description": "Observe as seis casas da linha e encontre o número que falta.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 15: Sudoku 6×6 – Coluna",
+      "description": "Observe as seis casas da coluna e encontre o número que falta.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 16: Sudoku 6×6 – Bloco",
+      "description": "Encontre o número que falta no bloco de seis casas.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 17: O que é Sudoku 6×6? (Tipo 1)",
+      "description": "Aprenda as regras de linha, coluna e bloco; depois resolva três casas-alvo.",
+      "action": "Começar aula"
+    },
+    {
+      "title": "Etapa 18: Anotações a lápis (linha 6×6)",
+      "description": "Anote os dois números que faltam, em tamanho pequeno, em duas casas vazias.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 19: Anotações a lápis (coluna 6×6)",
+      "description": "Anote os dois números que faltam em duas casas vazias da coluna.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 20: Anotações a lápis (bloco 6×6)",
+      "description": "Anote os dois números que faltam em duas casas vazias do bloco.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 21: O que é Sudoku 6×6? (Tipo 2)",
+      "description": "Resolva cinco casas-alvo em ordem. As respostas corretas permanecem no tabuleiro.",
+      "action": "Começar aula"
+    },
+    {
+      "title": "Etapa 22: Desafio de anotações",
+      "description": "Complete oito casas-alvo anotando dois números candidatos em cada casa.",
+      "action": "Começar desafio"
+    },
+    {
+      "title": "Etapa 23: Ver um número por vez (1, 2, 6)",
+      "description": "Observe os números 1, 2 e 6, um de cada vez. Use as linhas, colunas e blocos destacados para encontrar onde cada um se encaixa.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 24: Ver um número por vez (1, 2, 5)",
+      "description": "Observe os números 1, 2 e 5, um de cada vez. Use as linhas, colunas e blocos destacados para encontrar onde cada um se encaixa.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 25: Desafio de Sudoku 6×6 1",
+      "description": "Complete um Sudoku 6×6 inteiro usando destaques e anotações a lápis.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 26: Desafio de Sudoku 6×6 2",
+      "description": "Tente um Sudoku 6×6 mais difícil e combine todas as técnicas aprendidas.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 27: Sudoku 9×9 – Linha",
+      "description": "Observe as nove casas da linha e encontre o número que falta.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 28: Sudoku 9×9 – Coluna",
+      "description": "Observe as nove casas da coluna e encontre o número que falta.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 29: Sudoku 9×9 – Bloco",
+      "description": "Encontre o número que falta no bloco 3×3.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 30: Resolver usando linha e coluna",
+      "description": "Use a linha e a coluna juntas para identificar o mesmo número que está faltando.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 31: Linha + coluna + bloco",
+      "description": "Use a linha, a coluna e o bloco 3×3 para encontrar o único número que falta.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 32: Encontrar as pistas relevantes",
+      "description": "Ignore os números sem relação e concentre-se nas pistas úteis da linha, coluna e bloco.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 33: Anotações a lápis (linha 9×9)",
+      "description": "Pratique anotar os candidatos que faltam em letras pequenas em cada linha.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 34: Anotações a lápis (coluna 9×9)",
+      "description": "Pratique anotar os candidatos que faltam em letras pequenas em cada coluna.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 35: Anotações a lápis (bloco 9×9)",
+      "description": "Use anotações a lápis para identificar os candidatos que faltam em cada bloco 3×3.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 36: Prática de Sudoku 9×9 1 – Passo a passo",
+      "description": "Siga a ordem indicada e resolva 21 casas-alvo em um único Sudoku 9×9.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 37: Prática de Sudoku 9×9 2 – Usar anotações",
+      "description": "Use anotações nas quatro primeiras casas-alvo e resolva a última usando essas anotações.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 38: Prática de Sudoku 9×9 3 – Ver um número por vez",
+      "description": "Observe os números de 1 a 9, um por vez. Use destaques e anotações para encontrar cada posição.",
+      "action": "Começar exercício"
+    },
+    {
+      "title": "Etapa 39: Desafio de Sudoku 9×9 1",
+      "description": "Complete todo o Sudoku 9×9. Use anotações e destaque de números quando ajudar.",
+      "action": "Começar desafio"
+    },
+    {
+      "title": "Etapa 40: Desafio de Sudoku 9×9 2 – Método das duas posições",
+      "description": "Use o método das duas posições e examine um número por vez para resolver toda a grade.",
+      "action": "Começar desafio"
+    },
+    {
+      "title": "Etapa 41: Prova final 9×9 (Parte 1)",
+      "description": "Complete o Sudoku. Você pode conferir a qualquer momento; os erros ficam marcados em vermelho.",
+      "action": "Começar teste"
+    },
+    {
+      "title": "Etapa 42: Prova final 9×9 (Parte 2)",
+      "description": "Complete o segundo Sudoku da prova. Você pode conferir a qualquer momento; os erros ficam marcados em vermelho.",
+      "action": "Começar teste"
+    },
+    {
+      "title": "Etapa 43: Primeira entrevista na empresa – Sudoku 9×9",
+      "description": "Primeira entrevista na empresa. Use o que aprendeu na prova final para completar este Sudoku 9×9.",
+      "action": "Começar primeira entrevista"
+    },
+    {
+      "title": "Etapa 44: Entrevista final na empresa – Sudoku 9×9",
+      "description": "Entrevista final na empresa. Complete este Sudoku 9×9 usando anotações, destaques e conferência.",
+      "action": "Começar entrevista final"
+    },
+    {
+      "title": "Etapa 45: Primeiro desafio após a contratação – Sudoku 9×9",
+      "description": "Parabéns pela contratação! Encare seu primeiro desafio depois de entrar na empresa.",
+      "action": "Começar desafio após a contratação"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Etapa 1: Linha",
+      "instruction": "Observe a linha e encontre o número que está faltando."
+    },
+    "column": {
+      "title": "Etapa 2: Coluna",
+      "instruction": "Observe a coluna e encontre o número que está faltando."
+    },
+    "box": {
+      "title": "Etapa 3: Bloco 2×2",
+      "instruction": "Encontre o número que falta no pequeno bloco."
+    },
+    "rowcol": {
+      "title": "Etapa 4: Linha + coluna",
+      "instruction": "Use as pistas da linha e da coluna para resolver o ponto de interrogação."
+    },
+    "threeways": {
+      "title": "Etapa 5: Usar três direções",
+      "instruction": "Combine as pistas das três direções para encontrar o número correto."
+    },
+    "boxways": {
+      "title": "Etapa 6: Bloco + coluna + linha",
+      "instruction": "Use juntas as pistas do bloco, da coluna e da linha."
+    },
+    "advanced": {
+      "title": "Etapa 7: Encontrar as pistas úteis",
+      "instruction": "Ignore as distrações e identifique as pistas importantes."
+    },
+    "classic": {
+      "title": "Etapa 8: Prática de Sudoku 4×4",
+      "instruction": "Resolva os desafios na ordem. Cada resposta correta permanece no tabuleiro."
+    },
+    "practical": {
+      "title": "Etapa 9: Desafio de Sudoku 4×4",
+      "instruction": "Selecione uma casa vazia, digite um número e confira sua resposta. Use uma dica se precisar."
+    },
+    "breakthrough": {
+      "title": "Etapa 10: Encontrar a casa decisiva",
+      "instruction": "Encontre a primeira casa cuja resposta pode ser determinada. Cada acerto leva ao próximo desafio."
+    },
+    "graduate1": {
+      "title": "Etapa 11: Prova final 4×4 (1/3)",
+      "instruction": "Complete a grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho."
+    },
+    "graduate2": {
+      "title": "Etapa 12: Prova final 4×4 (2/3)",
+      "instruction": "Complete a segunda grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho."
+    },
+    "graduate3": {
+      "title": "Etapa 13: Prova final 4×4 (3/3)",
+      "instruction": "Complete a terceira grade 4×4 e confira suas respostas. As entradas incorretas ficam marcadas em vermelho."
+    },
+    "sixrow": {
+      "title": "Etapa 14: Sudoku 6×6 – Linha",
+      "instruction": "Observe as seis casas da linha e encontre o número que falta."
+    },
+    "sixcolumn": {
+      "title": "Etapa 15: Sudoku 6×6 – Coluna",
+      "instruction": "Observe as seis casas da coluna e encontre o número que falta."
+    },
+    "sixbox": {
+      "title": "Etapa 16: Sudoku 6×6 – Bloco",
+      "instruction": "Encontre o número que falta no bloco de seis casas."
+    },
+    "sixnote": {
+      "title": "Etapa 18: Anotações a lápis (linha 6×6)",
+      "instruction": "Anote os dois números que faltam, em tamanho pequeno, em duas casas vazias."
+    },
+    "sixcolumnnote": {
+      "title": "Etapa 19: Anotações a lápis (coluna 6×6)",
+      "instruction": "Anote os dois números que faltam em duas casas vazias da coluna."
+    },
+    "sixboxnote": {
+      "title": "Etapa 20: Anotações a lápis (bloco 6×6)",
+      "instruction": "Anote os dois números que faltam em duas casas vazias do bloco."
+    },
+    "step14": {
+      "title": "Etapa 17: O que é Sudoku 6×6? (Tipo 1)",
+      "instruction": "O Sudoku tem três regras:\n1. Cada coluna contém os números de 1 a 6 sem repetição.\n2. Cada linha contém os números de 1 a 6 sem repetição.\n3. Cada bloco de seis casas contém os números de 1 a 6 sem repetição.\nResolva as três casas-alvo em ordem. As respostas corretas permanecem no tabuleiro."
+    },
+    "sixintro2": {
+      "title": "Etapa 21: O que é Sudoku 6×6? (Tipo 2)",
+      "instruction": "Resolva cinco casas-alvo em ordem. As respostas corretas permanecem no tabuleiro."
+    },
+    "sixnotecombat": {
+      "title": "Etapa 22: Desafio de anotações",
+      "instruction": "Complete oito casas-alvo anotando dois números candidatos em cada casa."
+    },
+    "numberfocus": {
+      "title": "Etapa 23: Ver um número por vez (1, 2, 6)",
+      "instruction": "Observe os números 1, 2 e 6, um de cada vez. Use as linhas, colunas e blocos destacados para encontrar onde cada um se encaixa."
+    },
+    "numberfocus2": {
+      "title": "Etapa 24: Ver um número por vez (1, 2, 5)",
+      "instruction": "Observe os números 1, 2 e 5, um de cada vez. Use as linhas, colunas e blocos destacados para encontrar onde cada um se encaixa."
+    },
+    "numberfocus3": {
+      "title": "Etapa 25: Desafio de Sudoku 6×6 1",
+      "instruction": "Complete um Sudoku 6×6 inteiro usando destaques e anotações a lápis."
+    },
+    "numberfocus4": {
+      "title": "Etapa 26: Desafio de Sudoku 6×6 2",
+      "instruction": "Tente um Sudoku 6×6 mais difícil e combine todas as técnicas aprendidas."
+    },
+    "ninerow": {
+      "title": "Etapa 27: Sudoku 9×9 – Linha",
+      "instruction": "Observe as nove casas da linha e encontre o número que falta."
+    },
+    "ninecolumn": {
+      "title": "Etapa 28: Sudoku 9×9 – Coluna",
+      "instruction": "Observe as nove casas da coluna e encontre o número que falta."
+    },
+    "ninebox": {
+      "title": "Etapa 29: Sudoku 9×9 – Bloco",
+      "instruction": "Encontre o número que falta no bloco 3×3."
+    },
+    "ninerowcol": {
+      "title": "Etapa 30: Resolver usando linha e coluna",
+      "instruction": "Use a linha e a coluna juntas para identificar o mesmo número que está faltando."
+    },
+    "ninerowcolbox": {
+      "title": "Etapa 31: Linha + coluna + bloco",
+      "instruction": "Use a linha, a coluna e o bloco 3×3 para encontrar o único número que falta."
+    },
+    "nineadvanced": {
+      "title": "Etapa 32: Encontrar as pistas relevantes",
+      "instruction": "Ignore os números sem relação e concentre-se nas pistas úteis da linha, coluna e bloco."
+    },
+    "ninenote": {
+      "title": "Etapa 33: Anotações a lápis (linha 9×9)",
+      "instruction": "Pratique anotar os candidatos que faltam em letras pequenas em cada linha."
+    },
+    "ninecolumnnote": {
+      "title": "Etapa 34: Anotações a lápis (coluna 9×9)",
+      "instruction": "Pratique anotar os candidatos que faltam em letras pequenas em cada coluna."
+    },
+    "nineboxnote": {
+      "title": "Etapa 35: Anotações a lápis (bloco 9×9)",
+      "instruction": "Use anotações a lápis para identificar os candidatos que faltam em cada bloco 3×3."
+    },
+    "ninepractice1": {
+      "title": "Etapa 36: Prática de Sudoku 9×9 1 – Passo a passo",
+      "instruction": "Siga a ordem indicada e resolva 21 casas-alvo em um único Sudoku 9×9."
+    },
+    "ninepractice2": {
+      "title": "Etapa 37: Prática de Sudoku 9×9 2 – Usar anotações",
+      "instruction": "Use anotações nas quatro primeiras casas-alvo e resolva a última usando essas anotações."
+    },
+    "ninefocus": {
+      "title": "Etapa 38: Prática de Sudoku 9×9 3 – Ver um número por vez",
+      "instruction": "Observe os números de 1 a 9, um por vez. Use destaques e anotações para encontrar cada posição."
+    },
+    "ninecombat1": {
+      "title": "Etapa 39: Desafio de Sudoku 9×9 1",
+      "instruction": "Complete todo o Sudoku 9×9. Use anotações e destaque de números quando ajudar."
+    },
+    "ninecombat2": {
+      "title": "Etapa 40: Desafio de Sudoku 9×9 2 – Método das duas posições",
+      "instruction": "Use o método das duas posições e examine um número por vez para resolver toda a grade."
+    },
+    "ninecombat3": {
+      "title": "Etapa 41: Prova final 9×9 (Parte 1)",
+      "instruction": "Complete o Sudoku. Você pode conferir a qualquer momento; os erros ficam marcados em vermelho."
+    },
+    "ninecombat4": {
+      "title": "Etapa 42: Prova final 9×9 (Parte 2)",
+      "instruction": "Complete o segundo Sudoku da prova. Você pode conferir a qualquer momento; os erros ficam marcados em vermelho."
+    },
+    "ninecombat75": {
+      "title": "Etapa 43: Primeira entrevista na empresa – Sudoku 9×9",
+      "instruction": "Primeira entrevista na empresa. Use o que aprendeu na prova final para completar este Sudoku 9×9."
+    },
+    "ninecombat80": {
+      "title": "Etapa 44: Entrevista final na empresa – Sudoku 9×9",
+      "instruction": "Entrevista final na empresa. Complete este Sudoku 9×9 usando anotações, destaques e conferência."
+    },
+    "ninecombat5": {
+      "title": "Etapa 45: Primeiro desafio após a contratação – Sudoku 9×9",
+      "instruction": "Parabéns pela contratação! Encare seu primeiro desafio depois de entrar na empresa."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Observe as casas e escolha um número abaixo.",
+    "答對了！你找到破局點！": "Muito bem! Você encontrou a casa decisiva!",
+    "再想一想！請重新觀察線索。": "Pense mais um pouco e observe as pistas novamente.",
+    "沒關係，慢慢找。請再選一次。": "Tudo bem. Vá com calma e tente outra vez.",
+    "請先選取一個空格。": "Selecione primeiro uma casa vazia.",
+    "請先選取一個空格，再按數字加入小字。": "Selecione uma casa vazia e escolha um número para adicionar uma anotação.",
+    "請先點選棋盤上的空格，再選擇數字。": "Toque em uma casa vazia do tabuleiro e escolha um número.",
+    "題目原有數字不能修改。": "Os números originais do exercício não podem ser alterados.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "O modo Anotações está ativado. Selecione uma casa vazia e escolha um número abaixo para adicionar uma anotação.",
+    "筆記模式已關閉。": "O modo Anotações está desativado.",
+    "已取消所有金色反白。": "Todos os destaques dourados foram removidos.",
+    "目前沒有選取空格，也沒有反金顯示。": "Nenhuma casa está selecionada e nenhum número está destacado.",
+    "目前沒有選取空格，也沒有反白區域。": "Nenhuma casa está selecionada e nenhuma área está destacada.",
+    "已清空選取格子的答案與筆記。": "A resposta e as anotações da casa selecionada foram apagadas.",
+    "已清空選取格子的所有小字。": "Todas as anotações pequenas da casa selecionada foram apagadas.",
+    "按下方數字加入或移除筆記。": "Escolha um número abaixo para adicionar ou remover uma anotação.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "O modo Anotações está desativado. Toque em “Anotações” para ativá-lo.",
+    "請先關閉「筆記」，再填入正式答案。": "Desative “Anotações” antes de inserir a resposta definitiva.",
+    "請依照順序完成目前亮起的目標格。": "Conclua, em ordem, as casas-alvo que estão iluminadas.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Conclua a casa-alvo iluminada antes de passar para a próxima.",
+    "已選取空格，請按下方數字填入答案。": "Casa vazia selecionada. Escolha um número abaixo para inserir a resposta.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Resposta inserida. O sistema não verifica automaticamente; toque em “Conferir” quando necessário.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Número inserido. Toque em “Conferir” quando terminar; você também pode continuar editando.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Pense mais um pouco: resolva apenas a casa que contém o ponto de interrogação.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Não está correto: o número ficou vermelho. Observe novamente e encontre a casa decisiva!",
+    "三題全部答對！你已學會一次檢查一個數字。": "As três respostas estão corretas! Você aprendeu a verificar um número por vez.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "Todos os números de 1 a 9 foram conferidos! Você concluiu a etapa 38.",
+    "本次已完成，但瀏覽器無法保存進度。": "Esta sessão foi concluída, mas o navegador não conseguiu salvar seu progresso.",
+    "目前目標格已選取，請先開啟「筆記」。": "A casa-alvo está selecionada. Ative primeiro “Anotações”.",
+    "目前目標格已選取，請按下方數字寫入小字。": "A casa-alvo está selecionada. Escolha um número abaixo para escrever uma anotação pequena.",
+    "最後目標格已選取，請直接填入答案。": "A última casa-alvo está selecionada. Insira a resposta diretamente.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Selecione primeiro a casa-alvo e escolha um número para registrar como candidato.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Toque no número indicado que já aparece no tabuleiro e observe as áreas destacadas.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Encontre por conta própria uma casa onde esse número pode entrar, selecione-a e escolha o número abaixo.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Toque em um 1, 2 ou 6 que já esteja no tabuleiro e observe as áreas destacadas em dourado.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Toque em um 1, 2 ou 5 que já esteja no tabuleiro e observe as áreas destacadas em dourado.",
+    "提示：缺少的數字是 ": "Dica: o número que falta é ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Dois números foram anotados, mas a combinação está incorreta. Use “Limpar” e tente novamente.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Os candidatos desta casa estão incorretos. Use “Limpar” e registre novamente.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Os dois pequenos candidatos estão incorretos. Use “Limpar” e registre novamente.",
+    "這個候選數字不正確，請再觀察九宮格。": "Este candidato está incorreto. Observe novamente o bloco 3×3.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Esta resposta definitiva está incorreta. Observe as áreas destacadas ou anote os candidatos.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Esta posição está incorreta. Observe as áreas douradas e encontre a casa onde o número pode ser colocado.",
+    "已選取這一格，請選擇你認為正確的數字。": "Esta casa está selecionada. Escolha o número que você considera correto.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Selecione uma casa vazia e escolha um número para inserir a resposta ou uma anotação.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Tudo correto! Você concluiu o desafio de Sudoku 4×4!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Tudo correto! Você passou na prova final de Sudoku 4×4 (1/3)!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Tudo correto! Você passou na prova final de Sudoku 4×4 (2/3)!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Tudo correto! Você passou na prova final de Sudoku 4×4 (3/3)!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "As oito casas-alvo foram concluídas! Você terminou o desafio de anotações da etapa 22.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "As cinco respostas estão corretas! Você concluiu o exercício de Sudoku 6×6 tipo 2.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Excelente! Todo o tabuleiro está correto. Parabéns por passar na primeira entrevista da empresa, etapa 43!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Excelente! Você passou na entrevista final da empresa, etapa 44!",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Excelente! Você concluiu o desafio de dificuldade 90 e passou na primeira prova após a contratação, etapa 45!",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Você concluiu todas as etapas disponíveis! Muito bem. Você pode voltar ao início.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Você concluiu esta etapa. Muito bem! Continue com o próximo desafio.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Toque primeiro em um número que já esteja no tabuleiro e observe as áreas destacadas.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Toque em um número do tabuleiro para destacar sua linha, coluna e bloco; depois selecione uma casa vazia para inserir a resposta. O modo Anotações permite registrar candidatos.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Ative “Anotações” e registre dois candidatos com base na linha, coluna e bloco da casa-alvo. As casas concluídas permanecem preenchidas.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Ative “Anotações”, selecione uma casa vazia e registre todos os candidatos que faltam nessa linha. Há seis questões com tipos diferentes.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Ative “Anotações”, selecione uma casa vazia e registre todos os candidatos que faltam nessa coluna. Há seis questões com tipos diferentes.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Observe as cinco casas-alvo em ordem: primeiro a linha, depois a coluna e o bloco.",
+    "這一關請靠自己的觀察找出破局點！": "Use sua própria observação para encontrar a casa decisiva nesta etapa!",
+    "畢業考請靠自己的觀察完成，加油！": "Conclua a prova final usando sua própria observação. Boa sorte!",
+    "按下方數字填入答案；也可開啟筆記。": "Escolha um número abaixo para inserir a resposta; você também pode ativar Anotações.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Ative “Anotações” e registre pequenas notas nas quatro casas-alvo, na ordem indicada. Depois da quarta, desative Anotações e deduza a resposta definitiva da última casa.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Etapa 1/9: toque em qualquer número 1 do exercício. Depois do destaque, ative Anotações e registre as posições possíveis do 1.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Agora ative Anotações e registre as posições possíveis do 1.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Força! Você já usou todas as dicas. Você consegue resolver sozinho!",
+    "提示已經使用完畢，你可以自己做到！": "Você já usou todas as dicas. Você consegue resolver sozinho!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Ótimo! Todo este Sudoku 9×9 está correto. Você concluiu a etapa 42!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Ótimo! Todo este Sudoku 9×9 está correto. Você concluiu a etapa 41!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Ótimo! Todo este Sudoku 9×9 está correto. Você concluiu a etapa 40!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Ótimo! Todo este Sudoku 9×9 está correto. Você concluiu a etapa 39!",
+    "請依序完成目前亮起的目標格。": "Conclua, em ordem, as casas-alvo iluminadas.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "O modo Anotações está ativado. A casa-alvo foi selecionada automaticamente; escolha um número abaixo para inserir uma anotação.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Na última etapa, desative Anotações e insira diretamente a resposta definitiva.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Pense mais um pouco: use as quatro anotações anteriores para deduzir a resposta final.",
+    "新題目來了！再找出一個破局點。": "Novo exercício! Encontre mais uma casa decisiva.",
+    "題目原有數字不能修改，請選擇空格。": "Os números originais do exercício não podem ser alterados. Escolha uma casa vazia.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Este número ainda não está correto. Use as pistas da linha, coluna e bloco, ou registre primeiro os candidatos.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Esta resposta está incorreta e não será inserida no tabuleiro. Observe a linha, a coluna e o bloco 3×3, ou use Anotações.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Algumas anotações não correspondem aos números que faltam nesta linha. Use “Limpar” para apagar a casa e tente novamente.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Algumas anotações não correspondem aos números que faltam nesta linha. Use “Limpar” para apagar a casa e tente novamente.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Pense mais um pouco: observe primeiro a linha, depois a coluna e por fim o bloco. A resposta correta permanecerá no tabuleiro.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Pense mais um pouco: observe a linha, a coluna e o bloco da casa-alvo. A resposta correta permanecerá no tabuleiro.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Próxima questão! O modo Anotações foi ativado automaticamente. Registre os dois números que faltam em cada uma das duas casas vazias.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "As três respostas estão corretas! Você aprendeu a resolver usando as regras de linha, coluna e bloco.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Ative “Anotações” e registre pequenas notas nas quatro casas-alvo, na ordem indicada.",
+    "三題全部完成！你已學會一次檢查一個數字。": "As três questões foram concluídas! Você aprendeu a verificar um número por vez.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "Nas quatro primeiras etapas, ative Anotações e registre os dois números candidatos.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Os números fornecidos no exercício não podem ser alterados. Escolha uma casa vazia.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Excelente! Você concluiu as 21 etapas em ordem e resolveu este Sudoku!",
+    "已選取空格，請按下方數字填入。": "Casa vazia selecionada. Escolha um número abaixo para preenchê-la.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "O modo Anotações está desativado. Toque em “Anotações” para ativá-lo.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Correto! Você concluiu o exercício de deduzir a resposta usando anotações.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Toque primeiro em um número que já esteja no tabuleiro 6×6. O sistema destacará a linha, a coluna e o bloco desse número. Os botões numéricos abaixo servem apenas para inserir respostas ou anotações.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Selecione primeiro a casa que você acredita que pode destravar o jogo e escolha um número."
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Sudoku-Lernraum",
+    "village": "Sudoku-Einsteigerdorf",
+    "home": "Startseite",
+    "smaller": "Text verkleinern",
+    "larger": "Text vergrößern",
+    "language": "Language",
+    "category4": "4×4-Sudoku",
+    "category6": "6×6-Sudoku",
+    "category9": "9×9-Sudoku",
+    "homeNote": "Keine Anmeldung und keine Zeitmessung. Lassen Sie sich Zeit.",
+    "start": "Übung starten",
+    "exam": "Test starten",
+    "study": "Lektion starten",
+    "challenge": "Herausforderung starten",
+    "practice": "Übung starten",
+    "battle": "Herausforderung starten",
+    "graduation": "Abschlussprüfung starten",
+    "firstInterview": "Erstes Vorstellungsgespräch starten",
+    "finalInterview": "Abschlussgespräch starten",
+    "hiredChallenge": "Erste Herausforderung nach der Einstellung",
+    "gameFeedback": "Betrachten Sie die Felder und wählen Sie unten eine Zahl.",
+    "check": "Prüfen",
+    "clear": "Löschen",
+    "notes": "Notizen",
+    "hint": "Hinweis",
+    "question": "Aufgabe",
+    "modalTitle": "Schritt abgeschlossen!",
+    "next": "Nächster Schritt",
+    "modalHome": "Zurück zur Startseite",
+    "footer": "Le Zai Ling Zhong | Ohne Eile. Schritt für Schritt lernen.",
+    "gridAria": "Sudoku-Gitter",
+    "categoryAria": "Sudoku-Größenkategorien",
+    "brandAlt": "Le-Zai-Ling-Zhong-Logo",
+    "section4": "4×4-Sudoku",
+    "section6": "6×6-Sudoku",
+    "section9": "9×9-Sudoku",
+    "completeNext": "Sie haben diesen Schritt abgeschlossen. Gut gemacht! Weiter geht es mit der nächsten Herausforderung.",
+    "completeAll": "Sie haben alle verfügbaren Schritte abgeschlossen! Gut gemacht. Sie können zur Startseite zurückkehren."
+  },
+  "lessons": [
+    {
+      "title": "Schritt 1: Zeile",
+      "description": "Betrachten Sie die Zeile und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 2: Spalte",
+      "description": "Betrachten Sie die Spalte und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 3: 2×2-Block",
+      "description": "Finden Sie die fehlende Zahl im kleinen Block.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 4: Zeile + Spalte",
+      "description": "Nutzen Sie die Hinweise aus Zeile und Spalte, um das Fragezeichen zu lösen.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 5: Drei Richtungen nutzen",
+      "description": "Kombinieren Sie die Hinweise aus drei Richtungen, um die richtige Zahl zu finden.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 6: Block + Spalte + Zeile",
+      "description": "Nutzen Sie die Hinweise aus Block, Spalte und Zeile gemeinsam.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 7: Nützliche Hinweise finden",
+      "description": "Ignorieren Sie Ablenkungen und erkennen Sie die wichtigen Hinweise.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 8: 4×4-Sudoku-Übung",
+      "description": "Lösen Sie die Aufgaben der Reihe nach. Jede richtige Antwort bleibt im Gitter.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 9: 4×4-Sudoku-Herausforderung",
+      "description": "Wählen Sie ein leeres Feld, geben Sie eine Zahl ein und prüfen Sie Ihre Antwort. Nutzen Sie bei Bedarf einen Hinweis.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 10: Das entscheidende Feld finden",
+      "description": "Finden Sie das erste Feld, dessen Lösung sich eindeutig bestimmen lässt. Jede richtige Antwort führt zur nächsten Aufgabe.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 11: 4×4-Abschlussprüfung (1/3)",
+      "description": "Füllen Sie das 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert.",
+      "action": "Test starten"
+    },
+    {
+      "title": "Schritt 12: 4×4-Abschlussprüfung (2/3)",
+      "description": "Füllen Sie das zweite 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert.",
+      "action": "Test starten"
+    },
+    {
+      "title": "Schritt 13: 4×4-Abschlussprüfung (3/3)",
+      "description": "Füllen Sie das dritte 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert.",
+      "action": "Test starten"
+    },
+    {
+      "title": "Schritt 14: 6×6-Sudoku – Zeile",
+      "description": "Betrachten Sie die sechs Felder der Zeile und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 15: 6×6-Sudoku – Spalte",
+      "description": "Betrachten Sie die sechs Felder der Spalte und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 16: 6×6-Sudoku – Block",
+      "description": "Finden Sie die fehlende Zahl im Sechserblock.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 17: Was ist ein 6×6-Sudoku? (Typ 1)",
+      "description": "Lernen Sie die Regeln für Zeilen, Spalten und Blöcke und lösen Sie anschließend drei Zielfelder.",
+      "action": "Lektion starten"
+    },
+    {
+      "title": "Schritt 18: Bleistiftnotizen (6×6-Zeile)",
+      "description": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 19: Bleistiftnotizen (6×6-Spalte)",
+      "description": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern der Spalte.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 20: Bleistiftnotizen (6×6-Block)",
+      "description": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern des Blocks.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 21: Was ist ein 6×6-Sudoku? (Typ 2)",
+      "description": "Lösen Sie fünf Zielfelder der Reihe nach. Richtige Antworten bleiben im Gitter.",
+      "action": "Lektion starten"
+    },
+    {
+      "title": "Schritt 22: Herausforderung mit Notizen",
+      "description": "Füllen Sie acht Zielfelder aus, indem Sie in jedes Feld zwei mögliche Zahlen eintragen.",
+      "action": "Herausforderung starten"
+    },
+    {
+      "title": "Schritt 23: Eine Zahl nach der anderen prüfen (1, 2, 6)",
+      "description": "Prüfen Sie nacheinander die Zahlen 1, 2 und 6. Nutzen Sie markierte Zeilen, Spalten und Blöcke, um den passenden Platz zu finden.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 24: Eine Zahl nach der anderen prüfen (1, 2, 5)",
+      "description": "Prüfen Sie nacheinander die Zahlen 1, 2 und 5. Nutzen Sie markierte Zeilen, Spalten und Blöcke, um den passenden Platz zu finden.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 25: 6×6-Sudoku-Herausforderung 1",
+      "description": "Vervollständigen Sie ein ganzes 6×6-Sudoku mithilfe von Markierungen und Bleistiftnotizen.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 26: 6×6-Sudoku-Herausforderung 2",
+      "description": "Versuchen Sie ein schwierigeres 6×6-Sudoku und kombinieren Sie alle erlernten Techniken.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 27: 9×9-Sudoku – Zeile",
+      "description": "Betrachten Sie die neun Felder der Zeile und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 28: 9×9-Sudoku – Spalte",
+      "description": "Betrachten Sie die neun Felder der Spalte und finden Sie die fehlende Zahl.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 29: 9×9-Sudoku – Block",
+      "description": "Finden Sie die fehlende Zahl im 3×3-Block.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 30: Mit Zeile und Spalte lösen",
+      "description": "Nutzen Sie Zeile und Spalte gemeinsam, um dieselbe fehlende Zahl zu bestimmen.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 31: Zeile + Spalte + Block",
+      "description": "Nutzen Sie Zeile, Spalte und 3×3-Block, um die eine fehlende Zahl zu finden.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 32: Relevante Hinweise finden",
+      "description": "Ignorieren Sie irrelevante Zahlen und konzentrieren Sie sich auf die hilfreichen Hinweise in Zeile, Spalte und Block.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 33: Bleistiftnotizen (9×9-Zeile)",
+      "description": "Üben Sie, fehlende Kandidaten in jeder Zeile klein zu notieren.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 34: Bleistiftnotizen (9×9-Spalte)",
+      "description": "Üben Sie, fehlende Kandidaten in jeder Spalte klein zu notieren.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 35: Bleistiftnotizen (9×9-Block)",
+      "description": "Nutzen Sie Bleistiftnotizen, um fehlende Kandidaten in jedem 3×3-Block zu erkennen.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 36: 9×9-Sudoku-Übung 1 – Schritt für Schritt",
+      "description": "Folgen Sie der vorgegebenen Reihenfolge und lösen Sie 21 Zielfelder in einem 9×9-Sudoku.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 37: 9×9-Sudoku-Übung 2 – Notizen verwenden",
+      "description": "Verwenden Sie in den ersten vier Zielfeldern Bleistiftnotizen und lösen Sie das letzte Feld mithilfe dieser Notizen.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 38: 9×9-Sudoku-Übung 3 – Eine Zahl nach der anderen prüfen",
+      "description": "Prüfen Sie die Zahlen von 1 bis 9 nacheinander. Nutzen Sie Markierungen und Notizen, um jede Position zu finden.",
+      "action": "Übung starten"
+    },
+    {
+      "title": "Schritt 39: 9×9-Sudoku-Herausforderung 1",
+      "description": "Vervollständigen Sie das gesamte 9×9-Sudoku. Nutzen Sie bei Bedarf Notizen und Zahlenmarkierungen.",
+      "action": "Herausforderung starten"
+    },
+    {
+      "title": "Schritt 40: 9×9-Sudoku-Herausforderung 2 – Zwei-Positionen-Methode",
+      "description": "Nutzen Sie die Zwei-Positionen-Methode und prüfen Sie jeweils eine Zahl, um das gesamte Gitter zu lösen.",
+      "action": "Herausforderung starten"
+    },
+    {
+      "title": "Schritt 41: 9×9-Abschlussprüfung (Teil 1)",
+      "description": "Vervollständigen Sie das Sudoku. Sie können jederzeit prüfen; falsche Einträge werden rot markiert.",
+      "action": "Test starten"
+    },
+    {
+      "title": "Schritt 42: 9×9-Abschlussprüfung (Teil 2)",
+      "description": "Vervollständigen Sie das zweite Sudoku der Abschlussprüfung. Sie können jederzeit prüfen; falsche Einträge werden rot markiert.",
+      "action": "Test starten"
+    },
+    {
+      "title": "Schritt 43: Erstes Bewerbungsgespräch – 9×9-Sudoku",
+      "description": "Erstes Bewerbungsgespräch. Nutzen Sie die Kenntnisse aus der Abschlussprüfung, um dieses 9×9-Sudoku zu lösen.",
+      "action": "Erstes Vorstellungsgespräch starten"
+    },
+    {
+      "title": "Schritt 44: Abschließendes Bewerbungsgespräch – 9×9-Sudoku",
+      "description": "Abschließendes Bewerbungsgespräch. Lösen Sie dieses 9×9-Sudoku mit Notizen, Markierungen und Prüfung.",
+      "action": "Abschlussgespräch starten"
+    },
+    {
+      "title": "Schritt 45: Erste Herausforderung nach der Einstellung – 9×9-Sudoku",
+      "description": "Herzlichen Glückwunsch zur Einstellung! Stellen Sie sich Ihrer ersten Herausforderung im neuen Unternehmen.",
+      "action": "Erste Herausforderung nach der Einstellung"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Schritt 1: Zeile",
+      "instruction": "Betrachten Sie die Zeile und finden Sie die fehlende Zahl."
+    },
+    "column": {
+      "title": "Schritt 2: Spalte",
+      "instruction": "Betrachten Sie die Spalte und finden Sie die fehlende Zahl."
+    },
+    "box": {
+      "title": "Schritt 3: 2×2-Block",
+      "instruction": "Finden Sie die fehlende Zahl im kleinen Block."
+    },
+    "rowcol": {
+      "title": "Schritt 4: Zeile + Spalte",
+      "instruction": "Nutzen Sie die Hinweise aus Zeile und Spalte, um das Fragezeichen zu lösen."
+    },
+    "threeways": {
+      "title": "Schritt 5: Drei Richtungen nutzen",
+      "instruction": "Kombinieren Sie die Hinweise aus drei Richtungen, um die richtige Zahl zu finden."
+    },
+    "boxways": {
+      "title": "Schritt 6: Block + Spalte + Zeile",
+      "instruction": "Nutzen Sie die Hinweise aus Block, Spalte und Zeile gemeinsam."
+    },
+    "advanced": {
+      "title": "Schritt 7: Nützliche Hinweise finden",
+      "instruction": "Ignorieren Sie Ablenkungen und erkennen Sie die wichtigen Hinweise."
+    },
+    "classic": {
+      "title": "Schritt 8: 4×4-Sudoku-Übung",
+      "instruction": "Lösen Sie die Aufgaben der Reihe nach. Jede richtige Antwort bleibt im Gitter."
+    },
+    "practical": {
+      "title": "Schritt 9: 4×4-Sudoku-Herausforderung",
+      "instruction": "Wählen Sie ein leeres Feld, geben Sie eine Zahl ein und prüfen Sie Ihre Antwort. Nutzen Sie bei Bedarf einen Hinweis."
+    },
+    "breakthrough": {
+      "title": "Schritt 10: Das entscheidende Feld finden",
+      "instruction": "Finden Sie das erste Feld, dessen Lösung sich eindeutig bestimmen lässt. Jede richtige Antwort führt zur nächsten Aufgabe."
+    },
+    "graduate1": {
+      "title": "Schritt 11: 4×4-Abschlussprüfung (1/3)",
+      "instruction": "Füllen Sie das 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert."
+    },
+    "graduate2": {
+      "title": "Schritt 12: 4×4-Abschlussprüfung (2/3)",
+      "instruction": "Füllen Sie das zweite 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert."
+    },
+    "graduate3": {
+      "title": "Schritt 13: 4×4-Abschlussprüfung (3/3)",
+      "instruction": "Füllen Sie das dritte 4×4-Gitter aus und prüfen Sie Ihre Antworten. Falsche Einträge werden rot markiert."
+    },
+    "sixrow": {
+      "title": "Schritt 14: 6×6-Sudoku – Zeile",
+      "instruction": "Betrachten Sie die sechs Felder der Zeile und finden Sie die fehlende Zahl."
+    },
+    "sixcolumn": {
+      "title": "Schritt 15: 6×6-Sudoku – Spalte",
+      "instruction": "Betrachten Sie die sechs Felder der Spalte und finden Sie die fehlende Zahl."
+    },
+    "sixbox": {
+      "title": "Schritt 16: 6×6-Sudoku – Block",
+      "instruction": "Finden Sie die fehlende Zahl im Sechserblock."
+    },
+    "sixnote": {
+      "title": "Schritt 18: Bleistiftnotizen (6×6-Zeile)",
+      "instruction": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern."
+    },
+    "sixcolumnnote": {
+      "title": "Schritt 19: Bleistiftnotizen (6×6-Spalte)",
+      "instruction": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern der Spalte."
+    },
+    "sixboxnote": {
+      "title": "Schritt 20: Bleistiftnotizen (6×6-Block)",
+      "instruction": "Notieren Sie die beiden fehlenden Zahlen klein in zwei leeren Feldern des Blocks."
+    },
+    "step14": {
+      "title": "Schritt 17: Was ist ein 6×6-Sudoku? (Typ 1)",
+      "instruction": "Sudoku hat drei Regeln:\n1. Jede Spalte enthält die Zahlen 1 bis 6 ohne Wiederholung.\n2. Jede Zeile enthält die Zahlen 1 bis 6 ohne Wiederholung.\n3. Jeder Block mit sechs Feldern enthält die Zahlen 1 bis 6 ohne Wiederholung.\nLösen Sie die drei Zielfelder der Reihe nach. Richtige Antworten bleiben im Gitter."
+    },
+    "sixintro2": {
+      "title": "Schritt 21: Was ist ein 6×6-Sudoku? (Typ 2)",
+      "instruction": "Lösen Sie fünf Zielfelder der Reihe nach. Richtige Antworten bleiben im Gitter."
+    },
+    "sixnotecombat": {
+      "title": "Schritt 22: Herausforderung mit Notizen",
+      "instruction": "Füllen Sie acht Zielfelder aus, indem Sie in jedes Feld zwei mögliche Zahlen eintragen."
+    },
+    "numberfocus": {
+      "title": "Schritt 23: Eine Zahl nach der anderen prüfen (1, 2, 6)",
+      "instruction": "Prüfen Sie nacheinander die Zahlen 1, 2 und 6. Nutzen Sie markierte Zeilen, Spalten und Blöcke, um den passenden Platz zu finden."
+    },
+    "numberfocus2": {
+      "title": "Schritt 24: Eine Zahl nach der anderen prüfen (1, 2, 5)",
+      "instruction": "Prüfen Sie nacheinander die Zahlen 1, 2 und 5. Nutzen Sie markierte Zeilen, Spalten und Blöcke, um den passenden Platz zu finden."
+    },
+    "numberfocus3": {
+      "title": "Schritt 25: 6×6-Sudoku-Herausforderung 1",
+      "instruction": "Vervollständigen Sie ein ganzes 6×6-Sudoku mithilfe von Markierungen und Bleistiftnotizen."
+    },
+    "numberfocus4": {
+      "title": "Schritt 26: 6×6-Sudoku-Herausforderung 2",
+      "instruction": "Versuchen Sie ein schwierigeres 6×6-Sudoku und kombinieren Sie alle erlernten Techniken."
+    },
+    "ninerow": {
+      "title": "Schritt 27: 9×9-Sudoku – Zeile",
+      "instruction": "Betrachten Sie die neun Felder der Zeile und finden Sie die fehlende Zahl."
+    },
+    "ninecolumn": {
+      "title": "Schritt 28: 9×9-Sudoku – Spalte",
+      "instruction": "Betrachten Sie die neun Felder der Spalte und finden Sie die fehlende Zahl."
+    },
+    "ninebox": {
+      "title": "Schritt 29: 9×9-Sudoku – Block",
+      "instruction": "Finden Sie die fehlende Zahl im 3×3-Block."
+    },
+    "ninerowcol": {
+      "title": "Schritt 30: Mit Zeile und Spalte lösen",
+      "instruction": "Nutzen Sie Zeile und Spalte gemeinsam, um dieselbe fehlende Zahl zu bestimmen."
+    },
+    "ninerowcolbox": {
+      "title": "Schritt 31: Zeile + Spalte + Block",
+      "instruction": "Nutzen Sie Zeile, Spalte und 3×3-Block, um die eine fehlende Zahl zu finden."
+    },
+    "nineadvanced": {
+      "title": "Schritt 32: Relevante Hinweise finden",
+      "instruction": "Ignorieren Sie irrelevante Zahlen und konzentrieren Sie sich auf die hilfreichen Hinweise in Zeile, Spalte und Block."
+    },
+    "ninenote": {
+      "title": "Schritt 33: Bleistiftnotizen (9×9-Zeile)",
+      "instruction": "Üben Sie, fehlende Kandidaten in jeder Zeile klein zu notieren."
+    },
+    "ninecolumnnote": {
+      "title": "Schritt 34: Bleistiftnotizen (9×9-Spalte)",
+      "instruction": "Üben Sie, fehlende Kandidaten in jeder Spalte klein zu notieren."
+    },
+    "nineboxnote": {
+      "title": "Schritt 35: Bleistiftnotizen (9×9-Block)",
+      "instruction": "Nutzen Sie Bleistiftnotizen, um fehlende Kandidaten in jedem 3×3-Block zu erkennen."
+    },
+    "ninepractice1": {
+      "title": "Schritt 36: 9×9-Sudoku-Übung 1 – Schritt für Schritt",
+      "instruction": "Folgen Sie der vorgegebenen Reihenfolge und lösen Sie 21 Zielfelder in einem 9×9-Sudoku."
+    },
+    "ninepractice2": {
+      "title": "Schritt 37: 9×9-Sudoku-Übung 2 – Notizen verwenden",
+      "instruction": "Verwenden Sie in den ersten vier Zielfeldern Bleistiftnotizen und lösen Sie das letzte Feld mithilfe dieser Notizen."
+    },
+    "ninefocus": {
+      "title": "Schritt 38: 9×9-Sudoku-Übung 3 – Eine Zahl nach der anderen prüfen",
+      "instruction": "Prüfen Sie die Zahlen von 1 bis 9 nacheinander. Nutzen Sie Markierungen und Notizen, um jede Position zu finden."
+    },
+    "ninecombat1": {
+      "title": "Schritt 39: 9×9-Sudoku-Herausforderung 1",
+      "instruction": "Vervollständigen Sie das gesamte 9×9-Sudoku. Nutzen Sie bei Bedarf Notizen und Zahlenmarkierungen."
+    },
+    "ninecombat2": {
+      "title": "Schritt 40: 9×9-Sudoku-Herausforderung 2 – Zwei-Positionen-Methode",
+      "instruction": "Nutzen Sie die Zwei-Positionen-Methode und prüfen Sie jeweils eine Zahl, um das gesamte Gitter zu lösen."
+    },
+    "ninecombat3": {
+      "title": "Schritt 41: 9×9-Abschlussprüfung (Teil 1)",
+      "instruction": "Vervollständigen Sie das Sudoku. Sie können jederzeit prüfen; falsche Einträge werden rot markiert."
+    },
+    "ninecombat4": {
+      "title": "Schritt 42: 9×9-Abschlussprüfung (Teil 2)",
+      "instruction": "Vervollständigen Sie das zweite Sudoku der Abschlussprüfung. Sie können jederzeit prüfen; falsche Einträge werden rot markiert."
+    },
+    "ninecombat75": {
+      "title": "Schritt 43: Erstes Bewerbungsgespräch – 9×9-Sudoku",
+      "instruction": "Erstes Bewerbungsgespräch. Nutzen Sie die Kenntnisse aus der Abschlussprüfung, um dieses 9×9-Sudoku zu lösen."
+    },
+    "ninecombat80": {
+      "title": "Schritt 44: Abschließendes Bewerbungsgespräch – 9×9-Sudoku",
+      "instruction": "Abschließendes Bewerbungsgespräch. Lösen Sie dieses 9×9-Sudoku mit Notizen, Markierungen und Prüfung."
+    },
+    "ninecombat5": {
+      "title": "Schritt 45: Erste Herausforderung nach der Einstellung – 9×9-Sudoku",
+      "instruction": "Herzlichen Glückwunsch zur Einstellung! Stellen Sie sich Ihrer ersten Herausforderung im neuen Unternehmen."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Betrachten Sie die Felder und wählen Sie unten eine Zahl.",
+    "答對了！你找到破局點！": "Richtig! Sie haben das entscheidende Feld gefunden!",
+    "再想一想！請重新觀察線索。": "Überlegen Sie noch einmal und prüfen Sie die Hinweise erneut.",
+    "沒關係，慢慢找。請再選一次。": "Kein Problem. Lassen Sie sich Zeit und versuchen Sie es noch einmal.",
+    "請先選取一個空格。": "Bitte wählen Sie zuerst ein leeres Feld.",
+    "請先選取一個空格，再按數字加入小字。": "Wählen Sie ein leeres Feld und dann eine Zahl, um eine Notiz hinzuzufügen.",
+    "請先點選棋盤上的空格，再選擇數字。": "Tippen Sie auf ein leeres Feld im Gitter und wählen Sie eine Zahl.",
+    "題目原有數字不能修改。": "Die vorgegebenen Zahlen können nicht geändert werden.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Der Notizmodus ist eingeschaltet. Wählen Sie ein leeres Feld und anschließend unten eine Zahl für eine Notiz.",
+    "筆記模式已關閉。": "Der Notizmodus ist ausgeschaltet.",
+    "已取消所有金色反白。": "Alle goldenen Markierungen wurden entfernt.",
+    "目前沒有選取空格，也沒有反金顯示。": "Es ist kein Feld ausgewählt und keine Zahl markiert.",
+    "目前沒有選取空格，也沒有反白區域。": "Es ist kein Feld ausgewählt und kein Bereich markiert.",
+    "已清空選取格子的答案與筆記。": "Antwort und Notizen des ausgewählten Feldes wurden gelöscht.",
+    "已清空選取格子的所有小字。": "Alle kleinen Notizen im ausgewählten Feld wurden gelöscht.",
+    "按下方數字加入或移除筆記。": "Wählen Sie unten eine Zahl, um eine Notiz hinzuzufügen oder zu entfernen.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Der Notizmodus ist ausgeschaltet. Tippen Sie auf „Notizen“, um ihn einzuschalten.",
+    "請先關閉「筆記」，再填入正式答案。": "Schalten Sie zuerst „Notizen“ aus, bevor Sie die endgültige Antwort eingeben.",
+    "請依照順序完成目前亮起的目標格。": "Füllen Sie die aktuell hervorgehobenen Zielfelder der Reihe nach aus.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Füllen Sie zuerst das hervorgehobene Zielfeld aus, bevor Sie zum nächsten wechseln.",
+    "已選取空格，請按下方數字填入答案。": "Leeres Feld ausgewählt. Wählen Sie unten eine Zahl für die Antwort.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Antwort eingetragen. Das System prüft sie nicht automatisch. Tippen Sie bei Bedarf auf „Prüfen“.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Zahl eingetragen. Tippen Sie nach Abschluss auf „Prüfen“; Sie können die Eingabe auch weiter bearbeiten.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Überlegen Sie noch einmal: Lösen Sie nur das Feld mit dem Fragezeichen.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Leider falsch: Die Zahl ist rot markiert. Prüfen Sie die Hinweise erneut und finden Sie den entscheidenden Schritt!",
+    "三題全部答對！你已學會一次檢查一個數字。": "Alle drei Antworten sind richtig! Sie können jetzt eine Zahl nach der anderen prüfen.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "Alle Zahlen von 1 bis 9 wurden geprüft! Sie haben Schritt 38 abgeschlossen.",
+    "本次已完成，但瀏覽器無法保存進度。": "Diese Runde ist abgeschlossen, aber der Browser konnte Ihren Fortschritt nicht speichern.",
+    "目前目標格已選取，請先開啟「筆記」。": "Das Zielfeld ist ausgewählt. Schalten Sie zuerst „Notizen“ ein.",
+    "目前目標格已選取，請按下方數字寫入小字。": "Das Zielfeld ist ausgewählt. Wählen Sie unten eine Zahl für eine kleine Notiz.",
+    "最後目標格已選取，請直接填入答案。": "Das letzte Zielfeld ist ausgewählt. Geben Sie die Antwort direkt ein.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Wählen Sie zuerst das aktuelle Zielfeld und dann eine Zahl für die Notiz.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Tippen Sie auf die angegebene Zahl, die bereits im Gitter steht, und beobachten Sie die markierten Bereiche.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Finden Sie selbst ein Feld, in das diese Zahl passt. Wählen Sie es aus und tippen Sie dann unten auf die Zahl.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Tippen Sie auf eine bereits vorhandene 1, 2 oder 6 und beobachten Sie die goldenen Markierungen.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Tippen Sie auf eine bereits vorhandene 1, 2 oder 5 und beobachten Sie die goldenen Markierungen.",
+    "提示：缺少的數字是 ": "Hinweis: Die fehlende Zahl ist ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Zwei Zahlen wurden notiert, aber die Kombination ist falsch. Löschen Sie das Feld mit „Löschen“ und versuchen Sie es erneut.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Die Kandidaten in diesem Feld sind falsch. Löschen Sie das Feld und tragen Sie sie erneut ein.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Die beiden kleinen Kandidaten sind falsch. Löschen Sie das Feld und tragen Sie sie erneut ein.",
+    "這個候選數字不正確，請再觀察九宮格。": "Dieser Kandidat ist falsch. Prüfen Sie den 3×3-Block erneut.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Diese endgültige Antwort ist falsch. Prüfen Sie die markierten Bereiche oder notieren Sie mögliche Kandidaten.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Diese Position ist falsch. Prüfen Sie die goldenen Markierungen und finden Sie das Feld, in das die Zahl gehört.",
+    "已選取這一格，請選擇你認為正確的數字。": "Dieses Feld ist ausgewählt. Wählen Sie die Zahl, die Sie für richtig halten.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Wählen Sie zuerst ein leeres Feld und dann eine Zahl für die Antwort oder eine Notiz.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Alles richtig! Sie haben die 4×4-Sudoku-Herausforderung abgeschlossen!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Alles richtig! Sie haben die 4×4-Sudoku-Abschlussprüfung (1/3) bestanden!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Alles richtig! Sie haben die 4×4-Sudoku-Abschlussprüfung (2/3) bestanden!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Alles richtig! Sie haben die 4×4-Sudoku-Abschlussprüfung (3/3) bestanden!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "Alle acht Zielfelder sind ausgefüllt! Sie haben die Notiz-Herausforderung in Schritt 22 abgeschlossen.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "Alle fünf Antworten sind richtig! Sie haben die 6×6-Sudoku-Übung vom Typ 2 abgeschlossen.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Ausgezeichnet! Das gesamte Gitter ist richtig. Glückwunsch, Sie haben das erste Bewerbungsgespräch in Schritt 43 bestanden!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Ausgezeichnet! Sie haben das abschließende Bewerbungsgespräch in Schritt 44 bestanden!",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Ausgezeichnet! Sie haben die Herausforderung mit Schwierigkeitsgrad 90 geschafft und die erste Aufgabe nach der Einstellung in Schritt 45 bestanden!",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Sie haben alle verfügbaren Schritte abgeschlossen! Gut gemacht. Sie können zur Startseite zurückkehren.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Sie haben diesen Schritt abgeschlossen. Gut gemacht! Weiter geht es mit der nächsten Herausforderung.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Tippen Sie zuerst auf eine Zahl, die bereits im Gitter steht, und beobachten Sie die Markierungen.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Tippen Sie auf eine Zahl im Gitter, um ihre Zeile, Spalte und ihren Block zu markieren. Wählen Sie dann ein leeres Feld für die Antwort. Im Notizmodus können Kandidaten eingetragen werden.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Schalten Sie zuerst „Notizen“ ein und tragen Sie anhand von Zeile, Spalte und Block des Zielfeldes zwei Kandidaten ein. Ausgefüllte Felder bleiben erhalten.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Schalten Sie „Notizen“ ein, wählen Sie ein leeres Feld und notieren Sie alle fehlenden Kandidaten dieser Zeile. Es gibt sechs Aufgaben mit wechselnden Typen.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Schalten Sie „Notizen“ ein, wählen Sie ein leeres Feld und notieren Sie alle fehlenden Kandidaten dieser Spalte. Es gibt sechs Aufgaben mit wechselnden Typen.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Betrachten Sie die fünf Zielfelder der Reihe nach: zuerst die Zeile, dann die Spalte und den Block.",
+    "這一關請靠自己的觀察找出破局點！": "Finden Sie in diesem Schritt durch eigenes Beobachten das entscheidende Feld!",
+    "畢業考請靠自己的觀察完成，加油！": "Schließen Sie die Prüfung mit eigener Beobachtung ab. Viel Erfolg!",
+    "按下方數字填入答案；也可開啟筆記。": "Wählen Sie unten eine Zahl für die Antwort; Sie können auch den Notizmodus einschalten.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Schalten Sie „Notizen“ ein und tragen Sie in den vier Zielfeldern der Reihe nach kleine Notizen ein. Schalten Sie nach dem vierten Schritt den Notizmodus aus und leiten Sie die endgültige Antwort für das letzte Feld ab.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Schritt 1/9: Tippen Sie im Rätsel auf eine beliebige 1. Schalten Sie nach der Markierung „Notizen“ ein und notieren Sie mögliche Positionen für die 1.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Schalten Sie jetzt „Notizen“ ein und notieren Sie mögliche Positionen für die 1.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Weiter so! Sie haben alle Hinweise verwendet. Sie schaffen das auch allein!",
+    "提示已經使用完畢，你可以自己做到！": "Sie haben alle Hinweise verwendet. Sie schaffen das auch allein!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Sehr gut! Dieses 9×9-Sudoku ist vollständig richtig. Schritt 42 abgeschlossen!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Sehr gut! Dieses 9×9-Sudoku ist vollständig richtig. Schritt 41 abgeschlossen!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Sehr gut! Dieses 9×9-Sudoku ist vollständig richtig. Schritt 40 abgeschlossen!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Sehr gut! Dieses 9×9-Sudoku ist vollständig richtig. Schritt 39 abgeschlossen!",
+    "請依序完成目前亮起的目標格。": "Füllen Sie die hervorgehobenen Zielfelder der Reihe nach aus.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Der Notizmodus ist eingeschaltet. Das Zielfeld wurde automatisch ausgewählt. Wählen Sie unten direkt eine Zahl für die Notiz.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Schalten Sie im letzten Schritt zuerst den Notizmodus aus und geben Sie dann die endgültige Antwort ein.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Überlegen Sie noch einmal: Nutzen Sie die vier vorherigen Notizen, um die letzte Antwort abzuleiten.",
+    "新題目來了！再找出一個破局點。": "Eine neue Aufgabe! Finden Sie ein weiteres entscheidendes Feld.",
+    "題目原有數字不能修改，請選擇空格。": "Die vorgegebenen Zahlen können nicht geändert werden. Wählen Sie ein leeres Feld.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Diese Zahl ist noch nicht richtig. Nutzen Sie die Hinweise aus Zeile, Spalte und Block oder notieren Sie zuerst die Kandidaten.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Diese Antwort ist falsch und wird nicht ins Gitter eingetragen. Prüfen Sie Zeile, Spalte und 3×3-Block erneut oder verwenden Sie Notizen.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Einige Notizen gehören nicht zu den fehlenden Zahlen dieser Zeile. Löschen Sie das Feld mit „Löschen“ und beginnen Sie erneut.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Einige Notizen gehören nicht zu den fehlenden Zahlen dieser Zeile. Löschen Sie das Feld mit „Löschen“ und beginnen Sie erneut.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Überlegen Sie noch einmal: Prüfen Sie zuerst die Zeile, dann die Spalte und zuletzt den Block. Die richtige Antwort bleibt im Gitter.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Überlegen Sie noch einmal: Prüfen Sie Zeile, Spalte und Block des Zielfeldes. Die richtige Antwort bleibt im Gitter.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Nächste Aufgabe! Der Notizmodus wurde automatisch eingeschaltet. Notieren Sie in jedem der beiden leeren Felder die zwei fehlenden Zahlen.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "Alle drei Antworten sind richtig! Sie können Sudoku jetzt mit den Regeln für Zeilen, Spalten und Blöcke lösen.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Schalten Sie „Notizen“ ein und tragen Sie in den vier Zielfeldern der Reihe nach kleine Notizen ein.",
+    "三題全部完成！你已學會一次檢查一個數字。": "Alle drei Aufgaben sind abgeschlossen! Sie haben gelernt, eine Zahl nach der anderen zu prüfen.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "Schalten Sie für die ersten vier Schritte „Notizen“ ein und tragen Sie die zwei möglichen Zahlen ein.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Die vorgegebenen Zahlen dürfen nicht geändert werden. Wählen Sie ein leeres Feld.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Ausgezeichnet! Sie haben alle 21 Schritte der Reihe nach abgeschlossen und dieses Sudoku gelöst!",
+    "已選取空格，請按下方數字填入。": "Leeres Feld ausgewählt. Wählen Sie unten eine Zahl zum Eintragen.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Der Notizmodus ist ausgeschaltet. Tippen Sie auf „Notizen“, um ihn einzuschalten.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Richtig! Sie haben die Übung abgeschlossen, bei der die Antwort mithilfe von Notizen abgeleitet wird.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Tippen Sie zuerst auf eine Zahl, die bereits im 6×6-Gitter steht. Das System markiert ihre Zeile, Spalte und den Block. Die Zahlenknöpfe unten dienen nur zum Eintragen von Antworten oder Notizen.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Wählen Sie zuerst das Feld aus, mit dem Sie das Rätsel Ihrer Meinung nach lösen können, und wählen Sie dann eine Zahl."
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Atelier de sudoku",
+    "village": "Village des débutants en sudoku",
+    "home": "Accueil",
+    "smaller": "Réduire le texte",
+    "larger": "Agrandir le texte",
+    "language": "Language",
+    "category4": "Sudoku 4×4",
+    "category6": "Sudoku 6×6",
+    "category9": "Sudoku 9×9",
+    "homeNote": "Aucune connexion ni aucun chronomètre. Prenez votre temps.",
+    "start": "Commencer l’exercice",
+    "exam": "Commencer le test",
+    "study": "Commencer la leçon",
+    "challenge": "Relever le défi",
+    "practice": "Commencer l’exercice",
+    "battle": "Relever le défi",
+    "graduation": "Commencer l’examen",
+    "firstInterview": "Commencer le premier entretien",
+    "finalInterview": "Commencer l’entretien final",
+    "hiredChallenge": "Commencer le défi après recrutement",
+    "gameFeedback": "Observez la grille, puis choisissez un chiffre ci-dessous.",
+    "check": "Vérifier",
+    "clear": "Effacer",
+    "notes": "Notes",
+    "hint": "Indice",
+    "question": "Question",
+    "modalTitle": "Étape terminée !",
+    "next": "Étape suivante",
+    "modalHome": "Retour à l’accueil",
+    "footer": "Le Zai Ling Zhong | Pas de course : apprenez pas à pas.",
+    "gridAria": "Grille de sudoku",
+    "categoryAria": "Catégories de taille du sudoku",
+    "brandAlt": "Logo Le Zai Ling Zhong",
+    "section4": "Sudoku 4×4",
+    "section6": "Sudoku 6×6",
+    "section9": "Sudoku 9×9",
+    "completeNext": "Vous avez terminé cette étape. Bravo ! Continuez avec le défi suivant.",
+    "completeAll": "Vous avez terminé toutes les étapes disponibles ! Bravo. Vous pouvez revenir à l’accueil."
+  },
+  "lessons": [
+    {
+      "title": "Étape 1 : Ligne",
+      "description": "Parcourez la ligne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 2 : Colonne",
+      "description": "Parcourez la colonne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 3 : Carré 2×2",
+      "description": "Trouvez le chiffre manquant dans le petit carré.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 4 : Ligne + colonne",
+      "description": "Utilisez les indices de la ligne et de la colonne pour résoudre le point d’interrogation.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 5 : Utiliser trois directions",
+      "description": "Combinez les indices des trois directions pour trouver le bon chiffre.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 6 : Carré + colonne + ligne",
+      "description": "Utilisez ensemble les indices du carré, de la colonne et de la ligne.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 7 : Repérer les indices utiles",
+      "description": "Ignorez les distractions et repérez les indices utiles.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 8 : Entraînement au sudoku 4×4",
+      "description": "Résolvez les grilles dans l’ordre. Chaque bonne réponse reste sur la grille.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 9 : Défi sudoku 4×4",
+      "description": "Choisissez une case vide, saisissez un chiffre puis vérifiez votre réponse. Utilisez un indice si nécessaire.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 10 : Trouver la case décisive",
+      "description": "Trouvez la première case dont la réponse peut être déterminée. Chaque bonne réponse mène à la grille suivante.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 11 : Examen de fin 4×4 (1/3)",
+      "description": "Complétez la grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge.",
+      "action": "Commencer le test"
+    },
+    {
+      "title": "Étape 12 : Examen de fin 4×4 (2/3)",
+      "description": "Complétez la deuxième grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge.",
+      "action": "Commencer le test"
+    },
+    {
+      "title": "Étape 13 : Examen de fin 4×4 (3/3)",
+      "description": "Complétez la troisième grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge.",
+      "action": "Commencer le test"
+    },
+    {
+      "title": "Étape 14 : Sudoku 6×6 – Ligne",
+      "description": "Observez les six cases de la ligne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 15 : Sudoku 6×6 – Colonne",
+      "description": "Observez les six cases de la colonne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 16 : Sudoku 6×6 – Région",
+      "description": "Trouvez le chiffre manquant dans la région de six cases.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 17 : Qu’est-ce que le sudoku 6×6 ? (Type 1)",
+      "description": "Apprenez les règles des lignes, colonnes et régions, puis résolvez trois cases cibles.",
+      "action": "Commencer la leçon"
+    },
+    {
+      "title": "Étape 18 : Notes au crayon (ligne 6×6)",
+      "description": "Notez les deux chiffres manquants en petits caractères dans deux cases vides.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 19 : Notes au crayon (colonne 6×6)",
+      "description": "Notez les deux chiffres manquants dans deux cases vides de la colonne.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 20 : Notes au crayon (région 6×6)",
+      "description": "Notez les deux chiffres manquants dans deux cases vides de la région.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 21 : Qu’est-ce que le sudoku 6×6 ? (Type 2)",
+      "description": "Résolvez cinq cases cibles dans l’ordre. Les bonnes réponses restent sur la grille.",
+      "action": "Commencer la leçon"
+    },
+    {
+      "title": "Étape 22 : Défi des notes au crayon",
+      "description": "Complétez huit cases cibles en inscrivant deux chiffres candidats dans chaque case.",
+      "action": "Relever le défi"
+    },
+    {
+      "title": "Étape 23 : Examiner un chiffre à la fois (1, 2, 6)",
+      "description": "Examinez successivement les 1, 2 et 6. Utilisez les lignes, colonnes et régions surlignées pour trouver leur place.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 24 : Examiner un chiffre à la fois (1, 2, 5)",
+      "description": "Examinez successivement les 1, 2 et 5. Utilisez les lignes, colonnes et régions surlignées pour trouver leur place.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 25 : Défi sudoku 6×6 1",
+      "description": "Complétez une grille 6×6 entière en utilisant le surlignage et les notes au crayon.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 26 : Défi sudoku 6×6 2",
+      "description": "Essayez un sudoku 6×6 plus difficile et combinez toutes les techniques apprises.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 27 : Sudoku 9×9 – Ligne",
+      "description": "Observez les neuf cases de la ligne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 28 : Sudoku 9×9 – Colonne",
+      "description": "Observez les neuf cases de la colonne et trouvez le chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 29 : Sudoku 9×9 – Région",
+      "description": "Trouvez le chiffre manquant dans la région 3×3.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 30 : Résoudre avec la ligne et la colonne",
+      "description": "Utilisez ensemble la ligne et la colonne pour identifier le même chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 31 : Ligne + colonne + région",
+      "description": "Utilisez la ligne, la colonne et la région 3×3 pour trouver l’unique chiffre manquant.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 32 : Repérer les indices pertinents",
+      "description": "Ignorez les chiffres sans rapport et concentrez-vous sur les indices utiles de la ligne, de la colonne et de la région.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 33 : Notes au crayon (ligne 9×9)",
+      "description": "Entraînez-vous à noter les candidats manquants en petits caractères dans chaque ligne.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 34 : Notes au crayon (colonne 9×9)",
+      "description": "Entraînez-vous à noter les candidats manquants en petits caractères dans chaque colonne.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 35 : Notes au crayon (région 9×9)",
+      "description": "Utilisez les notes au crayon pour repérer les candidats manquants dans chaque région 3×3.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 36 : Entraînement sudoku 9×9 1 – Pas à pas",
+      "description": "Suivez l’ordre indiqué et résolvez 21 cases cibles dans une même grille 9×9.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 37 : Entraînement sudoku 9×9 2 – Utiliser les notes",
+      "description": "Utilisez les notes au crayon dans les quatre premières cases, puis résolvez la dernière grâce à ces notes.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 38 : Entraînement sudoku 9×9 3 – Examiner un chiffre à la fois",
+      "description": "Examinez les chiffres de 1 à 9 un par un. Utilisez le surlignage et les notes pour trouver chaque emplacement.",
+      "action": "Commencer l’exercice"
+    },
+    {
+      "title": "Étape 39 : Défi sudoku 9×9 1",
+      "description": "Complétez toute la grille 9×9. Utilisez les notes et le surlignage des chiffres si nécessaire.",
+      "action": "Relever le défi"
+    },
+    {
+      "title": "Étape 40 : Défi sudoku 9×9 2 – Méthode des deux positions",
+      "description": "Utilisez la méthode des deux positions et examinez un chiffre à la fois pour résoudre toute la grille.",
+      "action": "Relever le défi"
+    },
+    {
+      "title": "Étape 41 : Examen final 9×9 (Partie 1)",
+      "description": "Complétez le sudoku. Vous pouvez vérifier à tout moment ; les erreurs sont marquées en rouge.",
+      "action": "Commencer le test"
+    },
+    {
+      "title": "Étape 42 : Examen final 9×9 (Partie 2)",
+      "description": "Complétez le deuxième sudoku de l’examen. Vous pouvez vérifier à tout moment ; les erreurs sont marquées en rouge.",
+      "action": "Commencer le test"
+    },
+    {
+      "title": "Étape 43 : Premier entretien d’embauche – Sudoku 9×9",
+      "description": "Premier entretien de l’entreprise. Utilisez les compétences acquises à l’examen pour résoudre ce sudoku 9×9.",
+      "action": "Commencer le premier entretien"
+    },
+    {
+      "title": "Étape 44 : Entretien final d’embauche – Sudoku 9×9",
+      "description": "Dernier entretien de l’entreprise. Résolvez ce sudoku 9×9 à l’aide des notes, du surlignage et de la vérification.",
+      "action": "Commencer l’entretien final"
+    },
+    {
+      "title": "Étape 45 : Premier défi après l’embauche – Sudoku 9×9",
+      "description": "Félicitations pour votre recrutement ! Relevez votre premier défi après votre arrivée dans l’entreprise.",
+      "action": "Commencer le défi après recrutement"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Étape 1 : Ligne",
+      "instruction": "Parcourez la ligne et trouvez le chiffre manquant."
+    },
+    "column": {
+      "title": "Étape 2 : Colonne",
+      "instruction": "Parcourez la colonne et trouvez le chiffre manquant."
+    },
+    "box": {
+      "title": "Étape 3 : Carré 2×2",
+      "instruction": "Trouvez le chiffre manquant dans le petit carré."
+    },
+    "rowcol": {
+      "title": "Étape 4 : Ligne + colonne",
+      "instruction": "Utilisez les indices de la ligne et de la colonne pour résoudre le point d’interrogation."
+    },
+    "threeways": {
+      "title": "Étape 5 : Utiliser trois directions",
+      "instruction": "Combinez les indices des trois directions pour trouver le bon chiffre."
+    },
+    "boxways": {
+      "title": "Étape 6 : Carré + colonne + ligne",
+      "instruction": "Utilisez ensemble les indices du carré, de la colonne et de la ligne."
+    },
+    "advanced": {
+      "title": "Étape 7 : Repérer les indices utiles",
+      "instruction": "Ignorez les distractions et repérez les indices utiles."
+    },
+    "classic": {
+      "title": "Étape 8 : Entraînement au sudoku 4×4",
+      "instruction": "Résolvez les grilles dans l’ordre. Chaque bonne réponse reste sur la grille."
+    },
+    "practical": {
+      "title": "Étape 9 : Défi sudoku 4×4",
+      "instruction": "Choisissez une case vide, saisissez un chiffre puis vérifiez votre réponse. Utilisez un indice si nécessaire."
+    },
+    "breakthrough": {
+      "title": "Étape 10 : Trouver la case décisive",
+      "instruction": "Trouvez la première case dont la réponse peut être déterminée. Chaque bonne réponse mène à la grille suivante."
+    },
+    "graduate1": {
+      "title": "Étape 11 : Examen de fin 4×4 (1/3)",
+      "instruction": "Complétez la grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge."
+    },
+    "graduate2": {
+      "title": "Étape 12 : Examen de fin 4×4 (2/3)",
+      "instruction": "Complétez la deuxième grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge."
+    },
+    "graduate3": {
+      "title": "Étape 13 : Examen de fin 4×4 (3/3)",
+      "instruction": "Complétez la troisième grille 4×4 et vérifiez vos réponses. Les erreurs sont marquées en rouge."
+    },
+    "sixrow": {
+      "title": "Étape 14 : Sudoku 6×6 – Ligne",
+      "instruction": "Observez les six cases de la ligne et trouvez le chiffre manquant."
+    },
+    "sixcolumn": {
+      "title": "Étape 15 : Sudoku 6×6 – Colonne",
+      "instruction": "Observez les six cases de la colonne et trouvez le chiffre manquant."
+    },
+    "sixbox": {
+      "title": "Étape 16 : Sudoku 6×6 – Région",
+      "instruction": "Trouvez le chiffre manquant dans la région de six cases."
+    },
+    "sixnote": {
+      "title": "Étape 18 : Notes au crayon (ligne 6×6)",
+      "instruction": "Notez les deux chiffres manquants en petits caractères dans deux cases vides."
+    },
+    "sixcolumnnote": {
+      "title": "Étape 19 : Notes au crayon (colonne 6×6)",
+      "instruction": "Notez les deux chiffres manquants dans deux cases vides de la colonne."
+    },
+    "sixboxnote": {
+      "title": "Étape 20 : Notes au crayon (région 6×6)",
+      "instruction": "Notez les deux chiffres manquants dans deux cases vides de la région."
+    },
+    "step14": {
+      "title": "Étape 17 : Qu’est-ce que le sudoku 6×6 ? (Type 1)",
+      "instruction": "Le sudoku suit trois règles :\n1. Chaque colonne contient les chiffres de 1 à 6 sans répétition.\n2. Chaque ligne contient les chiffres de 1 à 6 sans répétition.\n3. Chaque région de six cases contient les chiffres de 1 à 6 sans répétition.\nRésolvez les trois cases cibles dans l’ordre. Les bonnes réponses restent sur la grille."
+    },
+    "sixintro2": {
+      "title": "Étape 21 : Qu’est-ce que le sudoku 6×6 ? (Type 2)",
+      "instruction": "Résolvez cinq cases cibles dans l’ordre. Les bonnes réponses restent sur la grille."
+    },
+    "sixnotecombat": {
+      "title": "Étape 22 : Défi des notes au crayon",
+      "instruction": "Complétez huit cases cibles en inscrivant deux chiffres candidats dans chaque case."
+    },
+    "numberfocus": {
+      "title": "Étape 23 : Examiner un chiffre à la fois (1, 2, 6)",
+      "instruction": "Examinez successivement les 1, 2 et 6. Utilisez les lignes, colonnes et régions surlignées pour trouver leur place."
+    },
+    "numberfocus2": {
+      "title": "Étape 24 : Examiner un chiffre à la fois (1, 2, 5)",
+      "instruction": "Examinez successivement les 1, 2 et 5. Utilisez les lignes, colonnes et régions surlignées pour trouver leur place."
+    },
+    "numberfocus3": {
+      "title": "Étape 25 : Défi sudoku 6×6 1",
+      "instruction": "Complétez une grille 6×6 entière en utilisant le surlignage et les notes au crayon."
+    },
+    "numberfocus4": {
+      "title": "Étape 26 : Défi sudoku 6×6 2",
+      "instruction": "Essayez un sudoku 6×6 plus difficile et combinez toutes les techniques apprises."
+    },
+    "ninerow": {
+      "title": "Étape 27 : Sudoku 9×9 – Ligne",
+      "instruction": "Observez les neuf cases de la ligne et trouvez le chiffre manquant."
+    },
+    "ninecolumn": {
+      "title": "Étape 28 : Sudoku 9×9 – Colonne",
+      "instruction": "Observez les neuf cases de la colonne et trouvez le chiffre manquant."
+    },
+    "ninebox": {
+      "title": "Étape 29 : Sudoku 9×9 – Région",
+      "instruction": "Trouvez le chiffre manquant dans la région 3×3."
+    },
+    "ninerowcol": {
+      "title": "Étape 30 : Résoudre avec la ligne et la colonne",
+      "instruction": "Utilisez ensemble la ligne et la colonne pour identifier le même chiffre manquant."
+    },
+    "ninerowcolbox": {
+      "title": "Étape 31 : Ligne + colonne + région",
+      "instruction": "Utilisez la ligne, la colonne et la région 3×3 pour trouver l’unique chiffre manquant."
+    },
+    "nineadvanced": {
+      "title": "Étape 32 : Repérer les indices pertinents",
+      "instruction": "Ignorez les chiffres sans rapport et concentrez-vous sur les indices utiles de la ligne, de la colonne et de la région."
+    },
+    "ninenote": {
+      "title": "Étape 33 : Notes au crayon (ligne 9×9)",
+      "instruction": "Entraînez-vous à noter les candidats manquants en petits caractères dans chaque ligne."
+    },
+    "ninecolumnnote": {
+      "title": "Étape 34 : Notes au crayon (colonne 9×9)",
+      "instruction": "Entraînez-vous à noter les candidats manquants en petits caractères dans chaque colonne."
+    },
+    "nineboxnote": {
+      "title": "Étape 35 : Notes au crayon (région 9×9)",
+      "instruction": "Utilisez les notes au crayon pour repérer les candidats manquants dans chaque région 3×3."
+    },
+    "ninepractice1": {
+      "title": "Étape 36 : Entraînement sudoku 9×9 1 – Pas à pas",
+      "instruction": "Suivez l’ordre indiqué et résolvez 21 cases cibles dans une même grille 9×9."
+    },
+    "ninepractice2": {
+      "title": "Étape 37 : Entraînement sudoku 9×9 2 – Utiliser les notes",
+      "instruction": "Utilisez les notes au crayon dans les quatre premières cases, puis résolvez la dernière grâce à ces notes."
+    },
+    "ninefocus": {
+      "title": "Étape 38 : Entraînement sudoku 9×9 3 – Examiner un chiffre à la fois",
+      "instruction": "Examinez les chiffres de 1 à 9 un par un. Utilisez le surlignage et les notes pour trouver chaque emplacement."
+    },
+    "ninecombat1": {
+      "title": "Étape 39 : Défi sudoku 9×9 1",
+      "instruction": "Complétez toute la grille 9×9. Utilisez les notes et le surlignage des chiffres si nécessaire."
+    },
+    "ninecombat2": {
+      "title": "Étape 40 : Défi sudoku 9×9 2 – Méthode des deux positions",
+      "instruction": "Utilisez la méthode des deux positions et examinez un chiffre à la fois pour résoudre toute la grille."
+    },
+    "ninecombat3": {
+      "title": "Étape 41 : Examen final 9×9 (Partie 1)",
+      "instruction": "Complétez le sudoku. Vous pouvez vérifier à tout moment ; les erreurs sont marquées en rouge."
+    },
+    "ninecombat4": {
+      "title": "Étape 42 : Examen final 9×9 (Partie 2)",
+      "instruction": "Complétez le deuxième sudoku de l’examen. Vous pouvez vérifier à tout moment ; les erreurs sont marquées en rouge."
+    },
+    "ninecombat75": {
+      "title": "Étape 43 : Premier entretien d’embauche – Sudoku 9×9",
+      "instruction": "Premier entretien de l’entreprise. Utilisez les compétences acquises à l’examen pour résoudre ce sudoku 9×9."
+    },
+    "ninecombat80": {
+      "title": "Étape 44 : Entretien final d’embauche – Sudoku 9×9",
+      "instruction": "Dernier entretien de l’entreprise. Résolvez ce sudoku 9×9 à l’aide des notes, du surlignage et de la vérification."
+    },
+    "ninecombat5": {
+      "title": "Étape 45 : Premier défi après l’embauche – Sudoku 9×9",
+      "instruction": "Félicitations pour votre recrutement ! Relevez votre premier défi après votre arrivée dans l’entreprise."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Observez les cases, puis choisissez un chiffre ci-dessous.",
+    "答對了！你找到破局點！": "Bravo ! Vous avez trouvé la case décisive !",
+    "再想一想！請重新觀察線索。": "Réfléchissez encore et observez de nouveau les indices.",
+    "沒關係，慢慢找。請再選一次。": "Ce n’est pas grave. Prenez votre temps et réessayez.",
+    "請先選取一個空格。": "Veuillez d’abord sélectionner une case vide.",
+    "請先選取一個空格，再按數字加入小字。": "Sélectionnez une case vide, puis choisissez un chiffre pour ajouter une note.",
+    "請先點選棋盤上的空格，再選擇數字。": "Touchez une case vide de la grille, puis choisissez un chiffre.",
+    "題目原有數字不能修改。": "Les chiffres déjà présents dans l’énoncé ne peuvent pas être modifiés.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Le mode Notes est activé. Sélectionnez une case vide, puis choisissez un chiffre ci-dessous pour ajouter une note.",
+    "筆記模式已關閉。": "Le mode Notes est désactivé.",
+    "已取消所有金色反白。": "Tous les surlignages dorés ont été effacés.",
+    "目前沒有選取空格，也沒有反金顯示。": "Aucune case n’est sélectionnée et aucun chiffre n’est surligné.",
+    "目前沒有選取空格，也沒有反白區域。": "Aucune case n’est sélectionnée et aucune zone n’est surlignée.",
+    "已清空選取格子的答案與筆記。": "La réponse et les notes de la case sélectionnée ont été effacées.",
+    "已清空選取格子的所有小字。": "Toutes les petites notes de la case sélectionnée ont été effacées.",
+    "按下方數字加入或移除筆記。": "Choisissez un chiffre ci-dessous pour ajouter ou supprimer une note.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Le mode Notes est désactivé. Appuyez sur « Notes » pour l’activer.",
+    "請先關閉「筆記」，再填入正式答案。": "Désactivez d’abord « Notes » avant de saisir une réponse définitive.",
+    "請依照順序完成目前亮起的目標格。": "Terminez les cases cibles actuellement éclairées dans l’ordre.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Terminez la case cible éclairée avant de passer à la suivante.",
+    "已選取空格，請按下方數字填入答案。": "Case vide sélectionnée. Choisissez un chiffre ci-dessous pour saisir la réponse.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Réponse saisie. Le système ne la vérifie pas automatiquement ; appuyez sur « Vérifier » si nécessaire.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Chiffre saisi. Appuyez sur « Vérifier » lorsque vous avez terminé ; vous pouvez aussi continuer à modifier.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Réfléchissez encore : résolvez uniquement la case contenant le point d’interrogation.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Ce n’est pas correct : le chiffre est en rouge. Observez de nouveau et trouvez la case décisive !",
+    "三題全部答對！你已學會一次檢查一個數字。": "Les trois réponses sont correctes ! Vous savez maintenant examiner un chiffre à la fois.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "Les chiffres de 1 à 9 ont tous été vérifiés ! Vous avez terminé l’étape 38.",
+    "本次已完成，但瀏覽器無法保存進度。": "Cette session est terminée, mais le navigateur n’a pas pu enregistrer votre progression.",
+    "目前目標格已選取，請先開啟「筆記」。": "La case cible est sélectionnée. Activez d’abord « Notes ».",
+    "目前目標格已選取，請按下方數字寫入小字。": "La case cible est sélectionnée. Choisissez un chiffre ci-dessous pour écrire une petite note.",
+    "最後目標格已選取，請直接填入答案。": "La dernière case cible est sélectionnée. Saisissez directement la réponse.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Sélectionnez d’abord la case cible, puis choisissez un chiffre pour y noter un candidat.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Veuillez toucher le chiffre indiqué déjà présent sur la grille et observer les zones surlignées.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Trouvez vous-même une case où ce chiffre peut être placé, sélectionnez-la, puis choisissez le chiffre ci-dessous.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Touchez un 1, un 2 ou un 6 déjà présent sur la grille, puis observez les zones dorées.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Touchez un 1, un 2 ou un 5 déjà présent sur la grille, puis observez les zones dorées.",
+    "提示：缺少的數字是 ": "Indice : le chiffre manquant est ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Deux chiffres ont été notés, mais la combinaison est incorrecte. Effacez avec « Effacer » et réessayez.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Les candidats de cette case sont incorrects. Effacez avec « Effacer » et recommencez.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Les deux petits candidats sont incorrects. Effacez avec « Effacer » et recommencez.",
+    "這個候選數字不正確，請再觀察九宮格。": "Ce candidat est incorrect. Observez de nouveau la région 3×3.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Cette réponse définitive est incorrecte. Observez les zones surlignées ou notez les candidats.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Cette position est incorrecte. Observez les zones dorées et trouvez la case où placer ce chiffre.",
+    "已選取這一格，請選擇你認為正確的數字。": "Cette case est sélectionnée. Choisissez le chiffre que vous pensez correct.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Sélectionnez une case vide, puis choisissez un chiffre pour saisir une réponse ou une note.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Tout est correct ! Vous avez terminé le défi sudoku 4×4 !",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Tout est correct ! Vous avez réussi l’examen final sudoku 4×4 (1/3) !",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Tout est correct ! Vous avez réussi l’examen final sudoku 4×4 (2/3) !",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Tout est correct ! Vous avez réussi l’examen final sudoku 4×4 (3/3) !",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "Les huit cases cibles sont terminées ! Vous avez achevé le défi de notes de l’étape 22.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "Les cinq réponses sont correctes ! Vous avez terminé l’exercice de sudoku 6×6 de type 2.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Excellent ! Toute la grille est correcte. Félicitations, vous avez réussi le premier entretien de l’entreprise, étape 43 !",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Excellent ! Vous avez réussi l’entretien final de l’entreprise, étape 44 !",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Excellent ! Vous avez relevé le défi de difficulté 90 et réussi la première épreuve après l’embauche, étape 45 !",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Vous avez terminé toutes les étapes disponibles ! Bravo. Vous pouvez revenir à l’accueil.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Vous avez terminé cette étape. Bravo ! Continuez avec le défi suivant.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Touchez d’abord un chiffre déjà présent sur la grille et observez les zones surlignées.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Touchez un chiffre sur la grille pour voir sa ligne, sa colonne et sa région ; sélectionnez ensuite une case vide pour saisir une réponse. Le mode Notes permet d’inscrire des candidats.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Activez d’abord « Notes », puis inscrivez deux candidats selon la ligne, la colonne et la région de la case cible. Les cases terminées sont conservées.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Activez « Notes », sélectionnez une case vide et notez tous les candidats manquants de cette ligne. Il y a six questions de types différents.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Activez « Notes », sélectionnez une case vide et notez tous les candidats manquants de cette colonne. Il y a six questions de types différents.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Observez les cinq cases cibles dans l’ordre : examinez d’abord la ligne, puis la colonne et la région.",
+    "這一關請靠自己的觀察找出破局點！": "Utilisez votre propre observation pour trouver la case décisive dans cette étape !",
+    "畢業考請靠自己的觀察完成，加油！": "Terminez l’examen final en vous fiant à votre observation. Bon courage !",
+    "按下方數字填入答案；也可開啟筆記。": "Choisissez un chiffre ci-dessous pour saisir la réponse ; vous pouvez aussi activer Notes.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Activez « Notes » et inscrivez de petites notes dans les quatre cases cibles dans l’ordre indiqué. Après la quatrième, désactivez Notes et déduisez la réponse définitive de la dernière case.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Étape 1/9 : touchez un chiffre 1 dans la grille. Après le surlignage, activez Notes et notez les emplacements possibles du 1.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Activez maintenant Notes et notez les emplacements possibles du 1.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Courage ! Vous avez utilisé tous les indices. Vous pouvez y arriver seul !",
+    "提示已經使用完畢，你可以自己做到！": "Vous avez utilisé tous les indices. Vous pouvez y arriver seul !",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Excellent ! Toute cette grille 9×9 est correcte. Vous avez terminé l’étape 42 !",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Excellent ! Toute cette grille 9×9 est correcte. Vous avez terminé l’étape 41 !",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Excellent ! Toute cette grille 9×9 est correcte. Vous avez terminé l’étape 40 !",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Excellent ! Toute cette grille 9×9 est correcte. Vous avez terminé l’étape 39 !",
+    "請依序完成目前亮起的目標格。": "Terminez les cases cibles éclairées dans l’ordre.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Le mode Notes est activé. La case cible est sélectionnée automatiquement ; choisissez directement un chiffre ci-dessous pour noter un candidat.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Pour la dernière étape, désactivez d’abord Notes, puis saisissez directement la réponse définitive.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Réfléchissez encore : utilisez les quatre notes précédentes pour déduire la dernière réponse.",
+    "新題目來了！再找出一個破局點。": "Nouvelle grille ! Trouvez une autre case décisive.",
+    "題目原有數字不能修改，請選擇空格。": "Les chiffres initiaux ne peuvent pas être modifiés. Choisissez une case vide.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Ce chiffre est incorrect pour le moment. Utilisez les indices de la ligne, de la colonne et de la région, ou notez d’abord les candidats.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Cette réponse est incorrecte et ne sera pas inscrite dans la grille. Observez la ligne, la colonne et la région 3×3, ou utilisez Notes.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Certaines notes ne correspondent pas aux chiffres manquants de cette ligne. Effacez la case avec « Effacer » et recommencez.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Certaines notes ne correspondent pas aux chiffres manquants de cette ligne. Effacez la case avec « Effacer » et recommencez.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Réfléchissez encore : examinez d’abord la ligne, puis la colonne et enfin la région. La bonne réponse restera sur la grille.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Réfléchissez encore : observez la ligne, la colonne et la région de la case cible. La bonne réponse restera sur la grille.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Question suivante ! Notes est activé automatiquement. Inscrivez les deux chiffres manquants dans chacune des deux cases vides.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "Les trois réponses sont correctes ! Vous savez utiliser les règles des lignes, colonnes et régions pour résoudre le sudoku.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Activez « Notes » et inscrivez de petites notes dans les quatre cases cibles dans l’ordre indiqué.",
+    "三題全部完成！你已學會一次檢查一個數字。": "Les trois questions sont terminées ! Vous savez maintenant examiner un chiffre à la fois.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "Pour les quatre premières étapes, activez Notes et inscrivez les deux chiffres candidats.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Les chiffres fournis dans l’énoncé ne peuvent pas être modifiés. Choisissez une case vide.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Excellent ! Vous avez terminé les 21 étapes dans l’ordre et résolu cette grille de sudoku !",
+    "已選取空格，請按下方數字填入。": "Case vide sélectionnée. Choisissez un chiffre ci-dessous pour la remplir.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Le mode Notes est désactivé. Appuyez d’abord sur « Notes » pour l’activer.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Bravo ! Vous avez terminé l’exercice qui consiste à déduire la réponse à l’aide des notes.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Touchez d’abord un chiffre déjà présent dans la grille 6×6. Le système surlignera sa ligne, sa colonne et sa région. Les boutons numériques ci-dessous servent uniquement à saisir une réponse ou une note.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Sélectionnez d’abord la case où vous pensez pouvoir débloquer la grille, puis choisissez un chiffre."
+  }
+}
