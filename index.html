@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>樂在齡中｜數獨小教室</title><link rel="stylesheet" href="css/style.css?v=v67"></head><body class="font-normal">
-<header><img class="brand-logo" src="assets/lezaiblingzhong-logo.webp" alt="樂在齡中標誌"><div class="brand"><h1>數獨新手村</h1></div><nav><button id="home-top" aria-label="回到主頁">主</button><button id="font-smaller" aria-label="縮小字體">小</button><button id="font-larger" aria-label="放大字體">大</button></nav></header>
-<main><section id="home" class="panel"><div class="home-heading"><h2>4x4數獨</h2><button id="resume-progress" class="completed-progress" type="button" disabled><span>( <b id="completed-count">0</b> / 100 )</span> 已完成</button></div><div class="lessons">
+<div class="sticky-shell"><header><img class="brand-logo" src="assets/lezaiblingzhong-logo.webp" alt="樂在齡中標誌"><div class="brand"><h1>數獨新手村</h1></div><nav><button id="home-top" aria-label="回到主頁">主</button><button id="font-smaller" aria-label="縮小字體">小</button><button id="font-larger" aria-label="放大字體">大</button></nav></header><div id="category-nav" class="category-nav" role="group" aria-label="數獨尺寸分類"><button type="button" data-category="4x4" class="active" aria-pressed="true">4×4數獨</button><button type="button" data-category="6x6" aria-pressed="false">6×6數獨</button><button type="button" data-category="9x9" aria-pressed="false">9×9數獨</button></div></div>
+<main><section id="home" class="panel"><div class="lessons" id="section-4x4">
 <article><b>01</b><div><h3>第一步：橫排</h3><p>看看一排數字，找出缺少的數字。</p></div><button class="start" data-id="row">開始練習</button></article>
 <article><b>02</b><div><h3>第二步：直排</h3><p>看看一直排數字，找出缺少的數字。</p></div><button class="start" data-id="column">開始練習</button></article>
 <article><b>03</b><div><h3>第三步：四宮格</h3><p>看看小方格裡，缺少哪一個數字。</p></div><button class="start" data-id="box">開始練習</button></article>
@@ -14,7 +14,7 @@
 <article><b>11</b><div><h3>第十一步：4X4數獨畢業考（1/3）</h3><p>自行填寫整張4X4數獨，按下檢查確認答案；錯誤數字標紅，不直接公布答案。</p></div><button class="start" data-id="graduate1">開始考試</button></article>
 <article><b>12</b><div><h3>第十二步：4X4數獨畢業考（2/3）</h3><p>自行填寫第二張4X4數獨，按下檢查確認答案；錯誤數字標紅，不直接公布答案。</p></div><button class="start" data-id="graduate2">開始考試</button></article>
 <article><b>13</b><div><h3>第十三步：4X4數獨畢業考（3/3）</h3><p>自行填寫第三張4X4數獨，按下檢查確認答案；錯誤數字標紅，不直接公布答案。</p></div><button class="start" data-id="graduate3">開始考試</button></article>
-</div><div class="section-divider" role="separator" aria-label="以下為6×6數獨課程"><span>6×6數獨</span></div><div class="lessons">
+</div><div id="section-6x6" class="section-divider" role="separator" aria-label="以下為6×6數獨課程"><span>6×6數獨</span></div><div class="lessons">
 <article><b>14</b><div><h3>第十四步：6×6數獨－橫排</h3><p>看一排六個位置，找出缺少的數字。</p></div><button class="start" data-id="sixrow">開始練習</button></article>
 <article><b>15</b><div><h3>第十五步：6×6數獨－直排</h3><p>看一直排六個位置，找出缺少的數字。</p></div><button class="start" data-id="sixcolumn">開始練習</button></article>
 <article><b>16</b><div><h3>第十六步：6×6數獨－六宮格</h3><p>看六宮格中的六個位置，找出缺少的數字。</p></div><button class="start" data-id="sixbox">開始練習</button></article>
@@ -28,7 +28,7 @@
 <article><b>24</b><div><h3>第二十四步：一次只檢查某個數字全體（檢查1、2、5）</h3><p>依序檢查全部的 1、2、5，觀察橫排、直排與六宮格的反白範圍，找出可填入的位置。</p></div><button class="start" data-id="numberfocus2">開始練習</button></article>
 <article><b>25</b><div><h3>第二十五步：6×6數獨實戰一（利用一次只檢查某個數字全體）</h3><p>利用數字反白、橫排、直排與六宮格線索，搭配筆記，自己完成整盤 6×6 數獨。</p></div><button class="start" data-id="numberfocus3">開始練習</button></article>
 <article><b>26</b><div><h3>第二十六步：6×6數獨實戰二（比上題難，綜合運用所有技巧）</h3><p>挑戰第二類 6×6 數獨，綜合運用數字反白、橫排、直排、六宮格與筆記；若卡住，可先回到第二十一步複習。</p></div><button class="start" data-id="numberfocus4">開始練習</button></article>
-</div><div class="section-divider" role="separator" aria-label="以下為9×9數獨課程"><span>9×9數獨</span></div><div class="lessons">
+</div><div id="section-9x9" class="section-divider" role="separator" aria-label="以下為9×9數獨課程"><span>9×9數獨</span></div><div class="lessons">
 <article><b>27</b><div><h3>第二十七步：9×9數獨－橫排</h3><p>看一排九個位置，找出缺少的數字。</p></div><button class="start" data-id="ninerow">開始練習</button></article>
 <article><b>28</b><div><h3>第二十八步：9×9數獨－直排</h3><p>看一直排九個位置，找出缺少的數字。</p></div><button class="start" data-id="ninecolumn">開始練習</button></article>
 <article><b>29</b><div><h3>第二十九步：9×9數獨－九宮格</h3><p>看一個九宮格的九個位置，找出缺少的數字。</p></div><button class="start" data-id="ninebox">開始練習</button></article>
