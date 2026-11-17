@@ -546,6 +546,19 @@
     "筆記模式目前關閉，請先按「筆記」開啟。": "Notes are off. Press Notes to turn them on first.",
     "答對了！你已完成利用筆記推測答案的練習。": "Correct! You completed the exercise using pencil notes to infer the answer.",
     "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "First select a number already on the 6×6 board. The system will highlight its row, column, and box. The number buttons below are only for answers or notes.",
-    "請先點選你認為可以突破的空格，再選擇數字。": "Select the empty cell you think is the breakthrough, then choose a number."
+    "請先點選你認為可以突破的空格，再選擇數字。": "Select the empty cell you think is the breakthrough, then choose a number.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Choose a number below to enter your answer. You can turn on Notes if needed.",
+    "可以自行判斷要記筆記或直接填入答案。": "You can decide whether to add notes or enter the answer directly.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Target cell selected. Use the numbers below to enter the two pencil-mark candidates.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Turn on Notes first, then select the target cell.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "This is the second type of 6×6 Sudoku, with 3 rows × 2 columns per box. Select a number on the grid to see its highlights, or use Notes to record candidates. If you get stuck, review Step 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Select a number on the grid to highlight its row, column, and box. Select an empty cell and enter a number. Notes lets you record candidates.",
+    "記下": "Added",
+    "移除": "Removed",
+    "第二十六步": "Step 26",
+    "第二十五步": "Step 25",
+    "直排": "column",
+    "九宮格": "3×3 box",
+    "橫排": "row"
   }
 }

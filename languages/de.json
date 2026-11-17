@@ -546,6 +546,19 @@
     "筆記模式目前關閉，請先按「筆記」開啟。": "Der Notizmodus ist ausgeschaltet. Tippen Sie auf „Notizen“, um ihn einzuschalten.",
     "答對了！你已完成利用筆記推測答案的練習。": "Richtig! Sie haben die Übung abgeschlossen, bei der die Antwort mithilfe von Notizen abgeleitet wird.",
     "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Tippen Sie zuerst auf eine Zahl, die bereits im 6×6-Gitter steht. Das System markiert ihre Zeile, Spalte und den Block. Die Zahlenknöpfe unten dienen nur zum Eintragen von Antworten oder Notizen.",
-    "請先點選你認為可以突破的空格，再選擇數字。": "Wählen Sie zuerst das Feld aus, mit dem Sie das Rätsel Ihrer Meinung nach lösen können, und wählen Sie dann eine Zahl."
+    "請先點選你認為可以突破的空格，再選擇數字。": "Wählen Sie zuerst das Feld aus, mit dem Sie das Rätsel Ihrer Meinung nach lösen können, und wählen Sie dann eine Zahl.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Wählen Sie unten eine Zahl für Ihre Antwort. Bei Bedarf können Sie Notizen einschalten.",
+    "可以自行判斷要記筆記或直接填入答案。": "Sie können selbst entscheiden, ob Sie Notizen machen oder die Antwort direkt eingeben.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Zielfeld ausgewählt. Tragen Sie mit den Zahlen unten die beiden Kandidaten als Notizen ein.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Schalten Sie zuerst den Notizmodus ein und wählen Sie dann das Zielfeld aus.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Dies ist der zweite Typ des 6×6-Sudoku mit Blöcken aus 3 Zeilen × 2 Spalten. Tippen Sie auf eine Zahl, um die Markierungen zu sehen, oder verwenden Sie Notizen für Kandidaten. Wenn Sie nicht weiterkommen, wiederholen Sie Schritt 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Wählen Sie eine Zahl im Gitter aus, um ihre Zeile, Spalte und ihren Block zu markieren. Wählen Sie ein leeres Feld und geben Sie eine Zahl ein. Mit Notizen können Sie Kandidaten eintragen.",
+    "記下": "Hinzugefügt",
+    "移除": "Entfernt",
+    "第二十六步": "Schritt 26",
+    "第二十五步": "Schritt 25",
+    "直排": "Spalte",
+    "九宮格": "3×3-Block",
+    "橫排": "Zeile"
   }
 }

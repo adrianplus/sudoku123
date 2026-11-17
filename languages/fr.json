@@ -546,6 +546,19 @@
     "筆記模式目前關閉，請先按「筆記」開啟。": "Le mode Notes est désactivé. Appuyez d’abord sur « Notes » pour l’activer.",
     "答對了！你已完成利用筆記推測答案的練習。": "Bravo ! Vous avez terminé l’exercice qui consiste à déduire la réponse à l’aide des notes.",
     "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Touchez d’abord un chiffre déjà présent dans la grille 6×6. Le système surlignera sa ligne, sa colonne et sa région. Les boutons numériques ci-dessous servent uniquement à saisir une réponse ou une note.",
-    "請先點選你認為可以突破的空格，再選擇數字。": "Sélectionnez d’abord la case où vous pensez pouvoir débloquer la grille, puis choisissez un chiffre."
+    "請先點選你認為可以突破的空格，再選擇數字。": "Sélectionnez d’abord la case où vous pensez pouvoir débloquer la grille, puis choisissez un chiffre.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Choisissez un chiffre ci-dessous pour saisir votre réponse. Vous pouvez activer Notes si nécessaire.",
+    "可以自行判斷要記筆記或直接填入答案。": "À vous de décider si vous souhaitez prendre des notes ou saisir directement la réponse.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Case cible sélectionnée. Utilisez les chiffres ci-dessous pour noter les deux candidats.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Activez d’abord Notes, puis sélectionnez la case cible.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Voici le deuxième type de sudoku 6×6, avec des régions de 3 lignes × 2 colonnes. Touchez un chiffre pour voir les zones surlignées ou utilisez Notes pour inscrire les candidats. En cas de difficulté, révisez l’étape 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Sélectionnez un chiffre de la grille pour surligner sa ligne, sa colonne et sa région. Choisissez une case vide et saisissez un chiffre. Notes permet d’inscrire des candidats.",
+    "記下": "Ajouté",
+    "移除": "Retiré",
+    "第二十六步": "étape 26",
+    "第二十五步": "étape 25",
+    "直排": "colonne",
+    "九宮格": "région 3×3",
+    "橫排": "ligne"
   }
 }

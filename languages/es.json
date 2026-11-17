@@ -545,6 +545,20 @@
     "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Primero selecciona un número que ya esté en el tablero 6×6. El sistema resaltará su fila, columna y caja. Los botones numéricos de abajo solo sirven para respuestas o notas.",
     "請先點選你認為可以突破的空格，再選擇數字。": "Selecciona la casilla vacía que consideres clave y luego elige un número.",
     "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "En el último paso, desactiva Notas e introduce directamente la respuesta definitiva.",
-    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Piénsalo de nuevo: usa las cuatro notas guardadas para deducir la respuesta final."
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Piénsalo de nuevo: usa las cuatro notas guardadas para deducir la respuesta final.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Elige un número abajo para introducir tu respuesta. Puedes activar Notas si lo necesitas.",
+    "可以自行判斷要記筆記或直接填入答案。": "Puedes decidir si añadir notas o introducir directamente la respuesta.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Casilla objetivo seleccionada. Usa los números de abajo para anotar los dos candidatos.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Activa Notas primero y después selecciona la casilla objetivo.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Este es el segundo tipo de Sudoku 6×6, con cajas de 3 filas × 2 columnas. Selecciona un número para ver las zonas resaltadas o usa Notas para registrar candidatos. Si te atascas, repasa el paso 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Selecciona un número del tablero para resaltar su fila, columna y caja. Elige una casilla vacía e introduce un número. Notas permite registrar candidatos.",
+    "記下": "Anotado",
+    "移除": "Quitado",
+    "第二十六步": "paso 26",
+    "第二十五步": "paso 25",
+    "直排": "columna",
+    "九宮格": "caja 3×3",
+    "橫排": "fila",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Notas está activado. La casilla objetivo se selecciona automáticamente. Elige un número abajo para añadir una anotación."
   }
 }
