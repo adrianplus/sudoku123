@@ -1,0 +1,564 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Aula de sudoku",
+    "village": "Aldea de iniciación al sudoku",
+    "home": "Inicio",
+    "smaller": "Reducir texto",
+    "larger": "Aumentar texto",
+    "language": "Español (España)",
+    "category4": "Sudoku 4×4",
+    "category6": "Sudoku 6×6",
+    "category9": "Sudoku 9×9",
+    "homeNote": "No necesitas iniciar sesión ni usar un cronómetro. Tómate tu tiempo.",
+    "start": "Empezar práctica",
+    "exam": "Empezar examen",
+    "study": "Empezar lección",
+    "challenge": "Empezar reto",
+    "practice": "Empezar práctica",
+    "battle": "Empezar reto",
+    "graduation": "Empezar examen",
+    "firstInterview": "Empezar primera entrevista",
+    "finalInterview": "Empezar entrevista final",
+    "hiredChallenge": "Empezar reto de incorporación",
+    "gameFeedback": "Selecciona una casilla y luego elige un número abajo.",
+    "check": "Comprobar",
+    "clear": "Borrar",
+    "notes": "Notas",
+    "hint": "Pista",
+    "question": "Pregunta",
+    "modalTitle": "¡Paso completado!",
+    "next": "Siguiente paso",
+    "modalHome": "Volver al inicio",
+    "footer": "Le Zai Ling Zhong | Sin prisas. Aprende paso a paso.",
+    "gridAria": "Cuadrícula de sudoku",
+    "categoryAria": "Categorías por tamaño de sudoku",
+    "brandAlt": "Logotipo de Le Zai Ling Zhong",
+    "section4": "Sudoku 4×4",
+    "section6": "Sudoku 6×6",
+    "section9": "Sudoku 9×9",
+    "completeNext": "Has completado este paso. ¡Muy bien! Continúa con el siguiente reto.",
+    "completeAll": "¡Has completado todos los pasos disponibles! Muy bien. Puedes volver a la página de inicio."
+  },
+  "lessons": [
+    {
+      "title": "Paso 1: Fila",
+      "description": "Mira la fila y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 2: Columna",
+      "description": "Mira la columna y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 3: Caja 2×2",
+      "description": "Encuentra el número que falta en la caja pequeña.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 4: Fila + columna",
+      "description": "Usa las pistas de la fila y la columna para resolver el signo de interrogación.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 5: Usar tres direcciones",
+      "description": "Combina las pistas de tres direcciones para encontrar el número correcto.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 6: Caja + columna + fila",
+      "description": "Usa juntas las pistas de la caja, la columna y la fila.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 7: Encontrar las pistas útiles",
+      "description": "Ignora las distracciones e identifica las pistas importantes.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 8: Práctica de sudoku 4×4",
+      "description": "Resuelve los ejercicios en orden. Cada respuesta correcta permanece en el tablero.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 9: Reto de sudoku 4×4",
+      "description": "Selecciona una casilla vacía, introduce un número y comprueba la respuesta. Usa una pista si la necesitas.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 10: Encontrar la casilla clave",
+      "description": "Encuentra la primera casilla cuya respuesta se pueda determinar. Cada acierto lleva al siguiente ejercicio.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 11: Examen final 4×4 (1/3)",
+      "description": "Completa la cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo.",
+      "action": "Empezar examen"
+    },
+    {
+      "title": "Paso 12: Examen final 4×4 (2/3)",
+      "description": "Completa la segunda cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo.",
+      "action": "Empezar examen"
+    },
+    {
+      "title": "Paso 13: Examen final 4×4 (3/3)",
+      "description": "Completa la tercera cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo.",
+      "action": "Empezar examen"
+    },
+    {
+      "title": "Paso 14: Sudoku 6×6 – Fila",
+      "description": "Observa las seis casillas de la fila y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 15: Sudoku 6×6 – Columna",
+      "description": "Observa las seis casillas de la columna y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 16: Sudoku 6×6 – Caja",
+      "description": "Encuentra el número que falta en la caja de seis casillas.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 17: ¿Qué es el sudoku 6×6? (Tipo 1)",
+      "description": "Aprende las reglas de fila, columna y caja; después resuelve tres casillas objetivo.",
+      "action": "Empezar lección"
+    },
+    {
+      "title": "Paso 18: Notas pequeñas (fila 6×6)",
+      "description": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 19: Notas pequeñas (columna 6×6)",
+      "description": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías de la columna.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 20: Notas pequeñas (caja 6×6)",
+      "description": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías de la caja.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 21: ¿Qué es el sudoku 6×6? (Tipo 2)",
+      "description": "Resuelve cinco casillas objetivo en orden. Las respuestas correctas permanecen en el tablero.",
+      "action": "Empezar lección"
+    },
+    {
+      "title": "Paso 22: Reto con notas",
+      "description": "Completa ocho casillas objetivo anotando dos números candidatos en cada una.",
+      "action": "Empezar reto"
+    },
+    {
+      "title": "Paso 23: Revisar un número a la vez (1, 2, 6)",
+      "description": "Revisa 1, 2 y 6 por turnos. Usa las filas, columnas y cajas resaltadas para encontrar la posición de cada número.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 24: Revisar un número a la vez (1, 2, 5)",
+      "description": "Revisa 1, 2 y 5 por turnos. Usa las filas, columnas y cajas resaltadas para encontrar la posición de cada número.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 25: Reto de sudoku 6×6 1",
+      "description": "Completa un sudoku 6×6 usando el resaltado y las notas.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 26: Reto de sudoku 6×6 2",
+      "description": "Resuelve un sudoku 6×6 más difícil y combina todas las técnicas aprendidas.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 27: Sudoku 9×9 – Fila",
+      "description": "Observa las nueve casillas de la fila y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 28: Sudoku 9×9 – Columna",
+      "description": "Observa las nueve casillas de la columna y encuentra el número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 29: Sudoku 9×9 – Caja",
+      "description": "Encuentra el número que falta en la caja de 3×3.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 30: Resolver con fila y columna",
+      "description": "Usa la fila y la columna juntas para identificar el mismo número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 31: Fila + columna + caja",
+      "description": "Usa la fila, la columna y la caja de 3×3 para encontrar el único número que falta.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 32: Encontrar las pistas relevantes",
+      "description": "Ignora los números que no sirven y céntrate en las pistas útiles de la fila, columna y caja.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 33: Notas pequeñas (fila 9×9)",
+      "description": "Practica anotando como notas pequeñas los candidatos que faltan en cada fila.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 34: Notas pequeñas (columna 9×9)",
+      "description": "Practica anotando como notas pequeñas los candidatos que faltan en cada columna.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 35: Notas pequeñas (caja 9×9)",
+      "description": "Usa las notas para identificar los candidatos que faltan en cada caja de 3×3.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 36: Práctica de sudoku 9×9 1 – Paso a paso",
+      "description": "Sigue el orden indicado y resuelve 21 casillas objetivo en un mismo sudoku 9×9.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 37: Práctica de sudoku 9×9 2 – Usar notas",
+      "description": "Usa notas en las primeras cuatro casillas objetivo y resuelve la última con esa información.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 38: Práctica de sudoku 9×9 3 – Revisar un número a la vez",
+      "description": "Revisa los números del 1 al 9 uno por uno. Usa el resaltado y las notas para encontrar cada posición.",
+      "action": "Empezar práctica"
+    },
+    {
+      "title": "Paso 39: Reto de sudoku 9×9 1",
+      "description": "Completa el sudoku 9×9. Usa notas y resaltado de números cuando te ayuden.",
+      "action": "Empezar reto"
+    },
+    {
+      "title": "Paso 40: Reto de sudoku 9×9 2 – Método de dos posiciones",
+      "description": "Usa el método de dos posiciones y revisa un número a la vez para resolver la cuadrícula.",
+      "action": "Empezar reto"
+    },
+    {
+      "title": "Paso 41: Examen final 9×9 (Parte 1)",
+      "description": "Completa todo el sudoku. Puedes comprobarlo en cualquier momento; los errores se marcan en rojo.",
+      "action": "Empezar examen"
+    },
+    {
+      "title": "Paso 42: Examen final 9×9 (Parte 2)",
+      "description": "Completa el segundo examen. Puedes comprobarlo en cualquier momento; los errores se marcan en rojo.",
+      "action": "Empezar examen"
+    },
+    {
+      "title": "Paso 43: Primera entrevista de la empresa – Sudoku 9×9",
+      "description": "Primera entrevista de la empresa. Usa lo aprendido en el examen final para completar este sudoku 9×9.",
+      "action": "Empezar primera entrevista"
+    },
+    {
+      "title": "Paso 44: Entrevista final de la empresa – Sudoku 9×9",
+      "description": "Entrevista final de la empresa. Completa este sudoku 9×9 con notas, resaltado y comprobación.",
+      "action": "Empezar entrevista final"
+    },
+    {
+      "title": "Paso 45: Primer desafío después de entrar en la empresa – Sudoku 9×9",
+      "description": "¡Felicidades por conseguir el puesto! Afronta tu primer desafío después de incorporarte a la empresa.",
+      "action": "Empezar reto de incorporación"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Paso 1: Fila",
+      "instruction": "Mira la fila y encuentra el número que falta."
+    },
+    "column": {
+      "title": "Paso 2: Columna",
+      "instruction": "Mira la columna y encuentra el número que falta."
+    },
+    "box": {
+      "title": "Paso 3: Caja 2×2",
+      "instruction": "Encuentra el número que falta en la caja pequeña."
+    },
+    "rowcol": {
+      "title": "Paso 4: Fila + columna",
+      "instruction": "Usa las pistas de la fila y la columna para resolver el signo de interrogación."
+    },
+    "threeways": {
+      "title": "Paso 5: Usar tres direcciones",
+      "instruction": "Combina las pistas de tres direcciones para encontrar el número correcto."
+    },
+    "boxways": {
+      "title": "Paso 6: Caja + columna + fila",
+      "instruction": "Usa juntas las pistas de la caja, la columna y la fila."
+    },
+    "advanced": {
+      "title": "Paso 7: Encontrar las pistas útiles",
+      "instruction": "Ignora las distracciones e identifica las pistas importantes."
+    },
+    "classic": {
+      "title": "Paso 8: Práctica de sudoku 4×4",
+      "instruction": "Resuelve los ejercicios en orden. Cada respuesta correcta permanece en el tablero."
+    },
+    "practical": {
+      "title": "Paso 9: Reto de sudoku 4×4",
+      "instruction": "Selecciona una casilla vacía, introduce un número y comprueba la respuesta. Usa una pista si la necesitas."
+    },
+    "breakthrough": {
+      "title": "Paso 10: Encontrar la casilla clave",
+      "instruction": "Encuentra la primera casilla cuya respuesta se pueda determinar. Cada acierto lleva al siguiente ejercicio."
+    },
+    "graduate1": {
+      "title": "Paso 11: Examen final 4×4 (1/3)",
+      "instruction": "Completa la cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo."
+    },
+    "graduate2": {
+      "title": "Paso 12: Examen final 4×4 (2/3)",
+      "instruction": "Completa la segunda cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo."
+    },
+    "graduate3": {
+      "title": "Paso 13: Examen final 4×4 (3/3)",
+      "instruction": "Completa la tercera cuadrícula 4×4 y comprueba tus respuestas. Los números incorrectos se marcan en rojo."
+    },
+    "sixrow": {
+      "title": "Paso 14: Sudoku 6×6 – Fila",
+      "instruction": "Observa las seis casillas de la fila y encuentra el número que falta."
+    },
+    "sixcolumn": {
+      "title": "Paso 15: Sudoku 6×6 – Columna",
+      "instruction": "Observa las seis casillas de la columna y encuentra el número que falta."
+    },
+    "sixbox": {
+      "title": "Paso 16: Sudoku 6×6 – Caja",
+      "instruction": "Encuentra el número que falta en la caja de seis casillas."
+    },
+    "sixnote": {
+      "title": "Paso 18: Notas pequeñas (fila 6×6)",
+      "instruction": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías."
+    },
+    "sixcolumnnote": {
+      "title": "Paso 19: Notas pequeñas (columna 6×6)",
+      "instruction": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías de la columna."
+    },
+    "sixboxnote": {
+      "title": "Paso 20: Notas pequeñas (caja 6×6)",
+      "instruction": "Anota los dos números que faltan como notas pequeñas en dos casillas vacías de la caja."
+    },
+    "step14": {
+      "title": "Paso 17: ¿Qué es el sudoku 6×6? (Tipo 1)",
+      "instruction": "El sudoku tiene tres reglas:\n1. En cada columna, los números del 1 al 6 no se repiten.\n2. En cada fila, los números del 1 al 6 no se repiten.\n3. En cada caja de seis celdas, los números del 1 al 6 no se repiten.\nResuelve las tres casillas objetivo en orden. Las respuestas correctas permanecen en el tablero."
+    },
+    "sixintro2": {
+      "title": "Paso 21: ¿Qué es el sudoku 6×6? (Tipo 2)",
+      "instruction": "Resuelve cinco casillas objetivo en orden. Las respuestas correctas permanecen en el tablero."
+    },
+    "sixnotecombat": {
+      "title": "Paso 22: Reto con notas",
+      "instruction": "Completa ocho casillas objetivo anotando dos números candidatos en cada una."
+    },
+    "numberfocus": {
+      "title": "Paso 23: Revisar un número a la vez (1, 2, 6)",
+      "instruction": "Revisa 1, 2 y 6 por turnos. Usa las filas, columnas y cajas resaltadas para encontrar la posición de cada número."
+    },
+    "numberfocus2": {
+      "title": "Paso 24: Revisar un número a la vez (1, 2, 5)",
+      "instruction": "Revisa 1, 2 y 5 por turnos. Usa las filas, columnas y cajas resaltadas para encontrar la posición de cada número."
+    },
+    "numberfocus3": {
+      "title": "Paso 25: Reto de sudoku 6×6 1",
+      "instruction": "Completa un sudoku 6×6 usando el resaltado y las notas."
+    },
+    "numberfocus4": {
+      "title": "Paso 26: Reto de sudoku 6×6 2",
+      "instruction": "Resuelve un sudoku 6×6 más difícil y combina todas las técnicas aprendidas."
+    },
+    "ninerow": {
+      "title": "Paso 27: Sudoku 9×9 – Fila",
+      "instruction": "Observa las nueve casillas de la fila y encuentra el número que falta."
+    },
+    "ninecolumn": {
+      "title": "Paso 28: Sudoku 9×9 – Columna",
+      "instruction": "Observa las nueve casillas de la columna y encuentra el número que falta."
+    },
+    "ninebox": {
+      "title": "Paso 29: Sudoku 9×9 – Caja",
+      "instruction": "Encuentra el número que falta en la caja de 3×3."
+    },
+    "ninerowcol": {
+      "title": "Paso 30: Resolver con fila y columna",
+      "instruction": "Usa la fila y la columna juntas para identificar el mismo número que falta."
+    },
+    "ninerowcolbox": {
+      "title": "Paso 31: Fila + columna + caja",
+      "instruction": "Usa la fila, la columna y la caja de 3×3 para encontrar el único número que falta."
+    },
+    "nineadvanced": {
+      "title": "Paso 32: Encontrar las pistas relevantes",
+      "instruction": "Ignora los números que no sirven y céntrate en las pistas útiles de la fila, columna y caja."
+    },
+    "ninenote": {
+      "title": "Paso 33: Notas pequeñas (fila 9×9)",
+      "instruction": "Practica anotando como notas pequeñas los candidatos que faltan en cada fila."
+    },
+    "ninecolumnnote": {
+      "title": "Paso 34: Notas pequeñas (columna 9×9)",
+      "instruction": "Practica anotando como notas pequeñas los candidatos que faltan en cada columna."
+    },
+    "nineboxnote": {
+      "title": "Paso 35: Notas pequeñas (caja 9×9)",
+      "instruction": "Usa las notas para identificar los candidatos que faltan en cada caja de 3×3."
+    },
+    "ninepractice1": {
+      "title": "Paso 36: Práctica de sudoku 9×9 1 – Paso a paso",
+      "instruction": "Sigue el orden indicado y resuelve 21 casillas objetivo en un mismo sudoku 9×9."
+    },
+    "ninepractice2": {
+      "title": "Paso 37: Práctica de sudoku 9×9 2 – Usar notas",
+      "instruction": "Usa notas en las primeras cuatro casillas objetivo y resuelve la última con esa información."
+    },
+    "ninefocus": {
+      "title": "Paso 38: Práctica de sudoku 9×9 3 – Revisar un número a la vez",
+      "instruction": "Revisa los números del 1 al 9 uno por uno. Usa el resaltado y las notas para encontrar cada posición."
+    },
+    "ninecombat1": {
+      "title": "Paso 39: Reto de sudoku 9×9 1",
+      "instruction": "Completa el sudoku 9×9. Usa notas y resaltado de números cuando te ayuden."
+    },
+    "ninecombat2": {
+      "title": "Paso 40: Reto de sudoku 9×9 2 – Método de dos posiciones",
+      "instruction": "Usa el método de dos posiciones y revisa un número a la vez para resolver la cuadrícula."
+    },
+    "ninecombat3": {
+      "title": "Paso 41: Examen final 9×9 (Parte 1)",
+      "instruction": "Completa todo el sudoku. Puedes comprobarlo en cualquier momento; los errores se marcan en rojo."
+    },
+    "ninecombat4": {
+      "title": "Paso 42: Examen final 9×9 (Parte 2)",
+      "instruction": "Completa el segundo examen. Puedes comprobarlo en cualquier momento; los errores se marcan en rojo."
+    },
+    "ninecombat75": {
+      "title": "Paso 43: Primera entrevista de la empresa – Sudoku 9×9",
+      "instruction": "Primera entrevista de la empresa. Usa lo aprendido en el examen final para completar este sudoku 9×9."
+    },
+    "ninecombat80": {
+      "title": "Paso 44: Entrevista final de la empresa – Sudoku 9×9",
+      "instruction": "Entrevista final de la empresa. Completa este sudoku 9×9 con notas, resaltado y comprobación."
+    },
+    "ninecombat5": {
+      "title": "Paso 45: Primer desafío después de entrar en la empresa – Sudoku 9×9",
+      "instruction": "¡Felicidades por conseguir el puesto! Afronta tu primer desafío después de incorporarte a la empresa."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Observa las casillas y luego elige un número abajo.",
+    "答對了！你找到破局點！": "¡Correcto! Encontraste la casilla clave.",
+    "再想一想！請重新觀察線索。": "Inténtalo de nuevo. Observa las pistas otra vez.",
+    "沒關係，慢慢找。請再選一次。": "No pasa nada. Tómate tu tiempo e inténtalo otra vez.",
+    "請先選取一個空格。": "Primero selecciona una casilla vacía.",
+    "請先選取一個空格，再按數字加入小字。": "Selecciona una casilla vacía y luego elige un número para añadir una nota.",
+    "請先點選棋盤上的空格，再選擇數字。": "Selecciona una casilla vacía del tablero y luego elige un número.",
+    "題目原有數字不能修改。": "Los números originales del ejercicio no se pueden modificar.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Las notas están activadas. Selecciona una casilla vacía y elige un número abajo para añadir una nota.",
+    "筆記模式已關閉。": "Las notas están desactivadas.",
+    "已取消所有金色反白。": "Se ha quitado todo el resaltado dorado.",
+    "目前沒有選取空格，也沒有反金顯示。": "No hay ninguna casilla seleccionada ni resaltado activo.",
+    "目前沒有選取空格，也沒有反白區域。": "No hay ninguna casilla seleccionada ni zona resaltada.",
+    "已清空選取格子的答案與筆記。": "Se borraron la respuesta y las notas de la casilla seleccionada.",
+    "已清空選取格子的所有小字。": "Se borraron todas las notas pequeñas de la casilla seleccionada.",
+    "按下方數字加入或移除筆記。": "Elige un número abajo para añadir o quitar una nota.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Las notas están desactivadas. Pulsa Notas para activarlas.",
+    "請先關閉「筆記」，再填入正式答案。": "Desactiva Notas antes de introducir la respuesta definitiva.",
+    "請依照順序完成目前亮起的目標格。": "Completa la casilla objetivo resaltada siguiendo el orden.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Completa la casilla objetivo resaltada antes de pasar a la siguiente.",
+    "已選取空格，請按下方數字填入答案。": "Hay una casilla vacía seleccionada. Elige un número abajo para introducir la respuesta.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Respuesta introducida. El sistema no la comprobará automáticamente; pulsa Comprobar cuando quieras.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Número introducido. Pulsa Comprobar cuando termines o sigue editando.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Piénsalo otra vez. Solo tienes que resolver la casilla con el signo de interrogación.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "No es correcto. El número aparece en rojo. Observa de nuevo y encuentra la casilla clave.",
+    "三題全部答對！你已學會一次檢查一個數字。": "¡Las tres respuestas son correctas! Ya sabes revisar un número cada vez.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "¡Has revisado todos los números del 1 al 9! Has completado el paso 38.",
+    "本次已完成，但瀏覽器無法保存進度。": "Has completado esta sesión, pero el navegador no pudo guardar tu progreso.",
+    "目前目標格已選取，請先開啟「筆記」。": "La casilla objetivo está seleccionada. Activa primero «Notas».",
+    "目前目標格已選取，請按下方數字寫入小字。": "La casilla objetivo está seleccionada. Elige un número abajo para añadir una nota.",
+    "最後目標格已選取，請直接填入答案。": "La última casilla objetivo está seleccionada. Introduce directamente la respuesta.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Selecciona la casilla objetivo actual y luego elige un número para añadir una nota.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Selecciona el número indicado que ya aparece en el tablero para observar las zonas resaltadas.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Encuentra y selecciona una casilla vacía donde pueda ir este número y luego pulsa el número abajo.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Selecciona un 1, 2 o 6 que ya esté en el tablero y observa el resaltado dorado.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Selecciona un 1, 2 o 5 que ya esté en el tablero y observa el resaltado dorado.",
+    "提示：缺少的數字是 ": "Pista: el número que falta es ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Has anotado dos números, pero la pareja no es correcta. Pulsa Borrar e inténtalo de nuevo.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Los candidatos de esta casilla no son correctos. Pulsa Borrar y anótalos de nuevo.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Las dos notas candidatas no son correctas. Pulsa «Borrar» y anótalas de nuevo.",
+    "這個候選數字不正確，請再觀察九宮格。": "Este número candidato no es correcto. Vuelve a observar la caja de 3×3.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Esta respuesta definitiva no es correcta. Revisa la zona resaltada o activa Notas para registrar candidatos.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Esta posición no es correcta. Revisa el resaltado dorado y encuentra la casilla vacía donde va ese número.",
+    "已選取這一格，請選擇你認為正確的數字。": "Esta casilla está seleccionada. Elige el número que consideres correcto.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Selecciona una casilla vacía y luego elige un número abajo para introducirlo o anotarlo.",
+    "全部正確！你完成了 4X4 數獨實戰！": "¡Todo correcto! ¡Has completado el reto de sudoku 4×4!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "¡Todo correcto! ¡Has aprobado el examen final 4×4 (1/3)!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "¡Todo correcto! ¡Has aprobado el examen final 4×4 (2/3)!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "¡Todo correcto! ¡Has aprobado el examen final 4×4 (3/3)!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "¡Has completado las ocho casillas objetivo! Has terminado el reto de notas del paso 22.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "¡Las cinco respuestas son correctas! Has completado la práctica de sudoku 6×6 tipo 2.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "¡Excelente! El sudoku está correcto. ¡Has superado el paso 43: la primera entrevista de sudoku 9×9 de la empresa!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "¡Excelente! Has completado la entrevista final de la empresa y superado el paso 44.",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "¡Excelente! Has superado el reto de dificultad 90 y el paso 45: tu primera prueba después de incorporarte a la empresa.",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "¡Has completado todos los pasos disponibles! Muy bien. Puedes volver al inicio.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Has completado este paso. ¡Muy bien! Continúa con el siguiente reto.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Selecciona un número que ya esté en el tablero para ver las zonas resaltadas.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Selecciona un número del tablero para resaltar su fila, columna y caja. Selecciona una casilla vacía e introduce un número. Las notas permiten registrar candidatos.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Activa Notas y registra dos números candidatos usando la fila, columna y caja de la casilla objetivo. Las casillas completadas permanecen en el tablero.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Activa Notas, selecciona una casilla vacía y anota todos los candidatos que faltan en la fila. Hay seis ejercicios de distintos tipos.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Activa Notas, selecciona una casilla vacía y anota todos los candidatos que faltan en la columna. Hay seis ejercicios de distintos tipos.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Para cada una de las cinco casillas objetivo, revisa primero la fila y luego la columna y la caja.",
+    "這一關請靠自己的觀察找出破局點！": "Usa tu propia observación para encontrar la casilla clave de este nivel.",
+    "畢業考請靠自己的觀察完成，加油！": "Completa el examen final usando tu propia observación. ¡Ánimo!",
+    "按下方數字填入答案；也可開啟筆記。": "Elige un número abajo para introducir la respuesta o activa Notas.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Activa Notas y registra candidatos en las primeras cuatro casillas objetivo en orden. Después de la cuarta, desactiva Notas y usa tus apuntes para resolver la última casilla.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Paso 1 de 9: Selecciona cualquier 1 del sudoku. Después del resaltado, activa Notas y marca las posibles posiciones del 1.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Ahora activa Notas y marca las posibles posiciones del 1.",
+    "加油！提示已經使用完畢，你可以自己做到！": "¡Sigue así! Ya has usado todas las pistas. Puedes terminarlo por tu cuenta!",
+    "提示已經使用完畢，你可以自己做到！": "Ya has usado todas las pistas. ¡Puedes terminarlo por tu cuenta!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "¡Excelente! El sudoku 9×9 está correcto. ¡Has completado el paso 42!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "¡Excelente! El sudoku 9×9 está correcto. ¡Has completado el paso 41!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "¡Excelente! El sudoku 9×9 está correcto. ¡Has completado el paso 40!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "¡Excelente! El sudoku 9×9 está correcto. ¡Has completado el paso 39!",
+    "請依序完成目前亮起的目標格。": "Completa la casilla objetivo resaltada siguiendo el orden.",
+    "題目原有數字不能修改，請選擇空格。": "Los números originales no se pueden modificar. Selecciona una casilla vacía.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Este número no es correcto. Revisa las pistas de la fila, columna y caja, o usa Notas para registrar candidatos.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Esta respuesta no es correcta y no se colocará en el tablero. Revisa la fila, columna y caja de 3×3, o usa Notas.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Algunas notas no corresponden a los números que faltan en esta fila. Pulsa Borrar y vuelve a anotarlas.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Algunas notas no corresponden a los números que faltan en esta fila. Pulsa Borrar y vuelve a anotarlas.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Piénsalo de nuevo: revisa la fila, luego la columna y finalmente la caja de seis celdas. Las respuestas correctas permanecen.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Piénsalo de nuevo: revisa la fila, columna y caja de la casilla objetivo. Las respuestas correctas permanecen.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "¡Comienza el siguiente ejercicio! Las notas se han activado automáticamente. Anota los dos números que faltan en las dos casillas vacías.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "¡Las tres respuestas son correctas! Has aprendido a resolver usando las reglas de fila, columna y caja.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Activa Notas y escribe pequeñas anotaciones en las cuatro casillas objetivo en el orden indicado.",
+    "三題全部完成！你已學會一次檢查一個數字。": "¡Has completado las tres! Has aprendido a revisar un número cada vez.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "En los primeros cuatro pasos, activa Notas e introduce dos números candidatos.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Los números dados no se pueden modificar. Selecciona una casilla vacía.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "¡Excelente! Has completado los 21 pasos y resuelto este sudoku.",
+    "已選取空格，請按下方數字填入。": "Hay una casilla vacía seleccionada. Elige un número abajo para rellenarla.",
+    "新題目來了！再找出一個破局點。": "¡Nuevo ejercicio! Encuentra otra casilla clave.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Las notas están desactivadas. Pulsa Notas para activarlas.",
+    "答對了！你已完成利用筆記推測答案的練習。": "¡Correcto! Has completado el ejercicio usando notas para deducir la respuesta.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Primero selecciona un número que ya esté en el tablero 6×6. El sistema resaltará su fila, columna y caja. Los botones numéricos de abajo solo sirven para respuestas o notas.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Selecciona la casilla vacía que consideres clave y luego elige un número.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "En el último paso, desactiva Notas e introduce directamente la respuesta definitiva.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Piénsalo de nuevo: usa las cuatro notas guardadas para deducir la respuesta final.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Elige un número abajo para introducir tu respuesta. Puedes activar Notas si lo necesitas.",
+    "可以自行判斷要記筆記或直接填入答案。": "Puedes decidir si añadir notas o introducir directamente la respuesta.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Casilla objetivo seleccionada. Usa los números de abajo para anotar los dos candidatos.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Activa Notas primero y después selecciona la casilla objetivo.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Este es el segundo tipo de Sudoku 6×6, con cajas de 3 filas × 2 columnas. Selecciona un número para ver las zonas resaltadas o usa Notas para registrar candidatos. Si te atascas, repasa el paso 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Selecciona un número del tablero para resaltar su fila, columna y caja. Elige una casilla vacía e introduce un número. Notas permite registrar candidatos.",
+    "記下": "Anotado",
+    "移除": "Quitado",
+    "第二十六步": "paso 26",
+    "第二十五步": "paso 25",
+    "直排": "columna",
+    "九宮格": "caja 3×3",
+    "橫排": "fila",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Notas está activado. La casilla objetivo se selecciona automáticamente. Elige un número abajo para añadir una anotación."
+  }
+}
