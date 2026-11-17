@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","id","es","es-ES","es-419","fr","pt-BR","de","ja","ko","ru","it","zh-CN"];
+const allowed=["zh-TW","en","es-419","es-ES","fr","pt-BR","ru","id","de","ja","vi","ko","it","zh-CN"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
@@ -250,8 +250,8 @@ function textCore(value){
 function translateRuntime(raw){
   const L=lang;
   if(L==="zh-TW"||L==="ja"||L==="ko")return raw;
-  const en=L==="en",id=L==="id",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
-  const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:e;
+  const en=L==="en",id=L==="id",vi=L==="vi",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
+  const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:vi?a:e;
   let m;
   if((m=raw.match(/^已反金數字 (\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/)))return pick(`Highlighted ${m[1]} and selected the current cell. Press Clear or enter another number.`,`Se resaltó el ${m[1]} y se seleccionó la casilla actual. Pulsa Borrar o introduce otro número.`,`Le ${m[1]} est surligné et la case actuelle est sélectionnée. Appuyez sur Effacer ou saisissez un autre chiffre.`,`O ${m[1]} foi destacado e a casa atual foi selecionada. Toque em Limpar ou insira outro número.`,`${m[1]} wurde markiert und das aktuelle Feld ausgewählt. Tippen Sie auf Löschen oder geben Sie eine andere Zahl ein.`);
   if((m=raw.match(/^已反金數字 (\d+)，可觀察它所在的橫排、直排與九宮格。$/)))return pick(`Highlighted ${m[1]}. Observe its row, column, and 3×3 box.`,`Se resaltó el ${m[1]}. Observa su fila, columna y caja 3×3.`,`Le ${m[1]} est surligné. Observez sa ligne, sa colonne et sa région 3×3.`,`O ${m[1]} foi destacado. Observe sua linha, coluna e bloco 3×3.`,`${m[1]} wurde markiert. Beachten Sie die zugehörige Zeile, Spalte und den 3×3-Block.`);
@@ -396,7 +396,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");

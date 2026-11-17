@@ -1,0 +1,564 @@
+{
+  "ui": {
+    "siteTitle": "Lạc Tại Linh Trung | Lớp học Sudoku",
+    "village": "Làng học Sudoku",
+    "home": "Trang chủ",
+    "smaller": "Thu nhỏ chữ",
+    "larger": "Phóng to chữ",
+    "language": "Ngôn ngữ",
+    "category4": "Sudoku 4×4",
+    "category6": "Sudoku 6×6",
+    "category9": "Sudoku 9×9",
+    "homeNote": "Không cần đăng nhập hay dùng đồng hồ tính giờ. Hãy học thật thoải mái.",
+    "start": "Bắt đầu luyện tập",
+    "exam": "Bắt đầu kiểm tra",
+    "study": "Bắt đầu bài học",
+    "challenge": "Bắt đầu thử thách",
+    "practice": "Bắt đầu luyện tập",
+    "battle": "Bắt đầu thử thách",
+    "graduation": "Bắt đầu kiểm tra",
+    "firstInterview": "Bắt đầu phỏng vấn lần đầu",
+    "finalInterview": "Bắt đầu phỏng vấn cuối cùng",
+    "hiredChallenge": "Bắt đầu thử thách sau khi được tuyển dụng",
+    "gameFeedback": "Chọn một ô, sau đó chọn số ở bên dưới.",
+    "check": "Kiểm tra",
+    "clear": "Xóa",
+    "notes": "Ghi chú",
+    "hint": "Gợi ý",
+    "question": "Câu hỏi",
+    "modalTitle": "Đã hoàn thành bước này!",
+    "next": "Bước tiếp theo",
+    "modalHome": "Quay lại trang chủ",
+    "footer": "Lạc Tại Linh Trung | Không cần vội. Học từng bước một.",
+    "gridAria": "Bảng Sudoku",
+    "categoryAria": "Danh mục kích thước Sudoku",
+    "brandAlt": "Logo Lạc Tại Linh Trung",
+    "section4": "Sudoku 4×4",
+    "section6": "Sudoku 6×6",
+    "section9": "Sudoku 9×9",
+    "completeNext": "Bạn đã hoàn thành bước này. Làm rất tốt! Hãy tiếp tục thử thách tiếp theo.",
+    "completeAll": "Bạn đã hoàn thành tất cả các bước luyện tập hiện có! Làm rất tốt. Bạn có thể quay lại trang chủ."
+  },
+  "lessons": [
+    {
+      "title": "Bước 1: Hàng ngang",
+      "description": "Quan sát một hàng và tìm số còn thiếu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 2: Cột dọc",
+      "description": "Quan sát một cột và tìm số còn thiếu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 3: Ô vuông 2×2",
+      "description": "Tìm số còn thiếu trong ô vuông nhỏ.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 4: Hàng ngang + Cột dọc",
+      "description": "Kết hợp gợi ý từ hàng ngang và cột dọc để tìm số còn thiếu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 5: Ô vuông + Hàng ngang",
+      "description": "Dựa vào ô vuông và hàng ngang để tìm số thích hợp.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 6: Ô vuông + Cột dọc",
+      "description": "Dựa vào ô vuông và cột dọc để tìm số thích hợp.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 7: Kết hợp ba loại gợi ý",
+      "description": "Quan sát hàng ngang, cột dọc và ô vuông để tìm đáp án.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 8: Luyện tập câu đố cổ điển",
+      "description": "Lần lượt giải các câu đố Sudoku mẫu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 9: Thực hành Sudoku 4×4",
+      "description": "Tự điền các ô còn trống và kiểm tra đáp án.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 10: Tìm điểm đột phá",
+      "description": "Tìm ô có thể xác định chính xác bằng các gợi ý.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 11: Bài kiểm tra tốt nghiệp 4×4 (1/3)",
+      "description": "Hoàn thành bài kiểm tra đầu tiên.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 12: Bài kiểm tra tốt nghiệp 4×4 (2/3)",
+      "description": "Tiếp tục vận dụng các quy tắc Sudoku.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 13: Bài kiểm tra tốt nghiệp 4×4 (3/3)",
+      "description": "Hoàn thành bài kiểm tra cuối cùng của Sudoku 4×4.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 14: Sudoku 6×6 loại thứ nhất",
+      "description": "Làm quen với bảng Sudoku 6×6.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 15: Quan sát hàng ngang",
+      "description": "Dùng các số trong hàng ngang để loại trừ khả năng.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 16: Quan sát cột dọc",
+      "description": "Dùng các số trong cột dọc để loại trừ khả năng.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 17: Quan sát ô vuông",
+      "description": "Dùng các số trong ô vuông để tìm số còn thiếu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 18: Kết hợp hàng, cột và ô",
+      "description": "Kết hợp tất cả manh mối để tìm đáp án.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 19: Tìm vị trí phù hợp",
+      "description": "Xác định ô trống phù hợp cho một số đã cho.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 20: Luyện tập tổng hợp",
+      "description": "Vận dụng các quy tắc đã học để giải câu đố.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 21: Ôn tập Sudoku 6×6",
+      "description": "Ôn lại cách quan sát hàng, cột và ô.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 22: Thực hành ghi chú",
+      "description": "Ghi các số ứng viên vào ô trống bằng chế độ ghi chú.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 23: Ghi chú theo hàng ngang",
+      "description": "Ghi lại tất cả số còn thiếu trong hàng.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 24: Ghi chú theo cột dọc",
+      "description": "Ghi lại tất cả số còn thiếu trong cột.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 25: Luyện tập ghi chú",
+      "description": "Thực hành ghi và kiểm tra các số ứng viên.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 26: Sudoku 6×6 loại thứ hai",
+      "description": "Làm quen với cách chia ô của Sudoku 6×6 loại thứ hai.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 27: Quan sát vùng được tô sáng",
+      "description": "Chọn một số trên bảng để quan sát vùng liên quan.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 28: Tìm ô đột phá",
+      "description": "Tự tìm ô có thể giải được bằng các manh mối.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 29: Ghi chú hai ứng viên",
+      "description": "Ghi hai số có thể điền vào ô mục tiêu.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 30: Kiểm tra ứng viên",
+      "description": "Kiểm tra các số ứng viên đã ghi.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 31: Giải câu đố từng bước",
+      "description": "Lần lượt giải các ô mục tiêu theo hướng dẫn.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 32: Thực hành tổng hợp",
+      "description": "Tự kết hợp các quy tắc để hoàn thành câu đố.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 33: Thử thách Sudoku 6×6",
+      "description": "Hoàn thành thử thách Sudoku 6×6.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 34: Thực hành nâng cao",
+      "description": "Sử dụng ghi chú và các vùng được tô sáng.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 35: Tìm điểm đột phá nâng cao",
+      "description": "Tự quan sát để tìm bước đi quyết định.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 36: Ôn tập các quy tắc",
+      "description": "Ôn lại hàng ngang, cột dọc và ô vuông.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 37: Luyện tập ghi chú nâng cao",
+      "description": "Dùng ghi chú để suy luận đáp án.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 38: Kiểm tra từng số",
+      "description": "Lần lượt kiểm tra các số từ 1 đến 9.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 39: Sudoku 9×9",
+      "description": "Bắt đầu làm quen với Sudoku 9×9.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 40: Thực hành Sudoku 9×9",
+      "description": "Vận dụng các quy tắc trên bảng 9×9.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 41: Thử thách Sudoku 9×9",
+      "description": "Tự giải câu đố Sudoku 9×9.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 42: Hoàn thành Sudoku 9×9",
+      "description": "Hoàn thành câu đố và kiểm tra toàn bộ đáp án.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 43: Phỏng vấn đầu tiên của công ty Sudoku",
+      "description": "Vượt qua bài kiểm tra phỏng vấn đầu tiên.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 44: Phỏng vấn cuối cùng của công ty Sudoku",
+      "description": "Hoàn thành bài phỏng vấn cuối cùng.",
+      "action": "Bắt đầu luyện tập"
+    },
+    {
+      "title": "Bước 45: Thử thách sau khi được tuyển dụng",
+      "description": "Vượt qua thử thách cuối cùng sau khi được tuyển dụng.",
+      "action": "Bắt đầu luyện tập"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Bước 1: Hàng ngang",
+      "instruction": "Quan sát hàng ngang và tìm số còn thiếu."
+    },
+    "column": {
+      "title": "Bước 2: Cột dọc",
+      "instruction": "Quan sát cột dọc và tìm số còn thiếu."
+    },
+    "box": {
+      "title": "Bước 3: Ô vuông 2×2",
+      "instruction": "Tìm số còn thiếu trong ô vuông nhỏ."
+    },
+    "rowcol": {
+      "title": "Bước 4: Hàng ngang + Cột dọc",
+      "instruction": "Dùng gợi ý từ hàng ngang và cột dọc."
+    },
+    "threeways": {
+      "title": "Bước 5: Ô vuông + Hàng ngang",
+      "instruction": "Kết hợp gợi ý từ ô vuông và hàng ngang."
+    },
+    "boxways": {
+      "title": "Bước 6: Ô vuông + Cột dọc",
+      "instruction": "Kết hợp gợi ý từ ô vuông và cột dọc."
+    },
+    "advanced": {
+      "title": "Bước 7: Kết hợp ba loại gợi ý",
+      "instruction": "Quan sát hàng ngang, cột dọc và ô vuông."
+    },
+    "classic": {
+      "title": "Bước 8: Luyện tập câu đố cổ điển",
+      "instruction": "Lần lượt giải các câu đố Sudoku."
+    },
+    "practical": {
+      "title": "Bước 9: Thực hành Sudoku 4×4",
+      "instruction": "Điền các ô trống rồi nhấn nút Kiểm tra."
+    },
+    "breakthrough": {
+      "title": "Bước 10: Tìm điểm đột phá",
+      "instruction": "Tìm ô có thể xác định chính xác bằng các manh mối."
+    },
+    "graduate1": {
+      "title": "Bước 11: Bài kiểm tra tốt nghiệp 4×4 (1/3)",
+      "instruction": "Hoàn thành bài kiểm tra Sudoku 4×4."
+    },
+    "graduate2": {
+      "title": "Bước 12: Bài kiểm tra tốt nghiệp 4×4 (2/3)",
+      "instruction": "Tiếp tục vận dụng các quy tắc đã học."
+    },
+    "graduate3": {
+      "title": "Bước 13: Bài kiểm tra tốt nghiệp 4×4 (3/3)",
+      "instruction": "Hoàn thành bài kiểm tra cuối cùng của Sudoku 4×4."
+    },
+    "sixrow": {
+      "title": "Bước 14: Sudoku 6×6 loại thứ nhất",
+      "instruction": "Làm quen với bảng Sudoku 6×6."
+    },
+    "sixcolumn": {
+      "title": "Bước 15: Quan sát hàng ngang",
+      "instruction": "Dùng các số trong hàng ngang để loại trừ khả năng."
+    },
+    "sixbox": {
+      "title": "Bước 16: Quan sát cột dọc",
+      "instruction": "Dùng các số trong cột dọc để loại trừ khả năng."
+    },
+    "sixnote": {
+      "title": "Bước 17: Quan sát ô vuông",
+      "instruction": "Dùng các số trong ô vuông để tìm số còn thiếu."
+    },
+    "sixcolumnnote": {
+      "title": "Bước 18: Kết hợp hàng, cột và ô",
+      "instruction": "Kết hợp hàng ngang, cột dọc và ô vuông."
+    },
+    "sixboxnote": {
+      "title": "Bước 19: Tìm vị trí phù hợp",
+      "instruction": "Tìm ô trống phù hợp cho số đang xét."
+    },
+    "step14": {
+      "title": "Bước 20: Luyện tập tổng hợp",
+      "instruction": "Vận dụng các quy tắc đã học."
+    },
+    "sixintro2": {
+      "title": "Bước 21: Ôn tập Sudoku 6×6",
+      "instruction": "Ôn lại cách quan sát hàng, cột và ô vuông."
+    },
+    "sixnotecombat": {
+      "title": "Bước 22: Thực hành ghi chú",
+      "instruction": "Bật Ghi chú và ghi các số ứng viên."
+    },
+    "numberfocus": {
+      "title": "Bước 23: Ghi chú theo hàng ngang",
+      "instruction": "Ghi tất cả số còn thiếu trong hàng ngang."
+    },
+    "numberfocus2": {
+      "title": "Bước 24: Ghi chú theo cột dọc",
+      "instruction": "Ghi tất cả số còn thiếu trong cột dọc."
+    },
+    "numberfocus3": {
+      "title": "Bước 25: Luyện tập ghi chú",
+      "instruction": "Thực hành ghi và kiểm tra các số ứng viên."
+    },
+    "numberfocus4": {
+      "title": "Bước 26: Sudoku 6×6 loại thứ hai",
+      "instruction": "Sudoku 6×6 loại thứ hai có ô vuông gồm 3 hàng × 2 cột."
+    },
+    "ninerow": {
+      "title": "Bước 27: Quan sát vùng được tô sáng",
+      "instruction": "Chọn số có sẵn trên bảng để xem các vùng được tô sáng."
+    },
+    "ninecolumn": {
+      "title": "Bước 28: Tìm ô đột phá",
+      "instruction": "Tự tìm ô có thể giải được bằng các manh mối."
+    },
+    "ninebox": {
+      "title": "Bước 29: Ghi chú hai ứng viên",
+      "instruction": "Ghi hai số ứng viên vào ô mục tiêu."
+    },
+    "ninerowcol": {
+      "title": "Bước 30: Kiểm tra ứng viên",
+      "instruction": "Kiểm tra các số ứng viên đã ghi."
+    },
+    "ninerowcolbox": {
+      "title": "Bước 31: Giải câu đố từng bước",
+      "instruction": "Hoàn thành các ô mục tiêu theo đúng thứ tự."
+    },
+    "nineadvanced": {
+      "title": "Bước 32: Thực hành tổng hợp",
+      "instruction": "Kết hợp các quy tắc để hoàn thành câu đố."
+    },
+    "ninenote": {
+      "title": "Bước 33: Thử thách Sudoku 6×6",
+      "instruction": "Hoàn thành thử thách Sudoku 6×6."
+    },
+    "ninecolumnnote": {
+      "title": "Bước 34: Thực hành nâng cao",
+      "instruction": "Sử dụng ghi chú để hỗ trợ suy luận."
+    },
+    "nineboxnote": {
+      "title": "Bước 35: Tìm điểm đột phá nâng cao",
+      "instruction": "Tự quan sát để tìm bước đi quyết định."
+    },
+    "ninepractice1": {
+      "title": "Bước 36: Ôn tập các quy tắc",
+      "instruction": "Ôn lại hàng ngang, cột dọc và ô vuông."
+    },
+    "ninepractice2": {
+      "title": "Bước 37: Luyện tập ghi chú nâng cao",
+      "instruction": "Dùng ghi chú để suy luận đáp án."
+    },
+    "ninefocus": {
+      "title": "Bước 38: Kiểm tra từng số",
+      "instruction": "Lần lượt kiểm tra các số từ 1 đến 9."
+    },
+    "ninecombat1": {
+      "title": "Bước 39: Sudoku 9×9",
+      "instruction": "Bắt đầu làm quen với Sudoku 9×9."
+    },
+    "ninecombat2": {
+      "title": "Bước 40: Thực hành Sudoku 9×9",
+      "instruction": "Vận dụng các quy tắc trên bảng 9×9."
+    },
+    "ninecombat3": {
+      "title": "Bước 41: Thử thách Sudoku 9×9",
+      "instruction": "Tự giải câu đố Sudoku 9×9."
+    },
+    "ninecombat4": {
+      "title": "Bước 42: Hoàn thành Sudoku 9×9",
+      "instruction": "Hoàn thành câu đố và kiểm tra toàn bộ đáp án."
+    },
+    "ninecombat75": {
+      "title": "Bước 43: Phỏng vấn đầu tiên của công ty Sudoku",
+      "instruction": "Vượt qua bài kiểm tra phỏng vấn đầu tiên."
+    },
+    "ninecombat80": {
+      "title": "Bước 44: Phỏng vấn cuối cùng của công ty Sudoku",
+      "instruction": "Hoàn thành bài phỏng vấn cuối cùng."
+    },
+    "ninecombat5": {
+      "title": "Bước 45: Thử thách sau khi được tuyển dụng",
+      "instruction": "Vượt qua thử thách sau khi được tuyển dụng."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Hãy quan sát các ô, sau đó chọn một số ở bên dưới.",
+    "答對了！你找到破局點！": "Chính xác! Bạn đã tìm ra ô đột phá!",
+    "再想一想！請重新觀察線索。": "Hãy suy nghĩ thêm! Vui lòng quan sát lại các gợi ý.",
+    "沒關係，慢慢找。請再選一次。": "Không sao, hãy từ từ tìm nhé. Vui lòng thử lại.",
+    "請先選取一個空格。": "Trước tiên, hãy chọn một ô trống.",
+    "請先選取一個空格，再按數字加入小字。": "Hãy chọn một ô trống trước, sau đó chọn số để thêm ghi chú.",
+    "請先點選棋盤上的空格，再選擇數字。": "Hãy chọn một ô trống trên bảng, sau đó chọn số.",
+    "題目原有數字不能修改。": "Không thể thay đổi các số đã cho sẵn trong đề.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Đã bật chế độ Ghi chú. Hãy chọn ô trống rồi chọn số bên dưới để ghi chú.",
+    "筆記模式已關閉。": "Đã tắt chế độ Ghi chú.",
+    "已取消所有金色反白。": "Đã xóa tất cả vùng tô sáng màu vàng.",
+    "目前沒有選取空格，也沒有反金顯示。": "Hiện chưa chọn ô nào và không có vùng tô sáng màu vàng.",
+    "目前沒有選取空格，也沒有反白區域。": "Hiện chưa chọn ô nào và không có vùng nào được tô sáng.",
+    "已清空選取格子的答案與筆記。": "Đã xóa đáp án và ghi chú trong ô được chọn.",
+    "已清空選取格子的所有小字。": "Đã xóa tất cả ghi chú trong ô được chọn.",
+    "按下方數字加入或移除筆記。": "Chọn số bên dưới để thêm hoặc xóa ghi chú.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Chế độ Ghi chú đang tắt. Hãy nhấn “Ghi chú” để bật.",
+    "請先關閉「筆記」，再填入正式答案。": "Hãy tắt “Ghi chú” trước khi điền đáp án chính thức.",
+    "請依照順序完成目前亮起的目標格。": "Hãy lần lượt hoàn thành ô mục tiêu đang được tô sáng.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Hãy hoàn thành ô mục tiêu đang sáng trước khi chuyển sang ô tiếp theo.",
+    "已選取空格，請按下方數字填入答案。": "Đã chọn ô trống. Hãy chọn số bên dưới để điền đáp án.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Đã điền đáp án. Hệ thống không tự động chấm; hãy nhấn “Kiểm tra” khi cần.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Đã điền số. Sau khi hoàn tất, hãy nhấn “Kiểm tra” hoặc tiếp tục chỉnh sửa.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Hãy suy nghĩ thêm: bạn chỉ cần giải ô đang có dấu hỏi.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Chưa đúng. Số đã được đánh dấu màu đỏ. Hãy quan sát lại và tìm ô đột phá!",
+    "三題全部答對！你已學會一次檢查一個數字。": "Cả ba câu đều đúng! Bạn đã biết cách kiểm tra từng số một.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "Bạn đã kiểm tra xong các số từ 1 đến 9! Bạn đã hoàn thành Bước 38.",
+    "本次已完成，但瀏覽器無法保存進度。": "Bạn đã hoàn thành lần này, nhưng trình duyệt không thể lưu tiến độ.",
+    "目前目標格已選取，請先開啟「筆記」。": "Đã chọn ô mục tiêu. Trước tiên hãy bật “Ghi chú”.",
+    "目前目標格已選取，請按下方數字寫入小字。": "Đã chọn ô mục tiêu. Hãy chọn số bên dưới để ghi chú.",
+    "最後目標格已選取，請直接填入答案。": "Đã chọn ô mục tiêu cuối cùng. Hãy điền đáp án trực tiếp.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Hãy chọn ô mục tiêu hiện tại trước, sau đó chọn số để ghi chú.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Hãy chọn số được chỉ định đã có trên bảng để quan sát vùng tô sáng.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Hãy tự tìm và chọn ô trống có thể điền số này, sau đó chọn số bên dưới.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Hãy chọn số 1, 2 hoặc 6 đã có trên bảng, sau đó quan sát vùng tô sáng màu vàng.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Hãy chọn số 1, 2 hoặc 5 đã có trên bảng, sau đó quan sát vùng tô sáng màu vàng.",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Bạn đã ghi hai số nhưng tổ hợp chưa đúng. Hãy dùng “Xóa” rồi thử lại.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Các số ứng viên trong ô này chưa đúng. Hãy dùng “Xóa” và ghi lại.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Hai số ứng viên ghi chú chưa đúng. Hãy dùng “Xóa” và ghi lại.",
+    "這個候選數字不正確，請再觀察九宮格。": "Số ứng viên này chưa đúng. Hãy quan sát lại ô vuông 3×3.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Đáp án chính thức chưa đúng. Hãy quan sát lại vùng tô sáng màu vàng hoặc bật Ghi chú để ghi các số ứng viên.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Vị trí này chưa đúng. Hãy quan sát lại vùng tô sáng màu vàng và tìm ô trống phù hợp với số đó.",
+    "已選取這一格，請選擇你認為正確的數字。": "Đã chọn ô này. Hãy chọn số mà bạn cho là đúng.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Hãy chọn một ô trống trước, sau đó chọn số bên dưới để điền đáp án hoặc ghi chú.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Tất cả đều chính xác! Bạn đã hoàn thành phần thực hành Sudoku 4×4!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Tất cả đều chính xác! Bạn đã vượt qua bài kiểm tra tốt nghiệp Sudoku 4×4 (1/3)!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Tất cả đều chính xác! Bạn đã vượt qua bài kiểm tra tốt nghiệp Sudoku 4×4 (2/3)!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Tất cả đều chính xác! Bạn đã vượt qua bài kiểm tra tốt nghiệp Sudoku 4×4 (3/3)!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "Đã hoàn thành cả tám ô mục tiêu! Bạn đã hoàn thành phần thực hành Ghi chú ở Bước 22.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "Cả năm câu đều đúng! Bạn đã hoàn thành phần luyện tập Sudoku 6×6 loại thứ hai.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Tuyệt vời! Bảng Sudoku này hoàn toàn chính xác. Chúc mừng bạn đã vượt qua Bước 43: vòng phỏng vấn đầu tiên của công ty Sudoku 9×9!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Tuyệt vời! Bạn đã hoàn thành vòng phỏng vấn cuối cùng của công ty và chính thức vượt qua Bước 44!",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Tuyệt vời! Bạn đã hoàn thành thử thách độ khó 90 điểm và vượt qua Bước 45: bài kiểm tra đầu tiên sau khi được công ty Sudoku 9×9 tuyển dụng!",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Bạn đã hoàn thành tất cả các bước luyện tập hiện có! Làm rất tốt. Bây giờ bạn có thể quay lại trang chủ.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Bạn đã hoàn thành bước này, rất tốt! Hãy tiếp tục thử thách bước tiếp theo.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Hãy chọn một số đã có trên bảng để xem các vùng được tô sáng.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Hãy chọn một số trên bảng để làm sáng hàng ngang, cột dọc và ô vuông chứa số đó. Chọn ô trống rồi chọn số để điền. Chế độ Ghi chú dùng để ghi các số ứng viên.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Nhấn “Ghi chú” để bật chế độ, sau đó dựa vào hàng ngang, cột dọc và ô vuông của ô mục tiêu để ghi hai số ứng viên. Các ô đã hoàn thành sẽ được giữ nguyên.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Nhấn “Ghi chú”, chọn ô trống rồi ghi tất cả số còn thiếu trong hàng ngang. Lưu ý: màn này có sáu câu với dạng bài thay đổi lần lượt.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Nhấn “Ghi chú”, chọn ô trống rồi ghi tất cả số còn thiếu trong cột dọc. Lưu ý: màn này có sáu câu với dạng bài thay đổi lần lượt.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Hãy lần lượt quan sát năm ô mục tiêu: xem hàng ngang trước, sau đó đến cột dọc và ô vuông.",
+    "這一關請靠自己的觀察找出破局點！": "Ở màn này, hãy tự quan sát để tìm ra ô đột phá!",
+    "畢業考請靠自己的觀察完成，加油！": "Hãy tự quan sát để hoàn thành bài kiểm tra tốt nghiệp. Cố lên!",
+    "按下方數字填入答案；也可開啟筆記。": "Chọn số bên dưới để điền đáp án; bạn cũng có thể bật Ghi chú.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Trước tiên hãy bật “Ghi chú”, rồi lần lượt ghi các số ứng viên vào bốn ô mục tiêu. Sau bước thứ tư, hãy chủ động tắt “Ghi chú” và dựa vào các ghi chú trước đó để suy luận đáp án chính thức cho ô cuối cùng.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Bước 1/9: Hãy chọn một số 1 bất kỳ trong đề. Sau khi vùng được tô sáng, bật “Ghi chú” và ghi số 1 vào các vị trí có thể.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Bây giờ hãy bật “Ghi chú” và ghi số 1 vào những vị trí có thể.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Cố lên! Bạn đã dùng hết gợi ý. Bạn có thể tự hoàn thành!",
+    "提示已經使用完畢，你可以自己做到！": "Bạn đã dùng hết gợi ý. Bạn có thể tự hoàn thành!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Tuyệt vời! Bảng Sudoku 9×9 hoàn toàn chính xác. Bạn đã hoàn thành Bước 42!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Tuyệt vời! Bảng Sudoku 9×9 hoàn toàn chính xác. Bạn đã hoàn thành Bước 41!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Tuyệt vời! Bảng Sudoku 9×9 hoàn toàn chính xác. Bạn đã hoàn thành Bước 40!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Tuyệt vời! Bảng Sudoku 9×9 hoàn toàn chính xác. Bạn đã hoàn thành Bước 39!",
+    "請依序完成目前亮起的目標格。": "Hãy lần lượt hoàn thành ô mục tiêu đang được tô sáng.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Đã bật chế độ Ghi chú và tự động chọn ô mục tiêu. Hãy chọn số bên dưới để ghi chú.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Ở bước cuối, hãy chủ động tắt “Ghi chú” trước, sau đó điền đáp án chính thức.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Hãy suy nghĩ thêm: dùng bốn ghi chú đã lưu ở các bước trước để suy luận đáp án cuối cùng.",
+    "新題目來了！再找出一個破局點。": "Câu đố mới! Hãy tìm thêm một ô đột phá.",
+    "題目原有數字不能修改，請選擇空格。": "Không thể thay đổi các số có sẵn trong đề. Hãy chọn một ô trống.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Số này hiện chưa đúng. Hãy suy nghĩ lại dựa trên hàng ngang, cột dọc và ô vuông, hoặc dùng Ghi chú để ghi các số ứng viên.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Đáp án chưa đúng nên số sẽ không được điền vào bảng. Hãy quan sát lại hàng ngang, cột dọc và ô vuông 3×3, hoặc dùng Ghi chú trước.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Một vài ghi chú không phải là số còn thiếu trong hàng này. Nhấn “Xóa” để xóa ô hiện tại rồi ghi lại.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Một vài ghi chú không phải là số còn thiếu trong hàng ngang này. Nhấn “Xóa” để xóa ô hiện tại rồi ghi lại.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Hãy suy nghĩ thêm: xem hàng ngang trước, sau đó cột dọc, cuối cùng kiểm tra ô vuông 6 ô. Số đúng sẽ được giữ lại trên bảng.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Hãy suy nghĩ thêm: quan sát hàng ngang, cột dọc và ô vuông 6 ô chứa ô mục tiêu. Số đúng sẽ được giữ lại trên bảng.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Bắt đầu câu tiếp theo! Chế độ Ghi chú đã tự động bật. Hãy ghi hai số còn thiếu vào hai ô trống.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "Cả ba câu đều đúng! Bạn đã biết cách giải bằng quy tắc hàng ngang, cột dọc và ô vuông 6 ô.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Hãy bật “Ghi chú” trước, sau đó lần lượt ghi chú vào bốn ô mục tiêu theo thứ tự được chỉ định.",
+    "三題全部完成！你已學會一次檢查一個數字。": "Đã hoàn thành cả ba câu! Bạn đã học được cách kiểm tra từng số một.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "Trong bốn bước đầu, hãy bật “Ghi chú” và ghi hai số ứng viên.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Không thể thay đổi các số đã cho trong đề. Hãy chọn một ô trống.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Tuyệt vời! Bạn đã lần lượt hoàn thành cả 21 bước và giải được bảng Sudoku này!",
+    "已選取空格，請按下方數字填入。": "Đã chọn ô trống. Hãy chọn số bên dưới để điền.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Chế độ Ghi chú đang tắt. Hãy nhấn “Ghi chú” để bật trước.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Chính xác! Bạn đã hoàn thành bài luyện tập suy luận đáp án bằng ghi chú.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Trước tiên, hãy chọn một số có sẵn trên bảng 6×6 phía trên. Hệ thống sẽ tô sáng hàng ngang, cột dọc và ô vuông chứa số đó. Các nút số bên dưới chỉ dùng để điền đáp án hoặc ghi chú.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Hãy chọn ô trống mà bạn cho là có thể giải được trước, sau đó chọn số.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Chọn số bên dưới để điền đáp án; có thể bật Ghi chú khi cần.",
+    "可以自行判斷要記筆記或直接填入答案。": "Bạn có thể tự quyết định ghi chú hay điền đáp án trực tiếp.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Đã chọn ô mục tiêu. Hãy dùng các số bên dưới để ghi hai số ứng viên.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Hãy nhấn “Ghi chú” để bật chế độ ghi chú trước, sau đó chọn ô mục tiêu.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Đây là Sudoku 6×6 loại thứ hai, mỗi ô vuông gồm 3 hàng × 2 cột. Bạn có thể chọn một số trên bảng để xem vùng tô sáng hoặc dùng Ghi chú để ghi số ứng viên. Nếu gặp khó khăn, hãy quay lại ôn Bước 21.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Chọn một số trên bảng để làm sáng hàng ngang, cột dọc và ô vuông chứa số đó. Chọn ô trống rồi chọn số để điền. Chế độ Ghi chú dùng để ghi các số ứng viên.",
+    "記下": "Đã thêm",
+    "移除": "Đã xóa",
+    "第二十六步": "Bước 26",
+    "第二十五步": "Bước 25",
+    "直排": "cột dọc",
+    "九宮格": "ô vuông 3×3",
+    "橫排": "hàng ngang",
+    "提示：缺少的數字是 ": "Gợi ý: số còn thiếu là "
+  }
+}
