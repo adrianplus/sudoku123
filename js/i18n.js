@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","es-419","es-ES","fr","pt-BR","ru","id","de","ja","vi","ko","it","zh-CN"];
+const allowed=["zh-TW","en","es-419","es-ES","fr","pt-BR","ru","id","de","ja","vi","ko","it","zh-CN","tr"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
@@ -396,7 +396,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","tr":"Türkçe","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");

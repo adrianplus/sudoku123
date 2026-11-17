@@ -28,3 +28,9 @@ Important: some of the less common fixed gameplay messages use a general Indones
 - Added Tiếng Việt (`vi`) with 38 UI strings, 45 lesson cards, 45 step instructions, and 111 gameplay messages.
 - Reordered the language selector: Traditional Chinese first, Simplified Chinese last; other languages follow the agreed usage-scale order.
 - Preserved the V111 gameplay, puzzles, answers, and mobile layout.
+
+
+## V113 – Turkish language
+- Added Türkçe (`tr`) with 38 UI strings, 45 lesson cards, 45 step instructions, and 111 gameplay messages.
+- Added Turkish after Vietnamese in the language selector, preserving Traditional Chinese first and Simplified Chinese last.
+- Based on V112; existing puzzle data, answers, gameplay logic, and mobile layout are preserved.

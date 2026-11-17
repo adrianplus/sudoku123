@@ -1,0 +1,564 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Sudoku Sınıfı",
+    "village": "Sudoku Başlangıç Köyü",
+    "home": "Ana Sayfa",
+    "smaller": "Yazıyı küçült",
+    "larger": "Yazıyı büyüt",
+    "language": "Dil",
+    "category4": "4×4 Sudoku",
+    "category6": "6×6 Sudoku",
+    "category9": "9×9 Sudoku",
+    "homeNote": "Giriş yapmanız veya süre tutmanız gerekmez. Acele etmeyin.",
+    "start": "Alıştırmaya başla",
+    "exam": "Teste başla",
+    "study": "Derse başla",
+    "challenge": "Meydan okumaya başla",
+    "practice": "Alıştırmaya başla",
+    "battle": "Meydan okumaya başla",
+    "graduation": "Teste başla",
+    "firstInterview": "İlk mülakata başla",
+    "finalInterview": "Son mülakata başla",
+    "hiredChallenge": "İşe alım sonrası mücadeleye başla",
+    "gameFeedback": "Bir hücre seçin, ardından aşağıdan bir sayı seçin.",
+    "check": "Kontrol et",
+    "clear": "Temizle",
+    "notes": "Notlar",
+    "hint": "İpucu",
+    "question": "Soru",
+    "modalTitle": "Adım tamamlandı!",
+    "next": "Sonraki adım",
+    "modalHome": "Ana sayfaya dön",
+    "footer": "Le Zai Ling Zhong | Acele etmeyin. Her seferinde bir adım öğrenin.",
+    "gridAria": "Sudoku tablosu",
+    "categoryAria": "Sudoku boyut kategorileri",
+    "brandAlt": "Le Zai Ling Zhong logosu",
+    "section4": "4×4 Sudoku",
+    "section6": "6×6 Sudoku",
+    "section9": "9×9 Sudoku",
+    "completeNext": "Bu adımı tamamladınız. Harika! Şimdi sonraki mücadeleye geçin.",
+    "completeAll": "Mevcut tüm adımları tamamladınız! Harika iş çıkardınız. Ana sayfaya dönebilirsiniz."
+  },
+  "lessons": [
+    {
+      "title": "1. Adım: Satır",
+      "description": "Bir satıra bakın ve eksik sayıyı bulun.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "2. Adım: Sütun",
+      "description": "Bir sütuna bakın ve eksik sayıyı bulun.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "3. Adım: 2×2 Kutu",
+      "description": "Küçük kutuda eksik olan sayıyı bulun.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "4. Adım: Satır + Sütun",
+      "description": "Eksik sayıyı bulmak için satır ve sütun ipuçlarını birlikte kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "5. Adım: Kutu + Satır",
+      "description": "Doğru sayıyı bulmak için kutu ve satır ipuçlarını kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "6. Adım: Kutu + Sütun",
+      "description": "Doğru sayıyı bulmak için kutu ve sütun ipuçlarını kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "7. Adım: Üç ipucunu birleştirme",
+      "description": "Yanıtı bulmak için satır, sütun ve kutuyu birlikte inceleyin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "8. Adım: Klasik bulmaca alıştırması",
+      "description": "Örnek Sudoku bulmacalarını sırayla çözün.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "9. Adım: 4×4 Sudoku uygulaması",
+      "description": "Boş hücreleri doldurun ve yanıtlarınızı kontrol edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "10. Adım: Çözüm noktasını bulma",
+      "description": "İpuçlarıyla kesin olarak belirlenebilen hücreyi bulun.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "11. Adım: 4×4 mezuniyet sınavı (1/3)",
+      "description": "İlk sınavı tamamlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "12. Adım: 4×4 mezuniyet sınavı (2/3)",
+      "description": "Sudoku kurallarını uygulamaya devam edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "13. Adım: 4×4 mezuniyet sınavı (3/3)",
+      "description": "4×4 Sudoku'nun son sınavını tamamlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "14. Adım: 6×6 Sudoku – Birinci tür",
+      "description": "6×6 Sudoku tablosunu tanıyın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "15. Adım: Satırı inceleme",
+      "description": "Olasılıkları elemek için satırdaki sayıları kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "16. Adım: Sütunu inceleme",
+      "description": "Olasılıkları elemek için sütundaki sayıları kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "17. Adım: Kutuyu inceleme",
+      "description": "Eksik sayıyı bulmak için kutudaki sayıları kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "18. Adım: Satır, sütun ve kutuyu birleştirme",
+      "description": "Yanıtı bulmak için tüm ipuçlarını birleştirin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "19. Adım: Uygun konumu bulma",
+      "description": "Verilen bir sayı için uygun boş hücreyi belirleyin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "20. Adım: Genel alıştırma",
+      "description": "Bulmacayı çözmek için öğrendiğiniz kuralları uygulayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "21. Adım: 6×6 Sudoku tekrarı",
+      "description": "Satır, sütun ve kutuyu inceleme yöntemlerini tekrarlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "22. Adım: Not alma alıştırması",
+      "description": "Not modunu kullanarak boş hücrelere olası sayıları yazın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "23. Adım: Satır için not alma",
+      "description": "Satırda eksik olan tüm sayıları not edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "24. Adım: Sütun için not alma",
+      "description": "Sütunda eksik olan tüm sayıları not edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "25. Adım: Not alma çalışması",
+      "description": "Olası sayıları not etmeyi ve kontrol etmeyi deneyin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "26. Adım: 6×6 Sudoku – İkinci tür",
+      "description": "İkinci tür 6×6 Sudoku kutu düzenini tanıyın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "27. Adım: Vurgulanan bölgeyi inceleme",
+      "description": "İlgili bölgeleri görmek için tablodaki bir sayıyı seçin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "28. Adım: Çözüm hücresini bulma",
+      "description": "İpuçlarıyla çözülebilecek hücreyi kendiniz bulun.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "29. Adım: İki aday sayı yazma",
+      "description": "Hedef hücreye yazılabilecek iki sayıyı not edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "30. Adım: Aday sayıları kontrol etme",
+      "description": "Yazdığınız aday sayıları kontrol edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "31. Adım: Bulmacayı adım adım çözme",
+      "description": "Hedef hücreleri yönergeye göre sırayla çözün.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "32. Adım: Genel uygulama",
+      "description": "Bulmacayı tamamlamak için kuralları birleştirin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "33. Adım: 6×6 Sudoku mücadelesi",
+      "description": "6×6 Sudoku mücadelesini tamamlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "34. Adım: İleri düzey alıştırma",
+      "description": "Notları ve vurgulanan bölgeleri kullanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "35. Adım: İleri düzey çözüm noktası",
+      "description": "Belirleyici hamleyi bulmak için dikkatlice inceleyin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "36. Adım: Kuralları tekrar etme",
+      "description": "Satır, sütun ve kutu kurallarını tekrarlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "37. Adım: İleri düzey not alma",
+      "description": "Yanıtı bulmak için notlardan yararlanın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "38. Adım: Sayıları tek tek kontrol etme",
+      "description": "1'den 9'a kadar sayıları sırayla kontrol edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "39. Adım: 9×9 Sudoku",
+      "description": "9×9 Sudoku ile tanışın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "40. Adım: 9×9 Sudoku alıştırması",
+      "description": "9×9 tabloda Sudoku kurallarını uygulayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "41. Adım: 9×9 Sudoku mücadelesi",
+      "description": "9×9 Sudoku bulmacasını kendiniz çözün.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "42. Adım: 9×9 Sudoku'yu tamamlama",
+      "description": "Bulmacayı tamamlayın ve tüm yanıtları kontrol edin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "43. Adım: Sudoku şirketinde ilk mülakat",
+      "description": "İlk mülakat sınavını geçin.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "44. Adım: Sudoku şirketinde son mülakat",
+      "description": "Son mülakatı tamamlayın.",
+      "action": "Alıştırmaya başla"
+    },
+    {
+      "title": "45. Adım: İşe alındıktan sonraki mücadele",
+      "description": "İşe alındıktan sonraki son mücadeleyi geçin.",
+      "action": "Alıştırmaya başla"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "1. Adım: Satır",
+      "instruction": "Satıra bakın ve eksik sayıyı bulun."
+    },
+    "column": {
+      "title": "2. Adım: Sütun",
+      "instruction": "Sütuna bakın ve eksik sayıyı bulun."
+    },
+    "box": {
+      "title": "3. Adım: 2×2 Kutu",
+      "instruction": "Küçük kutuda eksik olan sayıyı bulun."
+    },
+    "rowcol": {
+      "title": "4. Adım: Satır + Sütun",
+      "instruction": "Satır ve sütun ipuçlarını birlikte kullanın."
+    },
+    "threeways": {
+      "title": "5. Adım: Kutu + Satır",
+      "instruction": "Kutu ve satır ipuçlarını birleştirin."
+    },
+    "boxways": {
+      "title": "6. Adım: Kutu + Sütun",
+      "instruction": "Kutu ve sütun ipuçlarını birleştirin."
+    },
+    "advanced": {
+      "title": "7. Adım: Üç ipucunu birleştirme",
+      "instruction": "Satır, sütun ve kutuyu birlikte inceleyin."
+    },
+    "classic": {
+      "title": "8. Adım: Klasik bulmaca alıştırması",
+      "instruction": "Sudoku bulmacalarını sırayla çözün."
+    },
+    "practical": {
+      "title": "9. Adım: 4×4 Sudoku uygulaması",
+      "instruction": "Boş hücreleri doldurun ve Kontrol et düğmesine basın."
+    },
+    "breakthrough": {
+      "title": "10. Adım: Çözüm noktasını bulma",
+      "instruction": "İpuçlarıyla kesin olarak belirlenebilen hücreyi bulun."
+    },
+    "graduate1": {
+      "title": "11. Adım: 4×4 mezuniyet sınavı (1/3)",
+      "instruction": "4×4 Sudoku sınavını tamamlayın."
+    },
+    "graduate2": {
+      "title": "12. Adım: 4×4 mezuniyet sınavı (2/3)",
+      "instruction": "Öğrendiğiniz kuralları uygulamaya devam edin."
+    },
+    "graduate3": {
+      "title": "13. Adım: 4×4 mezuniyet sınavı (3/3)",
+      "instruction": "4×4 Sudoku'nun son sınavını tamamlayın."
+    },
+    "sixrow": {
+      "title": "14. Adım: 6×6 Sudoku – Birinci tür",
+      "instruction": "6×6 Sudoku tablosunu tanıyın."
+    },
+    "sixcolumn": {
+      "title": "15. Adım: Satırı inceleme",
+      "instruction": "Satırdaki sayıları kullanarak olasılıkları eleyin."
+    },
+    "sixbox": {
+      "title": "16. Adım: Sütunu inceleme",
+      "instruction": "Sütundaki sayıları kullanarak olasılıkları eleyin."
+    },
+    "sixnote": {
+      "title": "17. Adım: Kutuyu inceleme",
+      "instruction": "Kutudaki sayıları kullanarak eksik sayıyı bulun."
+    },
+    "sixcolumnnote": {
+      "title": "18. Adım: Satır, sütun ve kutuyu birleştirme",
+      "instruction": "Satır, sütun ve kutu ipuçlarını birleştirin."
+    },
+    "sixboxnote": {
+      "title": "19. Adım: Uygun konumu bulma",
+      "instruction": "İncelenen sayı için uygun boş hücreyi bulun."
+    },
+    "step14": {
+      "title": "20. Adım: Genel alıştırma",
+      "instruction": "Öğrendiğiniz kuralları uygulayın."
+    },
+    "sixintro2": {
+      "title": "21. Adım: 6×6 Sudoku tekrarı",
+      "instruction": "Satır, sütun ve kutuyu inceleme yöntemlerini tekrarlayın."
+    },
+    "sixnotecombat": {
+      "title": "22. Adım: Not alma alıştırması",
+      "instruction": "Notlar'ı açın ve aday sayıları yazın."
+    },
+    "numberfocus": {
+      "title": "23. Adım: Satır için not alma",
+      "instruction": "Satırda eksik olan tüm sayıları boş hücrelere not edin."
+    },
+    "numberfocus2": {
+      "title": "24. Adım: Sütun için not alma",
+      "instruction": "Sütunda eksik olan tüm sayıları boş hücrelere not edin."
+    },
+    "numberfocus3": {
+      "title": "25. Adım: Not alma çalışması",
+      "instruction": "Aday sayıları not etmeyi ve kontrol etmeyi deneyin."
+    },
+    "numberfocus4": {
+      "title": "26. Adım: 6×6 Sudoku – İkinci tür",
+      "instruction": "İkinci tür 6×6 Sudoku'da kutular 3 satır × 2 sütundan oluşur."
+    },
+    "ninerow": {
+      "title": "27. Adım: Vurgulanan bölgeyi inceleme",
+      "instruction": "Tablodaki mevcut bir sayıyı seçerek vurgulanan bölgeleri görün."
+    },
+    "ninecolumn": {
+      "title": "28. Adım: Çözüm hücresini bulma",
+      "instruction": "İpuçlarıyla çözülebilecek hücreyi kendiniz bulun."
+    },
+    "ninebox": {
+      "title": "29. Adım: İki aday sayı yazma",
+      "instruction": "Hedef hücreye iki aday sayı yazın."
+    },
+    "ninerowcol": {
+      "title": "30. Adım: Aday sayıları kontrol etme",
+      "instruction": "Yazdığınız aday sayıları kontrol edin."
+    },
+    "ninerowcolbox": {
+      "title": "31. Adım: Bulmacayı adım adım çözme",
+      "instruction": "Hedef hücreleri doğru sırayla tamamlayın."
+    },
+    "nineadvanced": {
+      "title": "32. Adım: Genel uygulama",
+      "instruction": "Bulmacayı tamamlamak için kuralları birleştirin."
+    },
+    "ninenote": {
+      "title": "33. Adım: 6×6 Sudoku mücadelesi",
+      "instruction": "6×6 Sudoku mücadelesini tamamlayın."
+    },
+    "ninecolumnnote": {
+      "title": "34. Adım: İleri düzey alıştırma",
+      "instruction": "Çıkarım yapmak için notları kullanın."
+    },
+    "nineboxnote": {
+      "title": "35. Adım: İleri düzey çözüm noktası",
+      "instruction": "Belirleyici hamleyi bulmak için kendiniz inceleyin."
+    },
+    "ninepractice1": {
+      "title": "36. Adım: Kuralları tekrar etme",
+      "instruction": "Satır, sütun ve kutu kurallarını tekrarlayın."
+    },
+    "ninepractice2": {
+      "title": "37. Adım: İleri düzey not alma",
+      "instruction": "Yanıtı bulmak için notlardan yararlanın."
+    },
+    "ninefocus": {
+      "title": "38. Adım: Sayıları tek tek kontrol etme",
+      "instruction": "1'den 9'a kadar sayıları sırayla kontrol edin."
+    },
+    "ninecombat1": {
+      "title": "39. Adım: 9×9 Sudoku",
+      "instruction": "9×9 Sudoku ile tanışın."
+    },
+    "ninecombat2": {
+      "title": "40. Adım: 9×9 Sudoku alıştırması",
+      "instruction": "9×9 tabloda Sudoku kurallarını uygulayın."
+    },
+    "ninecombat3": {
+      "title": "41. Adım: 9×9 Sudoku mücadelesi",
+      "instruction": "9×9 Sudoku bulmacasını kendiniz çözün."
+    },
+    "ninecombat4": {
+      "title": "42. Adım: 9×9 Sudoku'yu tamamlama",
+      "instruction": "Bulmacayı tamamlayın ve tüm yanıtları kontrol edin."
+    },
+    "ninecombat75": {
+      "title": "43. Adım: Sudoku şirketinde ilk mülakat",
+      "instruction": "İlk mülakat sınavını geçin."
+    },
+    "ninecombat80": {
+      "title": "44. Adım: Sudoku şirketinde son mülakat",
+      "instruction": "Son mülakatı tamamlayın."
+    },
+    "ninecombat5": {
+      "title": "45. Adım: İşe alındıktan sonraki mücadele",
+      "instruction": "İşe alındıktan sonraki mücadeleyi geçin."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Hücreleri inceleyin, ardından aşağıdan bir sayı seçin.",
+    "答對了！你找到破局點！": "Doğru! Çözüm hücresini buldunuz!",
+    "再想一想！請重新觀察線索。": "Bir kez daha düşünün! İpuçlarını yeniden inceleyin.",
+    "沒關係，慢慢找。請再選一次。": "Sorun değil, acele etmeyin. Lütfen tekrar deneyin.",
+    "請先選取一個空格。": "Önce boş bir hücre seçin.",
+    "請先選取一個空格，再按數字加入小字。": "Önce boş bir hücre seçin, ardından not eklemek için aşağıdan bir sayı seçin.",
+    "請先點選棋盤上的空格，再選擇數字。": "Önce tablodaki boş hücreyi, ardından bir sayıyı seçin.",
+    "題目原有數字不能修改。": "Başlangıçta verilen sayılar değiştirilemez.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Not modu açık. Boş hücreyi seçin ve aşağıdan bir sayı seçerek not ekleyin.",
+    "筆記模式已關閉。": "Not modu kapalı.",
+    "已取消所有金色反白。": "Tüm sarı vurgular temizlendi.",
+    "目前沒有選取空格，也沒有反金顯示。": "Seçili hücre yok ve sayı vurgulaması etkin değil.",
+    "目前沒有選取空格，也沒有反白區域。": "Seçili hücre yok ve vurgulanmış bir bölge bulunmuyor.",
+    "已清空選取格子的答案與筆記。": "Seçili hücrenin yanıtı ve notları temizlendi.",
+    "已清空選取格子的所有小字。": "Seçili hücredeki tüm notlar temizlendi.",
+    "按下方數字加入或移除筆記。": "Not eklemek veya kaldırmak için aşağıdan bir sayı seçin.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Not modu kapalı. Açmak için Notlar düğmesine basın.",
+    "請先關閉「筆記」，再填入正式答案。": "Kesin yanıtı girmeden önce Notlar modunu kapatın.",
+    "請依照順序完成目前亮起的目標格。": "Vurgulanan hedef hücreyi sırayla tamamlayın.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Sonraki hücreye geçmeden önce vurgulanan hedef hücreyi tamamlayın.",
+    "已選取空格，請按下方數字填入答案。": "Boş hücre seçildi. Yanıtınızı girmek için aşağıdan bir sayı seçin.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Yanıt girildi. Sistem otomatik kontrol yapmaz; hazır olduğunuzda Kontrol et'e basın.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Sayı girildi. Hazır olduğunuzda Kontrol et'e basın veya düzenlemeye devam edin.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Bir kez daha düşünün. Yalnızca soru işaretinin bulunduğu hücreyi çözmeniz gerekiyor.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Tam doğru değil. Sayı kırmızıyla işaretlendi. Yeniden inceleyin ve çözüm noktasını bulun!",
+    "三題全部答對！你已學會一次檢查一個數字。": "Üç yanıtın tamamı doğru! Sayıları teker teker kontrol etmeyi öğrendiniz.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "1'den 9'a kadar tüm sayıları kontrol ettiniz. 38. adım tamamlandı!",
+    "本次已完成，但瀏覽器無法保存進度。": "Bu oturum tamamlandı ancak tarayıcı ilerlemenizi kaydedemedi.",
+    "目前目標格已選取，請先開啟「筆記」。": "Hedef hücre seçildi. Önce Notlar modunu açın.",
+    "目前目標格已選取，請按下方數字寫入小字。": "Hedef hücre seçildi. Not eklemek için aşağıdan bir sayı seçin.",
+    "最後目標格已選取，請直接填入答案。": "Son hedef hücre seçildi. Yanıtı doğrudan girin.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Önce hedef hücreyi seçin, ardından not eklemek için bir sayı seçin.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Vurgulanan bölgeleri görmek için tabloda önceden bulunan belirtilen sayıyı seçin.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Bu sayının yerleştirilebileceği boş hücreyi bulun ve seçin, ardından aşağıdan sayıyı seçin.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Tabloda bulunan 1, 2 veya 6 sayılarından birini seçin ve sarı vurguları inceleyin.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Tabloda bulunan 1, 2 veya 5 sayılarından birini seçin ve sarı vurguları inceleyin.",
+    "提示：缺少的數字是 ": "İpucu: eksik sayı ",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "İki sayı not edildi ancak ikili doğru değil. Temizle'yi kullanın ve tekrar deneyin.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Bu hücredeki aday sayılar yanlış. Temizle'yi kullanın ve yeniden not alın.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "İki aday notu yanlış. Temizle'yi kullanın ve yeniden not alın.",
+    "這個候選數字不正確，請再觀察九宮格。": "Bu aday sayı yanlış. 3×3 kutuyu yeniden inceleyin.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Bu kesin yanıt yanlış. Vurgulanan bölgeyi inceleyin veya aday sayıları not etmek için Notlar'ı açın.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Bu konum yanlış. Sarı vurguları inceleyin ve sayının yerleşebileceği boş hücreyi bulun.",
+    "已選取這一格，請選擇你認為正確的數字。": "Bu hücre seçildi. Doğru olduğunu düşündüğünüz sayıyı seçin.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Önce boş bir hücre seçin, ardından yanıt girmek veya not eklemek için aşağıdan bir sayı seçin.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Hepsi doğru! 4×4 Sudoku mücadelesini tamamladınız!",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Hepsi doğru! 4×4 Sudoku mezuniyet sınavını geçtiniz (1/3)!",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Hepsi doğru! 4×4 Sudoku mezuniyet sınavını geçtiniz (2/3)!",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Hepsi doğru! 4×4 Sudoku mezuniyet sınavını geçtiniz (3/3)!",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "Sekiz hedef hücrenin tamamı bitti! 22. adımdaki Notlar uygulamasını tamamladınız.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "Beş sorunun tamamı doğru! İkinci tür 6×6 Sudoku alıştırmasını tamamladınız.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Harika! Bulmaca tamamen doğru. 43. adımı, 9×9 Sudoku şirketinin ilk mülakatını geçtiniz!",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Harika! Şirketin son mülakatını tamamladınız ve 44. adımı geçtiniz!",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Harika! 90 puanlık mücadeleyi tamamladınız. 45. adımı, işe alındıktan sonraki ilk sınavı geçtiniz!",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Mevcut tüm alıştırma adımlarını tamamladınız! Harika iş çıkardınız. Ana sayfaya dönebilirsiniz.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Bu adımı tamamladınız. Harika! Şimdi sonraki mücadeleye geçin.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Vurgulanan bölgeleri görmek için tabloda bulunan bir sayıyı seçin.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Bir sayıyı seçerek bulunduğu satırı, sütunu ve kutuyu vurgulayın. Boş hücreyi seçip sayı girin. Notlar modunda aday sayıları kaydedebilirsiniz.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Notlar'ı açın. Hedef hücrenin satırını, sütununu ve kutusunu kullanarak iki aday sayı yazın. Tamamlanan hücreler korunur.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Notlar'ı açın, boş hücreyi seçin ve satırda eksik olan tüm aday sayıları not edin. Bu bölümde altı farklı bulmaca vardır.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Notlar'ı açın, boş hücreyi seçin ve sütunda eksik olan tüm aday sayıları not edin. Bu bölümde altı farklı bulmaca vardır.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Beş hedef hücreyi sırayla inceleyin. Önce satıra, ardından sütuna ve kutuya bakın.",
+    "這一關請靠自己的觀察找出破局點！": "Bu seviyede çözüm noktasını kendi gözleminizle bulun!",
+    "畢業考請靠自己的觀察完成，加油！": "Mezuniyet sınavını kendi gözleminizle tamamlayın. Başarabilirsiniz!",
+    "按下方數字填入答案；也可開啟筆記。": "Yanıtı girmek için aşağıdan bir sayı seçin; isterseniz Notlar'ı açabilirsiniz.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Notlar'ı açın ve ilk dört hedef hücreye sırayla notları yazın. Dördüncü adımdan sonra Notlar'ı kapatın ve son hücrenin yanıtını bulun.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "1/9. adım: Bulmacadaki herhangi bir 1 sayısını seçin. Bölgeler vurgulandıktan sonra Notlar'ı açın ve 1'in olası konumlarını not edin.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Şimdi Notlar'ı açın ve 1'in olası konumlarını not edin.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Devam edin! Tüm ipuçları kullanıldı. Bunu kendiniz çözebilirsiniz!",
+    "提示已經使用完畢，你可以自己做到！": "Tüm ipuçları kullanıldı. Bunu kendiniz çözebilirsiniz!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Harika! 9×9 Sudoku tamamen doğru. 42. adım tamamlandı!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Harika! 9×9 Sudoku tamamen doğru. 41. adım tamamlandı!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Harika! 9×9 Sudoku tamamen doğru. 40. adım tamamlandı!",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Harika! 9×9 Sudoku tamamen doğru. 39. adım tamamlandı!",
+    "請依序完成目前亮起的目標格。": "Vurgulanan hedef hücreyi sırayla tamamlayın.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Notlar modu açıldı ve hedef hücre otomatik seçildi. Not eklemek için aşağıdan bir sayı seçin.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Son adımda önce Notlar modunu kapatın, ardından kesin yanıtı doğrudan girin.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Bir kez daha düşünün: son yanıtı bulmak için önceki dört hücredeki notları kullanın.",
+    "新題目來了！再找出一個破局點。": "Yeni bulmaca! Bir çözüm noktası daha bulun.",
+    "題目原有數字不能修改，請選擇空格。": "Başlangıçta verilen sayılar değiştirilemez. Lütfen boş bir hücre seçin.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Bu sayı doğru değil. Satır, sütun ve kutu ipuçlarını yeniden değerlendirin veya aday sayıları Notlar'a kaydedin.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Bu yanıt yanlış ve tabloya girilmeyecek. Satırı, sütunu ve 3×3 kutuyu yeniden inceleyin veya önce Notlar'ı kullanın.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Bazı notlar bu satırda eksik olan sayılar değil. Temizle'ye basarak hücreyi silin ve yeniden not alın.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Bazı notlar bu satırda eksik olan sayılar değil. Temizle'ye basarak hücreyi silin ve yeniden not alın.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Bir kez daha düşünün: önce satıra, sonra sütuna ve son olarak 6 hücreli kutuya bakın. Doğru yanıtlar tabloda kalır.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Bir kez daha düşünün: hedef hücrenin satırını, sütununu ve 6 hücreli kutusunu inceleyin. Doğru yanıtlar tabloda kalır.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Sonraki bulmaca başlıyor! Notlar modu otomatik açıldı. İki boş hücreye eksik iki sayıyı not edin.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "Üç yanıtın tamamı doğru! Satır, sütun ve 6 hücreli kutu kurallarıyla çözmeyi öğrendiniz.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Önce Notlar'ı açın, ardından dört hedef hücreye belirtilen sırayla notları yazın.",
+    "三題全部完成！你已學會一次檢查一個數字。": "Üç sorunun tamamı bitti! Sayıları teker teker kontrol etmeyi öğrendiniz.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "İlk dört adımda Notlar'ı açın ve iki aday sayıyı girin.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Bulmacada verilen sayılar değiştirilemez. Lütfen boş bir hücre seçin.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Harika! 21 adımın tamamını bitirdiniz ve bu Sudoku bulmacasını çözdünüz!",
+    "已選取空格，請按下方數字填入。": "Boş hücre seçildi. Doldurmak için aşağıdan bir sayı seçin.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Notlar modu kapalı. Önce Notlar düğmesine basarak açın.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Doğru! Notları kullanarak yanıtı tahmin etme alıştırmasını tamamladınız.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Önce 6×6 tablodaki mevcut bir sayıyı seçin. Sistem bu sayının satırını, sütununu ve kutusunu vurgular. Aşağıdaki sayı düğmeleri yanıt veya not girmek içindir.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Önce çözüm olabileceğini düşündüğünüz boş hücreyi seçin, ardından bir sayı seçin.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Yanıtı girmek için aşağıdan bir sayı seçin; gerekirse Notlar'ı açabilirsiniz.",
+    "可以自行判斷要記筆記或直接填入答案。": "Not alıp almayacağınıza veya yanıtı doğrudan girip girmeyeceğinize kendiniz karar verebilirsiniz.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Hedef hücre seçildi. İki aday sayıyı kaydetmek için aşağıdaki sayıları kullanın.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Önce Notlar düğmesine basarak not modunu açın, ardından hedef hücreyi seçin.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Bu, ikinci tür 6×6 Sudoku'dur; her kutu 3 satır × 2 sütundan oluşur. Vurguları görmek için tablodaki bir sayıyı seçin veya aday sayıları Notlar'a kaydedin. Takılırsanız 21. adımı tekrarlayın.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Tablodaki bir sayıyı seçerek bulunduğu satırı, sütunu ve kutuyu vurgulayın. Boş hücreyi seçip sayı girin. Notlar modunda aday sayıları kaydedebilirsiniz.",
+    "記下": "Eklendi",
+    "移除": "Kaldırıldı",
+    "第二十六步": "26. Adım",
+    "第二十五步": "25. Adım",
+    "直排": "sütun",
+    "九宮格": "3×3 kutu",
+    "橫排": "satır"
+  }
+}
