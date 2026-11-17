@@ -516,3 +516,80 @@ body.game-active .category-nav{display:none}
   .sticky-shell header nav > button,
   .sticky-shell header nav .language-control{height:42px}
 }
+
+
+/* V114 Arabic RTL support: adapt reading direction and page flow without mirroring Sudoku cells or number keys. */
+html[dir="rtl"] body,
+html[dir="rtl"] .panel,
+html[dir="rtl"] .brand,
+html[dir="rtl"] .lessons article,
+html[dir="rtl"] .gamehead,
+html[dir="rtl"] .instruction,
+html[dir="rtl"] #feedback,
+html[dir="rtl"] .dialog,
+html[dir="rtl"] footer {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] header {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .brand-logo {
+  object-position: right center;
+}
+html[dir="rtl"] nav {
+  margin-left: 0;
+  margin-right: auto;
+  flex-direction: row-reverse;
+  direction: rtl;
+}
+html[dir="rtl"] .category-nav {
+  direction: rtl;
+}
+html[dir="rtl"] .lessons article {
+  direction: rtl;
+  grid-template-columns: 42px 1fr auto;
+}
+html[dir="rtl"] .gamehead {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .gamehead strong {
+  direction: ltr;
+}
+html[dir="rtl"] #grid,
+html[dir="rtl"] .pad,
+html[dir="rtl"] .pad button,
+html[dir="rtl"] .cell,
+html[dir="rtl"] .sparse-cell,
+html[dir="rtl"] .sparse-board-cell {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: center;
+}
+html[dir="rtl"] .puzzle-area {
+  direction: ltr;
+}
+html[dir="rtl"] .gamefoot {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .actions {
+  direction: rtl;
+}
+html[dir="rtl"] #game.column-layout {
+  direction: rtl;
+}
+html[dir="rtl"] #game.column-layout #grid.column {
+  direction: ltr;
+}
+html[dir="rtl"] #language-select {
+  direction: rtl;
+  text-align: right;
+}
+@media(max-width:640px) {
+  html[dir="rtl"] .lessons article {
+    grid-template-columns: 36px 1fr;
+  }
+  html[dir="rtl"] .lessons .start {
+    grid-column: 1 / -1;
+  }
+}

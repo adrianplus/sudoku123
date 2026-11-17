@@ -34,3 +34,10 @@ Important: some of the less common fixed gameplay messages use a general Indones
 - Added Türkçe (`tr`) with 38 UI strings, 45 lesson cards, 45 step instructions, and 111 gameplay messages.
 - Added Turkish after Vietnamese in the language selector, preserving Traditional Chinese first and Simplified Chinese last.
 - Based on V112; existing puzzle data, answers, gameplay logic, and mobile layout are preserved.
+
+
+## V114 – Arabic language and RTL layout support
+- Added العربية (`ar`) with 38 UI strings, 45 lesson cards, 45 step instructions, and 111 fixed gameplay messages.
+- Added Arabic right-to-left reading direction and right-aligned text for the page interface.
+- Sudoku grids and number pads remain left-to-right so puzzle coordinates and number entry are not mirrored.
+- Based on V113; no puzzle data, answers, or gameplay rules were intentionally changed.
