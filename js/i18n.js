@@ -251,7 +251,7 @@ function translateRuntime(raw){
   const L=lang;
   if(L==="zh-TW"||L==="ja"||L==="ko")return raw;
   const en=L==="en",id=L==="id",vi=L==="vi",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
-  const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:vi?a:e;
+  const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:vi?a:lang==="ar"?"يرجى متابعة التعليمات الظاهرة على الشاشة.":e;
   let m;
   if((m=raw.match(/^已反金數字 (\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/)))return pick(`Highlighted ${m[1]} and selected the current cell. Press Clear or enter another number.`,`Se resaltó el ${m[1]} y se seleccionó la casilla actual. Pulsa Borrar o introduce otro número.`,`Le ${m[1]} est surligné et la case actuelle est sélectionnée. Appuyez sur Effacer ou saisissez un autre chiffre.`,`O ${m[1]} foi destacado e a casa atual foi selecionada. Toque em Limpar ou insira outro número.`,`${m[1]} wurde markiert und das aktuelle Feld ausgewählt. Tippen Sie auf Löschen oder geben Sie eine andere Zahl ein.`);
   if((m=raw.match(/^已反金數字 (\d+)，可觀察它所在的橫排、直排與九宮格。$/)))return pick(`Highlighted ${m[1]}. Observe its row, column, and 3×3 box.`,`Se resaltó el ${m[1]}. Observa su fila, columna y caja 3×3.`,`Le ${m[1]} est surligné. Observez sa ligne, sa colonne et sa région 3×3.`,`O ${m[1]} foi destacado. Observe sua linha, coluna e bloco 3×3.`,`${m[1]} wurde markiert. Beachten Sie die zugehörige Zeile, Spalte und den 3×3-Block.`);

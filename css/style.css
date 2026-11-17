@@ -593,3 +593,116 @@ html[dir="rtl"] #language-select {
     grid-column: 1 / -1;
   }
 }
+
+
+/* V114.1: Arabic mobile layout correction only.
+   Keep desktop layout and all non-Arabic locales unchanged. */
+@media (max-width:640px) {
+  html[dir="rtl"] {
+    overflow-x: clip;
+  }
+  html[dir="rtl"] body {
+    overflow-x: clip;
+  }
+  html[dir="rtl"] main,
+  html[dir="rtl"] .panel,
+  html[dir="rtl"] #game {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Short lessons: separate the status/question line from the tool buttons. */
+  html[dir="rtl"] #game:not(.column-layout) .gamefoot {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+  }
+  html[dir="rtl"] #question {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+  html[dir="rtl"] .game-tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+  }
+  html[dir="rtl"] .game-tools > button,
+  html[dir="rtl"] .game-tools #check-wrap,
+  html[dir="rtl"] .game-tools #check-wrap button {
+    min-width: 0;
+    max-width: 100%;
+    flex: 0 1 auto;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  html[dir="rtl"] #hint {
+    flex: 0 0 42px;
+  }
+
+  /* 9×9 board and nine-number keypad must fit the phone viewport. */
+  html[dir="rtl"] .puzzle-area {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  html[dir="rtl"] #grid.nine-combat-board {
+    width: min(100%, calc(100vw - 48px)) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    min-width: 0;
+  }
+  html[dir="rtl"] #game:has(.nine-combat-board) .pad {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: clamp(2px, 1vw, 5px);
+    direction: ltr;
+  }
+  html[dir="rtl"] #game:has(.nine-combat-board) .pad button {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: clamp(42px, 11vw, 54px);
+    padding: 0;
+    font-size: clamp(1.15rem, 6vw, 1.8rem);
+    line-height: 1;
+  }
+  html[dir="rtl"] #game:has(.nine-combat-board) .gamefoot {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  html[dir="rtl"] #game:has(.nine-combat-board) .game-tools {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Long Arabic instructions may wrap, but must not push controls off-screen. */
+  html[dir="rtl"] .instruction,
+  html[dir="rtl"] #feedback {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}
