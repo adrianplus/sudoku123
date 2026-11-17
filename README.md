@@ -41,3 +41,10 @@ Important: some of the less common fixed gameplay messages use a general Indones
 - Added Arabic right-to-left reading direction and right-aligned text for the page interface.
 - Sudoku grids and number pads remain left-to-right so puzzle coordinates and number entry are not mirrored.
 - Based on V113; no puzzle data, answers, or gameplay rules were intentionally changed.
+
+
+## V115 – Hindi language
+- Added हिन्दी (`hi`) with 38 UI strings, 45 lesson cards, 45 step instructions, and 111 fixed gameplay messages.
+- Added Hindi to the language selector after Arabic and before Korean.
+- Hindi is left-to-right; no RTL layout changes were added.
+- Based on accepted V114.2; existing puzzles, answers, gameplay logic, and mobile layout are preserved.

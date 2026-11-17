@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","es-419","es-ES","fr","pt-BR","ru","id","de","ja","vi","ko","it","zh-CN","tr","ar"];
+const allowed=["zh-TW","en","es-419","es-ES","fr","pt-BR","ru","id","de","ja","vi","ko","it","zh-CN","tr","ar","hi"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
@@ -36,6 +36,10 @@ function translateRuntimeJK(raw,L){
   const ja=L==="ja";
   const choose=(j,k)=>ja?j:k;
   let m;
+  if((m=raw.match(/^已反金數字 (\\d+)，可觀察它所在的橫排、直排與九宮格。$/))&&hi)
+    return `संख्या ${m[1]} हाइलाइट की गई है। उसकी पंक्ति, स्तंभ और 3×3 खंड देखें।`;
+  if((m=raw.match(/^已反金數字 (\\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/))&&hi)
+    return `संख्या ${m[1]} हाइलाइट है और वर्तमान खाना चुना गया है। मिटाने के लिए “मिटाएँ” दबाएँ या दूसरी संख्या भरें।`;
   if((m=raw.match(/^第\s*(\d+)\s*題$/)))return choose(`問題 ${m[1]}`,`문제 ${m[1]}`);
   if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*題/)))return choose(`問題 ${m[1]} / ${m[2]}`,`${m[1]} / ${m[2]}번 문제`);
   if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*步/)))return choose(`ステップ ${m[1]} / ${m[2]}`,`${m[1]} / ${m[2]}단계`);
@@ -250,8 +254,8 @@ function textCore(value){
 function translateRuntime(raw){
   const L=lang;
   if(L==="zh-TW"||L==="ja"||L==="ko")return raw;
-  const en=L==="en",id=L==="id",vi=L==="vi",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
-  const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:vi?a:lang==="ar"?"يرجى متابعة التعليمات الظاهرة على الشاشة.":e;
+  const en=L==="en",id=L==="id",vi=L==="vi",hi=L==="hi",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
+  const pick=(a,b,c,d,e)=>hi?"कृपया स्क्रीन पर दिए गए निर्देशों का पालन करें।":en?a:es?b:fr?c:pt?d:vi?a:lang==="ar"?"يرجى متابعة التعليمات الظاهرة على الشاشة.":e;
   let m;
   if((m=raw.match(/^已反金數字 (\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/)))return pick(`Highlighted ${m[1]} and selected the current cell. Press Clear or enter another number.`,`Se resaltó el ${m[1]} y se seleccionó la casilla actual. Pulsa Borrar o introduce otro número.`,`Le ${m[1]} est surligné et la case actuelle est sélectionnée. Appuyez sur Effacer ou saisissez un autre chiffre.`,`O ${m[1]} foi destacado e a casa atual foi selecionada. Toque em Limpar ou insira outro número.`,`${m[1]} wurde markiert und das aktuelle Feld ausgewählt. Tippen Sie auf Löschen oder geben Sie eine andere Zahl ein.`);
   if((m=raw.match(/^已反金數字 (\d+)，可觀察它所在的橫排、直排與九宮格。$/)))return pick(`Highlighted ${m[1]}. Observe its row, column, and 3×3 box.`,`Se resaltó el ${m[1]}. Observa su fila, columna y caja 3×3.`,`Le ${m[1]} est surligné. Observez sa ligne, sa colonne et sa région 3×3.`,`O ${m[1]} foi destacado. Observe sua linha, coluna e bloco 3×3.`,`${m[1]} wurde markiert. Beachten Sie die zugehörige Zeile, Spalte und den 3×3-Block.`);
@@ -284,7 +288,7 @@ function translateRuntime(raw){
   if((m=raw.match(/^答對了！數字 (\d+) 已保留，繼續第 (\d+) \/ 21 步。$/)))return pick(`Correct! ${m[1]} is saved. Continue to step ${m[2]} of 21.`,`¡Correcto! El ${m[1]} se ha guardado. Continúa con el paso ${m[2]} de 21.`,`Correct ! Le ${m[1]} est conservé. Passez à l’étape ${m[2]} sur 21.`,`Correto! O número ${m[1]} foi mantido. Continue para a etapa ${m[2]} de 21.`,`Richtig! Die ${m[1]} bleibt erhalten. Weiter mit Schritt ${m[2]} von 21.`);
   if((m=raw.match(/^答對了！數字 (\d+) 已保留在棋盤上，請繼續(?:解)?第 (\d+) 題。$/)))return pick(`Correct! ${m[1]} is saved on the grid. Continue to question ${m[2]}.`,`¡Correcto! El ${m[1]} permanece en el tablero. Continúa con la pregunta ${m[2]}.`,`Correct ! Le ${m[1]} est conservé sur la grille. Passez à la question ${m[2]}.`,`Correto! O número ${m[1]} foi mantido no tabuleiro. Continue para a questão ${m[2]}.`,`Richtig! Die ${m[1]} bleibt im Gitter. Weiter mit Aufgabe ${m[2]}.`);
   if((m=raw.match(/^答對了！已完成 (\d+) \/ 6 題。$/)))return pick(`Correct! ${m[1]} of 6 questions completed.`,`¡Correcto! Has completado ${m[1]} de 6 preguntas.`,`Correct ! ${m[1]} questions sur 6 terminées.`,`Correto! ${m[1]} de 6 questões concluídas.`,`Richtig! ${m[1]} von 6 Aufgaben abgeschlossen.`);
-  if((m=raw.match(/^答對了！目前連續答對 (\d+) \/ (\d+) 題。$/)))return pick(`Correct! ${m[1]} of ${m[2]} consecutive answers are correct.`,`¡Correcto! ${m[1]} de ${m[2]} respuestas consecutivas son correctas.`,`Correct ! ${m[1]} réponses correctes consécutives sur ${m[2]}.`,`Correto! ${m[1]} de ${m[2]} respostas consecutivas corretas.`,`Richtig! ${m[1]} von ${m[2]} Antworten in Folge richtig.`);
+  if((m=raw.match(/^答對了！目前連續答對 (\d+) \/ (\d+) 題。$/)))return hi?`सही! लगातार ${m[1]} में से ${m[2]} उत्तर सही हैं।`:pick(`Correct! ${m[1]} of ${m[2]} consecutive answers are correct.`,`¡Correcto! ${m[1]} de ${m[2]} respuestas consecutivas son correctas.`,`Correct ! ${m[1]} réponses correctes consécutives sur ${m[2]}.`,`Correto! ${m[1]} de ${m[2]} respostas consecutivas corretas.`,`Richtig! ${m[1]} von ${m[2]} Antworten in Folge richtig.`);
   if((m=raw.match(/^已檢查 (\d+) 格，有 (\d+) 格不正確，錯誤答案已標示紅色。可以用「空」清除後重新填寫。$/)))return pick(`Checked ${m[1]} cells; ${m[2]} are incorrect. Errors are marked red. Use Clear to remove and correct them.`,`Se comprobaron ${m[1]} casillas; ${m[2]} son incorrectas. Los errores están en rojo. Usa Borrar para corregirlos.`,` ${m[1]} cases vérifiées ; ${m[2]} erreurs. Elles sont en rouge. Utilisez Effacer pour les corriger.`,`${m[1]} casas conferidas; ${m[2]} incorretas. Os erros aparecem em vermelho. Use Limpar para corrigir.`,`${m[1]} Felder geprüft; ${m[2]} sind falsch. Fehler sind rot markiert. Mit Löschen können Sie sie korrigieren.`);
   if((m=raw.match(/^已檢查 (\d+) 格，有 (\d+) 格不正確，紅色數字請再試試看。正確答案不會直接公布。$/)))return pick(`Checked ${m[1]} cells; ${m[2]} are incorrect. Try the red numbers again. The correct answers are not revealed.`,`Se comprobaron ${m[1]} casillas; ${m[2]} son incorrectas. Vuelve a intentar los números rojos. No se muestran las respuestas correctas.`,` ${m[1]} cases vérifiées ; ${m[2]} erreurs. Réessayez les chiffres rouges. Les bonnes réponses ne sont pas révélées.`,`${m[1]} casas conferidas; ${m[2]} incorretas. Tente novamente os números vermelhos. As respostas corretas não serão reveladas.`,`${m[1]} Felder geprüft; ${m[2]} sind falsch. Versuchen Sie es mit den roten Zahlen erneut. Die richtigen Antworten werden nicht verraten.`);
   if((m=raw.match(/^目前填入的 (\d+) 格都正確！還有 (\d+) 格未完成(，繼續加油)?。?$/)))return pick(`${m[1]} entered cells are correct! ${m[2]} cells remain. Keep going!`,`¡Las ${m[1]} casillas introducidas son correctas! Quedan ${m[2]}. ¡Sigue así!`,`Les ${m[1]} réponses saisies sont correctes ! Il reste ${m[2]} cases. Continuez !`,`As ${m[1]} casas preenchidas estão corretas! Restam ${m[2]}. Continue!`,`Alle ${m[1]} eingetragenen Zahlen sind richtig! Noch ${m[2]} Felder. Weiter so!`);
@@ -325,7 +329,7 @@ function translateRuntime(raw){
   if(raw==="太好了！整盤 6×6 數獨全部正確，你完成了第二十五步實戰！")return pick("Excellent! The entire 6×6 Sudoku is correct. You completed the Step 25 challenge!","¡Excelente! Todo el Sudoku 6×6 está correcto. ¡Has completado el desafío del paso 25!","Excellent ! Toute la grille de sudoku 6×6 est correcte. Vous avez terminé le défi de l’étape 25 !","Excelente! Todo o Sudoku 6×6 está correto. Você concluiu o desafio da etapa 25!","Ausgezeichnet! Das gesamte 6×6-Sudoku ist richtig. Sie haben die Herausforderung in Schritt 25 abgeschlossen!");
   if(raw==="太好了！整盤 6×6 數獨全部正確，你完成了第二十六步實戰！")return pick("Excellent! The entire 6×6 Sudoku is correct. You completed the Step 26 challenge!","¡Excelente! Todo el Sudoku 6×6 está correcto. ¡Has completado el desafío del paso 26!","Excellent ! Toute la grille de sudoku 6×6 est correcte. Vous avez terminé le défi de l’étape 26 !","Excelente! Todo o Sudoku 6×6 está correto. Você concluiu o desafio da etapa 26!","Ausgezeichnet! Das gesamte 6×6-Sudoku ist richtig. Sie haben die Herausforderung in Schritt 26 abgeschlossen!");
   if(raw.includes("中文")||/[\u3400-\u9fff]/.test(raw)){
-    const fallback=L==="id"?"Silakan ikuti petunjuk pada layar.":pick("Please continue with the on-screen instructions.","Continúa siguiendo las instrucciones en pantalla.","Veuillez suivre les instructions affichées à l’écran.","Continue seguindo as instruções na tela.","Bitte folgen Sie den Anweisungen auf dem Bildschirm.");
+    const fallback=L==="hi"?"कृपया स्क्रीन पर दिए गए निर्देशों का पालन करें।":L==="id"?"Silakan ikuti petunjuk pada layar.":pick("Please continue with the on-screen instructions.","Continúa siguiendo las instrucciones en pantalla.","Veuillez suivre les instructions affichées à l’écran.","Continue seguindo as instruções na tela.","Bitte folgen Sie den Anweisungen auf dem Bildschirm.");
     try{window.__sudokuI18nMissing=window.__sudokuI18nMissing||[];if(!window.__sudokuI18nMissing.includes(raw))window.__sudokuI18nMissing.push(raw);if(window.console&&console.warn)console.warn("Untranslated Sudoku message:",L,raw);}catch(e){}
     return fallback;
   }
@@ -338,7 +342,7 @@ function text(value){
   if(/[\u3400-\u9fff]/.test(rendered)){
     const retried=translateRuntime(String(value));
     if(!/[\u3400-\u9fff]/.test(String(retried)))return retried;
-    const fallback={ar:"يرجى متابعة التعليمات الظاهرة على الشاشة.",en:"Please continue with the on-screen instructions.",es:"Continúa siguiendo las instrucciones en pantalla.",fr:"Veuillez suivre les instructions affichées à l’écran.","pt-BR":"Continue seguindo as instruções na tela.",de:"Bitte folgen Sie den Anweisungen auf dem Bildschirm.",ru:"Пожалуйста, следуйте инструкциям на экране.",it:"Segui le istruzioni sullo schermo."}[lang]||"Please continue.";
+    const fallback={hi:"कृपया स्क्रीन पर दिए गए निर्देशों का पालन करें।",ar:"يرجى متابعة التعليمات الظاهرة على الشاشة.",en:"Please continue with the on-screen instructions.",es:"Continúa siguiendo las instrucciones en pantalla.",fr:"Veuillez suivre les instructions affichées à l’écran.","pt-BR":"Continue seguindo as instruções na tela.",de:"Bitte folgen Sie den Anweisungen auf dem Bildschirm.",ru:"Пожалуйста, следуйте инструкциям на экране.",it:"Segui le istruzioni sullo schermo."}[lang]||"Please continue.";
     try{window.__sudokuI18nMissing=window.__sudokuI18nMissing||[];if(!window.__sudokuI18nMissing.includes(String(value)))window.__sudokuI18nMissing.push(String(value));if(window.console&&console.warn)console.warn("Untranslated Sudoku message:",lang,String(value));}catch(e){}
     return fallback;
   }
@@ -398,7 +402,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","tr":"Türkçe","ar":"العربية","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","tr":"Türkçe","ar":"العربية","hi":"हिन्दी","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");
