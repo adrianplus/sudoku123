@@ -1,12 +1,29 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","es","fr","pt-BR","de","ja","ko","zh-CN"];
+const allowed=["zh-TW","en","es","fr","pt-BR","de","ja","ko","ru","it","zh-CN"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
 function load(v){
   lang=allowed.includes(v)?v:"zh-TW";
   const dictionaries=window.SudokuLanguageData||{};
-  dict=dictionaries[lang]||dictionaries["zh-TW"]||null;
+  if(lang==="zh-CN" && dictionaries["zh-TW"]){
+    // V109.0 has no standalone zh-CN dictionary. Build a complete Simplified
+    // Chinese view from the canonical Traditional Chinese dictionary so UI,
+    // category tabs, lesson cards, and fixed messages all switch together.
+    const convertTree=value=>{
+      if(typeof value==="string")return simplify(value);
+      if(Array.isArray(value))return value.map(convertTree);
+      if(value && typeof value==="object"){
+        const out={};
+        Object.keys(value).forEach(key=>{out[key]=convertTree(value[key]);});
+        return out;
+      }
+      return value;
+    };
+    dict=convertTree(dictionaries["zh-TW"]);
+  }else{
+    dict=dictionaries[lang]||dictionaries["zh-TW"]||null;
+  }
   if(!dict){lang="zh-TW";return;}
   safeSet(lang);
   apply();
@@ -321,7 +338,7 @@ function text(value){
   if(/[\u3400-\u9fff]/.test(rendered)){
     const retried=translateRuntime(String(value));
     if(!/[\u3400-\u9fff]/.test(String(retried)))return retried;
-    const fallback={en:"Please continue with the on-screen instructions.",es:"Continúa siguiendo las instrucciones en pantalla.",fr:"Veuillez suivre les instructions affichées à l’écran.","pt-BR":"Continue seguindo as instruções na tela.",de:"Bitte folgen Sie den Anweisungen auf dem Bildschirm."}[lang]||"Please continue.";
+    const fallback={en:"Please continue with the on-screen instructions.",es:"Continúa siguiendo las instrucciones en pantalla.",fr:"Veuillez suivre les instructions affichées à l’écran.","pt-BR":"Continue seguindo as instruções na tela.",de:"Bitte folgen Sie den Anweisungen auf dem Bildschirm.",ru:"Пожалуйста, следуйте инструкциям на экране.",it:"Segui le istruzioni sullo schermo."}[lang]||"Please continue.";
     try{window.__sudokuI18nMissing=window.__sudokuI18nMissing||[];if(!window.__sudokuI18nMissing.includes(String(value)))window.__sudokuI18nMissing.push(String(value));if(window.console&&console.warn)console.warn("Untranslated Sudoku message:",lang,String(value));}catch(e){}
     return fallback;
   }
@@ -331,6 +348,13 @@ function step(mode,field,fallback){
   if(lang==="zh-TW")return fallback;
   return (dict&&dict.steps&&dict.steps[mode]&&dict.steps[mode][field])||text(fallback);
 }
+// Keep the original Traditional Chinese lesson-card copy so every language
+// switch can restore from a stable source instead of the previously rendered text.
+const originalLessonCards = Array.from(document.querySelectorAll(".lessons article")).map(article=>({
+  title: article.querySelector("h3")?.textContent || "",
+  description: article.querySelector("p")?.textContent || "",
+  action: article.querySelector("button")?.textContent || ""
+}));
 function apply(){
   if(!dict)return;
   document.documentElement.lang=lang==="zh-TW"?"zh-Hant":lang;
@@ -349,9 +373,18 @@ function apply(){
   dividers.forEach((el,i)=>el.textContent=ui(["section6","section9"][i]));
   document.querySelectorAll(".lessons article").forEach((article,i)=>{
     const item=dict.lessons&&dict.lessons[i];
+    const original=originalLessonCards[i];
     const h=article.querySelector("h3"),p=article.querySelector("p"),b=article.querySelector("button");
     if(item){if(h)h.textContent=item.title;if(p)p.textContent=item.description;if(b)b.textContent=item.action;}
-    else if(lang==="zh-CN"){if(h)h.textContent=simplify(h.textContent);if(p)p.textContent=simplify(p.textContent);if(b)b.textContent=simplify(b.textContent);}
+    else if(lang==="zh-TW" && original){
+      if(h)h.textContent=original.title;
+      if(p)p.textContent=original.description;
+      if(b)b.textContent=original.action;
+    }else if(lang==="zh-CN" && original){
+      if(h)h.textContent=simplify(original.title);
+      if(p)p.textContent=simplify(original.description);
+      if(b)b.textContent=simplify(original.action);
+    }
   });
   set("#home .note","homeNote");
   set("#feedback","gameFeedback");
@@ -363,7 +396,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","es":"Español","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","es":"Español","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");
