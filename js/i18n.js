@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","es","es-ES","es-419","fr","pt-BR","de","ja","ko","ru","it","zh-CN"];
+const allowed=["zh-TW","en","id","es","es-ES","es-419","fr","pt-BR","de","ja","ko","ru","it","zh-CN"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
@@ -250,7 +250,7 @@ function textCore(value){
 function translateRuntime(raw){
   const L=lang;
   if(L==="zh-TW"||L==="ja"||L==="ko")return raw;
-  const en=L==="en",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
+  const en=L==="en",id=L==="id",es=L==="es"||L==="es-ES"||L==="es-419",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
   const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:e;
   let m;
   if((m=raw.match(/^已反金數字 (\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/)))return pick(`Highlighted ${m[1]} and selected the current cell. Press Clear or enter another number.`,`Se resaltó el ${m[1]} y se seleccionó la casilla actual. Pulsa Borrar o introduce otro número.`,`Le ${m[1]} est surligné et la case actuelle est sélectionnée. Appuyez sur Effacer ou saisissez un autre chiffre.`,`O ${m[1]} foi destacado e a casa atual foi selecionada. Toque em Limpar ou insira outro número.`,`${m[1]} wurde markiert und das aktuelle Feld ausgewählt. Tippen Sie auf Löschen oder geben Sie eine andere Zahl ein.`);
@@ -325,7 +325,7 @@ function translateRuntime(raw){
   if(raw==="太好了！整盤 6×6 數獨全部正確，你完成了第二十五步實戰！")return pick("Excellent! The entire 6×6 Sudoku is correct. You completed the Step 25 challenge!","¡Excelente! Todo el Sudoku 6×6 está correcto. ¡Has completado el desafío del paso 25!","Excellent ! Toute la grille de sudoku 6×6 est correcte. Vous avez terminé le défi de l’étape 25 !","Excelente! Todo o Sudoku 6×6 está correto. Você concluiu o desafio da etapa 25!","Ausgezeichnet! Das gesamte 6×6-Sudoku ist richtig. Sie haben die Herausforderung in Schritt 25 abgeschlossen!");
   if(raw==="太好了！整盤 6×6 數獨全部正確，你完成了第二十六步實戰！")return pick("Excellent! The entire 6×6 Sudoku is correct. You completed the Step 26 challenge!","¡Excelente! Todo el Sudoku 6×6 está correcto. ¡Has completado el desafío del paso 26!","Excellent ! Toute la grille de sudoku 6×6 est correcte. Vous avez terminé le défi de l’étape 26 !","Excelente! Todo o Sudoku 6×6 está correto. Você concluiu o desafio da etapa 26!","Ausgezeichnet! Das gesamte 6×6-Sudoku ist richtig. Sie haben die Herausforderung in Schritt 26 abgeschlossen!");
   if(raw.includes("中文")||/[\u3400-\u9fff]/.test(raw)){
-    const fallback=pick("Please continue with the on-screen instructions.","Continúa siguiendo las instrucciones en pantalla.","Veuillez suivre les instructions affichées à l’écran.","Continue seguindo as instruções na tela.","Bitte folgen Sie den Anweisungen auf dem Bildschirm.");
+    const fallback=L==="id"?"Silakan ikuti petunjuk pada layar.":pick("Please continue with the on-screen instructions.","Continúa siguiendo las instrucciones en pantalla.","Veuillez suivre les instructions affichées à l’écran.","Continue seguindo as instruções na tela.","Bitte folgen Sie den Anweisungen auf dem Bildschirm.");
     try{window.__sudokuI18nMissing=window.__sudokuI18nMissing||[];if(!window.__sudokuI18nMissing.includes(raw))window.__sudokuI18nMissing.push(raw);if(window.console&&console.warn)console.warn("Untranslated Sudoku message:",L,raw);}catch(e){}
     return fallback;
   }
@@ -396,7 +396,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");

@@ -1,28 +1,24 @@
-# Sudoku V110 — Spanish regional language packs
+# Sudoku V111 — Bahasa Indonesia
 
-Based on V109.3 (mobile header layout) and retaining the V109.2 Chinese language-switch fixes.
+Based on V110. The Indonesian language option (`id`, Bahasa Indonesia) has been added.
 
-## Added language options
-- Español (España) — `es-ES`
-- Español (Latinoamérica) — `es-419`
-
-Both variants include the complete existing locale structure:
-- 38 UI strings
+## Included translation structure
+- 38 interface strings
 - 45 lesson cards
-- 45 step descriptions
+- 45 step entries
 - 111 fixed gameplay messages
 
-The previous generic `es` locale remains available internally for backward compatibility with existing saved settings. The selector now presents the two explicit regional options.
+The locale is available both as `languages/id.json` and in the embedded `js/language-data.js` bundle for direct `file://` use.
 
-## Technical notes
-- Both locale dictionaries are included as standalone JSON files and embedded in `js/language-data.js` for direct `file://` use.
-- Runtime-generated messages route through the existing Spanish runtime translations.
-- The mobile header layout from V109.3 is preserved.
-- No Sudoku puzzle data, answers, progression, or gameplay logic was modified.
+## Preserved
+- V109.3 mobile header layout
+- V110 Spanish (Spain) and Spanish (Latin America) options
+- Existing language packs, puzzles, answers, progress behavior, and gameplay logic
 
 ## Validation
-- JSON structure/count checks for both new locales.
-- JavaScript syntax checks for `i18n.js`, `language-data.js`, and `app.js`.
-- ZIP integrity check.
+- JSON structure/count validation
+- JavaScript syntax checks
+- Embedded/standalone locale consistency
+- ZIP integrity
 
-Browser/device interaction testing has not been performed here. Please test both Spanish options on the same iPhone browser/webview and check long lesson descriptions.
+Important: some of the less common fixed gameplay messages use a general Indonesian instruction fallback rather than a fully contextual sentence. Browser/device interaction testing has not been performed. Please test the Indonesian option locally before publishing.

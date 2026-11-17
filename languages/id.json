@@ -1,0 +1,564 @@
+{
+  "ui": {
+    "siteTitle": "Le Zai Ling Zhong | Kelas Sudoku",
+    "village": "Desa Belajar Sudoku",
+    "home": "Beranda",
+    "smaller": "Perkecil teks",
+    "larger": "Perbesar teks",
+    "language": "Bahasa",
+    "category4": "Sudoku 4×4",
+    "category6": "Sudoku 6×6",
+    "category9": "Sudoku 9×9",
+    "homeNote": "Tidak perlu masuk atau menggunakan pengatur waktu. Belajarlah dengan santai.",
+    "start": "Mulai latihan",
+    "exam": "Mulai ujian",
+    "study": "Mulai pelajaran",
+    "challenge": "Mulai tantangan",
+    "practice": "Mulai latihan",
+    "battle": "Mulai tantangan",
+    "graduation": "Mulai ujian",
+    "firstInterview": "Mulai wawancara pertama",
+    "finalInterview": "Mulai wawancara akhir",
+    "hiredChallenge": "Mulai tantangan setelah diterima",
+    "gameFeedback": "Pilih sebuah kotak, lalu pilih angka di bawah.",
+    "check": "Periksa",
+    "clear": "Hapus",
+    "notes": "Catatan",
+    "hint": "Petunjuk",
+    "question": "Soal",
+    "modalTitle": "Langkah selesai!",
+    "next": "Langkah berikutnya",
+    "modalHome": "Kembali ke beranda",
+    "footer": "Le Zai Ling Zhong | Tidak perlu terburu-buru. Belajar selangkah demi selangkah.",
+    "gridAria": "Papan Sudoku",
+    "categoryAria": "Kategori ukuran Sudoku",
+    "brandAlt": "Logo Le Zai Ling Zhong",
+    "section4": "Sudoku 4×4",
+    "section6": "Sudoku 6×6",
+    "section9": "Sudoku 9×9",
+    "completeNext": "Anda telah menyelesaikan langkah ini. Bagus sekali! Lanjutkan ke tantangan berikutnya.",
+    "completeAll": "Anda telah menyelesaikan semua langkah yang tersedia! Bagus sekali. Anda dapat kembali ke beranda."
+  },
+  "lessons": [
+    {
+      "title": "Langkah 1: Baris",
+      "description": "Perhatikan baris dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 2: Kolom",
+      "description": "Perhatikan kolom dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 3: Kotak 2×2",
+      "description": "Temukan angka yang hilang di dalam kotak kecil.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 4: Baris + Kolom",
+      "description": "Gunakan petunjuk baris dan kolom untuk menentukan angka pada tanda tanya.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 5: Tiga Arah",
+      "description": "Gabungkan petunjuk dari tiga arah untuk menemukan angka yang benar.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 6: Kotak + Kolom + Baris",
+      "description": "Gunakan petunjuk kotak, kolom, dan baris secara bersamaan.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 7: Temukan Petunjuk Penting",
+      "description": "Abaikan angka yang tidak berkaitan dan temukan petunjuk yang diperlukan.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 8: Latihan Sudoku 4×4",
+      "description": "Selesaikan soal secara berurutan. Setiap jawaban benar akan tetap di papan.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 9: Tantangan Sudoku 4×4",
+      "description": "Pilih kotak kosong, masukkan angka, lalu periksa jawaban Anda. Gunakan petunjuk jika diperlukan.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 10: Temukan Kotak Kunci",
+      "description": "Temukan kotak pertama yang jawabannya dapat dipastikan. Setiap jawaban benar akan membawa Anda ke soal berikutnya.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 11: Ujian Akhir 4×4 (1/3)",
+      "description": "Lengkapi papan 4×4 dan periksa jawaban Anda. Angka yang salah akan ditandai merah.",
+      "action": "Mulai ujian"
+    },
+    {
+      "title": "Langkah 12: Ujian Akhir 4×4 (2/3)",
+      "description": "Lengkapi papan 4×4 kedua dan periksa jawaban Anda. Angka yang salah akan ditandai merah.",
+      "action": "Mulai ujian"
+    },
+    {
+      "title": "Langkah 13: Ujian Akhir 4×4 (3/3)",
+      "description": "Lengkapi papan 4×4 ketiga dan periksa jawaban Anda. Angka yang salah akan ditandai merah.",
+      "action": "Mulai ujian"
+    },
+    {
+      "title": "Langkah 14: Sudoku 6×6 – Baris",
+      "description": "Perhatikan enam kotak dalam satu baris dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 15: Sudoku 6×6 – Kolom",
+      "description": "Perhatikan enam kotak dalam satu kolom dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 16: Sudoku 6×6 – Kotak",
+      "description": "Temukan angka yang hilang di dalam kotak berisi enam sel.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 17: Apa Itu Sudoku 6×6? (Tipe 1)",
+      "description": "Pelajari aturan baris, kolom, dan kotak, lalu selesaikan tiga kotak sasaran.",
+      "action": "Mulai pelajaran"
+    },
+    {
+      "title": "Langkah 18: Catatan Kandidat (Baris 6×6)",
+      "description": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 19: Catatan Kandidat (Kolom 6×6)",
+      "description": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong pada kolom.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 20: Catatan Kandidat (Kotak 6×6)",
+      "description": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong dalam kotak.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 21: Apa Itu Sudoku 6×6? (Tipe 2)",
+      "description": "Selesaikan lima kotak sasaran secara berurutan. Jawaban yang benar akan tetap di papan.",
+      "action": "Mulai pelajaran"
+    },
+    {
+      "title": "Langkah 22: Tantangan Catatan Kandidat",
+      "description": "Selesaikan delapan kotak sasaran dengan mencatat dua angka kandidat di setiap kotak.",
+      "action": "Mulai tantangan"
+    },
+    {
+      "title": "Langkah 23: Periksa Satu Angka Sekaligus (1, 2, 6)",
+      "description": "Periksa angka 1, 2, dan 6 secara bergantian. Gunakan baris, kolom, dan kotak yang disorot untuk menemukan posisi setiap angka.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 24: Periksa Satu Angka Sekaligus (1, 2, 5)",
+      "description": "Periksa angka 1, 2, dan 5 secara bergantian. Gunakan baris, kolom, dan kotak yang disorot untuk menemukan posisi setiap angka.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 25: Tantangan Sudoku 6×6 1",
+      "description": "Selesaikan seluruh Sudoku 6×6 dengan menggunakan penyorotan dan catatan kandidat.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 26: Tantangan Sudoku 6×6 2",
+      "description": "Coba Sudoku 6×6 yang lebih sulit dan gabungkan semua teknik yang telah Anda pelajari.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 27: Sudoku 9×9 – Baris",
+      "description": "Perhatikan sembilan kotak dalam satu baris dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 28: Sudoku 9×9 – Kolom",
+      "description": "Perhatikan sembilan kotak dalam satu kolom dan temukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 29: Sudoku 9×9 – Kotak",
+      "description": "Temukan angka yang hilang di dalam kotak 3×3.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 30: Selesaikan dengan Baris dan Kolom",
+      "description": "Gunakan baris dan kolom bersama-sama untuk menemukan angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 31: Baris + Kolom + Kotak",
+      "description": "Gunakan baris, kolom, dan kotak 3×3 untuk menemukan satu angka yang hilang.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 32: Temukan Petunjuk yang Relevan",
+      "description": "Abaikan angka yang tidak berkaitan dan fokus pada petunjuk penting di baris, kolom, dan kotak.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 33: Catatan Kandidat (Baris 9×9)",
+      "description": "Berlatih mencatat angka kandidat yang hilang sebagai catatan kecil di setiap baris.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 34: Catatan Kandidat (Kolom 9×9)",
+      "description": "Berlatih mencatat angka kandidat yang hilang sebagai catatan kecil di setiap kolom.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 35: Catatan Kandidat (Kotak 9×9)",
+      "description": "Gunakan catatan kandidat untuk menemukan angka yang mungkin di setiap kotak 3×3.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 36: Latihan Sudoku 9×9 1 – Langkah demi Langkah",
+      "description": "Ikuti urutan yang ditentukan dan selesaikan 21 kotak sasaran dalam satu Sudoku 9×9.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 37: Latihan Sudoku 9×9 2 – Gunakan Catatan Kandidat",
+      "description": "Gunakan catatan kandidat pada empat kotak sasaran pertama, lalu selesaikan kotak terakhir dengan bantuan catatan tersebut.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 38: Latihan Sudoku 9×9 3 – Periksa Satu Angka Sekaligus",
+      "description": "Periksa angka 1 sampai 9 satu per satu. Gunakan penyorotan dan catatan kandidat untuk menemukan setiap posisi.",
+      "action": "Mulai latihan"
+    },
+    {
+      "title": "Langkah 39: Tantangan Sudoku 9×9 1",
+      "description": "Selesaikan seluruh Sudoku 9×9. Gunakan catatan kandidat dan penyorotan angka jika diperlukan.",
+      "action": "Mulai tantangan"
+    },
+    {
+      "title": "Langkah 40: Tantangan Sudoku 9×9 2 – Metode Dua Posisi",
+      "description": "Gunakan metode dua posisi dan periksa satu angka sekaligus untuk menyelesaikan seluruh papan.",
+      "action": "Mulai tantangan"
+    },
+    {
+      "title": "Langkah 41: Ujian Akhir Sudoku 9×9 (Bagian 1)",
+      "description": "Selesaikan seluruh Sudoku. Anda dapat memeriksa kapan saja; jawaban yang salah akan ditandai merah.",
+      "action": "Mulai ujian"
+    },
+    {
+      "title": "Langkah 42: Ujian Akhir Sudoku 9×9 (Bagian 2)",
+      "description": "Selesaikan soal ujian kedua. Anda dapat memeriksa kapan saja; jawaban yang salah akan ditandai merah.",
+      "action": "Mulai ujian"
+    },
+    {
+      "title": "Langkah 43: Wawancara Kerja Pertama – Sudoku 9×9",
+      "description": "Ini wawancara kerja pertama Anda. Gunakan keterampilan dari ujian akhir untuk menyelesaikan Sudoku 9×9 ini.",
+      "action": "Mulai wawancara pertama"
+    },
+    {
+      "title": "Langkah 44: Wawancara Kerja Terakhir – Sudoku 9×9",
+      "description": "Ini wawancara kerja terakhir Anda. Selesaikan Sudoku 9×9 ini dengan menggunakan catatan, penyorotan, dan pemeriksaan.",
+      "action": "Mulai wawancara akhir"
+    },
+    {
+      "title": "Langkah 45: Tantangan Pertama Setelah Diterima Bekerja – Sudoku 9×9",
+      "description": "Selamat, Anda diterima bekerja! Hadapi tantangan pertama Anda setelah bergabung dengan perusahaan.",
+      "action": "Mulai tantangan setelah diterima"
+    }
+  ],
+  "steps": {
+    "row": {
+      "title": "Langkah 1: Baris",
+      "instruction": "Perhatikan baris dan temukan angka yang hilang."
+    },
+    "column": {
+      "title": "Langkah 2: Kolom",
+      "instruction": "Perhatikan kolom dan temukan angka yang hilang."
+    },
+    "box": {
+      "title": "Langkah 3: Kotak 2×2",
+      "instruction": "Temukan angka yang hilang di dalam kotak kecil."
+    },
+    "rowcol": {
+      "title": "Langkah 4: Baris + Kolom",
+      "instruction": "Gunakan petunjuk baris dan kolom untuk menentukan angka pada tanda tanya."
+    },
+    "threeways": {
+      "title": "Langkah 5: Tiga Arah",
+      "instruction": "Gabungkan petunjuk dari tiga arah untuk menemukan angka yang benar."
+    },
+    "boxways": {
+      "title": "Langkah 6: Kotak + Kolom + Baris",
+      "instruction": "Gunakan petunjuk kotak, kolom, dan baris secara bersamaan."
+    },
+    "advanced": {
+      "title": "Langkah 7: Temukan Petunjuk Penting",
+      "instruction": "Abaikan angka yang tidak berkaitan dan temukan petunjuk yang diperlukan."
+    },
+    "classic": {
+      "title": "Langkah 8: Latihan Sudoku 4×4",
+      "instruction": "Selesaikan soal secara berurutan. Setiap jawaban benar akan tetap di papan."
+    },
+    "practical": {
+      "title": "Langkah 9: Tantangan Sudoku 4×4",
+      "instruction": "Pilih kotak kosong, masukkan angka, lalu periksa jawaban Anda. Gunakan petunjuk jika diperlukan."
+    },
+    "breakthrough": {
+      "title": "Langkah 10: Temukan Kotak Kunci",
+      "instruction": "Temukan kotak pertama yang jawabannya dapat dipastikan. Setiap jawaban benar akan membawa Anda ke soal berikutnya."
+    },
+    "graduate1": {
+      "title": "Langkah 11: Ujian Akhir 4×4 (1/3)",
+      "instruction": "Lengkapi papan 4×4 dan periksa jawaban Anda. Angka yang salah akan ditandai merah."
+    },
+    "graduate2": {
+      "title": "Langkah 12: Ujian Akhir 4×4 (2/3)",
+      "instruction": "Lengkapi papan 4×4 kedua dan periksa jawaban Anda. Angka yang salah akan ditandai merah."
+    },
+    "graduate3": {
+      "title": "Langkah 13: Ujian Akhir 4×4 (3/3)",
+      "instruction": "Lengkapi papan 4×4 ketiga dan periksa jawaban Anda. Angka yang salah akan ditandai merah."
+    },
+    "sixrow": {
+      "title": "Langkah 14: Sudoku 6×6 – Baris",
+      "instruction": "Perhatikan enam kotak dalam satu baris dan temukan angka yang hilang."
+    },
+    "sixcolumn": {
+      "title": "Langkah 15: Sudoku 6×6 – Kolom",
+      "instruction": "Perhatikan enam kotak dalam satu kolom dan temukan angka yang hilang."
+    },
+    "sixbox": {
+      "title": "Langkah 16: Sudoku 6×6 – Kotak",
+      "instruction": "Temukan angka yang hilang di dalam kotak berisi enam sel."
+    },
+    "sixnote": {
+      "title": "Langkah 18: Catatan Kandidat (Baris 6×6)",
+      "instruction": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong."
+    },
+    "sixcolumnnote": {
+      "title": "Langkah 19: Catatan Kandidat (Kolom 6×6)",
+      "instruction": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong pada kolom."
+    },
+    "sixboxnote": {
+      "title": "Langkah 20: Catatan Kandidat (Kotak 6×6)",
+      "instruction": "Catat dua angka yang hilang sebagai catatan kecil di dua kotak kosong dalam kotak."
+    },
+    "step14": {
+      "title": "Langkah 17: Apa Itu Sudoku 6×6? (Tipe 1)",
+      "instruction": "Sudoku memiliki tiga aturan:\n1. Setiap kolom berisi angka 1–6 tanpa pengulangan.\n2. Setiap baris berisi angka 1–6 tanpa pengulangan.\n3. Setiap kotak berisi enam sel dengan angka 1–6 tanpa pengulangan.\nSelesaikan tiga kotak sasaran secara berurutan. Jawaban yang benar akan tetap di papan."
+    },
+    "sixintro2": {
+      "title": "Langkah 21: Apa Itu Sudoku 6×6? (Tipe 2)",
+      "instruction": "Selesaikan lima kotak sasaran secara berurutan. Jawaban yang benar akan tetap di papan."
+    },
+    "sixnotecombat": {
+      "title": "Langkah 22: Tantangan Catatan Kandidat",
+      "instruction": "Selesaikan delapan kotak sasaran dengan mencatat dua angka kandidat di setiap kotak."
+    },
+    "numberfocus": {
+      "title": "Langkah 23: Periksa Satu Angka Sekaligus (1, 2, 6)",
+      "instruction": "Periksa angka 1, 2, dan 6 secara bergantian. Gunakan baris, kolom, dan kotak yang disorot untuk menemukan posisi setiap angka."
+    },
+    "numberfocus2": {
+      "title": "Langkah 24: Periksa Satu Angka Sekaligus (1, 2, 5)",
+      "instruction": "Periksa angka 1, 2, dan 5 secara bergantian. Gunakan baris, kolom, dan kotak yang disorot untuk menemukan posisi setiap angka."
+    },
+    "numberfocus3": {
+      "title": "Langkah 25: Tantangan Sudoku 6×6 1",
+      "instruction": "Selesaikan seluruh Sudoku 6×6 dengan menggunakan penyorotan dan catatan kandidat."
+    },
+    "numberfocus4": {
+      "title": "Langkah 26: Tantangan Sudoku 6×6 2",
+      "instruction": "Coba Sudoku 6×6 yang lebih sulit dan gabungkan semua teknik yang telah Anda pelajari."
+    },
+    "ninerow": {
+      "title": "Langkah 27: Sudoku 9×9 – Baris",
+      "instruction": "Perhatikan sembilan kotak dalam satu baris dan temukan angka yang hilang."
+    },
+    "ninecolumn": {
+      "title": "Langkah 28: Sudoku 9×9 – Kolom",
+      "instruction": "Perhatikan sembilan kotak dalam satu kolom dan temukan angka yang hilang."
+    },
+    "ninebox": {
+      "title": "Langkah 29: Sudoku 9×9 – Kotak",
+      "instruction": "Temukan angka yang hilang di dalam kotak 3×3."
+    },
+    "ninerowcol": {
+      "title": "Langkah 30: Selesaikan dengan Baris dan Kolom",
+      "instruction": "Gunakan baris dan kolom bersama-sama untuk menemukan angka yang hilang."
+    },
+    "ninerowcolbox": {
+      "title": "Langkah 31: Baris + Kolom + Kotak",
+      "instruction": "Gunakan baris, kolom, dan kotak 3×3 untuk menemukan satu angka yang hilang."
+    },
+    "nineadvanced": {
+      "title": "Langkah 32: Temukan Petunjuk yang Relevan",
+      "instruction": "Abaikan angka yang tidak berkaitan dan fokus pada petunjuk penting di baris, kolom, dan kotak."
+    },
+    "ninenote": {
+      "title": "Langkah 33: Catatan Kandidat (Baris 9×9)",
+      "instruction": "Berlatih mencatat angka kandidat yang hilang sebagai catatan kecil di setiap baris."
+    },
+    "ninecolumnnote": {
+      "title": "Langkah 34: Catatan Kandidat (Kolom 9×9)",
+      "instruction": "Berlatih mencatat angka kandidat yang hilang sebagai catatan kecil di setiap kolom."
+    },
+    "nineboxnote": {
+      "title": "Langkah 35: Catatan Kandidat (Kotak 9×9)",
+      "instruction": "Gunakan catatan kandidat untuk menemukan angka yang mungkin di setiap kotak 3×3."
+    },
+    "ninepractice1": {
+      "title": "Langkah 36: Latihan Sudoku 9×9 1 – Langkah demi Langkah",
+      "instruction": "Ikuti urutan yang ditentukan dan selesaikan 21 kotak sasaran dalam satu Sudoku 9×9."
+    },
+    "ninepractice2": {
+      "title": "Langkah 37: Latihan Sudoku 9×9 2 – Gunakan Catatan Kandidat",
+      "instruction": "Gunakan catatan kandidat pada empat kotak sasaran pertama, lalu selesaikan kotak terakhir dengan bantuan catatan tersebut."
+    },
+    "ninefocus": {
+      "title": "Langkah 38: Latihan Sudoku 9×9 3 – Periksa Satu Angka Sekaligus",
+      "instruction": "Periksa angka 1 sampai 9 satu per satu. Gunakan penyorotan dan catatan kandidat untuk menemukan setiap posisi."
+    },
+    "ninecombat1": {
+      "title": "Langkah 39: Tantangan Sudoku 9×9 1",
+      "instruction": "Selesaikan seluruh Sudoku 9×9. Gunakan catatan kandidat dan penyorotan angka jika diperlukan."
+    },
+    "ninecombat2": {
+      "title": "Langkah 40: Tantangan Sudoku 9×9 2 – Metode Dua Posisi",
+      "instruction": "Gunakan metode dua posisi dan periksa satu angka sekaligus untuk menyelesaikan seluruh papan."
+    },
+    "ninecombat3": {
+      "title": "Langkah 41: Ujian Akhir Sudoku 9×9 (Bagian 1)",
+      "instruction": "Selesaikan seluruh Sudoku. Anda dapat memeriksa kapan saja; jawaban yang salah akan ditandai merah."
+    },
+    "ninecombat4": {
+      "title": "Langkah 42: Ujian Akhir Sudoku 9×9 (Bagian 2)",
+      "instruction": "Selesaikan soal ujian kedua. Anda dapat memeriksa kapan saja; jawaban yang salah akan ditandai merah."
+    },
+    "ninecombat75": {
+      "title": "Langkah 43: Wawancara Kerja Pertama – Sudoku 9×9",
+      "instruction": "Ini wawancara kerja pertama Anda. Gunakan keterampilan dari ujian akhir untuk menyelesaikan Sudoku 9×9 ini."
+    },
+    "ninecombat80": {
+      "title": "Langkah 44: Wawancara Kerja Terakhir – Sudoku 9×9",
+      "instruction": "Ini wawancara kerja terakhir Anda. Selesaikan Sudoku 9×9 ini dengan menggunakan catatan, penyorotan, dan pemeriksaan."
+    },
+    "ninecombat5": {
+      "title": "Langkah 45: Tantangan Pertama Setelah Diterima Bekerja – Sudoku 9×9",
+      "instruction": "Selamat, Anda diterima bekerja! Hadapi tantangan pertama Anda setelah bergabung dengan perusahaan."
+    }
+  },
+  "messages": {
+    "請觀察格子，再選擇下方數字。": "Perhatikan kotak-kotak, lalu pilih angka di bawah.",
+    "答對了！你找到破局點！": "Benar! Anda menemukan kotak kunci!",
+    "再想一想！請重新觀察線索。": "Coba lagi. Perhatikan petunjuknya sekali lagi.",
+    "沒關係，慢慢找。請再選一次。": "Tidak apa-apa. Jangan terburu-buru, lalu coba lagi.",
+    "請先選取一個空格。": "Silakan pilih kotak kosong terlebih dahulu.",
+    "請先選取一個空格，再按數字加入小字。": "Pilih kotak kosong, lalu pilih angka untuk menambahkan catatan kandidat.",
+    "請先點選棋盤上的空格，再選擇數字。": "Pilih kotak kosong pada papan, lalu pilih angka.",
+    "題目原有數字不能修改。": "Angka asli pada soal tidak dapat diubah.",
+    "筆記模式已開啟。請選取空格，再按下方數字輸入小字。": "Mode Catatan aktif. Pilih kotak kosong, lalu pilih angka di bawah untuk menambahkan catatan.",
+    "筆記模式已關閉。": "Mode Catatan nonaktif.",
+    "已取消所有金色反白。": "Semua sorotan kuning telah dihapus.",
+    "目前沒有選取空格，也沒有反金顯示。": "Tidak ada kotak yang dipilih dan tidak ada angka yang disorot.",
+    "目前沒有選取空格，也沒有反白區域。": "Tidak ada kotak yang dipilih dan tidak ada area yang disorot.",
+    "已清空選取格子的答案與筆記。": "Jawaban dan catatan pada kotak yang dipilih telah dihapus.",
+    "已清空選取格子的所有小字。": "Semua catatan kandidat pada kotak yang dipilih telah dihapus.",
+    "按下方數字加入或移除筆記。": "Pilih angka di bawah untuk menambahkan atau menghapus catatan.",
+    "筆記模式目前關閉，請按「筆記」開啟。": "Mode Catatan nonaktif. Tekan Catatan untuk mengaktifkannya.",
+    "請先關閉「筆記」，再填入正式答案。": "Nonaktifkan Catatan sebelum memasukkan jawaban akhir.",
+    "請依照順序完成目前亮起的目標格。": "Selesaikan kotak sasaran yang sedang disorot sesuai urutan.",
+    "請先完成目前亮起的目標格，再進行下一格。": "Selesaikan kotak sasaran yang sedang disorot sebelum melanjutkan.",
+    "已選取空格，請按下方數字填入答案。": "Kotak kosong telah dipilih. Pilih angka di bawah untuk memasukkan jawaban.",
+    "已填入答案。系統不會自動判斷；需要時可按「檢查」。": "Jawaban telah dimasukkan. Sistem tidak memeriksa secara otomatis; tekan Periksa jika sudah siap.",
+    "已填入數字。填好後按「檢查」，也可以繼續修改。": "Angka telah dimasukkan. Tekan Periksa jika sudah siap, atau lanjutkan mengubah jawaban.",
+    "再想一想：只要解開目前問號所在的格子即可。": "Coba lagi. Anda hanya perlu menyelesaikan kotak yang bertanda tanya.",
+    "這次不對，數字已標紅。再觀察一下，重新找破局點！": "Belum tepat. Angka ditandai merah. Perhatikan kembali dan temukan cara menyelesaikannya!",
+    "三題全部答對！你已學會一次檢查一個數字。": "Ketiganya benar! Anda telah belajar memeriksa satu angka setiap kali.",
+    "數字 1～9 都已完成檢查！你完成了第三十八步。": "Anda telah memeriksa semua angka dari 1 sampai 9. Langkah 38 selesai!",
+    "本次已完成，但瀏覽器無法保存進度。": "Sesi ini selesai, tetapi browser tidak dapat menyimpan kemajuan Anda.",
+    "目前目標格已選取，請先開啟「筆記」。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "目前目標格已選取，請按下方數字寫入小字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "最後目標格已選取，請直接填入答案。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先選取目前目標格，再選擇數字寫入小字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選棋盤上已存在的指定數字，觀察反白區域。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先自己找出並點選可以填入這個數字的空格，再按下方數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選棋盤上已有的 1、2 或 6，再觀察金色反白區域。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選棋盤上已有的 1、2 或 5，再觀察金色反白區域。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "提示：缺少的數字是 ": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "已記下兩個數字，但組合不正確。請用「空」清除後重試。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這格的候選數字不正確，請用「空」清除後重新記錄。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "兩個候選小字不正確，請用「空」清除後重新記錄。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這個候選數字不正確，請再觀察九宮格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這個位置不正確。請重新觀察金色反白區域，找出能填入該數字的空格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "已選取這一格，請選擇你認為正確的數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先選擇一個空格，再按下方數字填入或記筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "全部正確！你完成了 4X4 數獨實戰！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "全部正確！你通過了4X4數獨畢業考（1/3）！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "全部正確！你通過了4X4數獨畢業考（2/3）！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "全部正確！你通過了4X4數獨畢業考（3/3）！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "八個目標格全部完成！你已完成第二十二步筆記實戰。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "五題全部答對！你已完成6×6數獨第二類練習。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！這盤數獨全部正確，恭喜你通過第四十三步：9×9數獨公司初次面試！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！你完成了公司的最終面試，正式通過第四十四步！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！你完成了90分難度的挑戰，通過第四十五步：9X9數獨公司錄取後的第一次考驗！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "你已完成這一步，做得很好！接下來繼續挑戰下一步吧。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選棋盤上已有的數字，觀察反白區域。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "先按「筆記」開啟，再根據目標格所在的橫排、直排與六宮格，記下兩個候選數字。已完成的格子會保留。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "先按「筆記」，再選取空格，把這一橫排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "先按「筆記」，再選取空格，把這一直排缺少的候選數字全部記成小字。注意本關共有六題，題型會依序改變。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請依序觀察五個目標格，先看所在橫排，再看直排與六宮格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這一關請靠自己的觀察找出破局點！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "畢業考請靠自己的觀察完成，加油！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "按下方數字填入答案；也可開啟筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "現在請開啟「筆記」，把可能的位置記下小字 1。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "加油！提示已經使用完畢，你可以自己做到！": "Keep going! All hints have been used. Anda dapat finish it yourself!",
+    "提示已經使用完畢，你可以自己做到！": "All hints have been used. Anda dapat finish it yourself!",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十二步！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十一步！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！這盤 9×9 數獨全部正確，完成第四十步！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！這盤 9×9 數獨全部正確，完成第三十九步！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請依序完成目前亮起的目標格。": "Selesaikan kotak sasaran yang sedang disorot sesuai urutan.",
+    "筆記模式已開啟。目標格已自動選取，請直接按下方數字輸入小字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "最後一步請先主動關閉「筆記」，再直接填入正式答案。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "再想一想：利用前面四個保留的小字筆記推測最後答案。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "新題目來了！再找出一個破局點。": "A new soal! Find another breakthrough kotak.",
+    "題目原有數字不能修改，請選擇空格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這個數字目前不正確。請利用橫排、直排與六宮格線索再想一想，或先用筆記記錄候選數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這個答案不正確，數字不會寫入棋盤。請再觀察橫排、直排與九宮格，或先使用筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "有些小字不是這一排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "有些小字不是這一橫排缺少的數字。按「空」可清除目前格子，再重新記錄。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "再想一想：先看橫排，再看直排，最後檢查所在的六宮格。答對後數字會保留。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "再想一想：觀察目標格所在的橫排、直排與六宮格。答對後數字會保留。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "下一題開始！筆記模式已自動開啟，請在兩個空格各記下目前題目缺少的兩個數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "三題全部答對！你已學會利用橫排、直排與六宮格的規則解題。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "三題全部完成！你已學會一次檢查一個數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "前四步請先開啟「筆記」，寫入兩個候選小字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "原本題目提供的數字不能修改，請選擇空格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "太好了！你已依序完成全部 21 步，成功解開這盤數獨！": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "已選取空格，請按下方數字填入。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "筆記模式目前關閉，請先按「筆記」開啟。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "答對了！你已完成利用筆記推測答案的練習。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先直接點選上方 6×6 棋盤裡已存在的數字，系統才會反白該數字的橫排、直排與六宮格；下方數字按鈕只用來填答案或筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先點選你認為可以突破的空格，再選擇數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "按下方數字填入答案；需要時可開啟筆記。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "可以自行判斷要記筆記或直接填入答案。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "已選取目標格，請用下方數字記錄兩個候選小字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "請先按「筆記」開啟筆記模式，再選取目標格。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "這是第二類數獨，六宮格為 3 列 × 2 欄。可以先點棋盤上的數字觀察反白，或使用筆記記錄候選數字；若卡住，可先回第二十一步複習。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "先點選棋盤上的數字，觀察該數字所在的橫排、直排與六宮格；選取空格後按數字填入。筆記模式可記錄候選數字。": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "記下": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "移除": "Silakan ikuti petunjuk pada layar dan lanjutkan latihan.",
+    "第二十六步": "Langkah 26",
+    "第二十五步": "Langkah 25",
+    "直排": "kolom",
+    "九宮格": "3×3 kotak",
+    "橫排": "baris"
+  }
+}
