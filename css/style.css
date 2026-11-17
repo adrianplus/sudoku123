@@ -407,3 +407,112 @@ body.game-active .category-nav{display:none}
 .language-chevron{width:15px;height:15px;flex:0 0 15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 #language-select{position:absolute;inset:0;width:100%;height:100%;max-width:none;min-width:0;margin:0;padding:0;border:0;border-radius:inherit;opacity:0;cursor:pointer;font-size:16px}
 @media(max-width:640px){.language-control{height:36px;min-width:112px;gap:6px;padding:0 8px;font-size:.76em}.language-globe{width:18px;height:18px;flex-basis:18px}.language-chevron{width:14px;height:14px;flex-basis:14px}}
+
+
+/* V109.3: Mobile header follows the approved two-column sketch.
+   Logo occupies the left column; title and the four controls stack on the right. */
+@media (max-width:640px){
+  .sticky-shell header{
+    display:grid;
+    grid-template-columns:clamp(88px,18vw,116px) minmax(0,1fr);
+    grid-template-rows:auto auto;
+    grid-template-areas:
+      "logo brand"
+      "logo controls";
+    align-items:center;
+    column-gap:12px;
+    row-gap:8px;
+    padding:10px 12px;
+  }
+  .sticky-shell .brand-logo{
+    grid-area:logo;
+    width:100%;
+    height:auto;
+    aspect-ratio:1 / 1;
+    object-fit:contain;
+    object-position:center;
+    border:1px solid #d9e0e8;
+    border-radius:50%;
+    padding:8px;
+    align-self:center;
+  }
+  .sticky-shell .brand{
+    grid-area:brand;
+    min-width:0;
+    width:100%;
+    align-self:end;
+  }
+  .sticky-shell .brand h1{
+    margin:0;
+    font-size:clamp(1rem,4.5vw,1.3rem);
+    line-height:1.2;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  .sticky-shell header nav{
+    grid-area:controls;
+    display:grid;
+    grid-template-columns:minmax(0,.85fr) minmax(0,.85fr) minmax(0,.85fr) minmax(0,2.1fr);
+    width:100%;
+    min-width:0;
+    margin:0;
+    gap:6px;
+    align-self:start;
+  }
+  .sticky-shell header nav > button,
+  .sticky-shell header nav .language-control{
+    width:100%;
+    min-width:0;
+    max-width:none;
+    height:46px;
+    margin:0;
+    padding:0 4px;
+    border-radius:10px;
+  }
+  .sticky-shell header nav > button{
+    display:grid;
+    place-items:center;
+    font-size:1em;
+  }
+  .sticky-shell header nav #home-top img{
+    width:30px;
+    height:30px;
+  }
+  .sticky-shell header nav #font-smaller,
+  .sticky-shell header nav #font-larger{
+    font-size:1.1em;
+  }
+  .sticky-shell header nav .language-control{
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    font-size:clamp(.68rem,2.8vw,.82rem);
+    padding:0 5px;
+  }
+  .sticky-shell header nav .language-globe{
+    width:17px;
+    height:17px;
+    flex:0 0 17px;
+  }
+  .sticky-shell header nav .language-chevron{
+    width:13px;
+    height:13px;
+    flex:0 0 13px;
+  }
+  .sticky-shell header nav .language-control-label{
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+}
+@media (max-width:380px){
+  .sticky-shell header{
+    grid-template-columns:84px minmax(0,1fr);
+    column-gap:9px;
+    padding-left:9px;
+    padding-right:9px;
+  }
+  .sticky-shell header nav{gap:4px}
+  .sticky-shell header nav > button,
+  .sticky-shell header nav .language-control{height:42px}
+}

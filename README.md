@@ -1,18 +1,19 @@
-# Sudoku V109.2 — Complete Simplified Chinese switching
+# Sudoku V109.3 — Mobile header layout
 
-Based on V109.1.
+Based on V109.2.
 
-## Fix
-- The language data shipped in V109.0 contains no standalone `zh-CN` dictionary.
-- Previously, selecting Simplified Chinese fell back to the Traditional Chinese dictionary for static UI labels, including the 4×4 / 6×6 / 9×9 category tabs.
-- V109.2 now builds a complete Simplified Chinese dictionary view from the canonical Traditional Chinese dictionary at language-switch time.
-- The conversion covers UI labels, category navigation, lesson cards, step content, and fixed messages.
-- V109.1's restoration of original Traditional Chinese lesson-card text remains intact.
-- Other languages and Sudoku gameplay logic are unchanged.
+## Change
+- Mobile header only (viewport width up to 640px) now follows the user's revised sketch.
+- The logo occupies a dedicated left column and spans the title/control rows.
+- The localized title sits at the upper right and can wrap naturally without being squeezed by controls.
+- Home, A−, A+, and Language controls sit together in one row below the title.
+- The three Sudoku category buttons and all lesson/game content retain their existing styles and behavior.
+- Desktop layout is unchanged.
+- No puzzle data, answers, progress logic, translations, or gameplay code was modified.
 
 ## Validation
+- CSS/HTML change inspection and cache-busting version update.
 - JavaScript syntax checks for i18n.js, language-data.js, and app.js.
-- Confirmed the Simplified Chinese dictionary is generated from the Traditional Chinese source and all category labels are converted.
-- ZIP integrity check passed.
+- ZIP integrity check.
 
-Browser interaction testing has not been performed here. Please open `index.html` locally and verify switching from Traditional Chinese / another language to Simplified Chinese.
+Browser/device interaction testing has not been performed here. Please test on the same iPhone browser/webview used in the screenshots, including long-title languages (Japanese, Korean, German, Russian).
