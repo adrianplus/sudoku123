@@ -288,7 +288,7 @@
 /* V105.1：第27、28步的缺格恢復顯示單一「？」。
    先前為修正其他步驟的雙問號而全域關閉偽元素，誤傷了橫排與直排練習。 */
 .nine-practice-cell.missing:after{content:"?";display:block;}
-#grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:"?" !important;display:block !important;}
+#grid.sudoku.nine-practice-board .nine-practice-cell.missing::after{content:"？" !important;display:block !important;}
 
 /* 第37步：9×9 筆記→正式答案 */
 #grid.nine-practice2-board .nine-practice-cell{position:relative;}

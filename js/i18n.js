@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const allowed=["zh-TW","en","es","fr","pt-BR","de","zh-CN"];
+const allowed=["zh-TW","en","es","fr","pt-BR","de","ja","ko","zh-CN"];
 let lang="zh-TW",dict=null;
 const safeGet=()=>{try{return localStorage.getItem("lezaiblingzhong_sudoku_language")||"zh-TW"}catch(e){return "zh-TW"}};
 const safeSet=v=>{try{localStorage.setItem("lezaiblingzhong_sudoku_language",v)}catch(e){}};
@@ -14,12 +14,100 @@ function load(v){
 const simplifyMap = {"並":"并","併":"并","來":"来","係":"系","個":"个","內":"内","兩":"两","別":"别","則":"则","剛":"刚","動":"动","區":"区","參":"参","問":"问","啟":"启","單":"单","嘗":"尝","圍":"围","學":"学","宮":"宫","實":"实","寫":"写","將":"将","尋":"寻","對":"对","屬":"属","張":"张","強":"强","後":"后","從":"从","態":"态","慮":"虑","應":"应","戰":"战","戲":"戏","捲":"卷","換":"换","擇":"择","據":"据","擾":"扰","敗":"败","數":"数","斷":"断","於":"于","時":"时","暫":"暂","會":"会","條":"条","業":"业","樂":"乐","標":"标","樣":"样","機":"机","橫":"横","檢":"检","欄":"栏","決":"决","沒":"没","減":"减","測":"测","準":"准","瀏":"浏","為":"为","無":"无","狀":"状","獨":"独","現":"现","產":"产","畢":"毕","當":"当","盤":"盘","確":"确","種":"种","筆":"笔","範":"范","紀":"纪","紅":"红","終":"终","組":"组","絕":"绝","統":"统","經":"经","綜":"综","維":"维","線":"线","編":"编","練":"练","縮":"缩","總":"总","繼":"继","續":"续","習":"习","職":"职","與":"与","舊":"旧","蒐":"搜","藍":"蓝","處":"处","號":"号","裡":"里","複":"复","規":"规","覽":"览","觀":"观","計":"计","記":"记","設":"设","試":"试","該":"该","誌":"志","認":"认","語":"语","誤":"误","說":"说","課":"课","請":"请","謎":"谜","證":"证","識":"识","變":"变","讓":"让","輯":"辑","輸":"输","這":"这","連":"连","進":"进","遊":"游","運":"运","過":"过","選":"选","還":"还","邏":"逻","鈕":"钮","錄":"录","錯":"错","鏈":"链","閉":"闭","開":"开","間":"间","闖":"闯","關":"关","隨":"随","難":"难","靈":"灵","響":"响","頁":"页","順":"顺","須":"须","題":"题","顏":"颜","類":"类","顯":"显","餘":"余","驗":"验","驟":"骤","體":"体","麼":"么","點":"点","齡":"龄"};
 function simplify(value){return String(value).replace(/[\u3400-\u9fff]/g,ch=>simplifyMap[ch]||ch)}
 function ui(key,fallback=""){return (dict&&dict.ui&&dict.ui[key])||fallback}
+
+function translateRuntimeJK(raw,L){
+  const ja=L==="ja";
+  const choose=(j,k)=>ja?j:k;
+  let m;
+  if((m=raw.match(/^第\s*(\d+)\s*題$/)))return choose(`問題 ${m[1]}`,`문제 ${m[1]}`);
+  if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*題/)))return choose(`問題 ${m[1]} / ${m[2]}`,`${m[1]} / ${m[2]}번 문제`);
+  if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*步/)))return choose(`ステップ ${m[1]} / ${m[2]}`,`${m[1]} / ${m[2]}단계`);
+  if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*關/)))return choose(`レベル ${m[1]} / ${m[2]}`,`${m[1]} / ${m[2]}단계`);
+  if((m=raw.match(/^已完成\s*(\d+)\s*\/\s*(\d+)\s*格/)))return choose(`${m[1]} / ${m[2]}マス完了`,`${m[1]} / ${m[2]}칸 완료`);
+  if((m=raw.match(/^第\s*(\d+)\s*列第\s*(\d+)\s*欄/)))return choose(`${m[1]}行 ${m[2]}列`,` ${m[1]}행 ${m[2]}열`);
+  if(raw==="自行填寫")return choose("自分で入力","직접 입력");
+  if(raw==="三題完成")return choose("3問完了","3문제 완료");
+  if(raw==="五題完成")return choose("5問完了","5문제 완료");
+  if(raw==="八格完成")return choose("8マス完了","8칸 완료");
+  if(raw==="21 步完成")return choose("21ステップ完了","21단계 완료");
+  if(raw==="完成了！")return choose("完了！","완료!");
+  if((m=raw.match(/^第\s*(\d+)\s*題：(.+)$/)))return choose(`問題 ${m[1]}：${m[2]}`,`${m[1]}번 문제: ${m[2]}`);
+  if((m=raw.match(/^答對了！目前連續答對\s*(\d+)\s*\/\s*(\d+)\s*題。$/)))return choose(`正解です！${m[1]} / ${m[2]}問連続正解です。`,`정답입니다! ${m[2]}문제 중 ${m[1]}문제 연속 정답입니다.`);
+  if((m=raw.match(/^答對了！已完成\s*(\d+)\s*\/\s*(\d+)\s*題。$/)))return choose(`正解です！${m[1]} / ${m[2]}問完了しました。`,`정답입니다! ${m[2]}문제 중 ${m[1]}문제를 완료했습니다.`);
+  if((m=raw.match(/^兩個空格都已正確記下兩個小字！連續答對\s*(\d+)\s*\/\s*(\d+)\s*題。$/)))return choose(`2つの空きマスに正しい候補を記録しました！${m[1]} / ${m[2]}問連続正解です。`,`두 빈칸에 올바른 후보 숫자를 모두 기록했습니다! ${m[2]}문제 중 ${m[1]}문제 연속 정답입니다.`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已填入並保留。(.*)$/)))return choose(`正解です！${m[1]}を入力し、盤面に残しました。${m[2]?"続けて解くか、別の数字を選んで盤面を確認できます。":""}`,`정답입니다! ${m[1]}을(를) 입력했고 보드에 유지됩니다.${m[2]?" 계속 풀거나 다른 숫자를 선택해 보드를 살펴보세요.":""}`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已保留，繼續第\s*(\d+)\s*\/\s*21\s*步。$/)))return choose(`正解です！${m[1]}を盤面に残しました。ステップ ${m[2]} / 21 に進みましょう。`,`정답입니다! ${m[1]}이(가) 보드에 유지됩니다. ${m[2]} / 21단계로 계속하세요.`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已保留在棋盤上，請繼續第\s*(\d+)\s*題。$/)))return choose(`正解です！${m[1]}を盤面に残しました。問題${m[2]}に進みましょう。`,`정답입니다! ${m[1]}이(가) 보드에 유지됩니다. ${m[2]}번 문제를 계속하세요.`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已保留在棋盤上，請繼續解第\s*(\d+)\s*題。$/)))return choose(`正解です！${m[1]}を盤面に残しました。問題${m[2]}を解きましょう。`,`정답입니다! ${m[1]}이(가) 보드에 유지됩니다. ${m[2]}번 문제를 계속 푸세요.`);
+  if((m=raw.match(/^已反金數字\s*(\d+)，並選取目前格子；可按「空」清除或直接輸入其他數字。$/)))return choose(`${m[1]}をハイライトし、現在のマスを選択しました。「消去」を押すか、別の数字を入力してください。`,`숫자 ${m[1]}을 강조하고 현재 칸을 선택했습니다. ‘지우기’를 누르거나 다른 숫자를 입력하세요.`);
+  if((m=raw.match(/^已反金數字\s*(\d+)，可觀察它所在的橫排、直排與九宮格。$/)))return choose(`${m[1]}をハイライトしました。横の列、縦の列、3×3ブロックを確認してください。`,`숫자 ${m[1]}을 강조했습니다. 해당 가로줄, 세로줄, 3×3 상자를 살펴보세요.`);
+  if((m=raw.match(/^已反白所有數字\s*(\d+)\s*所在的橫排、直排與六宮格。$/)))return choose(`${m[1]}がある横の列、縦の列、ブロックをハイライトしました。`,`${m[1]}이(가) 있는 가로줄, 세로줄, 상자를 강조했습니다.`);
+  if((m=raw.match(/^已反白所有既有的\s*(\d+)\s*所在的橫排、直排與六宮格。請自行找出能填入\s*(\d+)\s*的空格。$/)))return choose(`盤面にある${m[1]}の横の列、縦の列、ブロックをハイライトしました。${m[2]}を入れられる空きマスを見つけてください。`,`보드에 있는 ${m[1]}이(가) 포함된 가로줄, 세로줄, 상자를 강조했습니다. ${m[2]}을(를) 넣을 빈칸을 직접 찾으세요.`);
+  if((m=raw.match(/^目前請檢查全部的\s*(\d+)，請點選棋盤上已有的\s*(\d+)。$/)))return choose(`${m[1]}をすべて確認します。盤面にある${m[2]}を選んでください。`,`숫자 ${m[1]}을 모두 확인하세요. 보드에서 숫자 ${m[2]}를 선택하세요.`);
+  if((m=raw.match(/^目前請先檢查數字\s*(\d+)，請按題目中的任一個\s*(\d+)。$/)))return choose(`最初に数字${m[1]}を確認します。問題内にある${m[2]}をどれか選んでください。`,`먼저 숫자 ${m[1]}을 확인하세요. 문제에서 숫자 ${m[2]} 하나를 선택하세요.`);
+  if((m=raw.match(/^請先在題目中按下任一個數字\s*(\d+)，啟動反金效果。$/)))return choose(`問題内にある${m[1]}をどれか選び、ハイライトを表示してください。`,`문제에서 숫자 ${m[1]} 하나를 선택해 강조 표시를 켜세요.`);
+  if((m=raw.match(/^已選取第\s*(\d+)\s*列、第\s*(\d+)\s*欄。(.+)$/)))return choose(`${m[1]}行${m[2]}列を選択しました。${m[3].includes("加入或移除筆記")?"下の数字を選んでメモを追加または削除してください。":m[3].includes("填入答案")?"下の数字を選んで答えを入力してください。":"続けて操作してください。"}`,`${m[1]}행 ${m[2]}열을 선택했습니다. ${m[3].includes("加入或移除筆記")?"아래 숫자를 선택해 메모를 추가하거나 삭제하세요.":m[3].includes("填入答案")?"아래 숫자를 선택해 답을 입력하세요.":"계속 진행하세요."}`);
+  if((m=raw.match(/^已選取這個空格。請按下方的\s*(\d+)\s*填入。$/)))return choose(`この空きマスが選択されています。下の${m[1]}を選んで入力してください。`,`이 빈칸이 선택되었습니다. 아래의 숫자 ${m[1]}을 선택해 입력하세요.`);
+  if((m=raw.match(/^已選取空格，按下方數字加入小字筆記。$/)))return choose(`空きマスを選択しました。下の数字を押してメモを追加してください。`,`빈칸을 선택했습니다. 아래 숫자를 눌러 메모를 추가하세요.`);
+  if((m=raw.match(/^已選取空格，可以直接填入答案，或自行開啟筆記。$/)))return choose(`空きマスを選択しました。答えを直接入力するか、メモをオンにしてください。`,`빈칸을 선택했습니다. 답을 바로 입력하거나 메모를 켜세요.`);
+  if((m=raw.match(/^已選取空格，請按下方數字寫入小字。$/)))return choose(`空きマスを選択しました。下の数字を押してメモを入力してください。`,`빈칸을 선택했습니다. 아래 숫자를 눌러 메모를 입력하세요.`);
+  if((m=raw.match(/^請先按「筆記」按鈕，再選取空格。$/)))return choose(`先に「メモ」ボタンを押してから、空きマスを選んでください。`,`먼저 ‘메모’ 버튼을 누른 다음 빈칸을 선택하세요.`);
+  if((m=raw.match(/^已(記下|移除)候選數字\s*(\d+)。筆記可以繼續修改。?$/)))return choose(`${m[1]==="記下"?"候補数字を記録しました":"候補数字を削除しました"}：${m[2]}。メモは引き続き編集できます。`,`${m[1]==="記下"?"후보 숫자를 기록했습니다":"후보 숫자를 삭제했습니다"}: ${m[2]}. 메모를 계속 수정할 수 있습니다.`);
+  if((m=raw.match(/^已(記下|移除)候選數字\s*(\d+)。$/)))return choose(`${m[1]==="記下"?"候補数字を記録しました":"候補数字を削除しました"}：${m[2]}。`,`${m[1]==="記下"?"후보 숫자를 기록했습니다":"후보 숫자를 삭제했습니다"}: ${m[2]}.`);
+  if((m=raw.match(/^已(記下|移除)小字\s*(\d+)。$/)))return choose(`${m[1]==="記下"?"メモを追加しました":"メモを削除しました"}：${m[2]}。`,`${m[1]==="記下"?"메모를 추가했습니다":"메모를 삭제했습니다"}: ${m[2]}.`);
+  if((m=raw.match(/^已記下小字\s*(\d+)。如果某一格已能確定，也可以自行關閉筆記直接填入答案。$/)))return choose(`メモ${m[1]}を追加しました。答えが確定したマスがあれば、メモをオフにして直接入力できます。`,`숫자 ${m[1]} 메모를 추가했습니다. 답을 확실히 알 수 있는 칸은 메모를 끄고 바로 입력해도 됩니다.`);
+  if((m=raw.match(/^目前正在檢查數字\s*(\d+)，請只記下小字\s*(\d+)。$/)))return choose(`現在は数字${m[1]}を確認中です。メモには${m[2]}だけを記入してください。`,`현재 숫자 ${m[1]} 확인 중입니다. 메모에는 ${m[2]}만 기록하세요.`);
+  if((m=raw.match(/^這一題要填入\s*(\d+)，請再試一次。$/)))return choose(`このマスに入る数字は${m[1]}です。もう一度試してください。`,`이 칸에 들어갈 숫자는 ${m[1]}입니다. 다시 시도하세요.`);
+  if((m=raw.match(/^答對了！已填入\s*(\d+)。筆記模式維持由你自己決定。$/)))return choose(`正解です！${m[1]}を入力しました。メモモードをオンにするかどうかは自分で決められます。`,`정답입니다! 숫자 ${m[1]} 입력 완료. 메모 모드는 원하는 대로 켜거나 끌 수 있습니다.`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已保留。請點選棋盤上已有的\s*(\d+)，繼續下一題。$/)))return choose(`正解です！${m[1]}を盤面に残しました。盤面にある${m[2]}を選んで次の問題に進んでください。`,`정답입니다! 숫자 ${m[1]}이 보드에 유지됩니다. 보드에서 숫자 ${m[2]}를 선택해 다음 문제로 진행하세요.`);
+  if((m=raw.match(/^已檢查\s*(\d+)\s*格，有\s*(\d+)\s*格不正確/)))return choose(`${m[1]}マスを確認し、${m[2]}マスが不正解です。間違いは赤で表示されています。消去して修正できます。`,`${m[1]}칸을 확인했고 ${m[2]}칸이 틀렸습니다. 오답은 빨간색으로 표시됩니다. 지운 뒤 수정할 수 있습니다.`);
+  if((m=raw.match(/^目前填入的\s*(\d+)\s*格都正確！還有\s*(\d+)\s*格未完成/)))return choose(`入力した${m[1]}マスはすべて正解です！残り${m[2]}マスです。`, `입력한 ${m[1]}칸은 모두 정답입니다! ${m[2]}칸이 남았습니다.`);
+  if((m=raw.match(/^已清空第\s*(\d+)\s*列、第\s*(\d+)\s*欄的答案與筆記。$/)))return choose(`${m[1]}行${m[2]}列の答えとメモを消去しました。`,`${m[1]}행 ${m[2]}열의 답과 메모를 지웠습니다.`);
+  if((m=raw.match(/^提示\s*(\d+)\/6：第\s*(\d+)\s*列第\s*(\d+)\s*欄是\s*(\d+)。/)))return choose(`ヒント ${m[1]}/6：${m[2]}行${m[3]}列は${m[4]}です。`,`힌트 ${m[1]}/6: ${m[2]}행 ${m[3]}열의 숫자는 ${m[4]}입니다.`);
+  if(raw.startsWith("第一題：觀察第二橫排"))return choose("問題1：2行目、5列目、右上のブロックを確認してください。","문제 1: 두 번째 가로줄, 다섯 번째 세로줄, 오른쪽 위 상자를 살펴보세요.");
+  if(raw.startsWith("第二題：觀察第二橫排"))return choose("問題2：2行目、6列目、右上のブロックを確認してください。","문제 2: 두 번째 가로줄, 여섯 번째 세로줄, 오른쪽 위 상자를 살펴보세요.");
+  if(raw.startsWith("第三題：觀察第一橫排"))return choose("問題3：1行目、5列目、右上のブロックを確認してください。","문제 3: 첫 번째 가로줄, 다섯 번째 세로줄, 오른쪽 위 상자를 살펴보세요.");
+  if(raw.startsWith("提示：缺少的數字是 "))return choose(`ヒント：足りない数字は${raw.slice("提示：缺少的數字是 ".length).replace("。","")}です。`,`힌트: 빠진 숫자는 ${raw.slice("提示：缺少的數字是 ".length).replace("。","")}입니다.`);
+
+  if((m=raw.match(/^已反金所有數字\s*(\d+)，請觀察各宮的空格。(.*)$/)))return choose(
+    `${m[1]}をすべてハイライトしました。各ブロックの空きマスを確認してください。${m[2]?"「メモ」をオンにして、1を置ける場所を記録してください。":""}`,
+    `숫자 ${m[1]} 강조 표시를 켰습니다. 각 상자의 빈칸을 살펴보세요.${m[2]?" ‘메모’를 켜고 1이 들어갈 수 있는 위치를 기록하세요.":""}`);
+  if((m=raw.match(/^已記下小字\s*(\d+)，請再填入另一個候選數字。$/)))return choose(`メモ${m[1]}を記録しました。もう1つの候補数字を入力してください。`,`숫자 ${m[1]} 메모를 기록했습니다. 다른 후보 숫자 하나를 더 입력하세요.`);
+  if((m=raw.match(/^已記下小字\s*(\d+)。請在這一格記下兩個候選數字。$/)))return choose(`メモ${m[1]}を記録しました。このマスに候補数字を2つ記録してください。`,`숫자 ${m[1]} 메모를 기록했습니다. 이 칸에 후보 숫자 두 개를 기록하세요.`);
+  if((m=raw.match(/^已在這一格記下小字\s*(\d+)。請把兩個缺少的數字都記錄在每個空格。$/)))return choose(`このマスにメモ${m[1]}を記録しました。各空きマスに足りない2つの数字を記録してください。`,`이 칸에 숫자 ${m[1]} 메모를 기록했습니다. 각 빈칸에 빠진 숫자 두 개를 모두 기록하세요.`);
+  if((m=raw.match(/^這題完成！所有空格都已正確記下\s*(\d+)\s*個候選小字。第\s*(\d+)\s*\/\s*(\d+)\s*題完成。$/)))return choose(`問題クリア！すべての空きマスに正しい候補${m[1]}個を記録しました。${m[2]} / ${m[3]}問完了です。`,`문제 완료! 모든 빈칸에 올바른 후보 숫자 ${m[1]}개를 기록했습니다. ${m[3]}문제 중 ${m[2]}문제 완료.`);
+  if((m=raw.match(/^第\s*(\d+)\s*\/\s*(\d+)\s*題開始！筆記模式維持 ON。請繼續找出目前題目缺少的候選數字。$/)))return choose(`問題${m[1]} / ${m[2]}が始まりました！メモモードはオンのままです。この問題に足りない候補数字を見つけてください。`,`문제 ${m[1]} / ${m[2]} 시작! 메모 모드는 켜진 상태입니다. 현재 문제에서 빠진 후보 숫자를 계속 찾으세요.`);
+  if((m=raw.match(/^這格筆記正確！已保留，請繼續第\s*(\d+)\s*格。筆記模式維持 (ON|OFF)。$/)))return choose(`このマスのメモは正解です！保存しました。${m[1]}番目のマスに進んでください。メモモード：${m[2]==="ON"?"オン":"オフ"}。`,`이 칸의 메모가 정답입니다! 저장했습니다. ${m[1]}번째 칸을 계속 진행하세요. 메모 모드: ${m[2]==="ON"?"켜짐":"꺼짐"}.`);
+  if((m=raw.match(/^筆記正確！已保留小字 (.+)，下一個目標格已自動選取，請繼續第\s*(\d+)\s*\/\s*5\s*步。$/)))return choose(`メモは正解です！候補${m[1]}を保存しました。次の目標マスが自動選択されました。ステップ${m[2]} / 5に進んでください。`,`메모가 정답입니다! 후보 숫자 ${m[1].replaceAll("、", ", ")} 저장 완료. 다음 목표 칸이 자동 선택되었습니다. ${m[2]} / 5단계를 계속하세요.`);
+  if(raw.startsWith("筆記正確！前四格筆記已完成"))return choose(`メモは正解です！最初の4マスが完了しました。最後の目標マスが自動選択されました。「メモ」をオフにして最終回答を入力してください。`,`메모가 정답입니다! 처음 네 칸을 완료했습니다. 마지막 목표 칸이 자동 선택되었습니다. ‘메모’를 끄고 최종 답을 입력하세요.`);
+  if((m=raw.match(/^答對了！數字\s*(\d+)\s*已保留。繼續第\s*(\d+)\s*題。$/)))return choose(`正解です！${m[1]}を保存しました。問題${m[2]}に進みましょう。`,`정답입니다! ${m[1]}이(가) 저장되었습니다. ${m[2]}번 문제를 계속하세요.`);
+
+  if((m=raw.match(/^已在這一格記下小字\s*(\d+)。請在所有空格記下這一(橫排|直排|九宮格)缺少的候選數字。$/))){
+    const axis=({"橫排":choose("横の列","가로줄"),"直排":choose("縦の列","세로줄"),"九宮格":choose("3×3ブロック","3×3 상자")})[m[2]];
+    return choose(`このマスにメモ${m[1]}を記録しました。すべての空きマスに、この${axis}に足りない候補数字を記録してください。`,`이 칸에 숫자 ${m[1]} 메모를 기록했습니다. 모든 빈칸에 이 ${axis}에서 빠진 후보 숫자를 기록하세요.`);
+  }
+
+  if((m=raw.match(/^答對了！\s*(\d+)\s*已填入並保留。(.*)$/)))return choose(`正解です！${m[1]}を入力し、盤面に残しました。${m[2]?"続けて解くか、別の数字を選んで盤面を確認できます。":""}`,`정답입니다! 숫자 ${m[1]} 입력 완료. 보드에 그대로 유지됩니다.${m[2]?" 계속 풀거나 다른 숫자를 선택해 보드를 살펴보세요.":""}`);
+  if((m=raw.match(/^數字\s*(\d+)\s*目前已完成檢查！接下來請在題目中按下任一個數字\s*(\d+)。筆記開關維持你的設定。$/)))return choose(`数字${m[1]}の確認が完了しました！次に問題内の${m[2]}をどれか選んでください。メモの設定はそのまま維持されます。`,`숫자 ${m[1]} 확인을 완료했습니다! 이제 문제에서 숫자 ${m[2]} 하나를 선택하세요. 메모 설정은 그대로 유지됩니다.`);
+  if((m=raw.match(/^請先點選棋盤上已有的\s*(\d+)，觀察反白區域。$/)))return choose(`盤面にある${m[1]}を選び、ハイライトされた範囲を確認してください。`,`보드에 있는 숫자 ${m[1]}을 선택해 강조된 영역을 살펴보세요.`);
+  return null;
+}
+
 function textCore(value){
   if(value===undefined||value===null)return value;
   const raw=String(value);
   if(lang==="zh-TW")return raw;
   if(dict&&dict.messages&&Object.prototype.hasOwnProperty.call(dict.messages,raw))return dict.messages[raw];
   if(lang==="zh-CN")return simplify(raw);
+  if(lang==="ja"||lang==="ko"){
+    const localized=translateRuntimeJK(raw,lang);
+    if(localized!==null)return localized;
+    if(/[\u3400-\u9fff]/.test(raw)){
+      window.__sudokuI18nMissing=window.__sudokuI18nMissing||[];
+      if(!window.__sudokuI18nMissing.includes(raw))window.__sudokuI18nMissing.push(raw);
+      return lang==="ja"?"この操作を続けてください。":"계속 진행해 주세요.";
+    }
+  }
   const runtimeFirst=translateRuntime(raw);
   if(runtimeFirst!==raw)return runtimeFirst;
   if(lang==="en"||lang==="es"){
@@ -144,7 +232,7 @@ function textCore(value){
 }
 function translateRuntime(raw){
   const L=lang;
-  if(L==="zh-TW")return raw;
+  if(L==="zh-TW"||L==="ja"||L==="ko")return raw;
   const en=L==="en",es=L==="es",fr=L==="fr",pt=L==="pt-BR",de=L==="de";
   const pick=(a,b,c,d,e)=>en?a:es?b:fr?c:pt?d:e;
   let m;
@@ -228,7 +316,7 @@ function translateRuntime(raw){
 }
 function text(value){
   const result=textCore(value);
-  if(lang==="zh-TW"||lang==="zh-CN"||result===undefined||result===null)return result;
+  if(lang==="zh-TW"||lang==="zh-CN"||lang==="ja"||lang==="ko"||result===undefined||result===null)return result;
   const rendered=String(result);
   if(/[\u3400-\u9fff]/.test(rendered)){
     const retried=translateRuntime(String(value));
@@ -275,7 +363,7 @@ function apply(){
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
   const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
-  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","es":"Español","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
+  const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","es":"Español","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");
