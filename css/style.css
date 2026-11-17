@@ -706,3 +706,20 @@ html[dir="rtl"] #language-select {
     word-break: normal;
   }
 }
+
+
+/* V114.2: Step 26 only — keep the Arabic notes control readable on phones.
+   Steps 25 and 41–45, all puzzle logic, and desktop layout remain untouched. */
+@media (max-width:640px) {
+  html[dir="rtl"] #game.numberfocus4-mode .game-tools #note-mode {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 116px;
+    max-width: 44vw;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
