@@ -67,3 +67,11 @@ Important: some of the less common fixed gameplay messages use a general Indones
 - 首次選語言、記住選擇、`?lang=` 指定語言與 `?lang=es` 對應 `es-419` 已用 Node 模擬測試。
 - 入口海報採手機 9:19 直式比例；桌機以置中窄版呈現。
 - 原有 `js/app.js`、`css/style.css`、`js/language-data.js`、45 步題庫與答案未修改。
+
+
+## V116.2 入口重開修正
+- 一般重新開啟 `index.html` 時，不再因已保存語系而自動跳過入口。
+- 仍記住上次選擇，並以金色外框及小圓點標示該語系。
+- 點選任一語系後才進入 `village.html`。
+- 明確指定語系的網址（例如 `?lang=hi`、`?lang=es`）仍保留直達對應語系的行為。
+- 已用 Node 模擬測試：保存語系後重開仍停留入口、上次語系標示、點擊進入遊戲、語言深連結。

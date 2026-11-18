@@ -39,6 +39,8 @@
   const params = new URLSearchParams(location.search);
   let requested = params.get("lang");
   if (requested === "es") requested = "es-419";
+
+  // Explicit language URLs remain deep links into the selected game language.
   if (requested && allowed.includes(requested)) {
     try {
       localStorage.setItem(KEY, requested);
@@ -47,16 +49,20 @@
     location.replace("village.html");
     return;
   }
+
+  // A normal visit to index.html always shows the language gateway.
+  // Remember the previous language visually, but never skip the gateway.
   let saved = "";
-  let chosen = "";
-  try {
-    saved = localStorage.getItem(KEY) || "";
-    chosen = localStorage.getItem("lezaiblingzhong_language_chosen") || "";
-  } catch (e) {}
-  if (allowed.includes(saved) && chosen === "1") {
-    location.replace("village.html");
-    return;
+  try { saved = localStorage.getItem(KEY) || ""; } catch (e) {}
+  if (allowed.includes(saved)) {
+    const previous = document.querySelector('[data-lang="' + saved + '"]');
+    if (previous) {
+      previous.classList.add("is-last-used");
+      previous.setAttribute("aria-label", previous.getAttribute("aria-label") + "（上次選擇）");
+      previous.setAttribute("title", "上次選擇");
+    }
   }
+
   document.querySelectorAll("[data-lang]").forEach(button => {
     button.addEventListener("click", () => {
       const lang = button.dataset.lang;
