@@ -48,3 +48,22 @@ Important: some of the less common fixed gameplay messages use a general Indones
 - Added Hindi to the language selector after Arabic and before Korean.
 - Hindi is left-to-right; no RTL layout changes were added.
 - Based on accepted V114.2; existing puzzles, answers, gameplay logic, and mobile layout are preserved.
+
+
+## V116 語言優先入口
+- `index.html` 是首次進入的語言選擇入口，16 格 4×4 一次呈現。
+- 第一次選擇後，使用 `lezaiblingzhong_sudoku_language` 保存語言並進入 `village.html`。
+- 再次進入首頁會依上次選擇直接進入遊戲。
+- `index.html?lang=hi` 等網址可指定語言直達；`?lang=es` 對應拉丁美洲西班牙文 `es-419`。
+- 遊戲首頁原有語言選單保留，仍可切換 `es-419` / `es-ES`。
+- 品牌名稱「樂在齡中」在入口與遊戲頁標記為不可翻譯。
+- 入口頁獨立使用 `css/welcome.css`；原遊戲 CSS、題庫與遊戲程式未作功能修改。
+
+
+## V116.1 手機入口測試版
+- 首頁改用已確認的完整地球直式概念圖作為底圖。
+- 16 個語言選項以真正的 HTML 按鈕疊在海報原按鈕位置，非點擊圖片；選擇後寫入既有語言儲存鍵並進入 `village.html`。
+- 修正 V116 首頁 inline JavaScript 中換行字元被錯誤寫成字面 `\\n`，導致整段入口腳本語法錯誤、按鈕無法綁定點擊事件的問題。
+- 首次選語言、記住選擇、`?lang=` 指定語言與 `?lang=es` 對應 `es-419` 已用 Node 模擬測試。
+- 入口海報採手機 9:19 直式比例；桌機以置中窄版呈現。
+- 原有 `js/app.js`、`css/style.css`、`js/language-data.js`、45 步題庫與答案未修改。

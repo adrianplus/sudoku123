@@ -364,7 +364,7 @@ function apply(){
   document.documentElement.lang=lang==="zh-TW"?"zh-Hant":lang;
   document.documentElement.dir=lang==="ar"?"rtl":"ltr";
   document.body.classList.toggle("rtl-language",lang==="ar");
-  document.title=ui("siteTitle","Le Zai Ling Zhong | Sudoku Classroom");
+  document.title="樂在齡中｜數獨新手村";
   const set=(selector,key,attr)=>{const el=document.querySelector(selector);if(el){if(attr)el.setAttribute(attr,ui(key));else el.textContent=ui(key)}};
   set(".brand h1","village");
   set("#font-smaller","smaller");set("#font-larger","larger");
@@ -400,13 +400,13 @@ function apply(){
   const modalTitle=document.getElementById("modal-title");if(modalTitle)modalTitle.textContent=ui("modalTitle");
   set("#next","next");set("#modal-home","modalHome");
   const footer=document.querySelector("footer");if(footer)footer.textContent=ui("footer");
-  const logo=document.querySelector(".brand-logo");if(logo)logo.alt=ui("brandAlt");
+  const logo=document.querySelector(".brand-logo");if(logo){logo.alt="樂在齡中";logo.setAttribute("translate","no");}
   const category=document.getElementById("category-nav");if(category)category.setAttribute("aria-label",ui("categoryAria"));
   const select=document.getElementById("language-select");if(select){if(select.value!==lang)select.value=lang;select.setAttribute("aria-label",ui("language"));select.title=ui("language");select.querySelectorAll("option").forEach(option=>{const labels={"zh-TW":"繁體中文","en":"English","id":"Bahasa Indonesia","vi":"Tiếng Việt","tr":"Türkçe","ar":"العربية","hi":"हिन्दी","es":"Español","es-ES":"Español (España)","es-419":"Español (Latinoamérica)","fr":"Français","pt-BR":"Português (Brasil)","de":"Deutsch","ja":"日本語","ko":"한국어","ru":"Русский","it":"Italiano","zh-CN":"简体中文"};if(labels[option.value])option.textContent=labels[option.value];});}
   if(window.__sudokuRefreshLanguage)window.__sudokuRefreshLanguage();
 }
 const select=document.getElementById("language-select");
-if(select)select.addEventListener("change",()=>load(select.value));
+if(select)select.addEventListener("change",()=>{try{localStorage.setItem("lezaiblingzhong_language_chosen","1")}catch(e){}load(select.value)});
 window.SudokuI18n={get language(){return lang},ui,text,step,load,apply};
 load(safeGet());
 })();
