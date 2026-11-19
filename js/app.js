@@ -10,20 +10,20 @@ rowcol:{step:4,title:"第四步：橫排＋直排",mode:"rowcol",text:"請同時
 threeways:{step:5,title:"第五步：同時考慮三個方向",mode:"threeways",text:"請觀察問號周圍三個方向的線索，合併判斷缺少的數字。",need:5},
 boxways:{step:6,title:"第六步：宮＋直排＋橫排",mode:"boxways",text:"請同時觀察問號所在的四宮格、直排與橫排，合併三種線索找出答案。",need:5},
 advanced:{step:7,title:"第七步：找出真正有用的線索",mode:"advanced",text:"棋盤上有些數字和問號無直接關係。請判斷問號所在的橫排、直排與四宮格，找出唯一答案。所有數字顏色相同，請靠規則判斷。",need:5},
-classic:{step:8,title:"第八步：4X4數獨練習",mode:"classic",text:"依照一到六的順序解題。每答對一格，答案就會保留在棋盤上，再繼續下一個位置。",need:6},
-practical:{step:9,title:"第九步：4X4數獨實戰",mode:"practical",text:"先選擇棋盤上的空格，再按下方數字填入。填好後按「檢查」；答錯的數字會標紅，不會直接公布答案。",need:1},
-breakthrough:{step:10,title:"第十步：找到4X4數獨的破局點",mode:"breakthrough",text:"觀察棋盤，找出第一個可以確定答案的格子。選擇空格並填入數字；答對立即進入下一題，答錯會標紅，請重新尋找。",need:1},
-graduate1:{step:11,title:"第十一步：4X4數獨畢業考（1/3）",mode:"graduate",text:"畢業考第一題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
-graduate2:{step:12,title:"第十二步：4X4數獨畢業考（2/3）",mode:"graduate",text:"畢業考第二題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
-graduate3:{step:13,title:"第十三步：4X4數獨畢業考（3/3）",mode:"graduate",text:"畢業考第三題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
+classic:{step:8,title:"第八步：4×4數獨練習",mode:"classic",text:"依照一到六的順序解題。每答對一格，答案就會保留在棋盤上，再繼續下一個位置。",need:6},
+practical:{step:9,title:"第九步：4×4數獨實戰",mode:"practical",text:"先選擇棋盤上的空格，再按下方數字填入。填好後按「檢查」；答錯的數字會標紅，不會直接公布答案。",need:1},
+breakthrough:{step:10,title:"第十步：找到4×4數獨的破局點",mode:"breakthrough",text:"觀察棋盤，找出第一個可以確定答案的格子。選擇空格並填入數字；答對立即進入下一題，答錯會標紅，請重新尋找。",need:1},
+graduate1:{step:11,title:"第十一步：4×4數獨畢業考（1/3）",mode:"graduate",text:"畢業考第一題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
+graduate2:{step:12,title:"第十二步：4×4數獨畢業考（2/3）",mode:"graduate",text:"畢業考第二題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
+graduate3:{step:13,title:"第十三步：4×4數獨畢業考（3/3）",mode:"graduate",text:"畢業考第三題：自行選擇空格並填入數字。填好後按「檢查」；錯誤數字會標紅，不會直接公布答案。全部填完且正確才能通過。",need:1},
 sixrow:{step:14,title:"第十四步：6×6數獨－橫排",mode:"sixrow",text:"請看這一橫排的六個位置。1、2、3、4、5、6 各出現一次，找出缺少的數字。",need:3},
 sixcolumn:{step:15,title:"第十五步：6×6數獨－直排",mode:"sixcolumn",text:"請看這一直排的六個位置。1、2、3、4、5、6 各出現一次，找出缺少的數字。",need:3},
 sixbox:{step:16,title:"第十六步：6×6數獨－六宮格",mode:"sixbox",text:"請觀察這個六宮格。1、2、3、4、5、6 各出現一次，找出缺少的數字。",need:3},
 sixnote:{step:18,title:"第十八步：練習筆記小字（6×6橫排）",mode:"sixnote",text:"開始時筆記模式為 OFF，請主動按下「筆記」開啟，再選取兩個空格，分別用小字記下這一排缺少的兩個數字。兩個空格都記錄正確，算答對一題；進入下一題後，筆記模式會維持 ON，連續答對三題過關。",need:3},
 sixcolumnnote:{step:19,title:"第十九步：練習筆記小字（6×6直排）",mode:"sixnote",noteType:"column",text:"開始時筆記模式為 OFF，請主動按下「筆記」開啟，再選取直排中的兩個空格，分別用小字記下這一直排缺少的兩個數字。兩個空格都記錄正確，算答對一題；進入下一題後，筆記模式會維持 ON，連續答對三題過關。",need:3},
 sixboxnote:{step:20,title:"第二十步：練習筆記小字（六宮格）",mode:"sixnote",noteType:"box",text:"開始時筆記模式為 OFF，請主動按下「筆記」開啟，再選取六宮格中的兩個空格，分別用小字記下這個六宮格缺少的兩個數字。兩個空格都記錄正確，算答對一題；進入下一題後，筆記模式會維持 ON，連續答對三題過關。",need:3},
-step14:{step:17,title:"第十七步：什麼是6×6數獨（第一類）",mode:"sixintro",text:"數獨三個規則：\n1. 直排1～6不重複\n2. 橫排1～6不重複\n3. 每個六宮格1～6不重複\n請依序解開三個目標格。每答對一格，數字會保留，再繼續下一格。",need:1},
-sixintro2:{step:21,title:"第二十一步：什麼是6×6數獨（第二類）",mode:"sixintro2",text:"請依照紅色標記的順序，依序解開五個目標格。每答對一格，數字會保留，再繼續下一格。請運用直排、橫排與六宮格不重複的規則。",need:1},
+step14:{step:17,title:"第十七步：什麼是6×6數獨（第一類）",mode:"sixintro",text:"第一類的六宮格是 2 列 × 3 欄。數獨三個規則：\n1. 直排1～6不重複\n2. 橫排1～6不重複\n3. 每個六宮格1～6不重複\n請先觀察粗線框出的六宮格，再依序解開三個目標格。每答對一格，數字會保留，再繼續下一格。",need:1},
+sixintro2:{step:21,title:"第二十一步：什麼是6×6數獨（第二類）",mode:"sixintro2",text:"第二類的六宮格是 3 列 × 2 欄，和第一類的 2 列 × 3 欄不同。請先觀察粗線框出的六宮格，再依照紅色標記的順序解開五個目標格。每答對一格，數字會保留，再繼續下一格。請運用直排、橫排與六宮格不重複的規則。",need:1},
 sixnotecombat:{step:22,title:"第二十二步：練習筆記小字實戰",mode:"sixnotecombat",text:"請主動開啟「筆記」，依序完成八個目標格。每格記下兩個可能的候選數字；符合橫排、直排與六宮格線索後，才進入下一格。已完成的筆記會保留。",need:1},
 numberfocus:{step:23,title:"第二十三步：一次只檢查某個數字全體（檢查全部的1、2、6）",mode:"numberfocus",text:"先點選棋盤上已有的 1、2 或 6，觀察該數字所在的橫排、直排與六宮格反白區域，再自行找出可填入該數字的空格。依序完成 1、2、6 三題。",need:1},
 numberfocus2:{step:24,title:"第二十四步：一次只檢查某個數字全體（檢查1、2、5）",mode:"numberfocus2",text:"先點選棋盤上已有的 1、2 或 5，觀察該數字所在的橫排、直排與六宮格反白區域，再自行找出可填入該數字的空格。依序完成 1、2、5 三題。",need:1},
@@ -38,16 +38,16 @@ nineadvanced:{step:32,title:"第三十二步：找出真正有用的線索",mode
 ninenote:{step:33,title:"第三十三步：練習筆記小字（9×9橫排）",mode:"ninenote",text:"請依照目前題次的提示，開啟「筆記」，在每個空格記下這一橫排缺少的候選數字。",need:6},
 ninecolumnnote:{step:34,title:"第三十四步：練習筆記小字（9×9直排）",mode:"ninecolumnnote",text:"請依照目前題次的提示，開啟「筆記」，在每個空格記下這一直排缺少的候選數字。",need:6},
 nineboxnote:{step:35,title:"第三十五步：練習筆記小字（9×9九宮格）",mode:"nineboxnote",text:"共五題：前兩題練習寫兩個小字，後三題練習寫三個小字。請開啟「筆記」，在每個空格記下這個九宮格缺少的候選數字。",need:5},
-ninepractice1:{step:36,title:"第三十六步：9×9數獨練習（一）step by step",mode:"ninepractice1",text:"依照指定順序，一步一步解開這盤 9×9 數獨。每次只處理目前的目標格；答對後數字會保留，完成 21 步即可過關。",need:1},
+ninepractice1:{step:36,title:"第三十六步：9×9數獨練習（一）循序練習",mode:"ninepractice1",text:"依照指定順序，一步一步解開這盤 9×9 數獨。每次只處理目前的目標格；答對後數字會保留，完成 21 步即可過關。",need:1},
 ninepractice2:{step:37,title:"第三十七步：9×9數獨練習（二）利用筆記推測出答案",mode:"ninepractice2",text:"請先開啟「筆記」，依照指定順序在四個目標格寫下小字筆記。完成第四步後，請主動關閉「筆記」，再根據前面的筆記推測最後一格的正式答案。",need:1},
-ninefocus:{step:38,title:"第三十八步：9×9數獨練習（三）一次檢查一個數字",mode:"ninefocus",text:"請先在題目中按下任一個數字 1。反金後，開啟「筆記」，把可能的位置記下小字。之後依序檢查數字 2～9，並自行判斷要記筆記或直接填入答案。",need:1},
-ninecombat1:{step:39,title:"第三十九步：9×9數獨實戰一（九缺一）",mode:"ninecombat1",text:"先選擇空格，再按下方數字填入答案；需要時可自行開啟筆記記錄候選數字。也可以直接按棋盤上已有的數字，使用反金效果觀察該數字的位置與線索。",need:1},
-ninecombat2:{step:40,title:"第四十步：9×9數獨實戰二（二餘法：利用一次檢查一個數字）",mode:"ninecombat2",text:"自行選擇空格，運用一次檢查一個數字與二餘法找出答案。可以使用筆記記錄候選數字，也可以直接按棋盤上已有的數字啟動反金效果。",need:1},
-ninecombat3:{step:41,title:"第四十一步：9×9數獨新手村畢業考（上）",mode:"ninecombat3",text:"自行選擇空格完成整盤數獨。可以使用筆記，也可以按棋盤上已有的數字啟動反金效果。答案不會自動檢查；你可以隨時按「檢查」，錯誤的正式數字會顯示紅色。",need:1},
-ninecombat4:{step:42,title:"第四十二步：9×9數獨新手村畢業考（下）",mode:"ninecombat4",text:"自行選擇空格完成整盤數獨。可以使用筆記，也可以按棋盤上已有的數字啟動反金效果。答案不會自動檢查；你可以隨時按「檢查」，錯誤的正式數字會顯示紅色。",need:1},
-ninecombat75:{step:43,title:"第四十三步：9×9數獨公司初次面試",mode:"ninecombat75",text:"這是公司的初次面試。請自行完成整盤數獨；可自由使用筆記、反金與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1},
-ninecombat80:{step:44,title:"第四十四步：9×9數獨公司最終面試",mode:"ninecombat80",text:"這是公司的最終面試。請自行完成整盤數獨；可自由使用筆記、反金與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1},
-ninecombat5:{step:45,title:"第四十五步：9X9數獨公司錄取後的第一次考驗",mode:"ninecombat5",text:"恭喜你通過公司的最終面試，正式錄取！這是錄取後的第一次考驗。請自行完成整盤數獨；可自由使用筆記、反金與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1}
+ninefocus:{step:38,title:"第三十八步：9×9數獨練習（三）一次檢查一個數字",mode:"ninefocus",text:"請先在題目中按下任一個數字 1。反白後，開啟「筆記」，把可能的位置記下小字。之後依序檢查數字 2～9，並自行判斷要記筆記或直接填入答案。",need:1},
+ninecombat1:{step:39,title:"第三十九步：9×9數獨實戰一（九缺一）",mode:"ninecombat1",text:"先選擇空格，再按下方數字填入答案；需要時可自行開啟筆記記錄候選數字。也可以直接按棋盤上已有的數字，使用反白效果觀察該數字的位置與線索。",need:1},
+ninecombat2:{step:40,title:"第四十步：9×9數獨實戰二（二餘法：利用一次檢查一個數字）",mode:"ninecombat2",text:"自行選擇空格，運用一次檢查一個數字與二餘法找出答案。可以使用筆記記錄候選數字，也可以直接按棋盤上已有的數字啟動反白效果。",need:1},
+ninecombat3:{step:41,title:"第四十一步：9×9數獨新手村畢業考（上）",mode:"ninecombat3",text:"自行選擇空格完成整盤數獨。可以使用筆記，也可以按棋盤上已有的數字啟動反白效果。答案不會自動檢查；你可以隨時按「檢查」，錯誤的正式數字會顯示紅色。",need:1},
+ninecombat4:{step:42,title:"第四十二步：9×9數獨新手村畢業考（下）",mode:"ninecombat4",text:"自行選擇空格完成整盤數獨。可以使用筆記，也可以按棋盤上已有的數字啟動反白效果。答案不會自動檢查；你可以隨時按「檢查」，錯誤的正式數字會顯示紅色。",need:1},
+ninecombat75:{step:43,title:"第四十三步：9×9數獨公司初次面試",mode:"ninecombat75",text:"這是公司的初次面試。請自行完成整盤數獨；可自由使用筆記、反白與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1},
+ninecombat80:{step:44,title:"第四十四步：9×9數獨公司最終面試",mode:"ninecombat80",text:"這是公司的最終面試。請自行完成整盤數獨；可自由使用筆記、反白與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1},
+ninecombat5:{step:45,title:"第四十五步：9X9數獨公司錄取後的第一次考驗",mode:"ninecombat5",text:"恭喜你通過公司的最終面試，正式錄取！這是錄取後的第一次考驗。請自行完成整盤數獨；可自由使用筆記、反白與「檢查」功能。答案不會自動檢查，錯誤的正式數字會在按下「檢查」後顯示紅色。",need:1}
 };
 const $=id=>document.getElementById(id),home=$("home"),game=$("game"),grid=$("grid"),feedback=$("feedback"),modal=$("modal"),next=$("next"),modalHome=$("modal-home"),hint=$("hint"),buttons=Array.from(document.querySelectorAll(".pad button")),sm=$("font-smaller"),lg=$("font-larger");
 const STORAGE_KEY="lezaiblingzhong_sudoku_progress_v3";let font=1,current=null,currentId=null,missing=0,streak=0,q=1,answered=false,timer=null,classicIndex=0,selectedCell=null,hintUsed=0,noteMode=false;
@@ -512,10 +512,10 @@ function render(){
   const affected=new Set();if(state.scanDigit!==null){for(let r=0;r<9;r++)for(let c=0;c<9;c++)if(vals[`${r},${c}`]===state.scanDigit){for(let i=0;i<9;i++){affected.add(`${r},${i}`);affected.add(`${i},${c}`);}const br=Math.floor(r/3)*3,bc=Math.floor(c/3)*3;for(let rr=br;rr<br+3;rr++)for(let cc=bc;cc<bc+3;cc++)affected.add(`${rr},${cc}`);}}
   puzzle.forEach((row,r)=>row.forEach((v,c)=>{const key=`${r},${c}`,item=document.createElement("div");item.className="cell number-focus-cell nine-combat-cell";item.dataset.cell=key;item.style.border="1px solid #718096";if(c===2||c===5)item.style.borderRight="4px solid #334155";if(r===2||r===5)item.style.borderBottom="4px solid #334155";const val=vals[key];if(affected.has(key))item.classList.add("scan-highlight");if(state.scanDigit!==null&&val===state.scanDigit)item.classList.add("scan-number");
     if(v){item.textContent=String(v);item.classList.add("locked");}else if(state.values[key]!==undefined){item.textContent=String(state.values[key]);item.classList.add("number-focus-filled");if(state.wrong&&state.wrong[key])item.classList.add("wrong");}else{item.classList.add("number-focus-empty");const notes=state.notes[key]||[];if(notes.length){const mini=document.createElement("div");mini.className="pencil-mini-grid nine-pencil-mini-grid";for(let n=1;n<=9;n++){const span=document.createElement("span");span.className="pencil-note"+(notes.includes(n)?" filled":"");span.textContent=notes.includes(n)?String(n):"";mini.appendChild(span);}item.appendChild(mini);}}
-    const displayedValue=vals[key];if(displayedValue){item.tabIndex=0;item.setAttribute("role","button");item.addEventListener("click",e=>{e.stopPropagation();state.scanDigit=displayedValue;selectedCell=(!v&&state.values[key]!==undefined)?key:null;render();say(!v&&state.values[key]!==undefined?`已反金數字 ${displayedValue}，並選取目前格子；可按「空」清除或直接輸入其他數字。`:`已反金數字 ${displayedValue}，可觀察它所在的橫排、直排與九宮格。`,"good");});}
+    const displayedValue=vals[key];if(displayedValue){item.tabIndex=0;item.setAttribute("role","button");item.addEventListener("click",e=>{e.stopPropagation();state.scanDigit=displayedValue;selectedCell=(!v&&state.values[key]!==undefined)?key:null;render();say(!v&&state.values[key]!==undefined?`已反白數字 ${displayedValue}，並選取目前格子；可按「空」清除或直接輸入其他數字。`:`已反白數字 ${displayedValue}，可觀察它所在的橫排、直排與九宮格。`,"good");});}
     if(selectedCell===key)item.classList.add("selected");if(!v&&state.values[key]===undefined){item.tabIndex=0;item.setAttribute("role","button");item.addEventListener("click",()=>{selectedCell=key;render();say(`已選取第 ${r+1} 列、第 ${c+1} 欄。${noteMode?"按下方數字加入或移除筆記。":"按下方數字填入答案；需要時可開啟筆記。"}`,"good");});}grid.appendChild(item);
   }));
-  const filled=Object.keys(state.values).length,total=puzzle.flat().filter(v=>v===0).length;setQuestion(`已完成 ${filled} / ${total} 格${state.scanDigit!==null?`｜正在反金數字 ${state.scanDigit}`:"｜可自行選格、填答、筆記或點數字反金"}`);
+  const filled=Object.keys(state.values).length,total=puzzle.flat().filter(v=>v===0).length;setQuestion(`已完成 ${filled} / ${total} 格${state.scanDigit!==null?`｜正在反白數字 ${state.scanDigit}`:"｜可自行選格、填答、筆記或點數字反白"}`);
   // 第 39～41 步：同一數字的九個正確位置都完成時，將下方該數字反灰；筆記與錯誤答案不計入。
   document.querySelectorAll(".pad button[data-n]").forEach(button=>{
    const digit=Number(button.dataset.n);
@@ -794,15 +794,15 @@ function render(){
   const solution=[[4,1,6,2,5,3,7,9,8],[7,5,3,1,8,9,2,4,6],[8,2,9,4,6,7,5,1,3],[1,3,4,9,7,2,6,8,5],[2,8,5,6,3,4,9,7,1],[9,6,7,5,1,8,4,3,2],[3,7,2,8,9,5,1,6,4],[6,4,8,7,2,1,3,5,9],[5,9,1,3,4,6,8,2,7]];
   const state=window.nineFocusState||(window.nineFocusState={digit:1,notes:{},values:{},scanDigit:null});
   const d=state.digit;
-  setInstruction(d===1?"第 1 / 9 步：請在題目中按下任一個數字 1。反金後，請開啟「筆記」，將可能的位置記下小字 1。":`第 ${d} / 9 步：請在題目中按下任一個數字 ${d}，再自行判斷要記筆記或直接填入答案。`);
+  setInstruction(d===1?"第 1 / 9 步：請在題目中按下任一個數字 1。反白後，請開啟「筆記」，將可能的位置記下小字 1。":`第 ${d} / 9 步：請在題目中按下任一個數字 ${d}，再自行判斷要記筆記或直接填入答案。`);
   grid.className="sudoku nine-practice-board number-focus-board nine-focus-board";grid.style.display="grid";grid.style.gridTemplateColumns="repeat(9,1fr)";grid.style.gridTemplateRows="repeat(9,1fr)";grid.style.width="min(100%,680px)";grid.style.aspectRatio="1";grid.style.height="auto";
   const vals={};puzzle.forEach((row,r)=>row.forEach((v,c)=>vals[`${r},${c}`]=state.values[`${r},${c}`]??v));
   const affected=new Set();if(state.scanDigit!==null){for(let r=0;r<9;r++)for(let c=0;c<9;c++)if(vals[`${r},${c}`]===state.scanDigit){for(let i=0;i<9;i++){affected.add(`${r},${i}`);affected.add(`${i},${c}`);}for(let rr=Math.floor(r/3)*3;rr<Math.floor(r/3)*3+3;rr++)for(let cc=Math.floor(c/3)*3;cc<Math.floor(c/3)*3+3;cc++)affected.add(`${rr},${cc}`);}}
   puzzle.forEach((row,r)=>row.forEach((v,c)=>{const key=`${r},${c}`,cell=document.createElement("div");cell.className="cell nine-practice-cell number-focus-cell";cell.dataset.cell=key;cell.style.border="1px solid #718096";if(c===0)cell.style.borderLeft="4px solid #334155";if(c===8)cell.style.borderRight="4px solid #334155";if(r===0)cell.style.borderTop="4px solid #334155";if(r===8)cell.style.borderBottom="4px solid #334155";if(c===2||c===5)cell.style.borderRight="4px solid #334155";if(r===2||r===5)cell.style.borderBottom="4px solid #334155";
    const val=vals[key];if(affected.has(key))cell.classList.add("scan-highlight");if(state.scanDigit!==null&&val===state.scanDigit)cell.classList.add("scan-number");
-   if(v){cell.textContent=String(v);cell.classList.add("locked");cell.tabIndex=0;cell.setAttribute("role","button");cell.addEventListener("click",()=>{if(v!==d){say(`目前請先檢查數字 ${d}，請按題目中的任一個 ${d}。`,"bad");return;}state.scanDigit=d;selectedCell=null;render();say(`已反金所有數字 ${d}，請觀察各宮的空格。${d===1?"現在請開啟「筆記」，把可能的位置記下小字 1。":"可以自行判斷要記筆記或直接填入答案。"}`,"good");});}
+   if(v){cell.textContent=String(v);cell.classList.add("locked");cell.tabIndex=0;cell.setAttribute("role","button");cell.addEventListener("click",()=>{if(v!==d){say(`目前請先檢查數字 ${d}，請按題目中的任一個 ${d}。`,"bad");return;}state.scanDigit=d;selectedCell=null;render();say(`已反白所有數字 ${d}，請觀察各宮的空格。${d===1?"現在請開啟「筆記」，把可能的位置記下小字 1。":"可以自行判斷要記筆記或直接填入答案。"}`,"good");});}
    else if(state.values[key]!==undefined){cell.textContent=String(state.values[key]);cell.classList.add("filled");}
-   else {const notes=state.notes[key]||[];if(notes.length){const mini=document.createElement("div");mini.className="pencil-mini-grid nine-pencil-mini-grid";for(let x=1;x<=9;x++){const sp=document.createElement("span");sp.className="pencil-note"+(notes.includes(x)?" filled":"");sp.textContent=notes.includes(x)?String(x):"";mini.appendChild(sp);}cell.appendChild(mini);}cell.tabIndex=0;cell.setAttribute("role","button");if(selectedCell===key)cell.classList.add("selected");cell.addEventListener("click",()=>{if(state.scanDigit===null){say(`請先在題目中按下任一個數字 ${d}，啟動反金效果。`,"bad");return;}selectedCell=key;render();say(noteMode?`已選取空格，按下方數字加入小字筆記。`:`已選取空格，可以直接填入答案，或自行開啟筆記。`,"good");});}
+   else {const notes=state.notes[key]||[];if(notes.length){const mini=document.createElement("div");mini.className="pencil-mini-grid nine-pencil-mini-grid";for(let x=1;x<=9;x++){const sp=document.createElement("span");sp.className="pencil-note"+(notes.includes(x)?" filled":"");sp.textContent=notes.includes(x)?String(x):"";mini.appendChild(sp);}cell.appendChild(mini);}cell.tabIndex=0;cell.setAttribute("role","button");if(selectedCell===key)cell.classList.add("selected");cell.addEventListener("click",()=>{if(state.scanDigit===null){say(`請先在題目中按下任一個數字 ${d}，啟動反白效果。`,"bad");return;}selectedCell=key;render();say(noteMode?`已選取空格，按下方數字加入小字筆記。`:`已選取空格，可以直接填入答案，或自行開啟筆記。`,"good");});}
    grid.appendChild(cell);
   }));
   setQuestion(`第 ${d} / 9：${state.scanDigit===null?`請按題目中的 ${d}`:`正在檢查數字 ${d}`}`);
@@ -1156,7 +1156,7 @@ function answer(n){if(answered)return;if(current&&(current.mode==="ninecombat1"|
    return candidates;
  };
  const maybeAdvance=()=>{const candidates=getCandidates();return candidates.length===0||candidates.every(k=>(state.notes[k]||[]).includes(d));};
- if(state.scanDigit===null){say(`請先按題目中的任一個數字 ${d}，啟動反金效果。`,"bad");return;}if(selectedCell===null){say("請先選取一個空格。","bad");return;}
+ if(state.scanDigit===null){say(`請先按題目中的任一個數字 ${d}，啟動反白效果。`,"bad");return;}if(selectedCell===null){say("請先選取一個空格。","bad");return;}
  const [r,c]=selectedCell.split(",").map(Number),key=selectedCell;if(puzzle[r][c]!==0){say("題目原有數字不能修改。","bad");return;}
  if(noteMode){
   if(n!==d){say(`目前正在檢查數字 ${d}，請只記下小字 ${d}。`,"bad");return;}
@@ -1165,7 +1165,7 @@ function answer(n){if(answered)return;if(current&&(current.mode==="ninecombat1"|
   if(maybeAdvance()){advanceFocus();return;}
   render();selectedCell=key;say(`已記下小字 ${n}。如果某一格已能確定，也可以自行關閉筆記直接填入答案。`,"good");return;
  }
- if(n!==solution[r][c]){say("這個正式答案不正確。可以再觀察反金區域，或開啟筆記記錄候選數字。","bad");return;}
+ if(n!==solution[r][c]){say("這個正式答案不正確。可以再觀察反白區域，或開啟筆記記錄候選數字。","bad");return;}
  state.values[key]=n;delete state.notes[key];
  if(maybeAdvance()){advanceFocus();return;}
  render();say(`答對了！已填入 ${n}。筆記模式維持由你自己決定。`,`good`);return;
@@ -1333,7 +1333,7 @@ function checkPractical(){
  grid.querySelectorAll(".practical-cell").forEach(cell=>{const key=cell.dataset.cell;if(fixed.has(key))return;const v=values[key];cell.classList.remove("wrong");if(v===undefined){empty++;return;}filled++;const [r,c]=key.split(",").map(Number);if(v!==solution[r][c]){wrong++;cell.classList.add("wrong");}});
  if(wrong){say(`已檢查 ${filled} 格，有 ${wrong} 格不正確，紅色數字請再試試看。正確答案不會直接公布。`,"bad");return;}
  if(empty){say(`目前填入的 ${filled} 格都正確！還有 ${empty} 格未完成，繼續加油。`,"good");return;}
- say(currentId==="graduate1"?"全部正確！你通過了4X4數獨畢業考（1/3）！":(currentId==="graduate2"?"全部正確！你通過了4X4數獨畢業考（2/3）！":(currentId==="graduate3"?"全部正確！你通過了4X4數獨畢業考（3/3）！":"全部正確！你完成了 4X4 數獨實戰！")),"good");answered=true;document.querySelectorAll(".pad button").forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>complete(),650);
+ say(currentId==="graduate1"?"全部正確！你通過了4×4數獨畢業考（1/3）！":(currentId==="graduate2"?"全部正確！你通過了4×4數獨畢業考（2/3）！":(currentId==="graduate3"?"全部正確！你通過了4×4數獨畢業考（3/3）！":"全部正確！你完成了 4×4 數獨實戰！")),"good");answered=true;document.querySelectorAll(".pad button").forEach(b=>b.disabled=true);hint.disabled=true;timer=setTimeout(()=>complete(),650);
 }
 function complete(){if(!progressData.completed.includes(currentId))progressData.completed.push(currentId);progressData.lastCompleted=currentId;updateHomeProgress();saveProgress();let nextId=({row:"column",column:"box",box:"rowcol",rowcol:"threeways",threeways:"boxways",boxways:"advanced",advanced:"classic",classic:"practical",practical:"breakthrough",breakthrough:"graduate1",graduate1:"graduate2",graduate2:"graduate3",graduate3:"sixrow",sixrow:"sixcolumn",sixcolumn:"sixbox",sixbox:"step14",step14:"sixnote",sixnote:"sixcolumnnote",sixcolumnnote:"sixboxnote",sixboxnote:"sixintro2",sixintro2:"sixnotecombat",sixnotecombat:"numberfocus",numberfocus:"numberfocus2",numberfocus2:"numberfocus3",numberfocus3:"numberfocus4",numberfocus4:"ninerow",ninerow:"ninecolumn",ninecolumn:"ninebox",ninebox:"ninerowcol",ninerowcol:"ninerowcolbox",ninerowcolbox:"nineadvanced",nineadvanced:"ninenote",ninenote:"ninecolumnnote",ninecolumnnote:"nineboxnote",nineboxnote:"ninepractice1",ninepractice1:"ninepractice2",ninepractice2:"ninefocus",ninefocus:"ninecombat1",ninecombat1:"ninecombat2",ninecombat2:"ninecombat3",ninecombat3:"ninecombat4",ninecombat4:"ninecombat75",ninecombat75:"ninecombat80",ninecombat80:"ninecombat5",ninecombat5:null})[currentId]||null;$("modal-title").textContent=window.SudokuI18n?(window.SudokuI18n.step(currentId,"title",current.title)+" — "+window.SudokuI18n.ui("modalTitle","Step completed!")):current.title+"完成了！";$("modal-message").textContent=window.SudokuI18n?window.SudokuI18n.text(nextId?"你已完成這一步，做得很好！接下來繼續挑戰下一步吧。":"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。"):(nextId?"你已完成這一步，做得很好！接下來繼續挑戰下一步吧。":"你已完成目前所有練習步驟！做得很好。接下來可以回到主頁。");next.classList.toggle("hidden",!nextId);next.dataset.id=nextId||"";modal.classList.remove("hidden");(nextId?next:modalHome).focus()}
 function goHome(){const returningFromGame=!!current&&!game.classList.contains("hidden");document.body.classList.remove("game-active");clearTimeout(timer);modal.classList.add("hidden");game.classList.add("hidden");home.classList.remove("hidden");current=null;currentId=null;updateHomeProgress();if(returningFromGame){returnedToHomeFromGame=true;window.requestAnimationFrame(()=>window.scrollTo(0,savedHomeScrollY));}else{if(returnedToHomeFromGame){returnedToHomeFromGame=false;savedHomeScrollY=0;}setActiveCategory("4x4");window.scrollTo(0,0);}}
@@ -1344,7 +1344,7 @@ document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>st
   const state=window[cfg.stateName]||(window[cfg.stateName]={values:{},notes:{},scanDigit:null});
   if(selectedCell===null){
    if(state.scanDigit!==null){state.scanDigit=null;render();say("已取消所有金色反白。");}
-   else say("目前沒有選取空格，也沒有反金顯示。");
+   else say("目前沒有選取空格，也沒有反白顯示。");
    return;
   }
   delete state.values[selectedCell];
@@ -1354,7 +1354,7 @@ document.querySelectorAll(".start").forEach(b=>b.addEventListener("click",()=>st
  }
  if(current.mode==="ninefocus"){
   const state=window.nineFocusState||(window.nineFocusState={digit:1,notes:{},values:{},scanDigit:null});
-  if(selectedCell===null){if(state.scanDigit!==null){state.scanDigit=null;render();say("已取消所有金色反白。");}else say("目前沒有選取空格，也沒有反金顯示。");return;}
+  if(selectedCell===null){if(state.scanDigit!==null){state.scanDigit=null;render();say("已取消所有金色反白。");}else say("目前沒有選取空格，也沒有反白顯示。");return;}
   delete state.values[selectedCell];delete state.notes[selectedCell];selectedCell=null;render();say("已清空選取格子的答案與筆記。");return;
  }
  if(current.mode==="numberfocus4"){
